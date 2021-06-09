@@ -1,11 +1,9 @@
 import React from 'react';
-import './App.css';
+import Home from './modules/home/Home';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-  
-    </div>
+    <Home title="Home" text="igbo"/>
   );
 }
 
