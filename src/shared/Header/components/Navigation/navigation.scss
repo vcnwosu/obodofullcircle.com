@@ -1,0 +1,12 @@
+.header-nav {
+  ul {
+    display: flex;
+    li {
+      list-style-type: none;
+      margin: 5px;
+      a {
+          text-decoration: none;
+      }
+    }
+  }
+}
