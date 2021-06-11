@@ -1,0 +1,14 @@
+footer {
+    background-color: grey;
+    padding: 40px;
+}
+
+.footer-container {
+    display: flex;
+    .logo {
+        width: 25%;
+    }
+    .footer-nav {
+        padding: 10px;
+    }
+}
