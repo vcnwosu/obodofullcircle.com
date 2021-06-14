@@ -1,5 +1,6 @@
 import AboutUs from "../modules/AboutUs";
 import Contribute from "../modules/Contribute";
+import Episodes from "../modules/Episodes";
 import ExchangeProgram from "../modules/ExchangeProgram";
 import Home from "../modules/Home";
 import Login from "../modules/Login";
@@ -34,6 +35,13 @@ const signup: Route = {
     component: Signup
 }
 
+const episodes: Route = {
+    path: '/episodes',
+    exact: true,
+    isProtected: false,
+    component: Episodes
+}
+
 const exchangeProgram: Route = {
     path: '/exchange-program',
     exact: true,
@@ -66,6 +74,7 @@ export const routeList = [
     home,
     login,
     signup,
+    episodes,
     exchangeProgram,
     resources,
     aboutUs,

@@ -1,7 +1,8 @@
-import Navigation, {Nav} from "../Navigation";
+import Navigation, {Navs} from "../Navigation";
 import './footer.scss';
+import Logo from '../../../assets/images/logo.svg';
 
-const navList1: Nav[] = [
+const navList1: Navs[] = [
     {
         path: '/about-us',
         text: 'About Us'
@@ -24,7 +25,7 @@ const navList1: Nav[] = [
     }
 ]
 
-const navList2: Nav[] = [
+const navList2: Navs[] = [
     {
         path: '/about-us',
         text: 'Exchange Program'
@@ -39,7 +40,7 @@ const navList2: Nav[] = [
     }
 ]
 
-const navList3: Nav[] = [
+const navList3: Navs[] = [
     {
         path: '/about-us',
         text: 'Android'
@@ -49,7 +50,7 @@ const navList3: Nav[] = [
         text: 'iOS'
     }
 ]
-const navList4: Nav[] = [
+const navList4: Navs[] = [
     {
         path: '/about-us',
         text: 'Become a Teacher'
@@ -58,11 +59,12 @@ const navList4: Nav[] = [
 
 const Footer = () => {
     return (
+        <>
         <footer>
+            <div className="logo">
+                <img src={Logo} alt="logo" />
+            </div>
             <div className="footer-container">
-                <div className="logo">
-                    <img src="favicon.ico" alt="" />
-                </div>
                 <div className="footer-nav">
                     <h3>Company</h3>
                     <Navigation list={navList1} type="footer"/>
@@ -81,6 +83,10 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+        <div className="copyright">
+        <p className="mb-0">COPYRIGHT 2021. ALL RIGHTS RESERVED</p>
+    </div>
+    </>
     )
 }
 
