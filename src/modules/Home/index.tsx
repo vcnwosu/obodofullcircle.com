@@ -1,9 +1,9 @@
-
+import HomeLearnIgbo from "./components/HomeLearnIgbo";
 const Home = () => {
     return (
-        <>
-            <h2>Home</h2>
-        </>
+        <div className="wrapper">
+            <HomeLearnIgbo />
+        </div>
     )
 }
 

@@ -1,8 +1,10 @@
 header {
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
     background-color: #0D0A3A;
-    height: 140px;
-    padding: 0 120px;
+    height: 110px;
+    display: grid !important;
+    .header-container {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

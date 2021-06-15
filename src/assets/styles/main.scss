@@ -1,0 +1,30 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+.wrapper {
+    padding: 0 120px;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+h1 {
+    font-family: '$font-extra-bold'
+}
+
+p {
+    font-family: '$font-museo';
+}
+
+.btn-primary {
+    @include btn($primary-color, $white);
+    font-family: '$font-museo';
+}
+
+.btn-secondary {
+    @include btn-outline($white, $primary-color);
+    font-family: '$font-museo';
+}

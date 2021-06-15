@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import styles from './navigation.module.scss';
 import './navigation.scss';
 
 export interface Navs {
@@ -39,7 +40,7 @@ const Navigation = ({ list, type }: Props) => {
 
                                 </NavDropdown>) :
                                 (<Nav.Link style={type === 'header' ? { margin: '10px' } : {}}>
-                                    <Link to={item.path} >{item.text}</Link>
+                                    <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}
                     </Nav>

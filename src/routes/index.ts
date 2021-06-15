@@ -42,7 +42,7 @@ const episodes: Route = {
     component: Episodes
 }
 
-const exchangeProgram: Route = {
+export const exchangeProgram: Route = {
     path: '/exchange-program',
     exact: true,
     isProtected: false,

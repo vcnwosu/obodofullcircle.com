@@ -4,11 +4,13 @@ import Button from 'react-bootstrap/Button';
 interface Props {
     text: string;
     type: 'button' | 'submit' | 'reset';
-    variant: string
+    variant: string;
+    className?: string;
+    onClick?: () => void;
 }
 
-export const CustomButton = ({text, type, variant}: Props) => {
+export const CustomButton = ({text, type, variant, className, ...rest}: Props) => {
     return (
-        <Button type={type} variant={variant}>{text}</Button>
+        <Button className={className} type={type} variant={variant} {...rest}>{text}</Button>
     )
 }

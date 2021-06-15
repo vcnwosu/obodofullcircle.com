@@ -2,7 +2,7 @@ import Navigation, {Navs} from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/logo.svg';
 
-const navList1: Navs[] = [
+const companyNavList: Navs[] = [
     {
         path: '/about-us',
         text: 'About Us'
@@ -25,7 +25,7 @@ const navList1: Navs[] = [
     }
 ]
 
-const navList2: Navs[] = [
+const podcastNavList: Navs[] = [
     {
         path: '/about-us',
         text: 'Exchange Program'
@@ -40,7 +40,7 @@ const navList2: Navs[] = [
     }
 ]
 
-const navList3: Navs[] = [
+const appNavList: Navs[] = [
     {
         path: '/about-us',
         text: 'Android'
@@ -50,7 +50,7 @@ const navList3: Navs[] = [
         text: 'iOS'
     }
 ]
-const navList4: Navs[] = [
+const teacherNavList: Navs[] = [
     {
         path: '/about-us',
         text: 'Become a Teacher'
@@ -67,19 +67,19 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-nav">
                     <h3>Company</h3>
-                    <Navigation list={navList1} type="footer"/>
+                    <Navigation list={companyNavList} type="footer"/>
                 </div>
                 <div className="footer-nav">
                     <h3>Our Podcast</h3>
-                    <Navigation list={navList2} type="footer"/>
+                    <Navigation list={podcastNavList} type="footer"/>
                 </div>
                 <div className="footer-nav">
                     <h3>App</h3>
-                    <Navigation list={navList3} type="footer"/>
+                    <Navigation list={appNavList} type="footer"/>
                 </div>
                 <div className="footer-nav">
                     <h3>Teacher</h3>
-                    <Navigation list={navList4} type="footer"/>
+                    <Navigation list={teacherNavList} type="footer"/>
                 </div>
             </div>
         </footer>
