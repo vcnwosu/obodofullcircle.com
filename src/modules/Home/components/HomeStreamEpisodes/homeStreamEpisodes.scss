@@ -1,0 +1,33 @@
+@import '../../../../assets/styles/variables';
+
+.wrapperStream {
+    position: relative;
+}
+
+h1.head {
+    font-size: 4rem !important;
+}
+
+h1.shadowText {
+    font-size: 5rem !important;
+    color: $text-shadow-2;
+    position: absolute;
+    top: 140px;
+    left: 120px;
+    opacity: 0.04;
+}
+
+.bg-stream {
+    background-color: $bg-color-2;
+    overflow-x: hidden;
+}
+
+.top-border {
+    height: 65px;
+    margin-left: -320px;
+}
+
+.bottom-border {
+    height: 65px;
+    margin-left: 590px;
+}
