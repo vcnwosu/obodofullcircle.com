@@ -1,6 +1,9 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/fonts';
+
 footer {
-    background-color: #0D0A3A;
-    height: 612px;
+    background-color: $bg-color;
+    height: 500px;
     position: relative;
     padding: 0 120px;
     display: flex;
@@ -22,21 +25,21 @@ footer {
         padding: 10px;
         h3 {
             font-size: 18px;
-            color: #06D6A0;
+            color: $primary-color;
             font-weight: bold;
         }
     }
 }
 
 .copyright {
-    background-color: #06D6A0;
-    height: 63px;
+    background-color: $primary-color;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     p {
         font-size: 14px;
-        font-weight: lighter;
+        font-family: '$font-light';
         color: #fff;
     }
 }

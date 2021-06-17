@@ -1,6 +1,8 @@
 import HomeLearnIgbo from "./components/HomeLearnIgbo";
 import HomeExchangeProgram from "./components/HomeExchangeProgram";
 import HomeStreamEpisodes from "./components/HomeStreamEpisodes";
+import HomeShopResources from "./components/HomeShopResources";
+import HomeWhyIgbo from "./components/HomeWhyIgbo";
 
 const Home = () => {
     return (
@@ -8,6 +10,8 @@ const Home = () => {
             <HomeLearnIgbo />
             <HomeExchangeProgram />
             <HomeStreamEpisodes />
+            <HomeWhyIgbo />
+            <HomeShopResources />
         </div>
     )
 }
