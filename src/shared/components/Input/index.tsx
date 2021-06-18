@@ -1,7 +1,14 @@
-const Input = () => {
+import './input.scss';
+
+interface Props {
+    type: string;
+    placeholder: string;
+}
+
+const Input = ({type, placeholder}: Props) => {
     return (
         <>
-            <input type="text" />
+            <input className="custom-input" type={type} placeholder={placeholder} />
         </>
     )
 }

@@ -16,7 +16,7 @@ const navList: Navs[] = [
         path: '/resources',
         text: 'Resources',
         isDropdown: true,
-        dropdownItems: ['new', 'old']
+        dropdownItems: ['Transcript']
     },
     {
         path: '/about-us',

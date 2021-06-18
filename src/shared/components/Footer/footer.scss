@@ -6,27 +6,42 @@ footer {
     height: 500px;
     position: relative;
     padding: 0 120px;
-    display: flex;
+    justify-content: space-evenly;
     .logo {
-        position: absolute;
-        margin-top: 164px;
+        // position: absolute;
+        // margin-top: 164px;
     }
     .navbar, .nav-link{
         padding: 0 !important;
+    }
+    .store-icons {
+        display: flex;
+        flex-direction: column;
+        img {
+            height: 120px;
+            width: 300px;
+        }
+    }
+    .social-links {
+        img {
+            margin: 0 15px;
+        }
     }
 }
 
 .footer-container {
     display: flex;
-    position: absolute;
-    top: 164px;
-    left: 587px;
+    gap: 2rem;
     .footer-nav {
         padding: 10px;
         h3 {
             font-size: 18px;
             color: $primary-color;
-            font-weight: bold;
+            font-family: '$font-bold';
+        }
+        .nav-link {
+            font-size: 16px !important;
+            font-family: '$font-regular';
         }
     }
 }

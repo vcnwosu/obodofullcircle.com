@@ -45,3 +45,8 @@ p {
     @include btn-icon($primary-color, $white);
     font-family: '$font-museo';
 }
+
+.btn-attached {
+    @include btn-attach($primary-color, $white);
+    font-family: '$font-museo';
+}

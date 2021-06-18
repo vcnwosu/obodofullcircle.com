@@ -1,0 +1,42 @@
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/variables';
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-indicators {
+    // display: none !important;
+}
+
+.main-container {
+    display: flex !important;
+    justify-content: space-evenly;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('../../../assets/images/left-arrow.svg') !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url('../../../assets/images/right-arrow.svg') !important;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 12px !important;
+    width: 12px !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: auto !important;
+}
+.language-container {
+    padding: 12px 20px;
+    p {
+        font-family: '$font-medium';
+        color: $text-color;
+    }
+}
+
+.selected {
+    background-color: #ECECF7;
+    border-radius: 0 0 5px 5px;
+}

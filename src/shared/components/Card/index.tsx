@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardImage from '../../../assets/images/cardLogo.svg';
 import './card.scss';
@@ -5,10 +6,15 @@ import './card.scss';
 interface Props {
     title: string;
     text: string;
+    available: boolean
 }
-const CustomCard = ({ title, text }: Props) => {
+const CustomCard = ({ title, text, available }: Props) => {
+
+    const mouseOver = (e: React.MouseEvent) => {
+        console.log(e)
+    }
     return (
-        <Card>
+        <Card onMouseOver={mouseOver}>
             <div className="card-image">
                 <img src={CardImage} alt="cardImg" />
             </div>
@@ -16,6 +22,9 @@ const CustomCard = ({ title, text }: Props) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{text}</Card.Text>
             </Card.Body>
+            <div className="coming-soon">
+                <h3>Coming Soon</h3>
+            </div>
         </Card>
     )
 }

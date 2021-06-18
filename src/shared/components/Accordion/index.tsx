@@ -12,7 +12,13 @@ const CustomAccordion = ({ list }: Props) => {
 
     const toggleState = (eventKey: number) => {
         const arr = [...toggle];
-        arr[eventKey] = !arr[eventKey];
+        arr.forEach((item, index) => {
+            if(eventKey === index) {
+                arr[index] = !arr[index];
+            } else {
+                arr[index] = false;
+            }
+        })
         setToggle(arr);
     }
     return (

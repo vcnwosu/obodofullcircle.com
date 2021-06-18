@@ -19,6 +19,26 @@
     }
 }
 
+@mixin btn-attach($btn-bg, $btn-text) {
+    padding:  12px 25px;
+    color: $btn-text;
+    background-color: $btn-bg;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    font-size: 12px;
+    &:active,
+    &:hover {
+        color: $btn-text!important;
+        background-color: $btn-bg !important;
+        border-color: $btn-bg !important;
+    }
+    &:focus {
+        background: $btn-bg;
+        box-shadow: none!important;
+        outline: none!important;
+    }
+}
+
 @mixin btn-outline($btn-bg, $btn-text) {
     padding:  15px 30px;
     color: $btn-text;

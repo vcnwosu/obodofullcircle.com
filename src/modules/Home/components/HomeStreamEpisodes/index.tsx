@@ -1,6 +1,6 @@
 import { CustomButton } from "../../../../shared/components/Button";
 import Arrow from '../../../../assets/images/arrow.svg';
-import Image from '../../../../assets/images/streamEpisodeImage.svg';
+import Image from '../../../../assets/images/streamEpisodeImage.png';
 import BorderImage from '../../../../assets/images/borderDesign.svg';
 import './homeStreamEpisodes.scss'
 
