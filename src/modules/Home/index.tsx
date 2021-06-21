@@ -4,6 +4,9 @@ import HomeStreamEpisodes from "./components/HomeStreamEpisodes";
 import HomeShopResources from "./components/HomeShopResources";
 import HomeWhyIgbo from "./components/HomeWhyIgbo";
 import LanguageSelector from "./components/LanguageSelector";
+import HomeStore from "./components/HomeStore";
+import HomeTeaching from "./components/HomeTeaching";
+import HomeTestimonials from "./components/HomeTestimonials";
 
 const Home = () => {
     return (
@@ -14,6 +17,9 @@ const Home = () => {
             <HomeStreamEpisodes />
             <HomeWhyIgbo />
             <HomeShopResources />
+            <HomeTestimonials />
+            <HomeStore />
+            <HomeTeaching />
         </div>
     )
 }

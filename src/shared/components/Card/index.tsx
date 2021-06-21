@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardImage from '../../../assets/images/cardLogo.svg';
 import './card.scss';
@@ -10,11 +10,18 @@ interface Props {
 }
 const CustomCard = ({ title, text, available }: Props) => {
 
-    const mouseOver = (e: React.MouseEvent) => {
-        console.log(e)
+    const [hovered, setHovered] = useState(false);
+
+    const mouseEnter = (e: React.MouseEvent) => {
+        setHovered(true);
     }
+
+    const mouseLeave = (e: React.MouseEvent) => {
+        setHovered(false);
+    }
+
     return (
-        <Card onMouseOver={mouseOver}>
+        <Card onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <div className="card-image">
                 <img src={CardImage} alt="cardImg" />
             </div>
@@ -22,9 +29,11 @@ const CustomCard = ({ title, text, available }: Props) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{text}</Card.Text>
             </Card.Body>
-            <div className="coming-soon">
-                <h3>Coming Soon</h3>
-            </div>
+            {hovered && !available &&
+                <div className="coming-soon">
+                    <h3>Coming Soon</h3>
+                </div>
+            }
         </Card>
     )
 }
