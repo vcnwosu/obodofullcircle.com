@@ -4,7 +4,7 @@ import { languageData } from './languageData';
 
 const CustomCarousel = () => {
     return (
-        <Carousel interval={null}>
+        <Carousel interval={null} indicators={false}>
             {languageData.map((item, index) => (
                 <Carousel.Item key={index}>
                 <div className="main-container">

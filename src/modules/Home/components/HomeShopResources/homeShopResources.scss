@@ -12,6 +12,7 @@
 
 .resources-div p {
     color: $bg-color;
+    font-family: '$font-museo-700';
 }
 
 .resources-div .card-title {
@@ -21,6 +22,7 @@
 .resources-div .card-text {
     color: $white;
     font-size: 14px;
+    font-family: '$font-museo-regular';
 }
 
 .resources-div .card-body {

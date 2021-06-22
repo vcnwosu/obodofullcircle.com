@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Accordion, Card } from "react-bootstrap";
-import { AccordionType } from "../../../modules/Home/components/HomeWhyIgbo";
+import { AccordionType } from "../../../modules/Home/components/HomeWhyObodo";
 import CustomToggle from "./CustomToggle";
 
 interface Props {

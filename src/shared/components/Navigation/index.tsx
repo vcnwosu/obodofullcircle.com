@@ -21,17 +21,14 @@ interface Props {
 const Navigation = ({ list, type }: Props) => {
     return (
         <>
-            <Navbar expand="lg">
+            {type === 'header' ? (<Navbar expand="lg">
                 {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        style={type === 'header' ? { flexDirection: 'row' } : { flexDirection: 'column' }}
-                        navbarScroll
-                    >
+                    <Nav navbarScroll>
                         {list.map(item => (
                             item.isDropdown ?
-                                (<NavDropdown style={type === 'header' ? { margin: '10px' } : {}} title={item.text} id="navbarScrollingDropdown">
+                                (<NavDropdown style={{ margin: '10px' }} title={item.text} id="navbarScrollingDropdown">
                                     {item.dropdownItems?.map(nav => (
                                         <NavDropdown.Item>
                                             <Link to={nav}>{nav}</Link>
@@ -39,13 +36,24 @@ const Navigation = ({ list, type }: Props) => {
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link style={type === 'header' ? { margin: '10px' } : {marginBottom: '10px'}}>
+                                (<Nav.Link style={{ margin: '10px' }}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+            </Navbar>)
+                :
+                (<Navbar expand="lg">
+                    <Nav className="flex-column">
+                        {list.map(item => (
+                            <Nav.Link style={{ marginBottom: '10px' }}>
+                                <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
+                            </Nav.Link>))
+                        }
+                    </Nav>
+                </Navbar>)
+            }
         </>
     )
 }

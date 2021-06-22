@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: '$font-semi-bold';
+    src: url('../fonts/HKGrotesk-SemiBold.otf');
+}
+
+@font-face {
     font-family: '$font-light';
     src: url('../fonts/HKGrotesk-Light.otf');
 }
@@ -26,4 +31,14 @@
 @font-face {
     font-family: '$font-regular';
     src: url('../fonts/HKGrotesk-Regular.otf');
+}
+
+@font-face {
+    font-family: '$font-museo-regular';
+    src: url('../fonts/Museo300-Regular.woff');
+}
+
+@font-face {
+    font-family: '$font-museo-700';
+    src: url('../fonts/Museo700-Regular.woff');
 }

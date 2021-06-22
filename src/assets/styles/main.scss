@@ -4,7 +4,10 @@
 @import 'fonts';
 
 .wrapper {
-    padding: 0 120px;
+    padding: 0 20px;
+    @media screen and (min-width: 767px) {
+        padding: 0 120px;
+    }
 }
 
 a:hover {
