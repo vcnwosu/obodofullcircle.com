@@ -1,0 +1,12 @@
+@import '../../../../../../assets/styles/variables';
+
+.videotestimonial-div {
+    width: 350px;
+    background-color: $white;
+    > div {
+        width: 350px !important;
+    }
+    .controls-div {
+        padding: 10px;
+    }
+}

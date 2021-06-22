@@ -39,7 +39,7 @@ const Navigation = ({ list, type }: Props) => {
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link style={type === 'header' ? { margin: '10px' } : {}}>
+                                (<Nav.Link style={type === 'header' ? { margin: '10px' } : {marginBottom: '10px'}}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}

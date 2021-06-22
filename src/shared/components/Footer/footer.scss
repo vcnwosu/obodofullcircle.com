@@ -1,42 +1,60 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/fonts';
+
 footer {
-    background-color: #0D0A3A;
-    height: 612px;
+    background-color: $bg-color;
+    height: 500px;
     position: relative;
     padding: 0 120px;
-    display: flex;
+    justify-content: space-evenly;
     .logo {
-        position: absolute;
-        margin-top: 164px;
+        // position: absolute;
+        // margin-top: 164px;
     }
     .navbar, .nav-link{
         padding: 0 !important;
+    }
+    .store-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        img {
+            height: 90px;
+        }
+    }
+    .social-links {
+        img {
+            margin: 0 15px;
+        }
     }
 }
 
 .footer-container {
     display: flex;
-    position: absolute;
-    top: 164px;
-    left: 587px;
+    gap: 2rem;
     .footer-nav {
         padding: 10px;
         h3 {
             font-size: 18px;
-            color: #06D6A0;
-            font-weight: bold;
+            color: $primary-color;
+            font-family: '$font-bold';
+        }
+        .nav-link {
+            font-size: 16px !important;
+            font-family: '$font-regular';
         }
     }
 }
 
 .copyright {
-    background-color: #06D6A0;
-    height: 63px;
+    background-color: $primary-color;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     p {
         font-size: 14px;
-        font-weight: lighter;
+        font-family: '$font-light';
         color: #fff;
     }
 }

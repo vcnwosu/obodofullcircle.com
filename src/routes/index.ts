@@ -35,7 +35,7 @@ const signup: Route = {
     component: Signup
 }
 
-const episodes: Route = {
+export const episodes: Route = {
     path: '/episodes',
     exact: true,
     isProtected: false,

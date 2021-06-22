@@ -7,10 +7,13 @@ interface Props {
     variant: string;
     className?: string;
     onClick?: () => void;
+    icon?: string
 }
 
-export const CustomButton = ({text, type, variant, className, ...rest}: Props) => {
+export const CustomButton = ({text, type, variant, className, icon, ...rest}: Props) => {
     return (
-        <Button className={className} type={type} variant={variant} {...rest}>{text}</Button>
+        <Button className={className} type={type} variant={variant} {...rest}>{text}
+            {icon &&  <img className="ml-4" src={icon} alt="icon" />}
+        </Button>
     )
 }

@@ -19,6 +19,18 @@ p {
     font-family: '$font-museo';
 }
 
+.bg-green {
+    background-color: $primary-color
+}
+
+.bg-blue {
+    background-color: $bg-color;
+}
+
+.bg-light {
+    background-color: $bg-color-2
+}
+
 .btn-primary {
     @include btn($primary-color, $white);
     font-family: '$font-museo';
@@ -26,5 +38,15 @@ p {
 
 .btn-secondary {
     @include btn-outline($white, $primary-color);
+    font-family: '$font-museo';
+}
+
+.btn-toggle {
+    @include btn-icon($primary-color, $white);
+    font-family: '$font-museo';
+}
+
+.btn-attached {
+    @include btn-attach($primary-color, $white);
     font-family: '$font-museo';
 }

@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/variables';
+
+.div-container {
+    background-color: $bg-color;
+}
+.wrapperExchange {
+    position: relative;
+}
+h1.heading {
+    font-size: 4rem !important;
+    color: $white;
+}
+h1.shadow {
+    font-size: 5rem !important;
+    color: $text-shadow-1;
+    position: absolute;
+    top: -80px;
+    left: 40px;
+}
+
+p.text {
+    color: $white;
+}

@@ -1,0 +1,33 @@
+@import '../../../../assets/styles/variables';
+
+.bg-green h2 {
+    color: $white;
+}
+
+.bg-green p {
+    color: $white;
+}
+
+.accordion-div {
+    width: 50%;
+}
+
+.accordion .card {
+    background: transparent;
+    border: none;
+    .card-header {
+        background: transparent;
+        border: none;
+        h5 {
+            color: $white;
+        }
+    }
+    .card-body {
+        color: $white;
+    }
+    hr {
+        background-color: $white;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}

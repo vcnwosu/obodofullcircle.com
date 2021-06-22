@@ -1,0 +1,36 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+
+.card-div {
+    gap: 3rem;
+}
+
+.resources-div h1 {
+    color: $bg-color;
+    font-family: '$font-bold';
+}
+
+.resources-div p {
+    color: $bg-color;
+}
+
+.resources-div .card-title {
+    font-family: '$font-bold';
+}
+
+.resources-div .card-text {
+    color: $white;
+    font-size: 14px;
+}
+
+.resources-div .card-body {
+    padding-bottom: 4rem;
+}
+
+.resources-div img {
+    height: 60px;
+}
+
+.resources-div .card {
+    border-radius: 0.5rem !important;
+}
