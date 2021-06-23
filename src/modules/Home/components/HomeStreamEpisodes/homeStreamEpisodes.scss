@@ -4,7 +4,7 @@
     position: relative;
     flex-direction: column;
     gap: 2rem;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
         flex-direction: row;
         gap: 0;
     }
@@ -13,10 +13,16 @@
     }
     > div {
         margin-left: 2rem;
+        @media screen and (min-width: 769px) {
+            margin-left: 0;
+        }
     }
     img.bgImage {
         height: 300px;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
+            height: 480px;
+        }
+        @media screen and (min-width: 1025px) {
             height: 600px;
         }
     }
@@ -24,7 +30,10 @@
 
 h1.head {
     font-size: 2rem !important;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
+        font-size: 3rem !important;
+    }
+    @media screen and (min-width: 1025px) {
         font-size: 4rem !important;
     }
 }
@@ -36,7 +45,12 @@ h1.shadowText {
     top: -32px;
     left: 40px;
     opacity: 0.04;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
+        font-size: 3.3rem !important;
+        top: 95px;
+        left: 20px;
+    }
+    @media screen and (min-width: 1025px) {
         font-size: 5rem !important;
         top: 140px;
         left: 120px;
@@ -51,7 +65,7 @@ h1.shadowText {
 .top-border {
     height: 40px;
     margin-left: -506px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
         height: 65px;
         margin-left: -320px;
     }
@@ -60,7 +74,7 @@ h1.shadowText {
 .bottom-border {
     height: 40px;
     margin-left: 120px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
         height: 65px;
         margin-left: 590px;
     }

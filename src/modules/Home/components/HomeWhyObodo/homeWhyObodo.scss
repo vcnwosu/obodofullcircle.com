@@ -3,13 +3,13 @@
 
 .bg-green .wrapperObodo {
     flex-direction: column;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
        flex-direction: row;
     }
     img {
         height: auto;
         width: 100%;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
             height: 500px;
         }
     }
@@ -28,8 +28,10 @@
 
 .accordion-div {
     width: 100%;
-    @media screen and (min-width: 767px) {
+    margin-top: 1rem;
+    @media screen and (min-width: 769px) {
         width: 50%;
+        margin-top: 3rem;
     }
 }
 

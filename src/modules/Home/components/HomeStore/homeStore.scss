@@ -5,31 +5,31 @@
   > div {
     flex-direction: column;
     gap: 2rem;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
       flex-direction: row;
     }
     > div.text-div {
       text-align: center;
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 769px) {
         text-align: left;
       }
       div {
           justify-content: center;
-          @media screen and (min-width: 767px) {
+          @media screen and (min-width: 769px) {
             justify-content: flex-start;          
         }
       }
     }
     div > img {
       height: 350px;
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 769px) {
         height: 600px;
       }
     }
   }
   .store-img {
     height: 50px;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
       height: 60px;
     }
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -20,16 +20,25 @@ interface Props {
 }
 
 const Navigation = ({ list, type }: Props) => {
+
+    const navbarRef = useRef<HTMLDivElement>();
+    const buttonRef = useRef< HTMLButtonElement | null | any>();
+
+    const hideShowClass = () => {
+        buttonRef.current?.classList.add('collapsed');
+        navbarRef.current?.classList.remove('show');
+    }
+
     return (
         <>
             {type === 'header' ? (<Navbar expand="lg">
                 <Navbar.Brand>
-                    <Link to="/">
+                    <Link to="/" onClick={hideShowClass}>
                         <img src={Logo} alt="logo" />
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Toggle ref={buttonRef} aria-controls="navbarScroll" />
+                <Navbar.Collapse ref={navbarRef} id="navbarScroll">
                     <Nav navbarScroll>
                         {list.map(item => (
                             item.isDropdown ?
@@ -41,7 +50,7 @@ const Navigation = ({ list, type }: Props) => {
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link style={{ margin: '10px' }}>
+                                (<Nav.Link style={{ margin: '10px' }} onClick={hideShowClass}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}

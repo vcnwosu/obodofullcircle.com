@@ -70,17 +70,16 @@ const HomeTestimonials = () => {
 
     useEffect(() => {
         windowWidth = window.innerWidth;
-        if(windowWidth < 768) {
+        if(windowWidth < 769) {
             distance = 316;
         } else {
             distance = 400
         }
         blockWidth = ref.current?.offsetWidth ? ref.current?.offsetWidth : 0;
-        console.log(windowWidth, blockWidth)
     }, [])
 
     const nextData = () => {
-        if(windowWidth < 768) {
+        if(windowWidth < 769) {
             if(scrollDistance > (testimonialArray.length - 1) * 300) {
                 return
             }

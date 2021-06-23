@@ -3,12 +3,12 @@
 .videotestimonial-div {
     width: 300px;
     background-color: $white;
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 769px) {
         min-width: 350px;
     }
     > div {
         width: 300px !important;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
             width: 350px !important;
         }
     }

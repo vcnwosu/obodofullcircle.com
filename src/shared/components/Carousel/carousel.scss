@@ -32,7 +32,7 @@
     padding: 12px 8px;
     img {
         height: 25px;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
             height: auto;
         }
     }
@@ -40,7 +40,7 @@
         font-family: '$font-medium';
         color: $text-color;
         font-size: 12px;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
             font-size: 16px;
         }
     }

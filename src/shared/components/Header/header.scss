@@ -2,22 +2,18 @@
 
 header {
     background-color: #0D0A3A;
-    // height: 110px;
     display: grid !important;
     .header-container {
-        // display: flex !important;
-        // align-items: center;
-        // justify-content: space-between;
         img {
             height: 60px;
         }
     }
     .navbar-toggler {
-        background-color: $white;
+        background-color: $primary-color;
     }
     .navbar-collapse {
         justify-content: flex-end;
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 769px) {
             justify-content: flex-end;
         }
     }
