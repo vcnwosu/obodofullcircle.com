@@ -19,7 +19,7 @@ const HomeLearnIgbo = () => {
                 <div>
                     <h1>Learn Igbo languages with Obodo</h1>
                     <p className="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam et deleniti, aliquam vel ad id provident magni alias, necessitatibus ut possimus. Illum quos magnam quae voluptatibus inventore, expedita velit cumque.</p>
-                    <div>
+                    <div className="d-flex">
                         <CustomButton type="button" text="Stream Episodes" variant="primary" onClick={() => navigateToEpisodes()}/>
                         <CustomButton className="ml-3" type="button" text="Exchange Program" variant="secondary" onClick={() => navigateToExchange()} />
                     </div>

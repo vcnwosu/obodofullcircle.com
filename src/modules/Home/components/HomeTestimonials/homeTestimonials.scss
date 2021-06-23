@@ -4,7 +4,10 @@
     background-image: url('../../../../assets/images/homeTestimonialsBG.png');
     background-position: center;
     .testimonial-wrapper {
-        padding: 0 0 0 200px;
+        padding: 0 0 0 20px;
+        @media screen and (min-width: 767px) {
+            padding: 0 0 0 200px;
+        }
     }
     h2 {
         color: $white;

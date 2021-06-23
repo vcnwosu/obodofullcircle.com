@@ -33,5 +33,19 @@ export const languageData: Language[] = [
         languageFifth: 'German',
         srcSixth: Italy,
         languageSixth: 'Italian'
+    },
+    {
+        srcFirst: India,
+        languageFirst: 'Hindi',
+        srcSecond: UnitedKingdom,
+        languageSecond: 'English',
+        srcThird: Nigeria,
+        languageThird: 'IGBO',
+        srcFourth: Spain,
+        languageFourth: 'Spanish',
+        srcFifth: Germany,
+        languageFifth: 'German',
+        srcSixth: Italy,
+        languageSixth: 'Italian'
     }
 ]

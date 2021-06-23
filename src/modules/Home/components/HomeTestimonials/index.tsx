@@ -61,27 +61,42 @@ const testimonialArray: Testimonial[] = [
 ]
 
 let blockWidth: number;
+let windowWidth: number;
+let distance: number;
 const HomeTestimonials = () => {
 
     const [scrollDistance, setScrollDistance] = useState(0);
     const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
+        windowWidth = window.innerWidth;
+        if(windowWidth < 768) {
+            distance = 316;
+        } else {
+            distance = 400
+        }
         blockWidth = ref.current?.offsetWidth ? ref.current?.offsetWidth : 0;
+        console.log(windowWidth, blockWidth)
     }, [])
 
     const nextData = () => {
-        if(scrollDistance > blockWidth + 400) {
-            return
+        if(windowWidth < 768) {
+            if(scrollDistance > (testimonialArray.length - 1) * 300) {
+                return
+            }
+        } else {
+            if(scrollDistance > blockWidth) {
+                return
+            }
         }
-        setScrollDistance(scrollDistance + 400);
+        setScrollDistance(scrollDistance + distance);
     }
 
     const previousData = () => {
-        if(scrollDistance < 400) {
+        if(scrollDistance < distance) {
             return
         }
-        setScrollDistance(scrollDistance - 400);
+        setScrollDistance(scrollDistance - distance);
     }
     return (
         <div className="testimonials-div pt-5 pb-5">

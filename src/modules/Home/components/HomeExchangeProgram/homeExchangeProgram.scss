@@ -3,20 +3,43 @@
 
 .div-container {
     background-color: $bg-color;
+    > div {
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 2rem;
+        @media screen and (min-width: 767px) {
+            flex-direction: row;
+        }
+    }
+    img.bgImage {
+        height: 400px;
+        @media screen and (min-width: 767px) {
+            height: 600px;
+        }
+    }
 }
 .wrapperExchange {
     position: relative;
+    padding-bottom: 2rem;
 }
 h1.heading {
-    font-size: 4rem !important;
+    font-size: 2rem !important;
     color: $white;
+    @media screen and (min-width: 767px) {
+        font-size: 4rem !important;
+    }
 }
 h1.shadow {
-    font-size: 5rem !important;
+    font-size: 2.2rem !important;
     color: $text-shadow-1;
     position: absolute;
-    top: -80px;
-    left: 40px;
+    top: -27px;
+    left: 6px;
+    @media screen and (min-width: 767px) {
+        font-size: 5rem !important;
+        top: -80px;
+        left: 40px;
+    }
 }
 
 p.text {

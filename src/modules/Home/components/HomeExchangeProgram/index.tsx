@@ -8,7 +8,7 @@ const HomeExchangeProgram = () => {
         <div className="div-container">
             <div className="wrapper d-flex align-items-center justify-content-between">
                 <div>
-                    <img src={Image} alt="exchange" height="600px" />
+                    <img className="bgImage" src={Image} alt="exchange" />
                 </div>
                 <div className="wrapper wrapperExchange">
                     <h1 className="shadow">Exchange Program</h1>

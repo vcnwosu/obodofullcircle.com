@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import styles from './navigation.module.scss';
 import './navigation.scss';
+import Logo from '../../../assets/images/logo.svg';
 
 export interface Navs {
     path: string;
@@ -22,7 +23,11 @@ const Navigation = ({ list, type }: Props) => {
     return (
         <>
             {type === 'header' ? (<Navbar expand="lg">
-                {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
+                <Navbar.Brand>
+                    <Link to="/">
+                        <img src={Logo} alt="logo" />
+                    </Link>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav navbarScroll>
@@ -43,16 +48,24 @@ const Navigation = ({ list, type }: Props) => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>)
-                :
-                (<Navbar expand="lg">
-                    <Nav className="flex-column">
-                        {list.map(item => (
-                            <Nav.Link style={{ marginBottom: '10px' }}>
-                                <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
-                            </Nav.Link>))
-                        }
-                    </Nav>
-                </Navbar>)
+                : type === 'footer' ?
+                    (<Navbar expand="lg">
+                        <Nav className="flex-column">
+                            {list.map(item => (
+                                <Nav.Link style={{ marginBottom: '10px' }}>
+                                    <NavLink to={item.path} >{item.text}</NavLink>
+                                </Nav.Link>))
+                            }
+                        </Nav>
+                    </Navbar>) : (<Navbar expand="lg">
+                        <Nav>
+                            {list.map(item => (
+                                <Nav.Link style={{ margin: '10px' }}>
+                                    <NavLink to={item.path} >{item.text}</NavLink>
+                                </Nav.Link>))
+                            }
+                        </Nav>
+                    </Navbar>)
             }
         </>
     )

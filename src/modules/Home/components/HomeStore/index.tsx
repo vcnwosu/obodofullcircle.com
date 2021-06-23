@@ -7,16 +7,16 @@ const HomeStore = () => {
     return (
         <div className="store-div pt-5 pb-5">
             <div className=" wrapper d-flex justify-content-between align-items-center">
-                <div>
+                <div className="text-div">
                     <h1 className="head">Learn anywhere, anytime</h1>
                     <p>Download the app today and start learning language for your everyday life</p>
-                    <div className="mt-5">
+                    <div className="d-flex mt-5">
                         <img className="store-img mr-3" src={GooglePlay} alt="googlePlay" />
                         <img className="store-img" src={AppStore} alt="appStore" />
                     </div>
                 </div>
                 <div>
-                    <img src={Image} alt="storeImage" height="600px" />
+                    <img src={Image} alt="storeImage" />
                 </div>
             </div>
         </div>
