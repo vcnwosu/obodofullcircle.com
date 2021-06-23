@@ -2,7 +2,7 @@ import HomeLearnIgbo from "./components/HomeLearnIgbo";
 import HomeExchangeProgram from "./components/HomeExchangeProgram";
 import HomeStreamEpisodes from "./components/HomeStreamEpisodes";
 import HomeShopResources from "./components/HomeShopResources";
-import HomeWhyIgbo from "./components/HomeWhyIgbo";
+import HomeWhyObodo from "./components/HomeWhyObodo";
 import LanguageSelector from "./components/LanguageSelector";
 import HomeStore from "./components/HomeStore";
 import HomeTeaching from "./components/HomeTeaching";
@@ -15,7 +15,7 @@ const Home = () => {
             <LanguageSelector />
             <HomeExchangeProgram />
             <HomeStreamEpisodes />
-            <HomeWhyIgbo />
+            <HomeWhyObodo />
             <HomeShopResources />
             <HomeTestimonials />
             <HomeStore />

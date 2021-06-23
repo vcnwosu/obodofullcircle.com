@@ -6,10 +6,12 @@ interface Props {
     userImage: string | undefined;
     userName: string;
 }
-const TextTestimonial = ({data, userImage, userName}: Props) => {
+const TextTestimonial = ({ data, userImage, userName }: Props) => {
     return (
-        <div className="testimonial-div">
-            <img src={Logo} alt="Logo" />
+        <div className="testimonial-div d-flex flex-column justify-content-between">
+            <div>
+                <img src={Logo} alt="Logo" />
+            </div>
             <p>{data}</p>
             <div className="d-flex align-items-center user-div">
                 <img src={userImage} alt="userImage" />

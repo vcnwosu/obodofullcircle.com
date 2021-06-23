@@ -1,6 +1,6 @@
 import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
-import './homeWhyIgbo.scss';
+import './homeWhyObodo.scss';
 
 export interface AccordionType {
     title: string;
@@ -34,7 +34,7 @@ const HomeWhyIgbo = () => {
     ]
     return (
         <div className="bg-green pt-5 pb-5">
-            <h2 className="text-center">Why Igbo</h2>
+            <h2 className="text-center">Why Obodo</h2>
             <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p>
             <div className="wrapper d-flex justify-content-between mt-5">
                 <div className="accordion-div mt-5">

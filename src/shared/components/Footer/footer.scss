@@ -7,10 +7,6 @@ footer {
     position: relative;
     padding: 0 120px;
     justify-content: space-evenly;
-    .logo {
-        // position: absolute;
-        // margin-top: 164px;
-    }
     .navbar, .nav-link{
         padding: 0 !important;
     }
@@ -24,7 +20,7 @@ footer {
     }
     .social-links {
         img {
-            margin: 0 15px;
+            margin: 0 1.25em;
         }
     }
 }

@@ -25,7 +25,7 @@ const HomeLearnIgbo = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={TutorImg} alt="tutor" height="600px" />
+                    <img src={TutorImg} alt="tutor" />
                 </div>
             </div>
         </div>

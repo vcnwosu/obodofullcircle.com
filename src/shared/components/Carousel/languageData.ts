@@ -1,7 +1,7 @@
 import India from '../../../assets/images/India.svg';
 import Germany from '../../../assets/images/Germany.svg';
 import Italy from '../../../assets/images/Italy.svg';
-import Mexico from '../../../assets/images/Mexico.svg';
+import Nigeria from '../../../assets/images/Nigeria.png';
 import Spain from '../../../assets/images/Spain.svg';
 import UnitedKingdom from '../../../assets/images/UnitedKingdom.svg';
 
@@ -25,7 +25,7 @@ export const languageData: Language[] = [
         languageFirst: 'Hindi',
         srcSecond: UnitedKingdom,
         languageSecond: 'English',
-        srcThird: Mexico,
+        srcThird: Nigeria,
         languageThird: 'IGBO',
         srcFourth: Spain,
         languageFourth: 'Spanish',
