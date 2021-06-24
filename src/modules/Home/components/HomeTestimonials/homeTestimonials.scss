@@ -4,7 +4,10 @@
     background-image: url('../../../../assets/images/homeTestimonialsBG.png');
     background-position: center;
     .testimonial-wrapper {
-        padding: 0 0 0 200px;
+        padding: 0 0 0 20px;
+        @media screen and (min-width: 769px) {
+            padding: 0 0 0 200px;
+        }
     }
     h2 {
         color: $white;
@@ -28,7 +31,7 @@
     scrollbar-width: none; /* Firefox */
     > div {
         gap: 1rem;
-        transition: 1s transform ease-in-out;
+        transition: 0.5s transform ease-in-out;
     }
     &::-webkit-scrollbar {
         display: none;

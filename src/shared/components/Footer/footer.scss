@@ -3,31 +3,69 @@
 
 footer {
     background-color: $bg-color;
-    height: 500px;
+    min-height: 500px;
     position: relative;
-    padding: 0 120px;
+    padding: 20px;
     justify-content: space-evenly;
+    @media screen and (min-width: 769px) {
+        padding: 0 40px;
+    }
+    @media screen and (min-width: 1025px) {
+        padding: 0 120px;
+    }
+    > div {
+        flex-direction: column;
+        gap: 2rem;
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+        }
+        img {
+            height: 60px;
+        }
+    }
     .navbar, .nav-link{
         padding: 0 !important;
     }
     .store-icons {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-around;
+        @media screen and (min-width: 769px) {
+            flex-direction: column;
+        }
         img {
-            height: 90px;
+            height: 55px;
+            @media screen and (min-width: 769px) {
+                height: 70px;
+            }
+            @media screen and (min-width: 1025px) {
+                height: 90px;
+            }
         }
     }
     .social-links {
         img {
-            margin: 0 1.25em;
+            margin: 0 0.5em;
+            height: 30px;
+            @media screen and (min-width: 769px) {
+                height: 45px;
+                margin: 0 0.5em;
+            }
+            @media screen and (min-width: 1025px) {
+                height: 45px;
+                margin: 0 1.25em;
+            }
         }
     }
 }
 
 .footer-container {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    @media screen and (min-width: 769px) {
+        flex-direction: row;
+        gap: 2rem;
+    }
     .footer-nav {
         padding: 10px;
         h3 {

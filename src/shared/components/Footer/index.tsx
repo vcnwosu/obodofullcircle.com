@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
                 <div className="d-flex justify-content-between">
                     <div className="links">
-                        <Navigation list={footerNavList} type="header"/>
+                        <Navigation list={footerNavList} type="footerBottom"/>
                     </div>
                     <div className="social-links">
                         <img src={Facebook} alt="facebook" />

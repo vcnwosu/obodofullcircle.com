@@ -1,7 +1,5 @@
 import Navigation, { Navs } from '../Navigation';
 import './header.scss';
-import Logo from '../../../assets/images/logo.svg';
-import { Link } from 'react-router-dom';
 
 const navList: Navs[] = [
     {
@@ -31,14 +29,7 @@ const Header = () => {
     return (
         <header>
             <div className="wrapper header-container">
-                <div className="logo">
-                    <Link to="/">
-                        <img src={Logo} alt="logo" height="60px" />
-                    </Link>
-                </div>
-                <div>
-                    <Navigation list={navList} type="header" />
-                </div>
+                <Navigation list={navList} type="header" />
             </div>
 
         </header>

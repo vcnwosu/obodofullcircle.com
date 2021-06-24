@@ -2,8 +2,17 @@
     height: 500px;
     background-image: url('../../../../assets/images/homeTeachingBG.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 350%;
+    @media screen and (min-width: 769px) {
+        background-size: 140%;
+    }
+    @media screen and (min-width: 1025px) {
+        background-size: cover;
+    }
     .head {
-        font-size: 3rem !important;
+        font-size: 2rem !important;
+        @media screen and (min-width: 769px) {
+            font-size: 3rem !important;
+        }
     }
 }

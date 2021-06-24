@@ -4,9 +4,6 @@
     text-align: center;
 }
 
-.carousel-indicators {
-    // display: none !important;
-}
 
 .main-container {
     display: flex !important;
@@ -28,11 +25,24 @@
 .carousel-control-prev, .carousel-control-next {
     width: auto !important;
 }
+.carousel.slide {
+    padding: 0 10px;
+}
 .language-container {
-    padding: 12px 20px;
+    padding: 12px 8px;
+    img {
+        height: 25px;
+        @media screen and (min-width: 769px) {
+            height: auto;
+        }
+    }
     p {
         font-family: '$font-medium';
         color: $text-color;
+        font-size: 12px;
+        @media screen and (min-width: 769px) {
+            font-size: 16px;
+        }
     }
 }
 

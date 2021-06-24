@@ -1,10 +1,11 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import styles from './navigation.module.scss';
 import './navigation.scss';
+import Logo from '../../../assets/images/logo.svg';
 
 export interface Navs {
     path: string;
@@ -19,12 +20,25 @@ interface Props {
 }
 
 const Navigation = ({ list, type }: Props) => {
+
+    const navbarRef = useRef<HTMLDivElement>();
+    const buttonRef = useRef< HTMLButtonElement | null | any>();
+
+    const hideShowClass = () => {
+        buttonRef.current?.classList.add('collapsed');
+        navbarRef.current?.classList.remove('show');
+    }
+
     return (
         <>
             {type === 'header' ? (<Navbar expand="lg">
-                {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Brand>
+                    <Link to="/" onClick={hideShowClass}>
+                        <img src={Logo} alt="logo" />
+                    </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle ref={buttonRef} aria-controls="navbarScroll" />
+                <Navbar.Collapse ref={navbarRef} id="navbarScroll">
                     <Nav navbarScroll>
                         {list.map(item => (
                             item.isDropdown ?
@@ -36,23 +50,31 @@ const Navigation = ({ list, type }: Props) => {
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link style={{ margin: '10px' }}>
+                                (<Nav.Link style={{ margin: '10px' }} onClick={hideShowClass}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>)
-                :
-                (<Navbar expand="lg">
-                    <Nav className="flex-column">
-                        {list.map(item => (
-                            <Nav.Link style={{ marginBottom: '10px' }}>
-                                <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
-                            </Nav.Link>))
-                        }
-                    </Nav>
-                </Navbar>)
+                : type === 'footer' ?
+                    (<Navbar expand="lg">
+                        <Nav className="flex-column">
+                            {list.map(item => (
+                                <Nav.Link style={{ marginBottom: '10px' }}>
+                                    <NavLink to={item.path} >{item.text}</NavLink>
+                                </Nav.Link>))
+                            }
+                        </Nav>
+                    </Navbar>) : (<Navbar expand="lg">
+                        <Nav>
+                            {list.map(item => (
+                                <Nav.Link style={{ margin: '10px' }}>
+                                    <NavLink to={item.path} >{item.text}</NavLink>
+                                </Nav.Link>))
+                            }
+                        </Nav>
+                    </Navbar>)
             }
         </>
     )

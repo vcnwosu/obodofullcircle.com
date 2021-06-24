@@ -1,13 +1,39 @@
 .store-div {
-    background-image: url('../../../../assets/images/learn_anywhere.png');
-    background-size: contain;
-    // h1.head {
-    //     font-size: 4rem;
-    // }
-    .store-img {
-        height: 60px;
+  background-image: url("../../../../assets/images/learn_anywhere.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  > div {
+    flex-direction: column;
+    gap: 2rem;
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
     }
-    p {
-        font-family: '$font-museo-700';
+    > div.text-div {
+      text-align: center;
+      @media screen and (min-width: 769px) {
+        text-align: left;
+      }
+      div {
+          justify-content: center;
+          @media screen and (min-width: 769px) {
+            justify-content: flex-start;          
+        }
+      }
     }
+    div > img {
+      height: 350px;
+      @media screen and (min-width: 769px) {
+        height: 600px;
+      }
+    }
+  }
+  .store-img {
+    height: 50px;
+    @media screen and (min-width: 769px) {
+      height: 60px;
+    }
+  }
+  p {
+    font-family: "$font-museo-700";
+  }
 }

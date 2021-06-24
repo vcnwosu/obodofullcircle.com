@@ -2,10 +2,13 @@
 @import '../../../../../../assets/styles/fonts';
 
 .testimonial-div {
-  min-width: 350px;
+  min-width: 300px;
   background-color: $white;
   padding: 10px;
   height: 100%;
+  @media screen and (min-width: 769px) {
+    min-width: 350px;
+  }
   p {
     font-family: '$font-museo-regular';
   }

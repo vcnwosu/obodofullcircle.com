@@ -4,13 +4,33 @@
     background-color: $bg-color-2;
     background-image: url('../../../../assets/images/learnBackgournd.svg');
     background-repeat: no-repeat;
-    background-position-y: 510%;
+    background-position-y: 300%;
+    margin-top: 1rem;
+    @media screen and (min-width: 769px) {
+        margin-top: 0;
+        background-position-y: 250%;
+    }
     img {
-        height: 700px;
+        height: 350px;
+        @media screen and (min-width: 769px) {
+            height: 700px;
+        }
+    }
+    > div {
+        flex-direction: column;
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+        }
     }
 }
 
 h1 {
-    font-size: 5rem !important;
+    font-size: 2rem !important;
     color: $bg-color;
+    @media screen and (min-width: 769px) {
+        font-size: 3rem !important;
+    }
+    @media screen and (min-width: 1025px) {
+        font-size: 5rem !important;
+    }
 }
