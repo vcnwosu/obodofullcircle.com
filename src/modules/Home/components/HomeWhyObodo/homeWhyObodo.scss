@@ -1,15 +1,17 @@
 @import '../../../../assets/styles/variables';
 @import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
 
 .bg-green .wrapperObodo {
     flex-direction: column;
-    @media screen and (min-width: 769px) {
-       flex-direction: row;
+    @include breakpoint(small) {
+        flex-direction: row;
     }
     img {
         height: auto;
         width: 100%;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             height: 500px;
         }
     }
@@ -29,7 +31,7 @@
 .accordion-div {
     width: 100%;
     margin-top: 1rem;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         width: 50%;
         margin-top: 3rem;
     }

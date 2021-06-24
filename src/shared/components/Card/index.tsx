@@ -21,7 +21,7 @@ const CustomCard = ({ title, text, available }: Props) => {
     }
 
     return (
-        <Card onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+        <Card className="shop-card" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             <div className="card-image">
                 <img src={CardImage} alt="cardImg" />
             </div>

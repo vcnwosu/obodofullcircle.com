@@ -12,8 +12,10 @@ interface Props {
 
 export const CustomButton = ({text, type, variant, className, icon, ...rest}: Props) => {
     return (
-        <Button className={className} type={type} variant={variant} {...rest}>{text}
-            {icon &&  <img className="ml-4" src={icon} alt="icon" />}
+        <Button className={className} type={type} variant={variant} {...rest}>
+            {!icon && text}
+            {/* {icon &&  <img className="ml-4" src={icon} alt="icon" />} */}
+            {icon && <span>{text}</span>}
         </Button>
     )
 }

@@ -38,7 +38,7 @@ p {
 }
 
 .btn-primary {
-    @include btn($primary-color, $white);
+    @include btn($primary-color, $white, $hover-color);
     font-family: '$font-museo';
 }
 

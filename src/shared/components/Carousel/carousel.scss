@@ -1,5 +1,6 @@
 @import '../../../assets/styles/fonts';
 @import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
 .carousel-inner {
     text-align: center;
 }
@@ -30,9 +31,16 @@
 }
 .language-container {
     padding: 12px 8px;
+    transition: transform 0.5s ease-in-out;
+    @include breakpoint(small) {
+        padding: 12px 20px;
+    }
+    &:hover {
+        transform: scale(1.2);
+    }
     img {
         height: 25px;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             height: auto;
         }
     }
@@ -40,9 +48,14 @@
         font-family: '$font-medium';
         color: $text-color;
         font-size: 12px;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             font-size: 16px;
         }
+    }
+    &:hover {
+        background-color: #ECECF7;
+        border-radius: 0 0 5px 5px;
+        cursor: pointer;    
     }
 }
 

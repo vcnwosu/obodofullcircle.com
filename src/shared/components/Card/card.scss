@@ -1,9 +1,17 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixins';
 
-.card {
+.shop-card {
     background: $bg-color-3;
     flex: 1;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+    // &:hover ~ .coming-soon {
+    //     display: grid;
+    // }
 }
 
 .card-image {
@@ -27,6 +35,9 @@
     place-items: center;
     border-radius: 0.5rem;
     cursor: default;
+    @include breakpoint(small) {
+        // display: none;
+    }
     h3 {
         color: $white;
         font-family: '$font-bold';
