@@ -4,10 +4,11 @@ interface Props {
     children: string;
     eventKey: string;
     title: string;
+    styleClass: string | undefined;
     onToggle: () => void
 }
 
-const CustomToggle = ({ children, eventKey, title, onToggle}: Props) => {
+const CustomToggle = ({ children, eventKey, title, styleClass, onToggle}: Props) => {
     const decoratedOnClick = useAccordionToggle(eventKey, () =>
         onToggle()
     );
@@ -17,7 +18,7 @@ const CustomToggle = ({ children, eventKey, title, onToggle}: Props) => {
             <h5>{title}</h5>
             <button
                 type="button"
-                className="btn-toggle"
+                className={styleClass}
                 onClick={decoratedOnClick}
             >
                 {children}

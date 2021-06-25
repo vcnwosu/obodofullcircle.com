@@ -4,10 +4,11 @@ import { AccordionType } from "../../../modules/Home/components/HomeWhyObodo";
 import CustomToggle from "./CustomToggle";
 
 interface Props {
-    list: AccordionType[]
+    list: AccordionType[],
+    styleClass: string;
 }
 
-const CustomAccordion = ({ list }: Props) => {
+const CustomAccordion = ({ list, styleClass }: Props) => {
     const [toggle, setToggle] = useState([false, false, false, false]);
 
     const toggleState = (eventKey: number) => {
@@ -26,7 +27,7 @@ const CustomAccordion = ({ list }: Props) => {
             {list.map((item, index) => (
                 <Card key={index}>
                     <Card.Header>
-                        <CustomToggle eventKey={item.eventKey} title={item.title} onToggle={() => toggleState(+item.eventKey) }>{toggle[index] ? '-' : '+'}</CustomToggle>
+                        <CustomToggle eventKey={item.eventKey} title={item.title} styleClass={styleClass} onToggle={() => toggleState(+item.eventKey) }>{toggle[index] ? '-' : '+'}</CustomToggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey={item.eventKey}>
                         <Card.Body>{item.text}</Card.Body>

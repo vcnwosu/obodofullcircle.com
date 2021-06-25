@@ -25,8 +25,22 @@ const Navigation = ({ list, type }: Props) => {
     const buttonRef = useRef< HTMLButtonElement | null | any>();
 
     const hideShowClass = () => {
-        buttonRef.current?.classList.add('collapsed');
-        navbarRef.current?.classList.remove('show');
+        buttonRef.current?.classList.toggle('collapsed');
+        navbarRef.current?.classList.toggle('show');
+    }
+
+    const handleHamburger = () => {
+        // if(buttonRef.current?.classList.contains('collapsed')) {
+        //     buttonRef.current?.classList.remove('collapsed');
+        //     navbarRef.current?.classList.add('collapsing');
+        //     setTimeout(() => {
+        //         navbarRef.current?.classList.add('show')
+        //     }, 1000)
+        // } else {
+        //     buttonRef.current?.classList.add('collapsed');
+        // }
+        buttonRef.current?.classList.toggle('collapsed');
+        navbarRef.current?.classList.toggle('show');
     }
 
     return (
@@ -37,20 +51,20 @@ const Navigation = ({ list, type }: Props) => {
                         <img src={Logo} alt="logo" />
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle ref={buttonRef} aria-controls="navbarScroll" />
+                <Navbar.Toggle ref={buttonRef} onClick={handleHamburger} aria-controls="navbarScroll" />
                 <Navbar.Collapse ref={navbarRef} id="navbarScroll">
                     <Nav navbarScroll>
                         {list.map(item => (
                             item.isDropdown ?
-                                (<NavDropdown style={{ margin: '10px' }} title={item.text} id="navbarScrollingDropdown">
+                                (<NavDropdown key={item.text} style={{ margin: '10px' }} title={item.text} id="navbarScrollingDropdown">
                                     {item.dropdownItems?.map(nav => (
-                                        <NavDropdown.Item>
+                                        <NavDropdown.Item key={nav}>
                                             <Link to={nav}>{nav}</Link>
                                         </NavDropdown.Item>
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link style={{ margin: '10px' }} onClick={hideShowClass}>
+                                (<Nav.Link key={item.text} style={{ margin: '10px' }} onClick={hideShowClass}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}
@@ -61,7 +75,7 @@ const Navigation = ({ list, type }: Props) => {
                     (<Navbar expand="lg">
                         <Nav className="flex-column">
                             {list.map(item => (
-                                <Nav.Link style={{ marginBottom: '10px' }}>
+                                <Nav.Link key={item.text} style={{ marginBottom: '10px' }}>
                                     <NavLink to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>))
                             }
@@ -69,7 +83,7 @@ const Navigation = ({ list, type }: Props) => {
                     </Navbar>) : (<Navbar expand="lg">
                         <Nav>
                             {list.map(item => (
-                                <Nav.Link style={{ margin: '10px' }}>
+                                <Nav.Link key={item.text} style={{ margin: '10px' }}>
                                     <NavLink to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>))
                             }

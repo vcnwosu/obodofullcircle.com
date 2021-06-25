@@ -48,7 +48,12 @@ p {
 }
 
 .btn-toggle {
-    @include btn-icon($primary-color, $white);
+    @include btn-icon($bg-color-5, $white, $primary-color );
+    font-family: '$font-museo';
+}
+
+.btn-toggle-secondary {
+    @include btn-icon($bg-color-6, $white, $white );
     font-family: '$font-museo';
 }
 
