@@ -1,0 +1,82 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+.wrapperStream {
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+    @include breakpoint(small) {
+        flex-direction: row;
+        gap: 0;
+    }
+    p {
+       font-family: '$font-museo-700';
+    }
+    > div {
+        margin-left: 2rem;
+        @include breakpoint(small) {
+            margin-left: 0;
+        }
+    }
+    img.bgImage {
+        height: 300px;
+        @include breakpoint(small) {
+            height: 480px;
+        }
+        @include breakpoint(large) {
+            height: 600px;
+        }
+    }
+}
+
+h1.head {
+    font-size: 2rem !important;
+    @include breakpoint(small) {
+        font-size: 3rem !important;
+    }
+    @include breakpoint(large) {
+        font-size: 4rem !important;
+    }
+}
+
+h1.shadowText {
+    font-size: 2.2rem !important;
+    color: $text-shadow-2;
+    position: absolute;
+    top: -32px;
+    left: 40px;
+    opacity: 0.04;
+    @include breakpoint(small) {
+        font-size: 3.3rem !important;
+        top: 95px;
+        left: 20px;
+    }
+    @include breakpoint(large) {
+        font-size: 5rem !important;
+        top: 130px;
+        left: 70px;
+    }
+}
+
+.bg-stream {
+    background-color: $bg-color-2;
+    overflow-x: hidden;
+}
+
+.top-border {
+    height: 40px;
+    margin-left: -506px;
+    @include breakpoint(small) {
+        height: 65px;
+        margin-left: -320px;
+    }
+}
+
+.bottom-border {
+    height: 40px;
+    margin-left: 120px;
+    @include breakpoint(small) {
+        height: 65px;
+        margin-left: 590px;
+    }
+}

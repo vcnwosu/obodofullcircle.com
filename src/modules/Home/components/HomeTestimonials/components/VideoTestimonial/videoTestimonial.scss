@@ -1,0 +1,22 @@
+@import '../../../../../../assets/styles/variables';
+@import '../../../../../../assets/styles/mixins';
+
+.videotestimonial-div {
+    width: 300px;
+    background-color: $white;
+    @include breakpoint(small) {
+        min-width: 350px;
+    }
+    > div {
+        width: 300px !important;
+        @include breakpoint(small) {
+            width: 350px !important;
+        }
+    }
+    span {
+        font-family: '$font-semi-bold';
+    }
+    .controls-div {
+        padding: 10px;
+    }
+}

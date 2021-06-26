@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="265" height="96" viewBox="0 0 265 96">
+  <g id="Group_3318" data-name="Group 3318" transform="translate(-284 -6296)">
+    <rect id="Rectangle_1745" data-name="Rectangle 1745" width="265" height="96" rx="8" transform="translate(284 6296)" fill="#07060f"/>
+    <g id="Group_3337" data-name="Group 3337">
+      <g id="Group_3134" data-name="Group 3134" transform="translate(-1 2)">
+        <text id="Google_Play" data-name="Google Play" transform="translate(385 6362)" fill="#fff" font-size="26" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Google Play</tspan></text>
+        <text id="GET_IT_ON" data-name="GET IT ON" transform="translate(385 6331)" fill="#fff" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GET IT ON</tspan></text>
+      </g>
+      <g id="google-play" transform="translate(315.086 6319.003)">
+        <path id="Path_3117" data-name="Path 3117" d="M27.013,23.7,1.862,48.847A5.963,5.963,0,0,1,.01,44.46V5.012A6.043,6.043,0,0,1,1.927.56Z" transform="translate(0 1.266)" fill="#65d1ff"/>
+        <path id="Path_3118" data-name="Path 3118" d="M30.059,15.221a6.167,6.167,0,0,1-3.282,5.427l-7.149,3.964-8.871-8.189L8.32,14.181,17.711,4.79l9.066,5A6.167,6.167,0,0,1,30.059,15.221Z" transform="translate(18.693 10.781)" fill="#ffc107"/>
+        <path id="Path_3119" data-name="Path 3119" d="M25.686,24.962.6,1.826A6.469,6.469,0,0,1,1.77.948,6.542,6.542,0,0,1,8.4.851l26.678,14.72-9.391,9.391Z" transform="translate(1.327 0)" fill="#4caf50"/>
+        <path id="Path_3120" data-name="Path 3120" d="M37.039,18.111l-28.6,15.76a6.472,6.472,0,0,1-3.249.845,6.331,6.331,0,0,1-3.379-.942A5.914,5.914,0,0,1,.58,32.831L25.731,7.68l2.437,2.242,8.871,8.189Z" transform="translate(1.282 17.282)" fill="#f44336"/>
+      </g>
+    </g>
+  </g>
+</svg>

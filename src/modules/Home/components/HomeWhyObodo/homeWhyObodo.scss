@@ -1,0 +1,60 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+
+.bg-green .wrapperObodo {
+    flex-direction: column;
+    @include breakpoint(small) {
+        flex-direction: row;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        @include breakpoint(small) {
+            height: 500px;
+        }
+    }
+    > div:nth-child(2) {
+        padding: 1.25rem;
+    }
+}
+.bg-green h2 {
+    color: $white;
+}
+
+.bg-green p {
+    color: $white;
+    font-family: '$font-museo-700';
+}
+
+.accordion-div {
+    width: 100%;
+    margin-top: 1rem;
+    @include breakpoint(small) {
+        width: 50%;
+        margin-top: 3rem;
+    }
+}
+
+.accordion .card {
+    background: transparent;
+    border: none;
+    .card-header {
+        background: transparent;
+        border: none;
+        h5 {
+            color: $white;
+            font-family: '$font-bold';
+        }
+    }
+    .card-body {
+        color: $white;
+        font-family: '$font-museo-regular';
+    }
+    hr {
+        background-color: $white;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}

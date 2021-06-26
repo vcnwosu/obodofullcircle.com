@@ -1,0 +1,44 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+.card-div {
+    gap: 2rem;
+    flex-direction: column;
+    @include breakpoint(small) {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.resources-div h1 {
+    color: $bg-color;
+    font-family: '$font-bold';
+}
+
+.resources-div p {
+    color: $bg-color;
+    font-family: '$font-museo-700';
+}
+
+.resources-div .card-title {
+    font-family: '$font-bold';
+}
+
+.resources-div .card-text {
+    color: $white;
+    font-size: 14px;
+    font-family: '$font-museo-regular';
+}
+
+.resources-div .card-body {
+    padding-bottom: 4rem;
+}
+
+.resources-div img {
+    height: 60px;
+}
+
+.resources-div .card {
+    border-radius: 0.5rem !important;
+}

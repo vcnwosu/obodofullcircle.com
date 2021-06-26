@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+
+.wrapperObodo {
+    flex-direction: column;
+    @include breakpoint(small) {
+        flex-direction: row;
+    }
+    img {
+        height: auto;
+        width: 100%;
+        @include breakpoint(small) {
+            height: 500px;
+        }
+    }
+    > div:nth-child(2) {
+        padding: 1.25rem;
+    }
+}
+.why-ep h2 {
+    color: $text-color-2;
+    font-family: '$font-bold';
+}
+
+.why-ep p {
+    color: $bg-color;
+    font-family: '$font-museo-700';
+}
+.why-ep > img {
+    height: 55px;
+}
+
+.accordion-div-ep {
+    width: 100%;
+    margin-top: 1rem;
+    @include breakpoint(small) {
+        width: 50%;
+        margin-top: 3rem;
+    }
+    .accordion .card {
+        border: none;
+        background: $bg-color-4;
+        margin-bottom: 1rem;
+        .card-header {
+            background: transparent;
+            border: none;
+            h5 {
+                color: $bg-color;
+                font-family: '$font-semi-bold';
+            }
+        }
+        .card-body {
+            color: $bg-color;
+            font-family: '$font-museo-regular';
+        }
+        hr {
+            display: none;
+        }
+    }
+}
+

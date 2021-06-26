@@ -1,0 +1,17 @@
+@import '../../../assets/styles/variables';
+
+header {
+    background-color: #0D0A3A;
+    display: grid !important;
+    .header-container {
+        img {
+            height: 60px;
+        }
+    }
+    .navbar-toggler {
+        background-color: $primary-color;
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+}

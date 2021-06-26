@@ -1,0 +1,48 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/variables';
+
+.ep-intro-div {
+    background: linear-gradient(180deg, $bg-color-4 75%, $white 0);
+    padding-top: 6rem;
+    h3 {
+        color: $primary-color;
+        font-family: '$font-museo';
+    }
+    h1 {
+        color: $bg-color;
+        font-family: '$font-extra-bold';
+        font-size: 3rem !important;
+    }
+    > div > p {
+        color: $bg-color;
+        font-family: '$font-museo';
+        padding-right: 60%;
+    }
+}
+.mission-container {
+    background-image: url('../../../../assets/images/ep-intro-bg.svg');
+    margin-left: 15rem;
+    padding: 3rem 0 0 3rem;
+    background-position-y: 215%;
+    background-repeat: no-repeat;
+    margin-top: 6rem;
+    .mission-div {
+        background-color: $bg-color;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem;
+        h2 {
+            color: $white;
+            font-family: '$font-bold';
+        }
+        p {
+            color: $white;
+            font-family: '$font-museo-regular';
+        }
+    }
+    .border-design {
+        height: 55px;
+        // margin-left: 100px;
+    }
+}

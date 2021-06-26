@@ -1,0 +1,95 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixins';
+
+footer {
+    background-color: $bg-color;
+    min-height: 500px;
+    position: relative;
+    padding: 20px;
+    justify-content: space-evenly;
+    @include breakpoint(small) {
+        padding: 0 40px;
+    }
+    @include breakpoint(large) {
+        padding: 0 120px;
+    }
+    > div {
+        flex-direction: column;
+        gap: 2rem;
+        @include breakpoint(small) {
+            flex-direction: row;
+        }
+        img {
+            height: 60px;
+        }
+    }
+    .navbar, .nav-link{
+        padding: 0 !important;
+    }
+    .store-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @include breakpoint(small) {
+            flex-direction: column;
+        }
+        img {
+            height: 55px;
+            @include breakpoint(small) {
+                height: 70px;
+            }
+            @include breakpoint(large) {
+                height: 90px;
+            }
+        }
+    }
+    .social-links {
+        img {
+            margin: 0 0.5em;
+            height: 30px;
+            @include breakpoint(small) {
+                height: 45px;
+                margin: 0 0.5em;
+            }
+            @include breakpoint(large) {
+                height: 45px;
+                margin: 0 1.25em;
+            }
+        }
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(small) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .footer-nav {
+        padding: 10px;
+        h3 {
+            font-size: 18px;
+            color: $primary-color;
+            font-family: '$font-bold';
+        }
+        .nav-link {
+            font-size: 16px !important;
+            font-family: '$font-regular';
+        }
+    }
+}
+
+.copyright {
+    background-color: $primary-color;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 14px;
+        font-family: '$font-light';
+        color: #fff;
+    }
+}

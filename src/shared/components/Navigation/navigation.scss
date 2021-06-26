@@ -1,0 +1,24 @@
+@import '../../../assets/styles/variables';
+
+.navbar {
+  a {
+    color: white;
+    font-size: 14px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .dropdown a {
+    color: white !important;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+  .dropdown-item a {
+    color: black !important;
+  }
+
+  // .active {
+  //   color: $primary-color;
+  // }
+}

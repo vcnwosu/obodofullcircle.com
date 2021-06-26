@@ -1,0 +1,40 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+.testimonials-div {
+    background-image: url('../../../../assets/images/homeTestimonialsBG.png');
+    background-position: center;
+    .testimonial-wrapper {
+        padding: 0 0 0 20px;
+        @include breakpoint(small) {
+            padding: 0 0 0 200px;
+        }
+    }
+    h2 {
+        color: $white;
+        font-family: '$font-bold';
+    }
+    p.text {
+        font-family: '$font-museo-700';
+    }
+}
+
+.arrow-icons {
+    img {
+        height: 40px;
+        cursor: pointer;
+    }
+}
+.testimonial-block {
+    overflow: hidden;
+    padding-right: 10px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    > div {
+        gap: 1rem;
+        transition: 0.5s transform ease-in-out;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
