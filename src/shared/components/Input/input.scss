@@ -1,3 +1,5 @@
+@import '../../../assets/styles/mixins';
+
 input.custom-input {
     border-radius: 10px 0 0 10px;
     padding: 11px 15px 13px;
@@ -5,8 +7,9 @@ input.custom-input {
     border: none;
     background-color: #ECECF7;
     width: 60%;
-    @media screen and (min-width: 769px) {
-        width: 20%;
+    @include breakpoint(small) {
+        width: 25%;
+        padding: 14px 15px 16px;
     }
     &:active, &:focus {
         outline: none;

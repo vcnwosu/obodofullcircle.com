@@ -1,8 +1,12 @@
+import ExchangeProgramIntroduction from "./components/ExchangeProgramIntroduction"
+import WhyExchangeProgram from "./components/WhyExchangeProgram"
+
 const ExchangeProgram = () => {
     return (
-        <>
-          <h2>ExchangeProgram</h2>  
-        </>
+        <div>
+          <ExchangeProgramIntroduction />
+          <WhyExchangeProgram />
+        </div>
     )
 }
 

@@ -1,14 +1,15 @@
 @import '../../../../../../assets/styles/variables';
+@import '../../../../../../assets/styles/mixins';
 
 .videotestimonial-div {
     width: 300px;
     background-color: $white;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         min-width: 350px;
     }
     > div {
         width: 300px !important;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             width: 350px !important;
         }
     }

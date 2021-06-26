@@ -1,17 +1,19 @@
+@import '../../../../assets/styles/mixins';
+
 .teaching-div {
     height: 500px;
     background-image: url('../../../../assets/images/homeTeachingBG.svg');
     background-repeat: no-repeat;
     background-size: 350%;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         background-size: 140%;
     }
-    @media screen and (min-width: 1025px) {
+    @include breakpoint(large) {
         background-size: cover;
     }
     .head {
         font-size: 2rem !important;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             font-size: 3rem !important;
         }
     }

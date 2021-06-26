@@ -27,7 +27,7 @@ const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://res.cloudinary.com/demo/video/upload/dog.mp4',
+        url: 'videos/test.mp4',
         userName: 'Chinara'
     },
     {

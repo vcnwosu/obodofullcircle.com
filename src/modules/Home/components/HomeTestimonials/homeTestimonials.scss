@@ -1,11 +1,12 @@
 @import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
 
 .testimonials-div {
     background-image: url('../../../../assets/images/homeTestimonialsBG.png');
     background-position: center;
     .testimonial-wrapper {
         padding: 0 0 0 20px;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             padding: 0 0 0 200px;
         }
     }
@@ -25,7 +26,7 @@
     }
 }
 .testimonial-block {
-    overflow: auto;
+    overflow: hidden;
     padding-right: 10px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none; /* Firefox */

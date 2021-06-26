@@ -1,5 +1,6 @@
 @import '../../../../assets/styles/variables';
 @import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
 
 .div-container {
     background-color: $bg-color;
@@ -7,13 +8,16 @@
         flex-direction: column;
         gap: 2rem;
         padding-bottom: 2rem;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             flex-direction: row;
+        }
+        @include breakpoint(large) {
+            padding-bottom: 0;
         }
     }
     img.bgImage {
         height: 400px;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             height: 600px;
         }
     }
@@ -25,10 +29,10 @@
 h1.heading {
     font-size: 2rem !important;
     color: $white;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         font-size: 3rem !important;
     }
-    @media screen and (min-width: 1025px) {
+    @include breakpoint(large) {
         font-size: 4rem !important;
     }
 }
@@ -38,12 +42,12 @@ h1.shadow {
     position: absolute;
     top: -27px;
     left: 6px;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         font-size: 3.3rem !important;
         top: -55px;
         left: 20px;
     }
-    @media screen and (min-width: 1025px) {
+    @include breakpoint(large) {
         font-size: 5rem !important;
         top: -80px;
         left: 40px;

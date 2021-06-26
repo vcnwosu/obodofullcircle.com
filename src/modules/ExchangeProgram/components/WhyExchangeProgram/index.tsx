@@ -1,6 +1,7 @@
 import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
-import './homeWhyObodo.scss';
+import BorderImage from '../../../../assets/images/borderDesign.svg';
+import './whyExchangeProgram.scss';
 
 export interface AccordionType {
     title: string;
@@ -8,7 +9,7 @@ export interface AccordionType {
     eventKey: string;
 }
 
-const HomeWhyIgbo = () => {
+const WhyExchangeProgram = () => {
 
     const accordionArray: AccordionType[] = [
         {
@@ -33,19 +34,20 @@ const HomeWhyIgbo = () => {
         }
     ]
     return (
-        <div className="bg-green pt-5 pb-5">
-            <h2 className="text-center">Why Obodo</h2>
+        <div className="why-ep pt-5">
+            <h2 className="text-center">Why IGBO Exchange Program</h2>
             <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p>
             <div className="wrapper wrapperObodo d-flex justify-content-between mt-5">
-                <div className="accordion-div">
-                    <CustomAccordion list={accordionArray} styleClass="btn-toggle" />
+                <div className="accordion-div-ep">
+                    <CustomAccordion list={accordionArray} styleClass="btn-toggle-secondary"/>
                 </div>
                 <div>
                     <img src={Image} alt="whyImage"/>
                 </div>
             </div>
+            <img src={BorderImage} alt="" />
         </div>
     )
 }
 
-export default HomeWhyIgbo;
+export default WhyExchangeProgram;

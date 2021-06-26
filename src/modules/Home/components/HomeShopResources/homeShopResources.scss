@@ -1,11 +1,13 @@
 @import '../../../../assets/styles/variables';
 @import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
 
 .card-div {
-    gap: 3rem;
+    gap: 2rem;
     flex-direction: column;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         flex-direction: row;
+        gap: 3rem;
     }
 }
 

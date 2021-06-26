@@ -1,5 +1,6 @@
 @import '../../../assets/styles/variables';
 @import '../../../assets/styles/fonts';
+@import '../../../assets/styles/mixins';
 
 footer {
     background-color: $bg-color;
@@ -7,16 +8,16 @@ footer {
     position: relative;
     padding: 20px;
     justify-content: space-evenly;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         padding: 0 40px;
     }
-    @media screen and (min-width: 1025px) {
+    @include breakpoint(large) {
         padding: 0 120px;
     }
     > div {
         flex-direction: column;
         gap: 2rem;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             flex-direction: row;
         }
         img {
@@ -30,15 +31,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        @media screen and (min-width: 769px) {
+        @include breakpoint(small) {
             flex-direction: column;
         }
         img {
             height: 55px;
-            @media screen and (min-width: 769px) {
+            @include breakpoint(small) {
                 height: 70px;
             }
-            @media screen and (min-width: 1025px) {
+            @include breakpoint(large) {
                 height: 90px;
             }
         }
@@ -47,11 +48,11 @@ footer {
         img {
             margin: 0 0.5em;
             height: 30px;
-            @media screen and (min-width: 769px) {
+            @include breakpoint(small) {
                 height: 45px;
                 margin: 0 0.5em;
             }
-            @media screen and (min-width: 1025px) {
+            @include breakpoint(large) {
                 height: 45px;
                 margin: 0 1.25em;
             }
@@ -62,7 +63,7 @@ footer {
 .footer-container {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 769px) {
+    @include breakpoint(small) {
         flex-direction: row;
         gap: 2rem;
     }

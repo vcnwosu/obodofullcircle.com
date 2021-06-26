@@ -10,18 +10,8 @@ interface Props {
 }
 const CustomCard = ({ title, text, available }: Props) => {
 
-    const [hovered, setHovered] = useState(false);
-
-    const mouseEnter = (e: React.MouseEvent) => {
-        setHovered(true);
-    }
-
-    const mouseLeave = (e: React.MouseEvent) => {
-        setHovered(false);
-    }
-
     return (
-        <Card onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+        <Card className="shop-card">
             <div className="card-image">
                 <img src={CardImage} alt="cardImg" />
             </div>
@@ -29,7 +19,7 @@ const CustomCard = ({ title, text, available }: Props) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{text}</Card.Text>
             </Card.Body>
-            {hovered && !available &&
+            {!available &&
                 <div className="coming-soon">
                     <h3>Coming Soon</h3>
                 </div>

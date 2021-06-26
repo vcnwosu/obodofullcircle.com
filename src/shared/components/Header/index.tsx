@@ -20,10 +20,10 @@ const navList: Navs[] = [
         path: '/about-us',
         text: 'About Us'
     },
-    {
-        path: '/contribute',
-        text: 'Contribute'
-    }
+    // {
+    //     path: '/contribute',
+    //     text: 'Contribute'
+    // }
 ]
 const Header = () => {
     return (

@@ -3,7 +3,7 @@
 @import '../../../../assets/styles/mixins';
 
 
-.bg-green .wrapperObodo {
+.wrapperObodo {
     flex-direction: column;
     @include breakpoint(small) {
         flex-direction: row;
@@ -19,42 +19,45 @@
         padding: 1.25rem;
     }
 }
-.bg-green h2 {
-    color: $white;
+.why-ep h2 {
+    color: $text-color-2;
+    font-family: '$font-bold';
 }
 
-.bg-green p {
-    color: $white;
+.why-ep p {
+    color: $bg-color;
     font-family: '$font-museo-700';
 }
+.why-ep > img {
+    height: 55px;
+}
 
-.accordion-div {
+.accordion-div-ep {
     width: 100%;
     margin-top: 1rem;
     @include breakpoint(small) {
         width: 50%;
         margin-top: 3rem;
     }
-}
-
-.accordion .card {
-    background: transparent;
-    border: none;
-    .card-header {
-        background: transparent;
+    .accordion .card {
         border: none;
-        h5 {
-            color: $white;
-            font-family: '$font-bold';
+        background: $bg-color-4;
+        margin-bottom: 1rem;
+        .card-header {
+            background: transparent;
+            border: none;
+            h5 {
+                color: $bg-color;
+                font-family: '$font-semi-bold';
+            }
+        }
+        .card-body {
+            color: $bg-color;
+            font-family: '$font-museo-regular';
+        }
+        hr {
+            display: none;
         }
     }
-    .card-body {
-        color: $white;
-        font-family: '$font-museo-regular';
-    }
-    hr {
-        background-color: $white;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-    }
 }
+

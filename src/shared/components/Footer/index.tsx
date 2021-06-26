@@ -1,6 +1,6 @@
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
-import Logo from '../../../assets/images/footerLogo.png';
+import Logo from '../../../assets/images/logo.svg';
 import GooglePlay from '../../../assets/images/googlePlay.svg';
 import AppStore from '../../../assets/images/appStore.svg';
 import Insta from '../../../assets/images/insta.png';
