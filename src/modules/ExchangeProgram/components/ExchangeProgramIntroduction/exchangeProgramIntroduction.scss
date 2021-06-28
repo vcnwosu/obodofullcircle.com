@@ -32,6 +32,9 @@
         align-items: center;
         gap: 2rem;
         padding: 3rem;
+        div > img {
+            height: 150px;
+        }
         h2 {
             color: $white;
             font-family: '$font-bold';

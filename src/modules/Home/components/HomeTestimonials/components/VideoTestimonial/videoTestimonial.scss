@@ -2,13 +2,14 @@
 @import '../../../../../../assets/styles/mixins';
 
 .videotestimonial-div {
-    width: 300px;
+    width: 320px;
     background-color: $white;
     @include breakpoint(small) {
         min-width: 350px;
     }
     > div {
-        width: 300px !important;
+        width: 320px !important;
+        height: auto !important;
         @include breakpoint(small) {
             width: 350px !important;
         }

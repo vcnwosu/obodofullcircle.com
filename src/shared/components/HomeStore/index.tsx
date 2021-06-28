@@ -1,6 +1,6 @@
-import Image from '../../../../assets/images/homeStore.svg';
-import GooglePlay from '../../../../assets/images/googlePlay.svg';
-import AppStore from '../../../../assets/images/appStore.svg';
+import Image from '../../../assets/images/homeStore.svg';
+import GooglePlay from '../../../assets/images/googlePlay.svg';
+import AppStore from '../../../assets/images/appStore.svg';
 import './homeStore.scss'
 
 const HomeStore = () => {

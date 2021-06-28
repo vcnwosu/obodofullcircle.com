@@ -1,5 +1,6 @@
 import './exchangeProgramIntroduction.scss';
-import BorderImage from '../../../../assets/images/borderDesign.svg'
+import BorderImage from '../../../../assets/images/borderDesign.svg';
+import MissionImage from '../../../../assets/images/Mission statement.svg';
 
 const ExchangeProgramIntroduction = () => {
     return (
@@ -11,7 +12,8 @@ const ExchangeProgramIntroduction = () => {
             </div>
             <div className="mission-container">
                 <div className="mission-div">
-                    <div style={{ height: '150px', minWidth: '150px', border: '1px solid white' }}>
+                    <div>
+                        <img src={MissionImage} alt="MissionImage" />
                     </div>
                     <div>
                         <h2>Mission Statement</h2>

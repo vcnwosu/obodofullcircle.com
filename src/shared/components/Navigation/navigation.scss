@@ -17,8 +17,8 @@
   .dropdown-item a {
     color: black !important;
   }
+}
 
-  // .active {
-  //   color: $primary-color;
-  // }
+.navbar-light .navbar-toggler-icon {
+  background-image: url('../../../assets/images/Hamburger.svg') !important;
 }

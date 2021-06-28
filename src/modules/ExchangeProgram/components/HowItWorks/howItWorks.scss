@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+
+.ep-how-div {
+  background-color: $primary-color;
+  h2 {
+    color: $white;
+    font-family: "$font-bold";
+  }
+  p {
+    color: $white;
+    font-family: "$font-museo";
+  }
+}
+.main-circle-container {
+  padding: 60px;
+  .circle-div {
+    flex: 1 1;
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+}

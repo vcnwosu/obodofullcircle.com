@@ -45,15 +45,41 @@ footer {
         }
     }
     .social-links {
-        img {
+        display: flex;
+        div {
             margin: 0 0.5em;
             height: 30px;
+            width: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            transition: background-image 0.2s ease-in-out;
+            &:first-child {
+                background-image: url('../../../assets/images/fb.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Facebook\ hover.svg');
+                }
+            }
+            &:nth-child(2) {
+                background-image: url('../../../assets/images/linkedin.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Linkedin\ hover.svg');
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../../../assets/images/insta.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Instagram\ hover.svg');
+                }
+            }
             @include breakpoint(small) {
                 height: 45px;
+                width: 45px;
                 margin: 0 0.5em;
             }
             @include breakpoint(large) {
                 height: 45px;
+                width: 45px;
                 margin: 0 1.25em;
             }
         }

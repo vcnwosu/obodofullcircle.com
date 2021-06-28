@@ -37,7 +37,7 @@
     place-items: center;
     border-radius: 0.5rem;
     cursor: default;
-    @include breakpoint(small) {
+    @include breakpoint(large) {
         display: none;
     }
     h3 {

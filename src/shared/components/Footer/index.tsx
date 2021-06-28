@@ -114,9 +114,12 @@ const Footer = () => {
                         <Navigation list={footerNavList} type="footerBottom"/>
                     </div>
                     <div className="social-links">
-                        <img src={Facebook} alt="facebook" />
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        {/* <img src={Facebook} alt="facebook" />
                         <img src={Linkedin} alt="linkedin" />
-                        <img src={Insta} alt="instagram" />
+                        <img src={Insta} alt="instagram" /> */}
                     </div>
                 </div>
             </footer>
