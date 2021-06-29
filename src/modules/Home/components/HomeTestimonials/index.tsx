@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import TextTestimonial from './components/TextTestimonial';
 import VideoTestimonial from './components/VideoTestimonial';
 import UserImage from '../../../../assets/images/user.svg';
@@ -16,7 +16,7 @@ interface Testimonial {
 const testimonialArray: Testimonial[] = [
     {
         type: 'video',
-        url: 'videos/Chiamaka Precious, London UK .mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Chiamaka Precious'
     },
     {
@@ -27,8 +27,8 @@ const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'videos/Chiamaka Precious, London UK .mp4',
-        userName: 'Chinara'
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chibuzo-Baltimore-US.mp4',
+        userName: 'Chibuzo'
     },
     {
         type: 'text',
@@ -37,10 +37,20 @@ const testimonialArray: Testimonial[] = [
         userName: 'Chelsea'
     },
     {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chineme-Maryland-US.mp4',
+        userName: 'Chineme'
+    },
+    {
         type: 'text',
         data: 'I’ve tried to learn igbo on my own three different times, and I failed each time, usually within a few weeks. With the igbo exchange program I’ve been able to make so much progress in the last couple of months. I learn things that I can use in everyday conversation, I have an encouraging conversation partner to practice my Igbo with every week, and a structured program to keep me accountable. Daalu Ifunanya for creating this program!',
         userImage: UserImage,
         userName: 'Ugo '
+    },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+        userName: 'Chizute'
     },
     {
         type: 'text',
@@ -49,10 +59,20 @@ const testimonialArray: Testimonial[] = [
         userName: 'Ijeoma'
     },
     {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Nneoma-New-York-USA.mp4',
+        userName: 'Nneoma'
+    },
+    {
         type: 'text',
         data: 'I am so happy that I decided to join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
         userImage: 'https://lh4.googleusercontent.com/e4W4zhCg3UXT4Ys533i6Qlo3ClysTIEe7eDAsB4rBUo8EhuDs9x8hmg-k7U3vtDY4DzWlhTREXEnbkP8nQx3-JUheK2s8EPWci7FJMwO',
         userName: 'Mary '
+    },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
+        userName: 'Obianuju'
     },
     {
         type: 'text',
@@ -61,20 +81,28 @@ const testimonialArray: Testimonial[] = [
         userName: 'Chimnonso Nduaka'
     },
     {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        userName: 'Prince Nwagbara'
+    },
+    {
         type: 'text',
         data: 'I love Igboppdacst! Like many Nigerians that grew up in the diaspora, I grew up hearing Igbo and could understand but, my confidence to speak? Nonexistant. Since joining the program, I have learned so much and am able to hold full conversations (which was a goal of mine). I love that the program goes at your pace, and the relationship you develop with your tutor. I’m excited to continue and hope to be fluent, which I know will be possible with this program. A God sent!',
         userImage: 'https://lh3.googleusercontent.com/W6aGQj9QzYu1izOqCVeCoHBWW1X7E1kBFjoRsqlbYjse7Gamr4y_8mXNo_raZ03_zMkYwJpfxBxpCK9D6DhIpS6uitQin0IdGFO0tEsL',
         userName: 'Chizi Duru'
     },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obi-Delaware-US.mp4',
+        userName: 'Obi'
+    }
 ]
 
-let blockWidth: number;
 let windowWidth: number;
 let distance: number;
 const HomeTestimonials = () => {
 
     const [scrollDistance, setScrollDistance] = useState(0);
-    const ref = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         windowWidth = window.innerWidth;
@@ -83,18 +111,15 @@ const HomeTestimonials = () => {
         } else {
             distance = 400
         }
-        blockWidth = ref.current?.offsetWidth ? ref.current?.offsetWidth : 0;
     }, [])
 
     const nextData = () => {
-        console.log(windowWidth, blockWidth);
-        
         if(windowWidth < 769) {
             if(scrollDistance > (testimonialArray.length - 1) * 320) {
                 return
             }
         } else {
-            if(scrollDistance > blockWidth + distance) {
+            if(scrollDistance > (testimonialArray.length - 3) * 370) {
                 return
             }
         }
@@ -123,7 +148,7 @@ const HomeTestimonials = () => {
                     </div>
                 </div>
                 <div className="testimonial-block mt-3">
-                    <div className="d-flex" ref={ref} style={{ transform: `translateX(-${scrollDistance}px)` }}>
+                    <div className="d-flex" style={{ transform: `translateX(-${scrollDistance}px)` }}>
                         {testimonialArray.map((item, index) => (
                             <div key={index} className={index % 2 === 0 ? 'mb-4' : 'mt-4'}>
                                 {item.type === 'text' ? <TextTestimonial data={item.data} userImage={item.userImage} userName={item.userName} /> : <VideoTestimonial url={item.url} userName={item.userName} />}

@@ -29,7 +29,10 @@
     font-family: '$font-museo-700';
 }
 .why-ep > img {
-    height: 55px;
+    height: 17px;
+    @include breakpoint(small) {
+        height: 55px;
+    }
 }
 
 .accordion-div-ep {

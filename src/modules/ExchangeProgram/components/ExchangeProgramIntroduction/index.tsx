@@ -20,9 +20,9 @@ const ExchangeProgramIntroduction = () => {
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aspernatur delectus consectetur saepe sunt dolor, labore molestiae esse rerum odit minus sit voluptates doloremque sapiente vero inventore iusto ullam, facere assumenda vel laudantium aliquid blanditiis neque. Consectetur esse unde nihil quae, animi pariatur. Quis esse officiis autem aspernatur. Fugiat, quia.</p>
                     </div>
                 </div>
-                <div className="text-right">
-                    <img className="border-design" src={BorderImage} alt="border" />
-                </div>
+            </div>
+            <div>
+                <img className="border-design" src={BorderImage} alt="border" />
             </div>
         </div>
     )

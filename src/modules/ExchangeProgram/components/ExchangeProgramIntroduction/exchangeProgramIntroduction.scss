@@ -1,5 +1,6 @@
 @import '../../../../assets/styles/fonts';
 @import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
 
 .ep-intro-div {
     background: linear-gradient(180deg, $bg-color-4 75%, $white 0);
@@ -11,27 +12,53 @@
     h1 {
         color: $bg-color;
         font-family: '$font-extra-bold';
-        font-size: 3rem !important;
+        font-size: 2rem !important;
+        @include breakpoint(small) {
+            font-size: 3rem !important;
+        }
     }
     > div > p {
         color: $bg-color;
         font-family: '$font-museo';
-        padding-right: 60%;
+        padding-right: 0;
+        @include breakpoint(small) {
+            padding-right: 60%;
+        }
+    }
+    div:nth-child(3) {
+        text-align: left;
+        @include breakpoint(small) {
+            text-align: right;  
+        }
+    }
+    .border-design {
+        height: 18px;
+        @include breakpoint(small) {
+            height: 55px;    
+        }
     }
 }
 .mission-container {
     background-image: url('../../../../assets/images/ep-intro-bg.svg');
-    margin-left: 15rem;
+    margin-left: 1rem;
     padding: 3rem 0 0 3rem;
-    background-position-y: 215%;
     background-repeat: no-repeat;
     margin-top: 6rem;
+    @include breakpoint(small) {
+        margin-left: 15rem;
+        background-position-y: 215%;
+    }
     .mission-div {
         background-color: $bg-color;
         display: flex;
         align-items: center;
         gap: 2rem;
-        padding: 3rem;
+        padding: 1rem;
+        flex-direction: column;
+        @include breakpoint(small) {
+            flex-direction: row;
+            padding: 3rem;
+        }
         div > img {
             height: 150px;
         }
@@ -43,9 +70,5 @@
             color: $white;
             font-family: '$font-museo-regular';
         }
-    }
-    .border-design {
-        height: 55px;
-        // margin-left: 100px;
     }
 }

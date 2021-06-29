@@ -1,16 +1,36 @@
 import CheckboxArrow from '../../../../../../assets/images/checkboxArrow.svg';
+import saveImage from '../../../../../../assets/images/save.svg';
+import { PlanType } from '../planData';
+interface NewPlanType extends PlanType {
+    type: number;
+}
 
-const PlanCard = () => {
+const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, type }: NewPlanType) => {
     return (
         <div className="plan-card">
             <div className="d-flex justify-content-between align-items-center">
-                <h2>Basic</h2>
-                <p>$65/Month</p>
+                <h2>{heading}</h2>
+                {type === 1 && <p className="price">{price}
+                    <span>
+                        /Month
+                    </span>
+                </p>}
+                {type !== 1 && <img className="save-image" src={saveImage} alt="saveImage" />}
             </div>
-            <div className="d-flex align-items-center">
-                <img src={CheckboxArrow} alt="CheckboxArro" />
-                <p>Free week trial</p>
-            </div>
+            {type !== 1 && <div className="d-flex justify-content-between align-items-center">
+                <p className="price">{priceSingleMonth}
+                    <span>
+                        /Month
+                    </span>
+                </p>
+                <p className="price">{priceTotal}</p>
+            </div>}
+            {detailsList.map(item => (
+                <div key={item.text} className="d-flex align-items-start">
+                    <img src={CheckboxArrow} alt="CheckboxArro" />
+                    <p>{item.text}</p>
+                </div>
+            ))}
         </div>
     )
 }
