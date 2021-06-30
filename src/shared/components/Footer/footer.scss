@@ -20,9 +20,6 @@ footer {
         @include breakpoint(small) {
             flex-direction: row;
         }
-        img {
-            height: 60px;
-        }
     }
     .navbar, .nav-link{
         padding: 0 !important;
@@ -30,7 +27,7 @@ footer {
     .store-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         @include breakpoint(small) {
             flex-direction: column;
         }
@@ -47,7 +44,7 @@ footer {
     .social-links {
         display: flex;
         div {
-            margin: 0 0.5em;
+            margin-left: 0.5em;
             height: 30px;
             width: 30px;
             background-repeat: no-repeat;
@@ -94,7 +91,7 @@ footer {
         gap: 2rem;
     }
     .footer-nav {
-        padding: 10px;
+        padding: 10px 0;
         h3 {
             font-size: 18px;
             color: $primary-color;
@@ -103,7 +100,14 @@ footer {
         .nav-link {
             font-size: 16px !important;
             font-family: '$font-regular';
+            margin: 10px 0;
         }
+    }
+}
+.links .nav-link {
+    margin: 10px 0;
+    @include breakpoint(small) {
+        margin: 10px;
     }
 }
 

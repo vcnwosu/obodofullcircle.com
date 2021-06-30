@@ -14,9 +14,8 @@ const ExchangeProgramPlans = () => {
                 <div className="type-selector d-flex justify-content-center">
                     <div className="d-flex type-background">
                         <div className={`type-item ${activeType === 1 ? 'active-type' : ''}`} onClick={() => setActiveType(1)}>MONTHLY</div>
-                        <div className={`type-item ${activeType === 2 ? 'active-type' : ''}`} onClick={() => setActiveType(2)}>QUATERLY</div>
-                        <div className={`type-item ${activeType === 3 ? 'active-type' : ''}`} onClick={() => setActiveType(3)}>BIANUALLY</div>
-                        <div className={`type-item ${activeType === 4 ? 'active-type' : ''}`} onClick={() => setActiveType(4)}>ANNUALLY</div>
+                        <div className={`type-item ${activeType === 2 ? 'active-type' : ''}`} onClick={() => setActiveType(2)}>2 MONTHS {"{POPULAR}"}</div>
+                        <div className={`type-item ${activeType === 3 ? 'active-type' : ''}`} onClick={() => setActiveType(3)}>QUATERLY</div>
                     </div>
                 </div>
                 <div className="plan-card-div d-flex justify-content-center">

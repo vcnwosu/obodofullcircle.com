@@ -1,11 +1,8 @@
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
-import Logo from '../../../assets/images/logo.svg';
+import Logo from '../../../assets/images/OBODOLOGO.svg';
 import GooglePlay from '../../../assets/images/googlePlay.svg';
 import AppStore from '../../../assets/images/appStore.svg';
-import Insta from '../../../assets/images/insta.png';
-import Facebook from '../../../assets/images/fb.png';
-import Linkedin from '../../../assets/images/linkedin.png';
 
 const companyNavList: Navs[] = [
     {
@@ -117,9 +114,6 @@ const Footer = () => {
                         <div></div>
                         <div></div>
                         <div></div>
-                        {/* <img src={Facebook} alt="facebook" />
-                        <img src={Linkedin} alt="linkedin" />
-                        <img src={Insta} alt="instagram" /> */}
                     </div>
                 </div>
             </footer>

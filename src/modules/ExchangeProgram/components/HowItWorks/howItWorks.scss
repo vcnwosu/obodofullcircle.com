@@ -1,8 +1,10 @@
 @import "../../../../assets/styles/variables";
 @import "../../../../assets/styles/fonts";
+@import '../../../../assets/styles/mixins';
 
 .ep-how-div {
-  background-color: $primary-color;
+  background-image: url('../../../../assets/images/How\ it\ works\ bg.svg');
+  padding-top: 4rem;
   h2 {
     color: $white;
     font-family: "$font-bold";
@@ -14,13 +16,25 @@
 }
 .main-circle-container {
   padding: 60px;
+  flex-direction: column;
+  gap: 2rem;
+  @include breakpoint(small) {
+    flex-direction: row;
+    gap: 5rem;
+  }
   .circle-div {
     flex: 1 1;
-    .circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-color: $white;
+    transition: transform 0.5s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      font-family: '$font-museo-regular';
+      text-align: center;
+      margin-top: 1rem;
     }
   }
 }

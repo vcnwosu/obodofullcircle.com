@@ -34,7 +34,10 @@
     .border-design {
         height: 18px;
         @include breakpoint(small) {
-            height: 55px;    
+            height: 45px;
+        }
+        @include breakpoint(large) {
+            height: 55px;     
         }
     }
 }
@@ -45,6 +48,10 @@
     background-repeat: no-repeat;
     margin-top: 6rem;
     @include breakpoint(small) {
+        margin-left: 10rem;
+        background-position-y: 215%;
+    }
+    @include breakpoint(large) {
         margin-left: 15rem;
         background-position-y: 215%;
     }

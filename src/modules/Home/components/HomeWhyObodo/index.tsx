@@ -34,8 +34,8 @@ const HomeWhyIgbo = () => {
     ]
     return (
         <div className="bg-green pt-5 pb-5">
-            <h2 className="text-center">Why Obodo</h2>
-            <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p>
+            <h2 className="text-center">Why the Conversation Exchange Program</h2>
+            {/* <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
             <div className="wrapper wrapperObodo d-flex justify-content-between mt-5">
                 <div className="accordion-div">
                     <CustomAccordion list={accordionArray} styleClass="btn-toggle" />

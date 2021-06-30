@@ -13,12 +13,9 @@ export interface PlanType {
 export const basicPlanData: PlanType = {
     heading: 'Basic',
     price: '$65',
-    priceSingleMonth: '$52',
-    priceTotal: '$156',
+    priceSingleMonth: '$49',
+    priceTotal: '$98',
     detailsList: [
-        {
-            text: 'Free week trial'
-        },
         {
             text: '45mins (max 1Hr)/week live calls'
         },
@@ -29,13 +26,22 @@ export const basicPlanData: PlanType = {
             text: 'T/TH Voice-note correspondence Immersion plan/prompts'
         },
         {
-            text: 'Case based learning structure'
+            text: 'Predominantly case based learning structure'
+        },
+        {
+            text: 'Immersive plan - LMS'
         },
         {
             text: 'Quizzes'
         },
         {
-            text: 'Sessions primary audio and chat based, occasional white board lessons'
+            text: 'Multimedia Learning Resources'
+        },
+        {
+            text: 'Monthly goals and Progress reports'
+        },
+        {
+            text: 'Abridged grammar lessons covered over longer period of time'
         }
     ]
 }
@@ -43,12 +49,9 @@ export const basicPlanData: PlanType = {
 export const premiumPlanData: PlanType = {
     heading: 'Premium',
     price: '$110',
-    priceSingleMonth: '$88',
-    priceTotal: '$264',
+    priceSingleMonth: '$99',
+    priceTotal: '$198',
     detailsList: [
-        {
-            text: 'Free week trial'
-        },
         {
             text: '1h 30mins week live calls'
         },
@@ -62,19 +65,22 @@ export const premiumPlanData: PlanType = {
             text: 'Classroom structure AND case based learning'
         },
         {
-            text: 'Immersion plan/prompts Quizzes'
+            text: 'Immersion plan'
         },
         {
-            text: 'Deeper dive to language grammar'
-        },
-        {
-            text: 'Focus on conversational Igbo'
+            text: 'Quizzes'
         },
         {
             text: 'Multimedia learning resources'
         },
         {
             text: 'Goal making and Progress reports'
+        },
+        {
+            text: 'Detailed dive into language grammar while continued focus on practicalilty for everyday speech'
+        },
+        {
+            text: 'Access to ALL audio flashcards for duration of subscription'
         }
     ]
 }
