@@ -8,6 +8,7 @@ const LanguageSelector = () => {
             <div className="wrapper">
                 {/* <CustomCarousel /> */}
                 <div className="text-center pt-5 pb-5">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
                     <Input type="text" placeholder="Enter your email address" />
                     <button type="button" className="btn-attached">Send</button>
                 </div>

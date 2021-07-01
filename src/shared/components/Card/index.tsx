@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
-import CardImage from '../../../assets/images/cardLogo.svg';
 import './card.scss';
 
 interface Props {
+    image: string;
     title: string;
     text: string;
     available: boolean
 }
-const CustomCard = ({ title, text, available }: Props) => {
+const CustomCard = ({ image, title, text, available }: Props) => {
 
     return (
         <Card className="shop-card">
             <div className="card-image">
-                <img src={CardImage} alt="cardImg" />
+                <img src={image} alt="cardImg" />
             </div>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>

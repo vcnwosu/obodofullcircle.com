@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72.858" height="82" viewBox="0 0 72.858 82">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#34c699"/>
+      <stop offset="0.65" stop-color="#13d29e"/>
+      <stop offset="1" stop-color="#06d6a0"/>
+    </linearGradient>
+  </defs>
+  <g id="Artboard_16" data-name="Artboard 16" transform="translate(-8.99 -8.834)">
+    <rect id="Rectangle_2108" data-name="Rectangle 2108" width="58.169" height="71.222" rx="3.4" transform="translate(25.021 8.834) rotate(12.33)" fill="#325254"/>
+    <rect id="Rectangle_2109" data-name="Rectangle 2109" width="58.169" height="73.815" rx="3.4" transform="translate(8.99 16.583)" fill="url(#linear-gradient)"/>
+    <path id="Path_3401" data-name="Path 3401" d="M35.255,53.159a1.247,1.247,0,0,1-.773,1.1,1.321,1.321,0,0,1-.573.125,1.4,1.4,0,0,1-.848-.287l-7.343-5.548H21.8A1.247,1.247,0,0,1,20.47,47.3V42.45A1.247,1.247,0,0,1,21.8,41.2h2.157a5.211,5.211,0,0,0,3.117-1.022l5.984-4.525a1.421,1.421,0,0,1,1.421-.162,1.247,1.247,0,0,1,.773,1.1V53.159Z" transform="translate(2.832 6.546)" fill="#fff"/>
+    <path id="Path_3402" data-name="Path 3402" d="M36.839,50.671h-.1a1.434,1.434,0,0,1-.947-.349l-.175-.175a1.122,1.122,0,0,1-.137-1.583,6.657,6.657,0,0,0-.2-8.727,1.134,1.134,0,0,1,.087-1.633l.175-.175a1.421,1.421,0,0,1,1.022-.349,1.346,1.346,0,0,1,.935.4,9.113,9.113,0,0,1,.274,12.055,1.346,1.346,0,0,1-.935.536Z" transform="translate(6.409 7.115)" fill="#fff"/>
+    <path id="Path_3403" data-name="Path 3403" d="M41.47,55.292a1.371,1.371,0,0,1-.972.424h0a1.409,1.409,0,0,1-.947-.349l-.187-.162a1.159,1.159,0,0,1-.075-1.658A12.167,12.167,0,0,0,39.052,36.5a1.159,1.159,0,0,1,0-1.683l.187-.15a1.321,1.321,0,0,1,.985-.362,1.247,1.247,0,0,1,.96.411,14.673,14.673,0,0,1,.287,20.57Z" transform="translate(7.326 6.283)" fill="#fff"/>
+    <rect id="Rectangle_2110" data-name="Rectangle 2110" width="46.575" height="2.356" rx="0.91" transform="translate(14.276 73.057)" fill="#fff"/>
+  </g>
+</svg>

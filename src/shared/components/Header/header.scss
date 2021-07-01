@@ -6,6 +6,10 @@ header {
     display: grid !important;
     .navbar {
         align-items: baseline;
+        padding: 1rem 0 !important;
+        @include breakpoint(small) {
+            padding: 0.5rem 0 !important;
+        }
         .nav-link {
             margin: 10px;
             @include breakpoint(small) {
@@ -15,6 +19,9 @@ header {
     }
     .navbar-collapse {
         justify-content: flex-end;
+    }
+    .navbar-toggler {
+        padding: 0 !important;
     }
 }
 
