@@ -6,7 +6,7 @@
     background-image: url('../../../../assets/images/learnBackgournd.svg');
     background-repeat: no-repeat;
     background-position-y: 300%;
-    margin-top: 1rem;
+    padding-top: 1rem;
     @include breakpoint(small) {
         margin-top: 0;
         background-position-y: 310%;
@@ -32,6 +32,6 @@ h1 {
         font-size: 3rem !important;
     }
     @include breakpoint(large) {
-        font-size: 5rem !important;
+        font-size: 4.2rem !important;
     }
 }

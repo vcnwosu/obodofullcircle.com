@@ -1,17 +1,32 @@
 @import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
 
 header {
     background-color: #0D0A3A;
     display: grid !important;
-    .header-container {
-        img {
-            height: 60px;
+    .navbar {
+        align-items: baseline;
+        .nav-link {
+            margin: 10px;
+            @include breakpoint(small) {
+                margin: 15px;
+            }
         }
-    }
-    .navbar-toggler {
-        background-color: $primary-color;
     }
     .navbar-collapse {
         justify-content: flex-end;
     }
+}
+
+.dropdown-toggle::after {
+    // content: url('../../../assets/images/caret.png') !important;
+    content: '' !important;
+    background-image: url(../../../assets/images/caret.svg);
+    height: 10px;
+    width: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none !important;
+    position: absolute;
+    margin: 0.5em 0 0 0.5em !important;
 }

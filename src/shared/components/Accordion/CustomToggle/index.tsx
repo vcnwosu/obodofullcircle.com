@@ -14,7 +14,7 @@ const CustomToggle = ({ children, eventKey, title, styleClass, onToggle}: Props)
     );
 
     return (
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between align-items-center">
             <h5>{title}</h5>
             <button
                 type="button"

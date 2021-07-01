@@ -20,9 +20,6 @@ footer {
         @include breakpoint(small) {
             flex-direction: row;
         }
-        img {
-            height: 60px;
-        }
     }
     .navbar, .nav-link{
         padding: 0 !important;
@@ -30,7 +27,7 @@ footer {
     .store-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         @include breakpoint(small) {
             flex-direction: column;
         }
@@ -45,15 +42,41 @@ footer {
         }
     }
     .social-links {
-        img {
-            margin: 0 0.5em;
+        display: flex;
+        div {
+            margin-left: 0.5em;
             height: 30px;
+            width: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            transition: background-image 0.2s ease-in-out;
+            &:first-child {
+                background-image: url('../../../assets/images/fb.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Facebook\ hover.svg');
+                }
+            }
+            &:nth-child(2) {
+                background-image: url('../../../assets/images/linkedin.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Linkedin\ hover.svg');
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../../../assets/images/insta.svg');
+                &:hover {
+                    background-image: url('../../../assets/images/Instagram\ hover.svg');
+                }
+            }
             @include breakpoint(small) {
                 height: 45px;
+                width: 45px;
                 margin: 0 0.5em;
             }
             @include breakpoint(large) {
                 height: 45px;
+                width: 45px;
                 margin: 0 1.25em;
             }
         }
@@ -68,7 +91,7 @@ footer {
         gap: 2rem;
     }
     .footer-nav {
-        padding: 10px;
+        padding: 10px 0;
         h3 {
             font-size: 18px;
             color: $primary-color;
@@ -77,7 +100,14 @@ footer {
         .nav-link {
             font-size: 16px !important;
             font-family: '$font-regular';
+            margin: 10px 0;
         }
+    }
+}
+.links .nav-link {
+    margin: 10px 0;
+    @include breakpoint(small) {
+        margin: 10px;
     }
 }
 

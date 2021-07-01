@@ -20,6 +20,9 @@
 }
 
 .arrow-icons {
+    div:active {
+        transform: translateY(4px);
+    }
     img {
         height: 40px;
         cursor: pointer;

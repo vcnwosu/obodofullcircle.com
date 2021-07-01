@@ -29,7 +29,13 @@
     font-family: '$font-museo-700';
 }
 .why-ep > img {
-    height: 55px;
+    height: 17px;
+    @include breakpoint(small) {
+        height: 45px;
+    }
+    @include breakpoint(large) {
+        height: 55px;
+    }
 }
 
 .accordion-div-ep {
@@ -49,11 +55,14 @@
             h5 {
                 color: $bg-color;
                 font-family: '$font-semi-bold';
+                margin-bottom: 0;
+                padding: 1rem 0;
             }
         }
         .card-body {
             color: $bg-color;
             font-family: '$font-museo-regular';
+            padding: 0 1.25rem 1.25rem;
         }
         hr {
             display: none;

@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import styles from './navigation.module.scss';
 import './navigation.scss';
-import Logo from '../../../assets/images/logo.svg';
+import Logo from '../../../assets/images/OBODOLOGO.svg';
 
 export interface Navs {
     path: string;
@@ -25,23 +25,23 @@ const Navigation = ({ list, type }: Props) => {
     const buttonRef = useRef< HTMLButtonElement | null | any>();
 
     const hideShowClass = () => {
-        buttonRef.current?.classList.toggle('collapsed');
-        navbarRef.current?.classList.toggle('show');
+        // buttonRef.current?.classList.toggle('collapsed');
+        navbarRef.current?.classList.remove('show');
     }
 
     const handleHamburger = () => {
         // if(buttonRef.current?.classList.contains('collapsed')) {
         //     buttonRef.current?.classList.remove('collapsed');
-        //     navbarRef.current?.classList.add('collapsing');
         //     setTimeout(() => {
-        //         navbarRef.current?.classList.add('show')
-        //     }, 1000)
-        // } else {
-        //     buttonRef.current?.classList.add('collapsed');
-        // }
-        buttonRef.current?.classList.toggle('collapsed');
-        navbarRef.current?.classList.toggle('show');
-    }
+            //         navbarRef.current?.classList.add('show')
+            //     }, 1000)
+            // } else {
+                //     buttonRef.current?.classList.add('collapsed');
+                // }
+                // navbarRef.current?.classList.toggle('show');
+                // buttonRef.current?.classList.toggle('collapsed');
+                    // navbarRef.current?.classList.add('collapsing');
+            }
 
     return (
         <>
@@ -56,7 +56,7 @@ const Navigation = ({ list, type }: Props) => {
                     <Nav navbarScroll>
                         {list.map(item => (
                             item.isDropdown ?
-                                (<NavDropdown key={item.text} style={{ margin: '10px' }} title={item.text} id="navbarScrollingDropdown">
+                                (<NavDropdown key={item.text} title={item.text} id="navbarScrollingDropdown">
                                     {item.dropdownItems?.map(nav => (
                                         <NavDropdown.Item key={nav}>
                                             <Link to={nav}>{nav}</Link>
@@ -64,7 +64,7 @@ const Navigation = ({ list, type }: Props) => {
                                     ))}
 
                                 </NavDropdown>) :
-                                (<Nav.Link key={item.text} style={{ margin: '10px' }} onClick={hideShowClass}>
+                                (<Nav.Link key={item.text} onClick={hideShowClass}>
                                     <NavLink activeClassName={styles.active} to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>)
                         ))}
@@ -75,7 +75,7 @@ const Navigation = ({ list, type }: Props) => {
                     (<Navbar expand="lg">
                         <Nav className="flex-column">
                             {list.map(item => (
-                                <Nav.Link key={item.text} style={{ marginBottom: '10px' }}>
+                                <Nav.Link key={item.text}>
                                     <NavLink to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>))
                             }
@@ -83,7 +83,7 @@ const Navigation = ({ list, type }: Props) => {
                     </Navbar>) : (<Navbar expand="lg">
                         <Nav>
                             {list.map(item => (
-                                <Nav.Link key={item.text} style={{ margin: '10px' }}>
+                                <Nav.Link key={item.text}>
                                     <NavLink to={item.path} >{item.text}</NavLink>
                                 </Nav.Link>))
                             }

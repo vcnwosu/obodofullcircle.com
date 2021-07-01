@@ -1,4 +1,6 @@
 import ExchangeProgramIntroduction from "./components/ExchangeProgramIntroduction"
+import ExchangeProgramPlans from "./components/ExchangeProgramPlans"
+import HowItWorks from "./components/HowItWorks"
 import WhyExchangeProgram from "./components/WhyExchangeProgram"
 
 const ExchangeProgram = () => {
@@ -6,6 +8,8 @@ const ExchangeProgram = () => {
         <div>
           <ExchangeProgramIntroduction />
           <WhyExchangeProgram />
+          <HowItWorks />
+          <ExchangeProgramPlans />
         </div>
     )
 }

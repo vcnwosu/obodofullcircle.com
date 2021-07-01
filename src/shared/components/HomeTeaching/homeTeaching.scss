@@ -1,0 +1,25 @@
+@import '../../../assets/styles/mixins';
+
+.teaching-div {
+    padding: 5rem 0;
+    background-image: url('../../../assets/images/homeTeachingBG.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+    background-position-x: 10%;
+    @include breakpoint(small) {
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+    @include breakpoint(large) {
+        padding-top: 11rem !important;
+        padding-bottom: 11rem !important;
+    }
+    .head {
+        font-size: 2rem !important;
+        @include breakpoint(small) {
+            font-size: 3rem !important;
+        }
+    }
+}

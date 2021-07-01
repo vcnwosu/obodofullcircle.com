@@ -1,4 +1,4 @@
-import { CustomButton } from "../../../../shared/components/Button";
+import { CustomButton } from "../Button";
 import './homeTeaching.scss';
 
 const HomeTeaching = () => {
