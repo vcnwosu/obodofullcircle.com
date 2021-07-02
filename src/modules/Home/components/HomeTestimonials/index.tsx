@@ -138,7 +138,7 @@ const HomeTestimonials = () => {
         setScrollDistance(scrollDistance - distance);
     }
     return (
-        <div className="testimonials-div pt-5 pb-5">
+        <div className="testimonials-div pt-5 pb-5" id="testimonials">
             <div className="testimonial-wrapper">
                 <div className="text-center">
                     <h2>See what people are saying</h2>

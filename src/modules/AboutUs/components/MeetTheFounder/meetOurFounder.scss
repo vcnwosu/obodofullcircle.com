@@ -15,6 +15,9 @@
     img {
         height: 400px;
         @include breakpoint(small) {
+            height: 550px;
+        }
+        @include breakpoint(large) {
             height: 650px;
         }
     }
@@ -28,6 +31,11 @@
             color: $text-shadow-3;
             font-size: 2.6rem !important;
             @include breakpoint(small) {
+                font-size: 3rem !important;
+                top: -1rem;
+                left: -2rem;
+            }
+            @include breakpoint(large) {
                 font-size: 5rem !important;
                 top: -5rem;
                 left: -2rem;
@@ -38,6 +46,10 @@
             color: $bg-color;
             margin-bottom: 1rem;
             @include breakpoint(small) {
+                margin-bottom: 1rem;
+                margin-top: 1.5rem
+            }
+            @include breakpoint(large) {
                 margin-bottom: 1.5rem;
             }
         }

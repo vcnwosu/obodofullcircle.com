@@ -2,12 +2,13 @@ import { useState } from 'react';
 import PlanCard from './components/PlanCard'
 import './exchangeProgramPlans.scss';
 import { basicPlanData, premiumPlanData } from './components/planData';
+import { CustomButton } from '../../../../shared/components/Button';
 
 const ExchangeProgramPlans = () => {
 
     const [activeType, setActiveType] = useState(1);
     return (
-        <div className="ep-plan-div">
+        <div className="ep-plan-div" id="plans">
             <div className="wrapper text-center">
                 <h2>Right Plan For Your Learning</h2>
                 <p>Igbo Conversation Exchange</p>
@@ -22,6 +23,7 @@ const ExchangeProgramPlans = () => {
                     <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
                     <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal}  />
                 </div>
+                <CustomButton type="button" variant="primary" text="Start 7-day trial now" />
             </div>
         </div>
     )

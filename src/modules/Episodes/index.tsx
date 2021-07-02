@@ -1,8 +1,10 @@
+import EpisodesIntroduction from "./components/EpisodesIntroduction"
+
 const Episodes = () => {
     return (
-        <>
-            <h2>Episodes</h2>
-        </>
+        <div>
+            <EpisodesIntroduction />
+        </div>
     )
     
 }

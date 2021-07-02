@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166" height="166" viewBox="0 0 166 166">
+  <defs>
+    <filter id="Rectangle_1994" x="0" y="0" width="166" height="166" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#a7a4cb" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3390" data-name="Group 3390" transform="translate(30 20)">
+    <g transform="matrix(1, 0, 0, 1, -30, -20)" filter="url(#Rectangle_1994)">
+      <rect id="Rectangle_1994-2" data-name="Rectangle 1994" width="106" height="106" rx="4" transform="translate(30 20)" fill="#fff"/>
+    </g>
+    <path id="Icon_simple-googlepodcasts" data-name="Icon simple-googlepodcasts" d="M3.98,25.686A3.975,3.975,0,0,0,0,29.666v4.325a3.98,3.98,0,1,0,7.96,0V29.666A3.975,3.975,0,0,0,3.98,25.686Zm55.723,0a3.975,3.975,0,0,0-3.98,3.98v4.325a3.98,3.98,0,1,0,7.96,0V29.666A3.975,3.975,0,0,0,59.7,25.686ZM17.725,38.714a3.975,3.975,0,0,0-3.98,3.98V47.02a3.98,3.98,0,0,0,7.96,0v-4.3a3.975,3.975,0,0,0-3.98-3.98Zm0-26.057a3.975,3.975,0,0,0-3.98,3.98V30.86a3.98,3.98,0,1,0,7.96,0V16.611a3.975,3.975,0,0,0-3.98-3.98Zm28.233,0a3.975,3.975,0,0,0-3.98,3.98v4.352a3.98,3.98,0,0,0,7.96,0V16.637a3.975,3.975,0,0,0-3.98-3.98ZM31.842,0a3.975,3.975,0,0,0-3.98,3.98V8.305a3.98,3.98,0,1,0,7.96,0V3.98A3.975,3.975,0,0,0,31.842,0Zm0,51.372a3.975,3.975,0,0,0-3.98,3.98V59.7a3.98,3.98,0,1,0,7.96.027V55.378a3.992,3.992,0,0,0-3.98-3.98ZM45.959,28.923a3.992,3.992,0,0,0-3.98,3.98V47.046a3.98,3.98,0,0,0,7.96,0V32.9A3.975,3.975,0,0,0,45.959,28.923ZM31.842,16.266a3.992,3.992,0,0,0-3.98,3.98V43.411a3.98,3.98,0,0,0,7.96,0V20.273a3.975,3.975,0,0,0-3.98-3.98Z" transform="translate(21.352 21.151)" fill="rgba(13,10,58,0.5)"/>
+  </g>
+</svg>

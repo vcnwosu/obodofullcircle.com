@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -11,15 +11,27 @@ export interface Navs {
     path: string;
     text: string;
     isDropdown?: boolean
-    dropdownItems?: string[]
+    dropdownItems?: string[];
+    divId: string;
 }
 
 interface Props {
     list: Navs[];
-    type: string
+    type: string;
+    onClick: (id: string) => void
 }
 
-const Navigation = ({ list, type }: Props) => {
+const Navigation = ({ list, type, onClick }: Props) => {
+    // const [activeDivId, setActiveDivId] = useState('');
+    let activeDivId;
+
+    // useEffect(() => {
+    //     scrollInto();
+    // }, [activeDivId]);
+
+    const selectActiveDivId = (id: string) => {
+        onClick(id);
+    }
 
     const navbarRef = useRef<HTMLDivElement>();
     const buttonRef = useRef< HTMLButtonElement | null | any>();
@@ -76,7 +88,7 @@ const Navigation = ({ list, type }: Props) => {
                         <Nav className="flex-column">
                             {list.map(item => (
                                 <Nav.Link key={item.text}>
-                                    <NavLink to={item.path} >{item.text}</NavLink>
+                                    <NavLink to={item.path} onClick={() => selectActiveDivId(item.divId)}>{item.text}</NavLink>
                                 </Nav.Link>))
                             }
                         </Nav>
