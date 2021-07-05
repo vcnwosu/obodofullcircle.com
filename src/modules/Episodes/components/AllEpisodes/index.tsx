@@ -1,0 +1,43 @@
+import { useState } from 'react';
+import './allEpisodes.scss'
+import AudioCard from './components/AudioCard';
+
+interface Season {
+    title: string;
+}
+const seasonData: Season[] = [
+    {
+        title: 'Season 1'
+    },
+    {
+        title: 'Season 2'
+    },
+    {
+        title: 'Season 3'
+    },
+    {
+        title: 'Season 4'
+    }
+];
+const AllEpisodes = () => {
+    const [currentSeason, setCurrentSeason] = useState(1);
+    return (
+        <div className="all-episodes-div">
+            <div className="wrapper">
+                <h2>All Episodes</h2>
+                <div className="d-flex season-container">
+                    {seasonData.map((season, index) => (
+                        <div key={season.title} className={currentSeason === index + 1 ? 'active' : ''} onClick={() => setCurrentSeason(index + 1)}>
+                            {season.title}
+                        </div>
+                    ))}
+                </div>
+                <div className="audio-cards-container">
+                    <AudioCard />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default AllEpisodes;

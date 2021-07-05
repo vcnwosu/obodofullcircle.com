@@ -14,7 +14,7 @@
     img {
         height: 350px;
         @include breakpoint(small) {
-            height: 700px;
+            height: 650px; 
         }
     }
     > div {

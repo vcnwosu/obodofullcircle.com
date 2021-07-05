@@ -1,0 +1,121 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.all-episodes-div {
+  padding: 4rem 0;
+  h2 {
+    color: $bg-color;
+    font-family: "$font-bold";
+  }
+  .season-container {
+    gap: 1rem;
+    div {
+      padding: 1rem 2rem;
+      background-color: $white;
+      color: $bg-color;
+      font-family: "$-font-medium";
+      border-radius: 10px;
+      cursor: pointer;
+      &.active {
+        background-color: $bg-color;
+        color: $white;
+      }
+    }
+  }
+  .audio-cards-container {
+    margin: 5rem 0;
+    padding: 0 4rem;
+    .audio-card {
+      background-color: $bg-color-9;
+      padding: 1rem;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      img {
+        width: 30%;
+      }
+      .episode-content {
+        width: calc(70% - 2rem);
+        p:first-child {
+          font-family: "font-semi-bold";
+          color: $bg-color-6;
+          span:last-child {
+            font-family: "$font-regular";
+            color: $primary-color;
+            background-color: rgba($color: $primary-color, $alpha: 0.1);
+            padding: 0.25rem 1rem;
+          }
+        }
+        h3 {
+          font-family: "$font-extra-bold";
+          color: $bg-color;
+        }
+        p {
+          color: $text-color-4;
+          font-family: "$font-museo-regular";
+        }
+        .rhap_container {
+          background-color: transparent;
+          box-shadow: none;
+          margin-top: 2rem;
+        }
+        .rhap_progress-bar-show-download {
+          background-color: $progress-bar-color;
+        }
+        .rhap_progress-filled {
+          background-color: $primary-color;
+        }
+        .rhap_controls-section {
+          display: none;
+        }
+        .rhap_progress-indicator {
+          display: none;
+        }
+        .rhap_time {
+          font-family: '$font-regular';
+          color: $black;
+        } 
+      }
+      .transcript-text{
+        transition: transform 0.3s ease-in;
+        transform: scaleY(0);
+        // display: none;
+        transform-origin: top;
+        h4 {
+          color: $bg-color;
+          font-family: '$font-semi-bold';
+        }
+        p {
+          color: $text-color-4;
+          font-family: '$font-museo-regular';
+        }
+        &.show-transcript {
+          transform: scaleY(1);
+          // display: block;
+        }
+      }
+    }
+  }
+  .button-div {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    button {
+      font-family: "$font-regular" !important;
+      min-width: 200px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    button:first-child {
+      @include btn($primary-color, $white, $hover-color);
+      padding: 13px 30px !important;
+      img {
+        height: 28px;
+      }
+    }
+  }
+}
