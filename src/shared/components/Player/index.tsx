@@ -5,20 +5,21 @@ import 'react-h5-audio-player/lib/styles.css';
 interface Props {
     src: string;
     playPause: boolean;
+    onEnded: () => void;
 }
-const Player = ({src, playPause}: Props) => {
+const Player = ({ src, playPause, onEnded }: Props) => {
 
     const playerRef = useRef<any>();
     useEffect(() => {
-        if(playPause) {
+        if (playPause) {
             playerRef.current.audio.current.play();
         } else {
             playerRef.current.audio.current.pause();
         }
     }, [playPause]);
-    
+
     return (
-        <AudioPlayer ref={playerRef} src={src} showSkipControls={false} showJumpControls={false} customAdditionalControls={[]} customVolumeControls={[]}/>
+        <AudioPlayer ref={playerRef} src={src} showSkipControls={false} showJumpControls={false} customAdditionalControls={[]} customVolumeControls={[]} onEnded={onEnded} />
     )
 }
 

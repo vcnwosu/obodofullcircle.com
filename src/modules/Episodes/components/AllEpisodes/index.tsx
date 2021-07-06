@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './allEpisodes.scss'
 import AudioCard from './components/AudioCard';
+import { AudioCardType } from './components/AudioCard'
 
 interface Season {
     title: string;
@@ -19,6 +20,22 @@ const seasonData: Season[] = [
         title: 'Season 4'
     }
 ];
+
+const audioCardData: AudioCardType[] = [
+    {
+        title: 'Introduction: O teego !',
+        showTranscript: false
+    },
+    {
+        title: 'Kola Nut Player I',
+        showTranscript: false
+    },
+    {
+        title: 'Kola Nut Player II',
+        showTranscript: false
+    }
+
+]
 const AllEpisodes = () => {
     const [currentSeason, setCurrentSeason] = useState(1);
     return (
@@ -33,7 +50,9 @@ const AllEpisodes = () => {
                     ))}
                 </div>
                 <div className="audio-cards-container">
-                    <AudioCard />
+                    {audioCardData.map(card => (
+                        <AudioCard key={card.title} title={card.title} showTranscript={card.showTranscript} />
+                    ))}
                 </div>
             </div>
         </div>

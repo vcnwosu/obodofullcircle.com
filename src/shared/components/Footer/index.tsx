@@ -92,7 +92,6 @@ const footerNavList: Navs[] = [
 const Footer = () => {
 
     const scrollInto = (id: string) => {
-        debugger
         if(id) {
             const divRef = document.getElementById(id);
             divRef?.scrollIntoView();
@@ -131,7 +130,7 @@ const Footer = () => {
                         <img src={AppStore} alt="appStore" />
                     </div>
                 </div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between bottom-nav">
                     <div className="links">
                         <Navigation list={footerNavList} type="footerBottom" onClick={(id: string) => scrollInto(id)}/>
                     </div>

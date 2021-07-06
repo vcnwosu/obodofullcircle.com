@@ -7,7 +7,7 @@ export interface Navs {
     path: string;
     text: string;
     isDropdown?: boolean
-    dropdownItems?: string[];
+    dropdownItems?: Navs[];
     divId: string;
 }
 

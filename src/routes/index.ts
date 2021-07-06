@@ -2,7 +2,7 @@ import AboutUs from "../modules/AboutUs";
 import Episodes from "../modules/Episodes";
 import ExchangeProgram from "../modules/ExchangeProgram";
 import Home from "../modules/Home";
-import Resources from "../modules/Resources";
+import Transcripts from "../modules/Transcripts";
 
 interface Route {
     path: string;
@@ -33,11 +33,11 @@ export const exchangeProgram: Route = {
     component: ExchangeProgram
 }
 
-const resources: Route = {
-    path: '/resources',
+const transcripts: Route = {
+    path: '/transcripts',
     exact: true,
     isProtected: false,
-    component: Resources
+    component: Transcripts
 }
 
 const aboutUs: Route = {
@@ -51,6 +51,6 @@ export const routeList = [
     home,
     episodes,
     exchangeProgram,
-    resources,
+    transcripts,
     aboutUs
 ]
