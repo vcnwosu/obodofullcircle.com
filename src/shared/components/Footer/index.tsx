@@ -1,8 +1,15 @@
+import { useState} from 'react';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
 import GooglePlay from '../../../assets/images/googlePlay.svg';
 import AppStore from '../../../assets/images/appStore.svg';
+import FB from '../../../assets/images/fb.svg';
+import FBHovered from '../../../assets/images/Facebook hover.svg';
+import Linkedin from '../../../assets/images/linkedin.svg';
+import LinkedinHovered from '../../../assets/images/Linkedin hover.svg';
+import Insta from '../../../assets/images/insta.svg';
+import InstaHovered from '../../../assets/images/Instagram hover.svg';
 
 const companyNavList: Navs[] = [
     {
@@ -91,6 +98,9 @@ const footerNavList: Navs[] = [
 
 const Footer = () => {
 
+    const [fbHovered, setFBHovered] = useState(false);
+    const [linkedinHovered, setLinkedinHovered] = useState(false);
+    const [instaHovered, setInstaHovered] = useState(false);
     const scrollInto = (id: string) => {
         if(id) {
             const divRef = document.getElementById(id);
@@ -135,9 +145,9 @@ const Footer = () => {
                         <Navigation list={footerNavList} type="footerBottom" onClick={(id: string) => scrollInto(id)}/>
                     </div>
                     <div className="social-links">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <img src={fbHovered ? FBHovered : FB} alt="" onMouseEnter={() => setFBHovered(true)} onMouseLeave={() => setFBHovered(false)}/>
+                        <img src={linkedinHovered ? LinkedinHovered : Linkedin} alt="" onMouseEnter={() => setLinkedinHovered(true)} onMouseLeave={() => setLinkedinHovered(false)}/>
+                        <img src={instaHovered ? InstaHovered : Insta} alt="" onMouseEnter={() => setInstaHovered(true)} onMouseLeave={() => setInstaHovered(false)}/>
                     </div>
                 </div>
             </footer>

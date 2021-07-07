@@ -41,14 +41,11 @@ const Header = () => {
 
     const inputRef = useRef<any>();
     const location = useLocation();
-    const scrollInto = (id: string) => {
-        const divRef = document.getElementById(id);
-        divRef?.scrollIntoView();
-    }
 
     const clickHandler = () => {
         inputRef.current.checked = false;
     }
+    
     return (
         <header>
             <div className="wrapper header-container">

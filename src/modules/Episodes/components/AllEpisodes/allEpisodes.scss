@@ -18,7 +18,7 @@
       padding: 0.5rem;
       background-color: $white;
       color: $bg-color;
-      font-family: "$-font-medium";
+      font-family: '$-font-medium';
       border-radius: 10px;
       cursor: pointer;
       font-size: 14px;
@@ -52,7 +52,7 @@
     }
     .audio-card {
       background-color: $bg-color-9;
-      padding: 0.5rem;
+      padding: 0.5rem 0.5rem 2rem;
       flex-direction: column;
       gap: 2rem;
       align-items: center;
@@ -107,7 +107,10 @@
           display: none;
         }
         .rhap_progress-indicator {
-          display: none;
+          width: 15px;
+          height: 15px;
+          top: -5px;
+          margin-left: -5px;
         }
         .rhap_progress-container {
           margin: 0;
@@ -116,7 +119,7 @@
           font-family: '$font-regular';
           color: $black;
           position: absolute;
-          top: 20px;
+          top: 25px;
         }
         .rhap_progress-section {
           display: block;

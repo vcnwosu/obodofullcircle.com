@@ -9,8 +9,8 @@ const EpisodesIntroduction = () => {
         <div className="episode-intro-div">
             <div className="wrapper">
                 <h3>Episodes</h3>
-                <p>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, magni!</p> */}
+                <h2>From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, magni!</p>
             </div>
             <div className="text-center podcast-platforms">
                 <p>Get On</p>

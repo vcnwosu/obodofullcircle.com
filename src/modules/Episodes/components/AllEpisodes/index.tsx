@@ -2,24 +2,7 @@ import { useState } from 'react';
 import './allEpisodes.scss'
 import AudioCard from './components/AudioCard';
 import { AudioCardType } from './components/AudioCard'
-
-interface Season {
-    title: string;
-}
-const seasonData: Season[] = [
-    {
-        title: 'Season 1'
-    },
-    {
-        title: 'Season 2'
-    },
-    {
-        title: 'Season 3'
-    },
-    {
-        title: 'Season 4'
-    }
-];
+import {seasonData} from '../../../../shared/CommonData/seasonData';
 
 const audioCardData: AudioCardType[] = [
     {

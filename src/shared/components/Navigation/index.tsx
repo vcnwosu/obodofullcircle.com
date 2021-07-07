@@ -29,20 +29,20 @@ const Navigation = ({ list, type, onClick }: Props) => {
                 (<Navbar expand="lg">
                     <Nav className="flex-column">
                         {list.map(item => (
-                            <Nav.Link key={item.text}>
-                                <NavLink to={item.path} onClick={() => selectActiveDivId(item.divId)}>{item.text}</NavLink>
-                            </Nav.Link>))
+                                <NavLink key={item.text} to={item.path} onClick={() => selectActiveDivId(item.divId)}>{item.text}</NavLink>
+
+                            ))
                         }
                     </Nav>
-                </Navbar>) : (<Navbar expand="lg">
+                </Navbar>) : (
+                <Navbar expand="lg">
                     <Nav>
                         {list.map(item => (
-                            <Nav.Link key={item.text}>
-                                <NavLink to={item.path} >{item.text}</NavLink>
-                            </Nav.Link>))
-                        }
+                            <NavLink key={item.text} to={item.path} >{item.text}</NavLink>
+                        ))}
                     </Nav>
-                </Navbar>)
+                </Navbar>
+                )
             }
         </>
     )
