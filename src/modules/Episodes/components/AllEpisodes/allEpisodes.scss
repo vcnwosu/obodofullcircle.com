@@ -1,0 +1,194 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/variables";
+
+.all-episodes-div {
+  padding: 2rem 0;
+  @include breakpoint(large) {
+    padding: 4rem 0;
+  }
+  h2 {
+    color: $bg-color;
+    font-family: "$font-bold";
+  }
+  .season-container {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    div {
+      padding: 0.5rem;
+      background-color: $white;
+      color: $bg-color;
+      font-family: "$-font-medium";
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      @include breakpoint(small) {
+        padding: 1rem 2rem;
+        font-size: 16px;
+      }
+      @include breakpoint(large) {
+        padding: 1rem 2rem;
+        font-size: 16px;
+      }
+      &.active {
+        background-color: $bg-color;
+        color: $white;
+      }
+    }
+  }
+  .audio-cards-container {
+    margin: 2rem 0;
+    padding: 0rem;
+    flex-direction: column;
+    @include breakpoint(small) {
+      flex-direction: row;
+      padding: 0 4rem;
+      margin: 3rem 0;
+    }
+    @include breakpoint(large) {
+      flex-direction: row;
+      padding: 0 4rem;
+      margin: 5rem 0;
+    }
+    .audio-card {
+      background-color: $bg-color-9;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      @include breakpoint(small) {
+        padding: 1rem;
+        flex-direction: row;
+      }
+      > img {
+        width: 100%;
+        @include breakpoint(small) {
+          width: 30%;
+        }
+      }
+      .episode-content {
+        width: 100%;
+        @include breakpoint(small) {
+          width: calc(70% - 2rem);
+        }
+        p:first-child {
+          font-family: "font-semi-bold";
+          color: $bg-color-6;
+          span:last-child {
+            font-family: "$font-regular";
+            color: $primary-color;
+            background-color: rgba($color: $primary-color, $alpha: 0.1);
+            padding: 0.25rem 1rem;
+          }
+        }
+        h3 {
+          font-family: "$font-extra-bold";
+          color: $bg-color;
+        }
+        p {
+          color: $text-color-4;
+          font-family: "$font-museo-regular";
+        }
+        .rhap_container {
+          background-color: transparent;
+          box-shadow: none;
+          margin-top: 2rem;
+          padding: 10px 0;
+        }
+        .rhap_progress-bar-show-download {
+          background-color: $progress-bar-color;
+        }
+        .rhap_progress-filled {
+          background-color: $primary-color;
+        }
+        .rhap_controls-section {
+          display: none;
+        }
+        .rhap_progress-indicator {
+          display: none;
+        }
+        .rhap_progress-container {
+          margin: 0;
+        }
+        .rhap_time {
+          font-family: '$font-regular';
+          color: $black;
+          position: absolute;
+          top: 20px;
+        }
+        .rhap_progress-section {
+          display: block;
+          position: relative;
+        }
+        .rhap_total-time {
+          right: 0;
+        } 
+      }
+      .transcript-text{
+        transition: transform 0.5s ease-in-out;
+        // max-height: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        display: none;
+        h4 {
+          color: $bg-color;
+          font-family: '$font-semi-bold';
+          justify-content: space-between;
+          gap: 0.5rem;
+          @include breakpoint(small) {
+            gap: 1rem;
+          }
+          hr {
+            width: 100%;
+            border: 1px solid $bg-color-6;
+          }
+        }
+        p {
+          color: $text-color-4;
+          font-family: '$font-museo-regular';
+        }
+        &.show-transcript {
+          transform: scaleY(1);
+          // max-height: max-content;
+          display: block;
+        }
+      }
+    }
+  }
+  .button-div {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    @include breakpoint(small) {
+      gap: 2rem;
+    }
+    button {
+      font-family: "$font-regular" !important;
+      min-width: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 15px 10px !important;
+      @include breakpoint(small) {
+        min-width: 200px;
+      }
+    }
+    button:first-child {
+      @include btn($primary-color, $white, $hover-color);
+      padding: 15px 10px !important;
+      @include breakpoint(small) {
+        padding: 13px 30px !important;
+      }
+      img {
+        height: 20px;
+        @include breakpoint(small) {
+          height: 28px;
+        }
+      }
+    }
+  }
+}

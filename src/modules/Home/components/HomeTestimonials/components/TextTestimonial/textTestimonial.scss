@@ -10,8 +10,18 @@
   @include breakpoint(small) {
     min-width: 350px;
   }
+  div img {
+    height: 60px;
+    // @include breakpoint(small) {
+    //   height: auto;
+    // }
+  }
   p {
     font-family: '$font-museo-regular';
+    font-size: 0.9rem;
+    @include breakpoint(small) {
+      font-size: 1rem;
+    }
   }
   span {
     font-family: '$font-semi-bold';

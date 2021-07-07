@@ -7,75 +7,99 @@ import AppStore from '../../../assets/images/appStore.svg';
 const companyNavList: Navs[] = [
     {
         path: '/about-us',
-        text: 'About Us'
+        text: 'About Us',
+        divId: ''
     },
     {
         path: '',
-        text: 'Why Us'
+        text: 'Why Us',
+        divId: ''
     },
     {
         path: '',
-        text: 'Careers'
+        text: 'Careers',
+        divId: ''
     },
     {
-        path: '/contribute',
-        text: 'Testimonial'
+        path: '',
+        text: 'Testimonial',
+        divId: 'testimonials'
     },
     {
-        path: '/contribute',
-        text: 'Plans'
+        path: '/exchange-program',
+        text: 'Plans',
+        divId: 'plans'
     }
 ]
 
 const podcastNavList: Navs[] = [
     {
         path: '',
-        text: 'Exchange Program'
+        text: 'Exchange Program',
+        divId: ''
     },
     {
         path: '',
-        text: 'Podcasts'
+        text: 'Podcasts',
+        divId: ''
     },
     {
         path: '',
-        text: 'Shop'
+        text: 'Shop',
+        divId: ''
     }
 ]
 
 const appNavList: Navs[] = [
     {
         path: '',
-        text: 'Android'
+        text: 'Android',
+        divId: ''
     },
     {
         path: '',
-        text: 'iOS'
+        text: 'iOS',
+        divId: ''
     }
 ]
 const teacherNavList: Navs[] = [
     {
         path: '',
-        text: 'Become a Teacher'
+        text: 'Become a Teacher',
+        divId: 'teaching'
     }
 ]
 
 const footerNavList: Navs[] = [
     {
         path: '',
-        text: 'Help'
+        text: 'Help',
+        divId: ''
     },
     {
         path: '',
-        text: 'Privacy Policy'
+        text: 'Privacy Policy',
+        divId: ''
     },
     {
         path: '',
-        text: 'Terms and Conditions'
+        text: 'Terms and Conditions',
+        divId: ''
     },
 
 ]
 
 const Footer = () => {
+
+    const scrollInto = (id: string) => {
+        if(id) {
+            const divRef = document.getElementById(id);
+            divRef?.scrollIntoView();
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }
+
     return (
         <>
             <footer className="d-flex flex-column">
@@ -86,19 +110,19 @@ const Footer = () => {
                     <div className="footer-container">
                         <div className="footer-nav">
                             <h3>Company</h3>
-                            <Navigation list={companyNavList} type="footer" />
+                            <Navigation list={companyNavList} type="footer" onClick={(id: string) => scrollInto(id)}/>
                         </div>
                         <div className="footer-nav">
                             <h3>Our Podcast</h3>
-                            <Navigation list={podcastNavList} type="footer" />
+                            <Navigation list={podcastNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
                         </div>
                         <div className="footer-nav">
                             <h3>App</h3>
-                            <Navigation list={appNavList} type="footer" />
+                            <Navigation list={appNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
                         </div>
                         <div className="footer-nav">
                             <h3>Teacher</h3>
-                            <Navigation list={teacherNavList} type="footer" />
+                            <Navigation list={teacherNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
                         </div>
                     </div>
                     <div className="store-icons">
@@ -106,9 +130,9 @@ const Footer = () => {
                         <img src={AppStore} alt="appStore" />
                     </div>
                 </div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between bottom-nav">
                     <div className="links">
-                        <Navigation list={footerNavList} type="footerBottom"/>
+                        <Navigation list={footerNavList} type="footerBottom" onClick={(id: string) => scrollInto(id)}/>
                     </div>
                     <div className="social-links">
                         <div></div>

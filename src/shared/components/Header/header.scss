@@ -1,32 +1,138 @@
-@import '../../../assets/styles/variables';
-@import '../../../assets/styles/mixins';
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
 
 header {
-    background-color: #0D0A3A;
-    display: grid !important;
-    .navbar {
-        align-items: baseline;
-        .nav-link {
-            margin: 10px;
-            @include breakpoint(small) {
-                margin: 15px;
-            }
+  background-color: $bg-color;
+  position: relative;
+  .header-container {
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(small) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 120px;
+    }
+    .logo {
+      @include breakpoint(small) {
+        grid-column: 2 / 3;
+      }
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+    }
+    
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out 0.25s;
+      pointer-events: all;
+    }
+    
+    nav {
+      position: absolute;
+      text-align: left;
+      top: 100%;
+      left: 0;
+      background-color: $bg-color;
+      width: 100%;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.4s ease-in-out;
+      z-index: 10;
+      @include breakpoint(small) {
+        all: unset;
+        grid-column: 3 / 4;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include breakpoint(small) {
+          display: flex;
+          justify-content: flex-end;
         }
+      }
+      li {
+        margin-bottom: 2rem;
+        margin-left: 20px;
+        @include breakpoint(small) {
+          margin-bottom: 0em;
+          margin-left: 45px;
+        }
+        &:first-child {
+          margin-top: 2rem;
+          @include breakpoint(small) {
+            margin-top: 0rem;
+          }
+        }
+        .dropdown-button {
+          background-color: transparent;
+          border: none;
+          color: $white;
+          // font-size: 14px;
+          &:focus + ul {
+            opacity: 1;
+            pointer-events: all;
+          }
+          &:hover {
+            color: $primary-color;
+          }
+          img {
+            margin-left: 0.75rem;
+            height: 8px;
+          }
+        }
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        @include breakpoint(small) {
+          opacity: 1;
+          // font-size: 14px;
+          pointer-events: all;
+        }
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      .custom-dropdown {
+        position: absolute;
+        flex-direction: column;
+        background-color: $white;
+        border-radius: 5px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        z-index: 10;
+        li {
+          margin-left: 0;
+          padding: 0.5rem 1rem;
+          margin: 0;
+          &:hover {
+            // background-color: $bg-color;
+            cursor: pointer;
+            > a {
+              color: $primary-color;
+            }
+          }
+          a {
+            color: $bg-color;
+          }
+        }
+      }
     }
-    .navbar-collapse {
-        justify-content: flex-end;
+    .hamburger {
+      margin-bottom: 0 !important;
+      @include breakpoint(small) {
+        display: none;
+      }
     }
-}
-
-.dropdown-toggle::after {
-    // content: url('../../../assets/images/caret.png') !important;
-    content: '' !important;
-    background-image: url(../../../assets/images/caret.svg);
-    height: 10px;
-    width: 17px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none !important;
-    position: absolute;
-    margin: 0.5em 0 0 0.5em !important;
+  }
 }

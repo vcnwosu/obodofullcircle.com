@@ -88,22 +88,21 @@
     @include breakpoint(small) {
         padding:  15px 30px;
     }
+    &:focus {
+        background: transparent;
+        box-shadow: none!important;
+        outline: none!important;
+        color: $btn-text !important;
+        border-color: $btn-text !important;
+    }
     &:active,
     &:hover {
         color: $btn-bg !important;
         background-color: $btn-text !important;
         border-color: $btn-text !important;
-        transform: translateY(4px);
     }
-    &:active {
+    &:hover {
         transform: translateY(4px);
-    }
-    &:focus {
-        background: $btn-bg;
-        box-shadow: none!important;
-        outline: none!important;
-        color: $btn-text !important;
-        border-color: $btn-text !important;
     }
 }
 

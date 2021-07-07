@@ -1,0 +1,42 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+.au-company-div {
+    background-color: $bg-color-4;
+    padding: 3rem 0;
+    h2 {
+        color: $bg-color;
+        font-family: '$font-bold';
+    }
+    p{
+        color: $bg-color;
+        font-family: '$font-museo-700';
+    }
+    .grid-items-container {
+        padding-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        @include breakpoint(small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .value-item {
+            h4 {
+                color: $bg-color;
+                font-family: '$font-bold';
+                margin-top: 1rem;
+                font-size: 1.4rem !important;
+                @include breakpoint(small) {
+                    margin-top: 1.5rem;
+                }
+            }
+            p {
+                color: $text-color-4;
+                font-family: '$font-museo-regular';
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+
+}

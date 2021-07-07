@@ -52,6 +52,7 @@ footer {
             cursor: pointer;
             transition: background-image 0.2s ease-in-out;
             &:first-child {
+                margin-left: 0;
                 background-image: url('../../../assets/images/fb.svg');
                 &:hover {
                     background-image: url('../../../assets/images/Facebook\ hover.svg');
@@ -85,13 +86,19 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
     @include breakpoint(small) {
         flex-direction: row;
         gap: 2rem;
+        flex-wrap: nowrap;
     }
     .footer-nav {
         padding: 10px 0;
+        width: 50%;
+        @include breakpoint(small) {
+            width: auto;
+        }
         h3 {
             font-size: 18px;
             color: $primary-color;
@@ -102,6 +109,12 @@ footer {
             font-family: '$font-regular';
             margin: 10px 0;
         }
+    }
+}
+.bottom-nav {
+    margin-top: 2rem;
+    @include breakpoint(small) {
+        margin-top: 0;
     }
 }
 .links .nav-link {

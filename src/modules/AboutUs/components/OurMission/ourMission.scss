@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+.au-mission-div {
+    background-color: $bg-color-4;
+    div:first-child {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        @include breakpoint(small) {
+            padding: 4rem 120px 6rem;
+        }
+    }
+    div:last-child {
+        max-height: 45px;
+        overflow: hidden;
+    }
+    h3 {
+        color: $primary-color;
+        font-family: '$font-museo';
+    }
+    p {
+        color: $bg-color;
+        font-family: '$font-bold';
+        font-size: 1.5rem;
+        @include breakpoint(small) {
+            font-size: 2rem;
+        }
+    }
+}

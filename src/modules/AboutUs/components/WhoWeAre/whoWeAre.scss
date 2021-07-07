@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+.au-whoWe-div {
+    background-image: url(../../../../assets/images/whoWeAre.svg);
+    padding: 5rem 0 5rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include breakpoint(small) {
+        padding: 9rem 0 10rem 0;
+    }
+    h3 {
+        color: $white;
+        font-family: '$font-bold';
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        color: $white;
+        font-family: '$font-museo-regular';
+        text-align: center;
+        padding: 0;
+        @include breakpoint(small) {
+            padding: 0 4rem;
+        }
+    }
+}

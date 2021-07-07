@@ -1,0 +1,53 @@
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+.episode-intro-div {
+    position: relative;
+    background: linear-gradient(180deg, $bg-color-4 90%, $white 0);
+    overflow-x: hidden;
+    @include breakpoint(small) {
+        background: linear-gradient(180deg, $bg-color-4 84%, $white 0);
+    }
+    div:first-child {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        @include breakpoint(small) {
+            padding: 4rem 120px 6rem;
+            padding-bottom: 4rem;
+        }
+    }
+    h3 {
+        color: $primary-color;
+        font-family: '$font-museo';
+    }
+    p {
+        color: $bg-color;
+        font-family: '$font-bold';
+        font-size: 1.5rem;
+        @include breakpoint(small) {
+            font-size: 2rem;
+        }
+    }
+    .podcast-platforms {
+        p {
+            font-family: '$font-bold';
+            color: $bg-color-6;
+        }
+        img {
+            z-index: 1;
+            height: 80px;
+            @include breakpoint(small) {
+                height: auto;
+            }
+        }   
+    }
+    > img {
+        position: absolute;
+        height: 30px;
+        top: calc(88% - 30px);
+        @include breakpoint(small) {
+            height: auto;
+            top: calc(82% - 48px);
+        }
+    }
+}
