@@ -20,7 +20,7 @@ interface Testimonial {
 const testimonialArray: Testimonial[] = [
     {
         type: 'video',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Chiamaka Precious'
     },
     {
@@ -31,7 +31,7 @@ const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'test1.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chibuzo-Baltimore-US.mp4',
         userName: 'Chibuzo'
     },
     {
@@ -40,59 +40,54 @@ const testimonialArray: Testimonial[] = [
         userImage: Chelsea,
         userName: 'Chelsea'
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chineme-Maryland-US.mp4',
-    //     userName: 'Chineme'
-    // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chineme-Maryland-US.mp4',
+        userName: 'Chineme'
+    },
     {
         type: 'text',
         data: 'I’ve tried to learn igbo on my own three different times, and I failed each time, usually within a few weeks. With the igbo exchange program I’ve been able to make so much progress in the last couple of months. I learn things that I can use in everyday conversation, I have an encouraging conversation partner to practice my Igbo with every week, and a structured program to keep me accountable. Daalu Ifunanya for creating this program!',
         userImage: UserImage,
         userName: 'Ugo '
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-    //     userName: 'Chizute'
-    // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+        userName: 'Chizute'
+    },
     {
         type: 'text',
         data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',
         userImage: UserImage,
         userName: 'Ijeoma'
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Nneoma-New-York-USA.mp4',
-    //     userName: 'Nneoma'
-    // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Nneoma-New-York-USA.mp4',
+        userName: 'Nneoma'
+    },
     {
         type: 'text',
         data: 'I am so happy that I decided to join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
         userImage: Mary,
         userName: 'Mary '
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
-    //     userName: 'Obianuju'
-    // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
+        userName: 'Obianuju'
+    },
     {
         type: 'text',
         data: 'Ndewo!\n I started my Igbo learning journey with the Igbo Podcast conversation Exchange just over two months ago and I’m so happy I made that decision. I’m 22 years old and it’s always bothered me that I couldn’t speak my mother tongue so to have the opportunity to learn at my own pace has been incredible. My conversation partner is friendly, patient and understanding and I feel at ease even when I make mistakes. I am slowly beginning to understand more of the language and I get excited when I listen to an Igbo song and it makes sense or when I watch Igbo movies and can get a general idea of what’s going on. I’m really grateful for this program and I’d definitely recommend it to others.',
         userImage: Chimnonso,
         userName: 'Chimnonso Nduaka'
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
-    //     userName: 'Prince Nwagbara'
-    // },
     {
         type: 'video',
-        url: 'test.mp4',
-        userName: 'Chiamaka Precious'
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        userName: 'Prince Nwagbara'
     },
     {
         type: 'text',
@@ -100,11 +95,11 @@ const testimonialArray: Testimonial[] = [
         userImage: Chizi,
         userName: 'Chizi Duru'
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obi-Delaware-US.mp4',
-    //     userName: 'Obi'
-    // }
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obi-Delaware-US.mp4',
+        userName: 'Obi'
+    }
 ]
 
 let windowWidth: number;
