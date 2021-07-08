@@ -3,9 +3,9 @@
 @import "../../../../assets/styles/variables";
 
 .all-episodes-div {
-  padding: 2rem 0;
+  padding: 2rem 0 0;
   @include breakpoint(large) {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
   }
   h2 {
     color: $bg-color;
@@ -18,7 +18,7 @@
       padding: 0.5rem;
       background-color: $white;
       color: $bg-color;
-      font-family: '$-font-medium';
+      font-family: '$font-medium';
       border-radius: 10px;
       cursor: pointer;
       font-size: 14px;
@@ -56,14 +56,27 @@
       flex-direction: column;
       gap: 2rem;
       align-items: center;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
       flex-wrap: wrap;
+      position: relative;
       @include breakpoint(small) {
         padding: 1rem;
         flex-direction: row;
       }
-      > img {
+      > .image-container {
         width: 100%;
+        position: relative;
+        img:first-child {
+          width: 100%;
+        }
+        img:last-child {
+          position: absolute;
+          height: 60px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }
         @include breakpoint(small) {
           width: 30%;
         }
@@ -74,8 +87,11 @@
           width: calc(70% - 2rem);
         }
         p:first-child {
-          font-family: "font-semi-bold";
+          font-family: "$font-semi-bold";
           color: $bg-color-6;
+          @include breakpoint(small) {
+            margin-bottom: 0.5rem;
+          }
           span:last-child {
             font-family: "$font-regular";
             color: $primary-color;
@@ -96,6 +112,12 @@
           box-shadow: none;
           margin-top: 2rem;
           padding: 10px 0;
+          @include breakpoint(small) {
+            margin-top: 1rem;
+          }
+          @include breakpoint(large) {
+            margin-top: 2rem;
+          }
         }
         .rhap_progress-bar-show-download {
           background-color: $progress-bar-color;
@@ -129,69 +151,75 @@
           right: 0;
         } 
       }
-      .transcript-text{
-        transition: transform 0.5s ease-in-out;
-        // max-height: 0;
-        transform: scaleY(0);
-        transform-origin: top;
-        display: none;
-        h4 {
-          color: $bg-color;
-          font-family: '$font-semi-bold';
-          justify-content: space-between;
-          gap: 0.5rem;
+    }
+    .button-div {
+      gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      @include breakpoint(small) {
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+      @include breakpoint(large) {
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      button {
+        font-family: "$font-regular" !important;
+        min-width: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 15px 10px !important;
+        @include breakpoint(small) {
+          min-width: 200px;
+        }
+      }
+      button:first-child {
+        @include btn($primary-color, $white, $hover-color);
+        padding: 15px 10px !important;
+        @include breakpoint(small) {
+          padding: 13px 30px !important;
+        }
+        img {
+          height: 20px;
           @include breakpoint(small) {
-            gap: 1rem;
+            height: 28px;
           }
-          hr {
-            width: 100%;
-            border: 1px solid $bg-color-6;
-          }
-        }
-        p {
-          color: $text-color-4;
-          font-family: '$font-museo-regular';
-        }
-        &.show-transcript {
-          transform: scaleY(1);
-          // max-height: max-content;
-          display: block;
         }
       }
     }
   }
-  .button-div {
-    gap: 0.5rem;
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    @include breakpoint(small) {
-      gap: 2rem;
-    }
-    button {
-      font-family: "$font-regular" !important;
-      min-width: 150px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+  .transcript-text{
+    transition: all 0.5s ease-in-out;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: $bg-color-9;
+    padding: 1rem;
+    h4 {
+      color: $bg-color;
+      font-family: '$font-semi-bold';
+      justify-content: space-between;
       gap: 0.5rem;
-      padding: 15px 10px !important;
       @include breakpoint(small) {
-        min-width: 200px;
+        gap: 1rem;
+      }
+      hr {
+        width: 100%;
+        border: 1px solid $bg-color-6;
       }
     }
-    button:first-child {
-      @include btn($primary-color, $white, $hover-color);
-      padding: 15px 10px !important;
-      @include breakpoint(small) {
-        padding: 13px 30px !important;
-      }
-      img {
-        height: 20px;
-        @include breakpoint(small) {
-          height: 28px;
-        }
-      }
+    p {
+      color: $text-color-4;
+      font-family: '$font-museo-regular';
+    }
+    &.show-transcript {
+      transform: scaleY(1);
+      max-height: 1000px;
     }
   }
 }
+  

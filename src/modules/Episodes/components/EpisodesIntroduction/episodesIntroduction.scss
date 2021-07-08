@@ -3,7 +3,7 @@
 @import '../../../../assets/styles/mixins';
 .episode-intro-div {
     position: relative;
-    background: linear-gradient(180deg, $bg-color-4 90%, $white 0);
+    background: linear-gradient(180deg, $bg-color-4 93%, $white 0);
     overflow-x: hidden;
     @include breakpoint(small) {
         background: linear-gradient(180deg, $bg-color-4 84%, $white 0);
@@ -53,7 +53,7 @@
     > img {
         position: absolute;
         height: 30px;
-        top: calc(88% - 30px);
+        top: calc(91% - 30px);
         @include breakpoint(small) {
             height: auto;
             top: calc(82% - 48px);

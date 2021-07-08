@@ -53,10 +53,6 @@ footer {
             transition: background-image 0.2s ease-in-out;
             &:first-child {
                 margin-left: 0;
-                // background-image: url('../../../assets/images/fb.svg');
-                // &:hover {
-                //     background-image: url('../../../assets/images/Facebook\ hover.svg');
-                // }
             }
             @include breakpoint(small) {
                 height: 45px;
@@ -74,7 +70,6 @@ footer {
 
 .footer-container {
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     @include breakpoint(small) {
         flex-direction: row;
@@ -106,6 +101,7 @@ footer {
 }
 .links a {
     margin: 10px 0;
+    font-family: '$font-light';
     @include breakpoint(small) {
         margin: 10px;
     }

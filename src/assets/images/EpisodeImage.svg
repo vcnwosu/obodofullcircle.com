@@ -5,9 +5,7 @@
     </pattern>
   </defs>
   <g id="Group_3724" data-name="Group 3724" transform="translate(-287 -1140)">
-    <g id="Group_3397" data-name="Group 3397" transform="translate(70.001 -223.027)">
-      <rect id="jessica-felicio-QS9ZX5UnS14-unsplash" width="346" height="346" transform="translate(217 1363.027)" fill="url(#pattern)"/>
-    </g>
+    <rect id="jessica-felicio-QS9ZX5UnS14-unsplash" width="346" height="346" transform="translate(287 1140)" fill="url(#pattern)"/>
     <text id="IGBO" transform="translate(339 1466)" fill="#fff" font-size="45" font-family="SegoeUI, Segoe UI" letter-spacing="1em"><tspan x="0" y="0">IGBO</tspan></text>
     <g id="Group_3398" data-name="Group 3398" transform="translate(-201.271 589.781)">
       <g id="Group_2963" data-name="Group 2963" transform="translate(504.996 556.78)">
@@ -25,6 +23,5 @@
         </g>
       </g>
     </g>
-    <path id="Icon_ionic-ios-play-circle" data-name="Icon ionic-ios-play-circle" d="M37.375,3.375a34,34,0,1,0,34,34A34,34,0,0,0,37.375,3.375Zm13.7,34.638L28.646,51.58a.727.727,0,0,1-1.1-.638V23.808a.724.724,0,0,1,1.1-.638L51.074,36.738A.749.749,0,0,1,51.074,38.013Z" transform="translate(422.625 1275.624)" fill="#fff"/>
   </g>
 </svg>

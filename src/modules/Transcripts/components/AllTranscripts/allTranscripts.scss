@@ -18,7 +18,7 @@
       padding: 0.5rem;
       background-color: $white;
       color: $bg-color;
-      font-family: "$-font-medium";
+      font-family: "$font-medium";
       border-radius: 10px;
       cursor: pointer;
       font-size: 14px;
@@ -43,23 +43,26 @@
     gap: 2rem;
     padding: 0;
     @include breakpoint(small) {
-      flex-direction: row;
       padding: 0 4rem;
       margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 2rem;
     }
     @include breakpoint(large) {
-      flex-direction: row;
       padding: 0 4rem;
       margin: 5rem 0;
       grid-template-columns: repeat(3, 1fr);
-      gap: 4rem 2rem;
+      gap: 3rem 2rem;
     }
     .transcript-card {
       background-color: $bg-color-9;
-      padding: 1rem;
+      padding: 0.5rem;
       gap: 1rem;
+      @include breakpoint(small) {
+        padding: 1rem;
+      }
       img {
-        height: 100%;
+        height: auto;
       }
       p:first-child {
         font-family: "$font-regular";

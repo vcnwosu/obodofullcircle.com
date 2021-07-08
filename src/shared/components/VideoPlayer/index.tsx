@@ -6,6 +6,7 @@ interface Props {
     onEnded: () => void;
 }
 const VideoPlayer = ({ url, playing, onEnded }: Props) => {
+
     return (
         <ReactPlayer url={url} playing={playing} onEnded={onEnded} />
     )
