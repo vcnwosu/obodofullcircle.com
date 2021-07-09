@@ -1,8 +1,10 @@
-@import '../../../assets/styles/mixins';
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/variables";
 
 .teaching-div {
     padding: 5rem 0;
-    background-image: url('../../../assets/images/homeTeachingBG.svg');
+    background-image: url("../../../assets/images/homeTeachingBG.svg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 8rem !important;
@@ -20,6 +22,51 @@
         font-size: 2rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
+        }
+    }
+}
+
+.modal-content {
+    padding: 3rem;
+}
+.modal-header,
+.modal-footer {
+    border: none !important;
+}
+.modal-footer {
+    justify-content: center;
+}
+.modal-title {
+    color: $primary-color;
+    font-family: "$font-bold";
+}
+.modal-dialog {
+    @include breakpoint(large) {
+        max-width: 650px !important;
+    }
+}
+.form-class {
+    .inputs-group {
+        justify-content: space-between;
+        gap: 2rem;
+        div:first-child {
+            width: 50%;
+        }
+    }
+    .input-group .form-control:last-child {
+        flex-grow: 5;
+        border-left: 1px solid $border-color-3 !important;
+    }
+    .form-group {
+        label {
+            color: $text-color-2;
+            font-family: "$font-medium";
+        }
+        .form-control {
+            background-color: $bg-color-2;
+            border-color: $bg-color-2;
+            font-family: '$font-medium';
+            color: $bg-color;
         }
     }
 }
