@@ -27,7 +27,7 @@ footer {
     .store-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         @include breakpoint(small) {
             flex-direction: column;
         }
@@ -43,7 +43,7 @@ footer {
     }
     .social-links {
         display: flex;
-        div {
+        img {
             margin-left: 0.5em;
             height: 30px;
             width: 30px;
@@ -53,22 +53,6 @@ footer {
             transition: background-image 0.2s ease-in-out;
             &:first-child {
                 margin-left: 0;
-                background-image: url('../../../assets/images/fb.svg');
-                &:hover {
-                    background-image: url('../../../assets/images/Facebook\ hover.svg');
-                }
-            }
-            &:nth-child(2) {
-                background-image: url('../../../assets/images/linkedin.svg');
-                &:hover {
-                    background-image: url('../../../assets/images/Linkedin\ hover.svg');
-                }
-            }
-            &:nth-child(3) {
-                background-image: url('../../../assets/images/insta.svg');
-                &:hover {
-                    background-image: url('../../../assets/images/Instagram\ hover.svg');
-                }
             }
             @include breakpoint(small) {
                 height: 45px;
@@ -86,7 +70,6 @@ footer {
 
 .footer-container {
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     @include breakpoint(small) {
         flex-direction: row;
@@ -104,8 +87,7 @@ footer {
             color: $primary-color;
             font-family: '$font-bold';
         }
-        .nav-link {
-            font-size: 16px !important;
+        a {
             font-family: '$font-regular';
             margin: 10px 0;
         }
@@ -117,8 +99,9 @@ footer {
         margin-top: 0;
     }
 }
-.links .nav-link {
+.links a {
     margin: 10px 0;
+    font-family: '$font-light';
     @include breakpoint(small) {
         margin: 10px;
     }

@@ -6,8 +6,8 @@ const TranscriptsIntroduction = () => {
         <div className="transcripts-intro-div">
             <div className="wrapper">
                 <h3>Transcripts</h3>
-                <p>Purchase the transcripts and worksheets to the free
-                    podcast audios</p>
+                <h2>Purchase the transcripts and worksheets to the free
+                    podcast audios</h2>
                 {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, magni!</p> */}
             </div>
             <img src={episodeBorder} alt="episodeBorder" />

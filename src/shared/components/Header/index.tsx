@@ -10,13 +10,11 @@ import Caret from '../../../assets/images/caret.svg';
 const navList: Navs[] = [
     {
         path: '/episodes',
-        text: 'Episodes',
-        divId: ''
+        text: 'Episodes'
     },
     {
         path: '/exchange-program',
-        text: 'Exchange Program',
-        divId: ''
+        text: 'Exchange Program'
     },
     {
         path: '',
@@ -25,30 +23,24 @@ const navList: Navs[] = [
         dropdownItems: [
             {
                 path: '/transcripts',
-                text: 'Transcripts',
-                divId: ''
+                text: 'Transcripts'
             }
-        ],
-        divId: ''
+        ]
     },
     {
         path: '/about-us',
-        text: 'About Us',
-        divId: ''
+        text: 'About Us'
     },
 ]
 const Header = () => {
 
     const inputRef = useRef<any>();
     const location = useLocation();
-    const scrollInto = (id: string) => {
-        const divRef = document.getElementById(id);
-        divRef?.scrollIntoView();
-    }
 
     const clickHandler = () => {
         inputRef.current.checked = false;
     }
+    
     return (
         <header>
             <div className="wrapper header-container">

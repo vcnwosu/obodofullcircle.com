@@ -1,14 +1,15 @@
-import AboutUs from "../modules/AboutUs";
-import Episodes from "../modules/Episodes";
-import ExchangeProgram from "../modules/ExchangeProgram";
-import Home from "../modules/Home";
-import Transcripts from "../modules/Transcripts";
+import React, { LazyExoticComponent } from "react";
 
+const Home = React.lazy(() => import('../modules/Home'))
+const Episodes = React.lazy(() => import('../modules/Episodes'))
+const ExchangeProgram = React.lazy(() => import('../modules/ExchangeProgram'))
+const Transcripts = React.lazy(() => import('../modules/Transcripts'))
+const AboutUs = React.lazy(() => import('../modules/AboutUs'))
 interface Route {
     path: string;
     exact: boolean;
     isProtected: boolean;
-    component: () => JSX.Element 
+    component: LazyExoticComponent<() => JSX.Element>
 }
 
 const home: Route = {

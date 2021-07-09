@@ -8,7 +8,7 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
         @include breakpoint(small) {
-            padding: 4rem 120px 6rem;
+            padding: 6rem 120px 6rem;
         }
     }
     div:last-child {
@@ -19,12 +19,20 @@
         color: $primary-color;
         font-family: '$font-museo';
     }
-    p {
+    h2 {
         color: $bg-color;
-        font-family: '$font-bold';
-        font-size: 1.5rem;
+        font-family: '$font-extra-bold';
+        font-size: 2rem !important;
         @include breakpoint(small) {
-            font-size: 2rem;
+            font-size: 3rem !important;
         }
     }
+    // p {
+    //     color: $bg-color;
+    //     font-family: '$font-bold';
+    //     font-size: 1.5rem;
+    //     @include breakpoint(small) {
+    //         font-size: 2rem;
+    //     }
+    // }
 }

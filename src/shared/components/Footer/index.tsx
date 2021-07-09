@@ -1,105 +1,92 @@
+import { useState} from 'react';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
 import GooglePlay from '../../../assets/images/googlePlay.svg';
 import AppStore from '../../../assets/images/appStore.svg';
+import FB from '../../../assets/images/fb.svg';
+import FBHovered from '../../../assets/images/Facebook hover.svg';
+import Linkedin from '../../../assets/images/linkedin.svg';
+import LinkedinHovered from '../../../assets/images/Linkedin hover.svg';
+import Insta from '../../../assets/images/insta.svg';
+import InstaHovered from '../../../assets/images/Instagram hover.svg';
 
 const companyNavList: Navs[] = [
     {
         path: '/about-us',
-        text: 'About Us',
-        divId: ''
+        text: 'About Us'
     },
     {
         path: '',
-        text: 'Why Us',
-        divId: ''
+        text: 'Why Us'
     },
     {
         path: '',
-        text: 'Careers',
-        divId: ''
+        text: 'Careers'
     },
     {
-        path: '',
-        text: 'Testimonial',
-        divId: 'testimonials'
+        path: '#testimonials',
+        text: 'Testimonial'
     },
     {
-        path: '/exchange-program',
+        path: '/exchange-program#plans',
         text: 'Plans',
-        divId: 'plans'
     }
 ]
 
 const podcastNavList: Navs[] = [
     {
-        path: '',
+        path: '/exchange-program',
         text: 'Exchange Program',
-        divId: ''
     },
     {
-        path: '',
+        path: '/episodes#podcasts',
         text: 'Podcasts',
-        divId: ''
     },
     {
         path: '',
-        text: 'Shop',
-        divId: ''
+        text: 'Shop'
     }
 ]
 
 const appNavList: Navs[] = [
     {
         path: '',
-        text: 'Android',
-        divId: ''
+        text: 'Android'
     },
     {
         path: '',
-        text: 'iOS',
-        divId: ''
+        text: 'iOS'
     }
 ]
 const teacherNavList: Navs[] = [
     {
-        path: '',
-        text: 'Become a Teacher',
-        divId: 'teaching'
+        path: '#teaching',
+        text: 'Become a Teacher'
     }
 ]
 
 const footerNavList: Navs[] = [
     {
         path: '',
-        text: 'Help',
-        divId: ''
+        text: 'Help'
     },
     {
         path: '',
-        text: 'Privacy Policy',
-        divId: ''
+        text: 'Privacy Policy'
     },
     {
         path: '',
-        text: 'Terms and Conditions',
-        divId: ''
+        text: 'Terms and Conditions'
     },
 
 ]
 
 const Footer = () => {
-
-    const scrollInto = (id: string) => {
-        if(id) {
-            const divRef = document.getElementById(id);
-            divRef?.scrollIntoView();
-        } else {
-            window.scrollTo(0, 0);
-        }
-    }
-
+    const [fbHovered, setFBHovered] = useState(false);
+    const [linkedinHovered, setLinkedinHovered] = useState(false);
+    const [instaHovered, setInstaHovered] = useState(false);
+    
     return (
         <>
             <footer className="d-flex flex-column">
@@ -110,19 +97,19 @@ const Footer = () => {
                     <div className="footer-container">
                         <div className="footer-nav">
                             <h3>Company</h3>
-                            <Navigation list={companyNavList} type="footer" onClick={(id: string) => scrollInto(id)}/>
+                            <Navigation list={companyNavList} type="footer"/>
                         </div>
                         <div className="footer-nav">
                             <h3>Our Podcast</h3>
-                            <Navigation list={podcastNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
+                            <Navigation list={podcastNavList} type="footer" />
                         </div>
                         <div className="footer-nav">
                             <h3>App</h3>
-                            <Navigation list={appNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
+                            <Navigation list={appNavList} type="footer" />
                         </div>
                         <div className="footer-nav">
                             <h3>Teacher</h3>
-                            <Navigation list={teacherNavList} type="footer" onClick={(id: string) => scrollInto(id)} />
+                            <Navigation list={teacherNavList} type="footer" />
                         </div>
                     </div>
                     <div className="store-icons">
@@ -132,12 +119,12 @@ const Footer = () => {
                 </div>
                 <div className="d-flex justify-content-between bottom-nav">
                     <div className="links">
-                        <Navigation list={footerNavList} type="footerBottom" onClick={(id: string) => scrollInto(id)}/>
+                        <Navigation list={footerNavList} type="footerBottom"/>
                     </div>
                     <div className="social-links">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <img src={fbHovered ? FBHovered : FB} alt="" onMouseEnter={() => setFBHovered(true)} onMouseLeave={() => setFBHovered(false)}/>
+                        <img src={linkedinHovered ? LinkedinHovered : Linkedin} alt="" onMouseEnter={() => setLinkedinHovered(true)} onMouseLeave={() => setLinkedinHovered(false)}/>
+                        <img src={instaHovered ? InstaHovered : Insta} alt="" onMouseEnter={() => setInstaHovered(true)} onMouseLeave={() => setInstaHovered(false)}/>
                     </div>
                 </div>
             </footer>

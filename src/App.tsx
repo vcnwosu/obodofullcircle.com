@@ -7,25 +7,34 @@ import Footer from './shared/components/Footer';
 import HomeTestimonials from './modules/Home/components/HomeTestimonials';
 import HomeStore from './shared/components/HomeStore';
 import HomeTeaching from './shared/components/HomeTeaching';
+import { Spinner } from 'react-bootstrap';
+
+const spinner = (
+  <div className="d-flex justify-content-center align-items-center" style={{minHeight: '100vh'}}>
+    <Spinner animation="border" variant="success" />
+  </div>
+)
 
 const App: React.FC = () => {
   const history = createBrowserHistory();
   return (
     <>
       <Router history={history}>
-        <Header />
-        <Switch>
-          {routeList.map(({path, ...rest}): any => 
-            (<Route key={path} path={path} {...rest} />)
-          )}
-        </Switch>
-        <HomeTestimonials />
-        <HomeStore />
-        <HomeTeaching />
-        <Footer/ >
+        <React.Suspense fallback={spinner}>
+          <Header />
+          <Switch>
+            {routeList.map(({ path, ...rest }): any =>
+              (<Route key={path} path={path} {...rest} />)
+            )}
+          </Switch>
+          <HomeTestimonials />
+          <HomeStore />
+          <HomeTeaching />
+          <Footer />
+        </React.Suspense>
       </Router>
     </>
-    
+
   );
 }
 

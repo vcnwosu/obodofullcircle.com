@@ -1,0 +1,94 @@
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.all-transcripts-div {
+  padding: 2rem 0;
+  @include breakpoint(large) {
+    padding: 4rem 0;
+  }
+  h2 {
+    color: $bg-color;
+    font-family: "$font-bold";
+  }
+  .season-container {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    div {
+      padding: 0.5rem;
+      background-color: $white;
+      color: $bg-color;
+      font-family: "$font-medium";
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      @include breakpoint(small) {
+        padding: 1rem 2rem;
+        font-size: 16px;
+      }
+      @include breakpoint(large) {
+        padding: 1rem 2rem;
+        font-size: 16px;
+      }
+      &.active {
+        background-color: $bg-color;
+        color: $white;
+      }
+    }
+  }
+  .transcript-cards-container {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    @include breakpoint(small) {
+      padding: 0 4rem;
+      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 2rem;
+    }
+    @include breakpoint(large) {
+      padding: 0 4rem;
+      margin: 5rem 0;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem 2rem;
+    }
+    .transcript-card {
+      background-color: $bg-color-9;
+      padding: 0.5rem;
+      gap: 1rem;
+      @include breakpoint(small) {
+        padding: 1rem;
+      }
+      img {
+        height: auto;
+      }
+      p:first-child {
+        font-family: "$font-regular";
+        color: $bg-color;
+        font-size: 13px;
+        margin-bottom: 0.5rem;
+      }
+      h5 {
+        font-family: "$font-bold";
+        color: $black;
+        font-size: 1rem;
+      }
+      p.description {
+        font-family: "$font-museo-regular";
+        color: $black;
+        margin-bottom: 0.5rem;
+        font-size: 13px;
+      }
+      button {
+        background-color: $primary-color;
+        color: $white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        font-family: "$font-semi-bold";
+      }
+    }
+  }
+}
