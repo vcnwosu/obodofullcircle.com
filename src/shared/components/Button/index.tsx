@@ -6,7 +6,7 @@ interface Props {
     type: 'button' | 'submit' | 'reset';
     variant: string;
     className?: string;
-    onClick?: () => void;
+    onClick?: (e?: any) => void;
     icon?: string
 }
 
