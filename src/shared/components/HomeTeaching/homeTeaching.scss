@@ -34,7 +34,7 @@
     border: none !important;
 }
 .modal-footer {
-    justify-content: center;
+    justify-content: center !important;
 }
 .modal-title {
     color: $primary-color;
@@ -49,11 +49,11 @@
     .inputs-group {
         justify-content: space-between;
         gap: 2rem;
-        div:first-child {
-            width: 50%;
+        .form-group {
+            flex: 1;
         }
     }
-    .input-group .form-control:last-child {
+    .input-group .contact-number {
         flex-grow: 5;
         border-left: 1px solid $border-color-3 !important;
     }
@@ -67,6 +67,11 @@
             border-color: $bg-color-2;
             font-family: '$font-medium';
             color: $bg-color;
+            padding-right: 0;
+            &:invalid, &:valid {
+                background-image: none;
+                padding-right: 0;
+            }
         }
     }
 }

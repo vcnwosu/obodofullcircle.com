@@ -3,8 +3,36 @@ import PlanCard from './components/PlanCard'
 import './exchangeProgramPlans.scss';
 import { basicPlanData, premiumPlanData } from './components/planData';
 import { CustomButton } from '../../../../shared/components/Button';
+import axios from 'axios';
+import axiosInstance from '../../../../http/httpInterceptor';
+import CustomModal from '../../../../shared/components/Modal';
 
 const ExchangeProgramPlans = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const modalBody = () => {
+        return (
+            <div className="form-class">
+                Trial Plan
+            </div>
+        )
+    }
+
+    const handleClose = () => {
+        setShowModal(false);
+    }
+
+    const handleSubmit = (event: any) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    };
+    const testAxios = () => {
+        axiosInstance.get('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.data)
+    }
 
     const [activeType, setActiveType] = useState(1);
     return (
@@ -23,8 +51,9 @@ const ExchangeProgramPlans = () => {
                     <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
                     <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal}  />
                 </div>
-                <CustomButton type="button" variant="primary" text="Start 7-day trial now" />
+                <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
+            <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
         </div>
     )
 }
