@@ -1,17 +1,17 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
 
 .ep-plan-div {
     background-color: $bg-color-2;
     padding: 3rem 0 3rem 0;
     > div > h2 {
         color: $bg-color;
-        font-family: '$font-bold';
+        font-family: "$font-bold";
     }
     p {
         color: $bg-color;
-        font-family: '$font-museo-700';
+        font-family: "$font-museo-700";
     }
     .type-selector {
         padding: 3rem 0;
@@ -22,7 +22,7 @@
         .type-item {
             background-color: $bg-color-7;
             color: $text-color-3;
-            font-family: '$font-medium';
+            font-family: "$font-medium";
             padding: 10px;
             cursor: pointer;
             font-size: 12px;
@@ -72,25 +72,25 @@
         @include breakpoint(small) {
             width: 350px;
         }
-        div:first-child {
+        > div:first-child {
             margin-bottom: 2rem;
         }
-        div:not(:first-child) {
+        > div:not(:first-child) {
             gap: 1rem;
             margin-bottom: 2rem;
         }
         h2 {
             color: $bg-color;
-            font-family: '$font-bold';
+            font-family: "$font-bold";
         }
         .save-image {
             margin-right: -0.5rem;
         }
         .price {
-            font-family: '$font-bold';
+            font-family: "$font-bold";
             font-size: 20px;
             span {
-                font-family: '$font-medium';
+                font-family: "$font-medium";
                 font-size: 16px;
             }
         }
@@ -98,7 +98,40 @@
             color: $bg-color;
             margin-bottom: 0;
             text-align: left;
-            font-family: '$font-museo-regular';
+            font-family: "$font-museo-regular";
         }
+        .tooltip-div {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-div .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px 0 6px 6px;
+            padding: 5px 0;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 140%;
+            right: 8px;
+        }
+        .tooltip-div:hover .tooltip-text {
+            visibility: visible;
+        }
+        .tooltip-div .tooltip-text::after {
+            content: " ";
+            position: absolute;
+            top: -30%;
+            right: 0;
+            margin-left: -5px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent black black transparent;
+          }
     }
 }

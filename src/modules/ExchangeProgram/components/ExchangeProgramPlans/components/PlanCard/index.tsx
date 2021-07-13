@@ -1,6 +1,7 @@
 import CheckboxArrow from '../../../../../../assets/images/checkboxArrow.svg';
 import saveImage from '../../../../../../assets/images/save.svg';
 import { PlanType } from '../planData';
+import Info from '../../../../../../assets/images/Info.svg';
 interface NewPlanType extends PlanType {
     type: number;
 }
@@ -27,8 +28,12 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
             </div>}
             {detailsList.map(item => (
                 <div key={item.text} className="d-flex align-items-start">
-                    <img src={CheckboxArrow} alt="CheckboxArro" />
+                    <img src={CheckboxArrow} alt="Checkbox" />
                     <p>{item.text}</p>
+                    <div className="tooltip-div">
+                        <img src={Info} alt="Info" />
+                        <span className="tooltip-text">Tooltip Text</span>
+                    </div>
                 </div>
             ))}
         </div>

@@ -3,9 +3,9 @@ import PlanCard from './components/PlanCard'
 import './exchangeProgramPlans.scss';
 import { basicPlanData, premiumPlanData } from './components/planData';
 import { CustomButton } from '../../../../shared/components/Button';
-import axios from 'axios';
-import axiosInstance from '../../../../http/httpInterceptor';
 import CustomModal from '../../../../shared/components/Modal';
+import axiosInstance from '../../../../http/httpInterceptor';
+import CustomSpinner from '../../../../shared/components/Spinner';
 
 const ExchangeProgramPlans = () => {
     const [showModal, setShowModal] = useState(false);
@@ -30,7 +30,7 @@ const ExchangeProgramPlans = () => {
         }
     };
     const testAxios = () => {
-        axiosInstance.get('https://jsonplaceholder.typicode.com/todos/1')
+        axiosInstance.get('https://jsonplaceholder.typicode.com/todo/1')
         .then(response => response.data)
     }
 
@@ -51,9 +51,10 @@ const ExchangeProgramPlans = () => {
                     <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
                     <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal}  />
                 </div>
-                <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
+                <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={testAxios} />
             </div>
             <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomSpinner show={false}/>
         </div>
     )
 }

@@ -3,22 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import './assets/styles/main.scss'
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axiosInstance from './http/httpInterceptor';
 
-// axios.interceptors.request.use((request: AxiosRequestConfig) => {
-//   debugger
-//   console.log(request)
-//   return request;
-// });
-
-// axios.interceptors.response.use((response: AxiosResponse<any>) => {
-//   console.log(response)
-//   return response;
-// },
-//   (err: AxiosError<any>) => {
-//     debugger
-//     return Promise.reject(err);
-//   });
+const axiosInterceptor = axiosInstance;
 
 ReactDOM.render(
   <React.StrictMode>

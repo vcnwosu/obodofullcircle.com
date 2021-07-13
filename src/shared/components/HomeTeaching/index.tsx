@@ -122,11 +122,7 @@ const HomeTeaching = () => {
                     <div className="d-flex inputs-group">
                         <Form.Group controlId="language">
                             <Form.Label>Language you speak</Form.Label>
-                            <Form.Control as="select" required value={formData.language} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
-                                <option value="" disabled>Select Langauge</option>
-                                <option value="1">English</option>
-                                <option value="2">Igbo</option>
-                            </Form.Control>
+                            <Form.Control type="text" required value={formData.language} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                             <Form.Control.Feedback type="invalid" >
                                 {errors.languageError}
                             </Form.Control.Feedback>

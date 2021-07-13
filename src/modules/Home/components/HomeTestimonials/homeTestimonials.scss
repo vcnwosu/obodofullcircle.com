@@ -34,8 +34,9 @@
     padding-bottom: 1rem;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    scrollbar-color: $primary-color $bg-color-5;
     @include breakpoint(small) {
-        scrollbar-width: inherit;
+        scrollbar-width: thin;
     }
     > div {
         gap: 1rem;
