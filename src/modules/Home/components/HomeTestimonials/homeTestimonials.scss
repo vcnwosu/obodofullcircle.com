@@ -1,22 +1,22 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .testimonials-div {
-    background-image: url('../../../../assets/images/homeTestimonialsBG.png');
+    background-image: url("../../../../assets/images/homeTestimonialsBG.png");
     background-position: center;
     .testimonial-wrapper {
-        padding: 0 0 0 20px;
+        padding: 0 20px 0 20px;
         @include breakpoint(small) {
-            padding: 0 0 0 200px;
+            padding: 0 10px 0 200px;
         }
     }
     h2 {
         color: $white;
-        font-family: '$font-bold';
+        font-family: "$font-bold";
     }
     p.text {
         color: $white;
-        font-family: '$font-museo-700';
+        font-family: "$font-museo-700";
     }
 }
 
@@ -31,9 +31,13 @@
 }
 .testimonial-block {
     overflow: auto;
-    padding-right: 10px;
-    -ms-overflow-style: none;  /* IE and Edge */
+    padding-bottom: 1rem;
+    -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    scrollbar-color: $primary-color $bg-color-5;
+    @include breakpoint(small) {
+        scrollbar-width: thin;
+    }
     > div {
         gap: 1rem;
         transition: 0.5s transform ease-in-out;
@@ -43,5 +47,19 @@
     }
     &::-webkit-scrollbar {
         display: none;
+        @include breakpoint(small) {
+            display: block;
+            height: 10px; /* height of horizontal scrollbar */
+            border: 1px solid $white;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+        outline: 1px solid slategrey;
     }
 }

@@ -27,14 +27,20 @@
 }
 
 .modal-content {
-    padding: 3rem;
+    padding: 1rem;
+    @include breakpoint(small) {
+        padding: 3rem;
+    }
 }
 .modal-header,
 .modal-footer {
     border: none !important;
 }
 .modal-footer {
-    justify-content: center;
+    justify-content: center !important;
+    button {
+        padding: 15px 20px;
+    }
 }
 .modal-title {
     color: $primary-color;
@@ -48,12 +54,17 @@
 .form-class {
     .inputs-group {
         justify-content: space-between;
-        gap: 2rem;
-        div:first-child {
-            width: 50%;
+        gap: 0rem;
+        flex-direction: column;
+        @include breakpoint(large) {
+            flex-direction: row;
+            gap: 2rem;
+        }
+        .form-group {
+            flex: 1;
         }
     }
-    .input-group .form-control:last-child {
+    .input-group .contact-number {
         flex-grow: 5;
         border-left: 1px solid $border-color-3 !important;
     }
@@ -67,6 +78,11 @@
             border-color: $bg-color-2;
             font-family: '$font-medium';
             color: $bg-color;
+            padding-right: 0;
+            &:invalid, &:valid {
+                background-image: none;
+                padding-right: 0;
+            }
         }
     }
 }

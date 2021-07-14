@@ -67,15 +67,15 @@ const HomeTestimonials = () => {
                     <h2>See what people are saying</h2>
                     <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rem.</p>
                 </div>
-                <div className=" d-flex arrow-icons">
+                {/* <div className=" d-flex arrow-icons">
                     <div className="mr-2" onClick={previousData}>
                         <img  src={LeftArrow} alt="leftArrow" />
                     </div>
                     <div onClick={nextData}>
                         <img src={RightArrow} alt="rightArrow" />
                     </div>
-                </div>
-                <div className="testimonial-block mt-3" >
+                </div> */}
+                <div className="testimonial-block mt-5" >
                     <div className="d-flex" ref={divRef} style={{ transform: `translateX(-${scrollDistance}px)` }}>
                         {testimonialArray.map((item, index) => (
                             <div key={index} className={index % 2 === 0 ? 'mb-4' : 'mt-4'}>

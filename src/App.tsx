@@ -8,6 +8,9 @@ import HomeTestimonials from './modules/Home/components/HomeTestimonials';
 import HomeStore from './shared/components/HomeStore';
 import HomeTeaching from './shared/components/HomeTeaching';
 import { Spinner } from 'react-bootstrap';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import CustomSpinner from './shared/components/Spinner';
 
 const spinner = (
   <div className="d-flex justify-content-center align-items-center" style={{minHeight: '100vh'}}>
@@ -15,6 +18,7 @@ const spinner = (
   </div>
 )
 
+toast.configure();
 const App: React.FC = () => {
   const history = createBrowserHistory();
   return (
@@ -33,6 +37,7 @@ const App: React.FC = () => {
           <Footer />
         </React.Suspense>
       </Router>
+      {/* <CustomSpinner /> */}
     </>
 
   );

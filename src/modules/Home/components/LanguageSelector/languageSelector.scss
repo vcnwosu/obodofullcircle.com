@@ -1,8 +1,32 @@
 @import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/fonts';
 
 .bg-language {
     background-color: $bg-color-2;
     h2 {
         margin-bottom: 2rem;
+    }
+    .form-group {
+        display: flex;
+        justify-content: center;
+        .form-control {
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+            padding: 11px 15px 13px;
+            font-size: 13px;
+            border: none;
+            background-color: #ECECF7;
+            width: 60%;
+            font-family: '$font-medium';
+            @include breakpoint(small) {
+                width: 25%;
+                padding: 16px 15px;
+            }
+            &:active, &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
     }
 }

@@ -4,9 +4,10 @@ export interface TranscriptCardType {
     title: string;
     description: string;
     price: string;
+    onClick: () => void;
 }
 
-const TranscriptCard = ({title, description, price}: TranscriptCardType) => {
+const TranscriptCard = ({title, description, price, onClick }: TranscriptCardType) => {
     return (
         <div className="d-flex transcript-card">
             <img src={TranscriptImage} alt="TranscriptImage" />
@@ -14,7 +15,7 @@ const TranscriptCard = ({title, description, price}: TranscriptCardType) => {
                 <p>Transcript</p>
                 <h5>{title}</h5>
                 <p className="description">{description}</p>
-                <button type="button">{price}</button>
+                <button type="button" onClick={onClick}>{price}</button>
             </div>
         </div>
     )
