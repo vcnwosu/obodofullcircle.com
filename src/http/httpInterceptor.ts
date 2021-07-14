@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 type Headers = {
     type?: string;
 }
-const baseURL = '';
+export const baseURL = 'https://jsonplaceholder.typicode.com/';
 const headers: Headers = {};
 
 headers['type'] = '2'
@@ -14,7 +14,9 @@ const axiosInstance = axios.create({
     headers
 })
 
+
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
+    debugger
     console.log(request)
     return request;
 });

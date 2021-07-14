@@ -29,7 +29,7 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
             {detailsList.map(item => (
                 <div key={item.text} className="d-flex align-items-start">
                     <img src={CheckboxArrow} alt="Checkbox" />
-                    <p>{item.text}</p>
+                    <p className="plan-text">{item.text}</p>
                     <div className="tooltip-div">
                         <img src={Info} alt="Info" />
                         <span className="tooltip-text">Tooltip Text</span>
