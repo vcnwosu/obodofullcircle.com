@@ -17,8 +17,11 @@
             font-size: 13px;
             border: none;
             background-color: #ECECF7;
-            width: 60%;
+            width: 70%;
             font-family: '$font-medium';
+            @include breakpoint(x-small) {
+                width: 60%;
+            }
             @include breakpoint(small) {
                 width: 25%;
                 padding: 16px 15px;

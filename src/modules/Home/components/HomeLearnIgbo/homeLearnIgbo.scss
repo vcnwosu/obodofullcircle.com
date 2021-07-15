@@ -23,15 +23,21 @@
             flex-direction: row;
         }
     }
+    h1 {
+        font-size: 2rem !important;
+        color: $bg-color;
+        @include breakpoint(small) {
+            font-size: 3rem !important;
+        }
+        @include breakpoint(large) {
+            font-size: 4.2rem !important;
+        }
+    }
+    p {
+        font-size: 1rem;
+        @include breakpoint(x-small) {
+            font-size: 1.25rem;
+        }
+    }
 }
 
-h1 {
-    font-size: 2rem !important;
-    color: $bg-color;
-    @include breakpoint(small) {
-        font-size: 3rem !important;
-    }
-    @include breakpoint(large) {
-        font-size: 4.2rem !important;
-    }
-}

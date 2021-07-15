@@ -2,14 +2,16 @@ import { useRef } from 'react';
 import { useState} from 'react';
 import { Form } from "react-bootstrap";
 import { toast } from "react-toastify";
+import { postRequest } from '../../../../http/httpService';
 import CustomCarousel from "../../../../shared/components/Carousel";
-import Input from "../../../../shared/components/Input";
+import CustomSpinner from '../../../../shared/components/Spinner';
 import { emailRegex } from "../../../../utils/regex";
 import './languageSelector.scss';
 
 const LanguageSelector = () => {
 
     const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false);
     const inputRef = useRef<any>();
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -22,8 +24,19 @@ const LanguageSelector = () => {
             toast.error('Please enter a valid email');
             return;
         } else {
-            inputRef.current.value = '';
-            toast.success('Submitted')
+            setLoading(true);
+            const formValue = {
+                email
+            };
+            postRequest('add-tutor-interest', formValue)
+            .then(res => {
+                setLoading(false);
+                inputRef.current.value = '';
+                toast.success(res.data.message);
+            })
+            .catch(err => {
+                setLoading(false);
+            })
         }
     }
 
@@ -41,6 +54,7 @@ const LanguageSelector = () => {
                     </Form>
                 </div>
             </div>
+            <CustomSpinner show={loading}/>
         </div>
     )
 }

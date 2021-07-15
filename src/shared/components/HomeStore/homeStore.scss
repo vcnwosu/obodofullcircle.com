@@ -1,19 +1,22 @@
 @import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
 
 .store-div {
   background-image: url("../../../assets/images/learn_anywhere.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   > div {
     flex-direction: column;
-    gap: 2rem;
     @include breakpoint(small) {
+      gap: 2rem;
       flex-direction: row;
     }
     > div.text-div {
       text-align: center;
+      margin-bottom: 2rem;
       @include breakpoint(small) {
         text-align: left;
+        margin-bottom: 0;
       }
       div {
         justify-content: center;
@@ -35,7 +38,25 @@
       height: 60px;
     }
   }
+  h1 {
+    color: $bg-color;
+    font-size: 1.8rem;
+    @include breakpoint(x-small) {
+      font-size: 2rem !important;
+    }
+    @include breakpoint(small) {
+      font-size: 3rem !important;
+    }
+    @include breakpoint(large) {
+      font-size: 4rem !important;
+    }
+  }
   p {
     font-family: "$font-museo-700";
+    font-size: 1rem;
+    color: $text-color-4;
+    @include breakpoint(x-small) {
+      font-size: 1.25rem;
+    }
   }
 }

@@ -11,15 +11,23 @@
     }
     p {
        font-family: '$font-museo-700';
+       font-size: 1rem;
+       color: $text-color-4;
+       @include breakpoint(x-small) {
+        font-size: 1.25rem;
+    }
     }
     > div {
-        margin-left: 2rem;
+        padding: 0 20px;
         @include breakpoint(small) {
             margin-left: 0;
         }
     }
     img.bgImage {
-        height: 300px;
+        height: 275px;
+        @include breakpoint(x-small) {
+            height: 300px;
+        }
         @include breakpoint(small) {
             height: 480px;
         }
@@ -30,7 +38,11 @@
 }
 
 h1.head {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
+    color: $bg-color;
+    @include breakpoint(x-small) {
+        font-size: 2rem !important;
+    }
     @include breakpoint(small) {
         font-size: 3rem !important;
     }
@@ -40,12 +52,19 @@ h1.head {
 }
 
 h1.shadowText {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
     color: $text-shadow-2;
     position: absolute;
-    top: 300px;
-    left: 40px;
+    top: 280px;
+    left: 25px;
     opacity: 0.04;
+    @include breakpoint(small) {
+        top: 300px;
+        left: 40px;
+    }
+    @include breakpoint(small) {
+        font-size: 2.2rem !important;
+    }
     @include breakpoint(small) {
         font-size: 3.3rem !important;
         top: 95px;

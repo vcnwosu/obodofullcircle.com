@@ -37,7 +37,7 @@ const HomeShopResources = () => {
     return (
         <div className="resources-div bg-light pt-5 pb-5">
             <h2 className="text-center">Shop Resources</h2>
-            <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, non.</p>
+            <p className="text-center">The gift that keeps on giving, shop now</p>
             <div className="d-flex wrapper card-div mt-5">
                 {cardDataArray.map(card => (
                     <CustomCard key={card.title} image={card.image} title={card.title} text={card.text} available={card.available}/>

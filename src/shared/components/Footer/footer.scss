@@ -7,12 +7,12 @@ footer {
     min-height: 500px;
     position: relative;
     padding: 20px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     @include breakpoint(small) {
         padding: 0 40px;
     }
     @include breakpoint(large) {
-        padding: 0 120px;
+        padding: 60px 120px 30px;
     }
     > div {
         flex-direction: column;
@@ -27,12 +27,18 @@ footer {
     .store-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 0rem;
         @include breakpoint(small) {
+            justify-content: flex-start;
+            gap: 2.25rem;
             flex-direction: column;
         }
         img {
-            height: 55px;
+            height: 45px;
+            @include breakpoint(x-small) {
+                height: 55px;
+            }
             @include breakpoint(small) {
                 height: 70px;
             }
@@ -73,7 +79,7 @@ footer {
     flex-wrap: wrap;
     @include breakpoint(small) {
         flex-direction: row;
-        gap: 2rem;
+        gap: 4rem;
         flex-wrap: nowrap;
     }
     .footer-nav {

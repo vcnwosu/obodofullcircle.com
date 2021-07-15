@@ -4,6 +4,7 @@ import CustomModal from "../Modal";
 import React, { useState } from "react";
 import { Form, FormControl, InputGroup } from "react-bootstrap";
 import { nameRegex, emailRegex, numericRegex} from '../../../utils/regex';
+import { stateList } from './stateList';
 
 const HomeTeaching = () => {
 
@@ -22,12 +23,12 @@ const HomeTeaching = () => {
 
     const initialErrors = {
         nameError: 'Please enter a name.',
-        countryError: 'Please select country.',
-        stateError: 'Please select state.',
+        countryError: 'Please select a country.',
+        stateError: 'Please select a state.',
         countryCodeError: 'Please enter country code and whatsapp contact.',
         whatsAppContactError: 'Please enter whatsapp contact.',
         emailError: 'Please enter an email.',
-        languageError: 'Please select a language.'
+        languageError: 'Please enter the language you speak.'
     }
 
     const [errors, setErrors] = useState(initialErrors);
@@ -75,6 +76,16 @@ const HomeTeaching = () => {
             event.stopPropagation();
         }
         setValidated(true);
+        const formValue = {
+            name: formData.name,
+            email: formData.email,
+            country: formData.country,
+            state: formData.state,
+            language: formData.language,
+            contact: `+${formData.countryCode}${formData.whatsAppContact}`
+        }
+        console.log(formValue);
+        setShowModal(false);
     };
 
     const modalBody = () => {
@@ -83,7 +94,7 @@ const HomeTeaching = () => {
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" required pattern={nameRegex} value={formData.name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                        <Form.Control type="text" maxLength={50} required pattern={nameRegex} value={formData.name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                         <Form.Control.Feedback type="invalid" >
                             {errors.nameError}
                         </Form.Control.Feedback>
@@ -93,8 +104,7 @@ const HomeTeaching = () => {
                             <Form.Label>Country</Form.Label>
                             <Form.Control as="select" required value={formData.country} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
                                 <option value="" disabled>Select Country</option>
-                                <option value="1">Delhi</option>
-                                <option value="2">Noida</option>
+                                <option value="Nigeria">Nigeria</option>
                             </Form.Control>
                             <Form.Control.Feedback type="invalid" >
                                 {errors.countryError}
@@ -104,8 +114,9 @@ const HomeTeaching = () => {
                             <Form.Label>State</Form.Label>
                             <Form.Control as="select"  required value={formData.state} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
                                 <option value="" disabled>Select State</option>
-                                <option value="1">Delhi</option>
-                                <option value="2">Noida</option>
+                                {stateList.map(item => (
+                                    <option key={item.state} value={item.state}>{item.state}</option>
+                                ))}
                             </Form.Control>
                             <Form.Control.Feedback type="invalid" >
                                 {errors.stateError}
@@ -130,8 +141,8 @@ const HomeTeaching = () => {
                         <Form.Group>
                             <Form.Label>WhatsApp Contact</Form.Label>
                             <InputGroup className="mb-3">
-                                <FormControl type="text" pattern={numericRegex} required id="countryCode" value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
-                                <FormControl className="contact-number" type="text" pattern={numericRegex} required id="whatsAppContact" value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                                <FormControl type="text" maxLength={4} pattern={numericRegex} required id="countryCode" value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                                <FormControl className="contact-number" type="text" maxLength={15} pattern={numericRegex} required id="whatsAppContact" value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                             <Form.Control.Feedback type="invalid" >
                                 {errors.countryCodeError}
                             </Form.Control.Feedback>
