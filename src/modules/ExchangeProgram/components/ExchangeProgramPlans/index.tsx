@@ -4,11 +4,12 @@ import './exchangeProgramPlans.scss';
 import { basicPlanData, premiumPlanData } from './components/planData';
 import { CustomButton } from '../../../../shared/components/Button';
 import CustomModal from '../../../../shared/components/Modal';
-import axiosInstance from '../../../../http/httpInterceptor';
+import { getRequest } from '../../../../http/httpService';
 import CustomSpinner from '../../../../shared/components/Spinner';
 
 const ExchangeProgramPlans = () => {
     const [showModal, setShowModal] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const modalBody = () => {
         return (
@@ -30,8 +31,15 @@ const ExchangeProgramPlans = () => {
         }
     };
     const testAxios = () => {
-        axiosInstance.get('https://jsonplaceholder.typicode.com/todo/1')
-        .then(response => response.data)
+        setLoading(true);
+        getRequest('todos/1')
+        .then(response => {
+            setLoading(false);
+            const data = response.data;
+        })
+        .catch(err => {
+            setLoading(false);
+        })
     }
 
     const [activeType, setActiveType] = useState(1);
@@ -51,10 +59,10 @@ const ExchangeProgramPlans = () => {
                     <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
                     <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal}  />
                 </div>
-                <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={testAxios} />
+                <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
             <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
-            <CustomSpinner show={false}/>
+            <CustomSpinner show={loading}/>
         </div>
     )
 }
