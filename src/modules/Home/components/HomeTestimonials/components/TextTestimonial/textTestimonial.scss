@@ -21,8 +21,11 @@
   }
   p {
     font-family: '$font-museo-regular';
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     white-space: pre-wrap;
+    @include breakpoint(x-small) {
+      font-size: 0.9rem;
+    }
     @include breakpoint(small) {
       font-size: 1rem;
     }
