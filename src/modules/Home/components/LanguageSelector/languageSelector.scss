@@ -28,6 +28,7 @@
             }
             @include breakpoint(small) {
                 width: 25%;
+                font-size: 14px;
                 padding: 16px 15px;
             }
             &:active, &:focus {
