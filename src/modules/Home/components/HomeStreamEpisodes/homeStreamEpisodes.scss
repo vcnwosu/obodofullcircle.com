@@ -52,6 +52,9 @@ h1.head {
         font-size: 3rem !important;
     }
     @include breakpoint(large) {
+        font-size: 3.5rem !important;
+    }
+    @include breakpoint(x-large) {
         font-size: 4rem !important;
     }
 }
@@ -77,7 +80,7 @@ h1.shadowText {
     }
     @include breakpoint(large) {
         font-size: 5rem !important;
-        top: 130px;
+        top: 120px;
         left: 70px;
     }
 }
