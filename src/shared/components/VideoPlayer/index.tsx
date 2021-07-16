@@ -8,7 +8,7 @@ interface Props {
 const VideoPlayer = ({ url, playing, onEnded }: Props) => {
 
     return (
-        <ReactPlayer url={url} playing={playing} onEnded={onEnded} />
+        <ReactPlayer url={url} playing={playing} onEnded={onEnded}/>
     )
 }
 

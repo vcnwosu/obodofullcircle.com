@@ -1,14 +1,19 @@
 @mixin btn($btn-bg, $btn-text, $btn-hover) {
-  padding: 15px;
+  padding: 0.75rem;
   color: $btn-text;
   background-color: $btn-bg;
   border: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 0.75rem;
   box-shadow: 0px 12px 15px 2px rgba(0, 0, 0, 0.1);
   transition: transform 0.1s ease-in-out;
+  @include breakpoint(x-small) {
+    padding: 15px;
+    font-size: 14px;
+  }
   @include breakpoint(small) {
     padding: 15px 30px;
+    font-size: 14px;
   }
   &:active,
   &:hover {
@@ -16,8 +21,8 @@
     background-color: $btn-bg !important;
     border-color: $btn-bg !important;
     @include breakpoint(small) {
-        transform: translateY(4px);
-        background-color: $btn-hover !important;
+      transform: translateY(4px);
+      background-color: $btn-hover !important;
     }
   }
   &:focus {
@@ -81,15 +86,20 @@
 }
 
 @mixin btn-outline($btn-bg, $btn-text) {
-  padding: 15px;
+  padding: 0.75rem;
   color: $btn-text;
   background-color: transparent;
   border-color: $btn-text;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 0.75rem;
   transition: transform 0.1s ease-in-out;
+  @include breakpoint(x-small) {
+    padding: 15px;
+    font-size: 14px;
+  }
   @include breakpoint(small) {
     padding: 15px 30px;
+    font-size: 14px;
   }
   &:focus {
     background: transparent;
@@ -111,7 +121,7 @@
   }
   &:hover {
     @include breakpoint(small) {
-        transform: translateY(4px);
+      transform: translateY(4px);
     }
   }
 }
@@ -140,6 +150,7 @@
 }
 
 @mixin breakpoint($point) {
+  $breakpoint-extra-small: "(min-width: 321px)";
   $breakpoint-small: "(min-width: 769px)";
   $breakpoint-large: "(min-width: 1025px)";
 
@@ -149,6 +160,10 @@
     }
   } @else if $point == large {
     @media screen and #{$breakpoint-large} {
+      @content;
+    }
+  } @else if $point == x-small {
+    @media screen and #{$breakpoint-extra-small} {
       @content;
     }
   }

@@ -17,9 +17,9 @@ const CustomModal = ({ show, handleClose, buttonText, heading, body, onSubmit }:
                 <Modal.Title>{heading}</Modal.Title>
             </Modal.Header>
             <Modal.Body>{body}</Modal.Body>
-            <Modal.Footer>
+            {/* <Modal.Footer>
                 <CustomButton type="submit" text={buttonText} variant="primary" onClick={(e: any) => onSubmit(e)} />
-            </Modal.Footer>
+            </Modal.Footer> */}
         </Modal>
     )
 }

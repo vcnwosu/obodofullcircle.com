@@ -8,7 +8,7 @@ const HomeStore = () => {
         <div className="store-div pt-5 pb-5">
             <div className=" wrapper d-flex justify-content-between align-items-center">
                 <div className="text-div">
-                    <h1 className="head">Learn anywhere, anytime</h1>
+                    <h1>Learn anywhere, anytime</h1>
                     <p>Download the app today and start learning language for your everyday life</p>
                     <div className="d-flex mt-5">
                         <img className="store-img mr-3" src={GooglePlay} alt="googlePlay" />

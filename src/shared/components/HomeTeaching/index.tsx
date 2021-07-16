@@ -2,13 +2,18 @@ import { CustomButton } from "../Button";
 import './homeTeaching.scss';
 import CustomModal from "../Modal";
 import React, { useState } from "react";
-import { Form, FormControl, InputGroup } from "react-bootstrap";
-import { nameRegex, emailRegex, numericRegex} from '../../../utils/regex';
+import { Button, Form, FormControl, InputGroup } from "react-bootstrap";
+import { nameRegex, emailRegex, numericRegex } from '../../../utils/regex';
+import { stateList } from './stateList';
+import { postRequest } from "../../../http/httpService";
+import CustomSpinner from "../Spinner";
+import { toast } from "react-toastify";
 
 const HomeTeaching = () => {
 
     const [showModal, setShowModal] = useState(false);
     const [validated, setValidated] = useState(false);
+    const [loading, setLoading] = useState(false);
     const initialFormvalue = {
         name: '',
         country: '',
@@ -22,12 +27,12 @@ const HomeTeaching = () => {
 
     const initialErrors = {
         nameError: 'Please enter a name.',
-        countryError: 'Please select country.',
-        stateError: 'Please select state.',
+        countryError: 'Please select a country.',
+        stateError: 'Please select a state.',
         countryCodeError: 'Please enter country code and whatsapp contact.',
         whatsAppContactError: 'Please enter whatsapp contact.',
         emailError: 'Please enter an email.',
-        languageError: 'Please select a language.'
+        languageError: 'Please enter the language you speak.'
     }
 
     const [errors, setErrors] = useState(initialErrors);
@@ -52,29 +57,57 @@ const HomeTeaching = () => {
                 } else {
                     setErrors({ ...errors, emailError: 'Please enter a valid email.' })
                 }
-                break;
+                    break;
                 case 'countryCode': if (e.target.validity.valueMissing) {
                     setErrors({ ...errors, countryCodeError: 'Please enter country code and whatsapp contact.' })
                 } else {
                     setErrors({ ...errors, countryCodeError: 'Please enter only numbers.' })
                 }
-                break;
+                    break;
                 case 'whatsAppContact': if (e.target.validity.valueMissing) {
-                    setErrors({ ...errors, whatsAppContactError: 'Please enter whatsapp contact.' })
+                    setErrors({ ...errors, countryCodeError: 'Please enter whatsapp contact and whatsapp contact.' })
                 } else {
-                    setErrors({ ...errors, whatsAppContactError: 'Please enter only numbers.' })
+                    setErrors({ ...errors, countryCodeError: 'Please enter only numbers.' })
                 }
-                break;
+                    break;
             }
         }
     }
     const handleSubmit = (event: any) => {
+        event.preventDefault();
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
-            event.preventDefault();
             event.stopPropagation();
+            setValidated(true);
+            return;
         }
         setValidated(true);
+        setLoading(true);
+        const formValue = {
+            name: formData.name,
+            email: formData.email,
+            country: formData.country,
+            state: formData.state,
+            language: formData.language,
+            contact: `+${formData.countryCode}${formData.whatsAppContact}`
+        }
+        console.log(formValue);
+        postRequest('add-tutor-contact', formValue)
+            .then(res => {
+                if(res.data.status) {
+                    setLoading(false);
+                    setFormData(initialFormvalue);
+                    setErrors(initialErrors);
+                    setShowModal(false);
+                    setValidated(false);
+                    toast.success(res.data.message);
+                } else {
+                    toast.error(res.data.message);
+                }
+            })
+            .catch(err => {
+                setLoading(false);
+            })
     };
 
     const modalBody = () => {
@@ -83,7 +116,7 @@ const HomeTeaching = () => {
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" required pattern={nameRegex} value={formData.name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                        <Form.Control type="text" maxLength={50} required pattern={nameRegex} value={formData.name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                         <Form.Control.Feedback type="invalid" >
                             {errors.nameError}
                         </Form.Control.Feedback>
@@ -93,8 +126,7 @@ const HomeTeaching = () => {
                             <Form.Label>Country</Form.Label>
                             <Form.Control as="select" required value={formData.country} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
                                 <option value="" disabled>Select Country</option>
-                                <option value="1">Delhi</option>
-                                <option value="2">Noida</option>
+                                <option value="Nigeria">Nigeria</option>
                             </Form.Control>
                             <Form.Control.Feedback type="invalid" >
                                 {errors.countryError}
@@ -102,10 +134,11 @@ const HomeTeaching = () => {
                         </Form.Group>
                         <Form.Group controlId="state">
                             <Form.Label>State</Form.Label>
-                            <Form.Control as="select"  required value={formData.state} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
+                            <Form.Control as="select" required value={formData.state} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)}>
                                 <option value="" disabled>Select State</option>
-                                <option value="1">Delhi</option>
-                                <option value="2">Noida</option>
+                                {stateList.map(item => (
+                                    <option key={item.state} value={item.state}>{item.state}</option>
+                                ))}
                             </Form.Control>
                             <Form.Control.Feedback type="invalid" >
                                 {errors.stateError}
@@ -130,17 +163,19 @@ const HomeTeaching = () => {
                         <Form.Group>
                             <Form.Label>WhatsApp Contact</Form.Label>
                             <InputGroup className="mb-3">
-                                <FormControl type="text" pattern={numericRegex} required id="countryCode" value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
-                                <FormControl className="contact-number" type="text" pattern={numericRegex} required id="whatsAppContact" value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
-                            <Form.Control.Feedback type="invalid" >
-                                {errors.countryCodeError}
-                            </Form.Control.Feedback>
+                                <FormControl type="text" maxLength={4} pattern={numericRegex} required id="countryCode" value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                                <FormControl className="contact-number" type="text" maxLength={15} pattern={numericRegex} required id="whatsAppContact" value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                                <Form.Control.Feedback type="invalid" >
+                                    {errors.countryCodeError}
+                                </Form.Control.Feedback>
                             </InputGroup>
                         </Form.Group>
                     </div>
-                    {/* <Button variant="primary" type="submit">
-                        Submit
-                    </Button> */}
+                    <div className="text-center">
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </div>
                 </Form>
             </div>
         )
@@ -153,6 +188,7 @@ const HomeTeaching = () => {
                 <CustomButton type="button" text="Contact us" variant="primary" onClick={() => setShowModal(true)} />
             </div>
             <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomSpinner show={loading} />
         </div>
     )
 }

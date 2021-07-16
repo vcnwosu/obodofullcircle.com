@@ -40,16 +40,16 @@
         left: 60%;
     }
     .vl:nth-child(3) {
-        left: 65%;
+        left: 66%;
     }
     .vl:nth-child(4) {
-        left: 70%;
+        left: 72%;
     }
     .vl:nth-child(5) {
-        left: 75%;
+        left: 78%;
     }
     .vl:nth-child(6) {
-        left: 80%;
+        left: 84%;
     }
 }
 .wrapperExchange {
@@ -58,8 +58,11 @@
     z-index: 1;
 }
 h1.heading {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     color: $white;
+    @include breakpoint(x-small) {
+        font-size: 2rem !important;
+    }
     @include breakpoint(small) {
         font-size: 3rem !important;
     }
@@ -68,12 +71,15 @@ h1.heading {
     }
 }
 h1.shadow {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
     color: $text-shadow-1;
     position: absolute;
     top: -27px;
     left: 6px;
     box-shadow: none !important;
+    @include breakpoint(x-small) {
+        font-size: 2.2rem !important;
+    }
     @include breakpoint(small) {
         font-size: 3.3rem !important;
         top: -55px;
@@ -89,4 +95,8 @@ h1.shadow {
 p.text {
     color: $white;
     font-family: '$font-museo-regular';
+    font-size: 1rem;
+    @include breakpoint(x-small) {
+        font-size: 1.25rem;
+    }
 }

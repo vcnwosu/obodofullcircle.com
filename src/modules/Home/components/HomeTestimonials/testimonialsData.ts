@@ -3,7 +3,9 @@ import Chelsea from '../../../../assets/images/Chelsea.svg';
 import Mary from '../../../../assets/images/Mary.svg';
 import Chimnonso from '../../../../assets/images/Chimnonso.svg';
 import Chizi from '../../../../assets/images/Chizi.svg';
+import Chioma from '../../../../assets/images/Chioma.svg';
 import DefaultUser from '../../../../assets/images/DefaultUser.svg';
+
 
 export interface Testimonial {
     type: string;
@@ -39,8 +41,8 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chibuzo-Baltimore-US.mp4',
-        userName: 'Chibuzo',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+        userName: 'Chizute',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
         onEnded: (index: number) => {},
@@ -58,8 +60,8 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chineme-Maryland-US.mp4',
-        userName: 'Chineme',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        userName: 'Prince Nwagbara',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
         onEnded: (index: number) => {},
@@ -77,7 +79,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Chizute',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -96,7 +98,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Nneoma-New-York-USA.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
         userName: 'Nneoma',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -115,7 +117,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
         userName: 'Obianuju',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -124,7 +126,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'text',
-        data: 'Ndewo!\n I started my Igbo learning journey with the Igbo Podcast conversation Exchange just over two months ago and I’m so happy I made that decision. I’m 22 years old and it’s always bothered me that I couldn’t speak my mother tongue so to have the opportunity to learn at my own pace has been incredible. My conversation partner is friendly, patient and understanding and I feel at ease even when I make mistakes. I am slowly beginning to understand more of the language and I get excited when I listen to an Igbo song and it makes sense or when I watch Igbo movies and can get a general idea of what’s going on. I’m really grateful for this program and I’d definitely recommend it to others.',
+        data: 'Ndewo!\nI started my Igbo learning journey with the Igbo Podcast conversation Exchange just over two months ago and I’m so happy I made that decision. I’m 22 years old and it’s always bothered me that I couldn’t speak my mother tongue so to have the opportunity to learn at my own pace has been incredible. My conversation partner is friendly, patient and understanding and I feel at ease even when I make mistakes. I am slowly beginning to understand more of the language and I get excited when I listen to an Igbo song and it makes sense or when I watch Igbo movies and can get a general idea of what’s going on. I’m really grateful for this program and I’d definitely recommend it to others.',
         userImage: Chimnonso,
         userName: 'Chimnonso Nduaka',
         isPlaying: false,
@@ -134,7 +136,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Prince Nwagbara',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -153,11 +155,21 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obi-Delaware-US.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
         userName: 'Obi',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
         onEnded: (index: number) => {},
         index: 7
+    },
+    {
+        type: 'text',
+        data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
+        userImage: Chioma,
+        userName: 'Chioma Nnamaka',
+        isPlaying: false,
+        handlePlayPause: (index: number) => {},
+        onEnded: (index: number) => {},
+        index: 0
     }
 ]

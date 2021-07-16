@@ -13,22 +13,22 @@ const HomeWhyIgbo = () => {
     const accordionArray: AccordionType[] = [
         {
             title: 'Learn with Native Speakers',
-            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that cane be truly understood.',
+            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that can be truly understood.',
             eventKey: "0"
         },
         {
             title: 'Set your pace with accountability',
-            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that cane be truly understood.',
+            text: 'Learn at your own pace with all of the multimedia resources provided, while still having a mapped out weekly plan to stay on track and your tutor or conversation partner to keep you accountable.',
             eventKey: "1"
         },
         {
             title: 'Practice Practically',
-            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that cane be truly understood.',
+            text: 'Learn how to navigate real life scenarios with the language, cultural nuances to the speech.',
             eventKey: "2"
         },
         {
-            title: 'Consistency and Tailorability',
-            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that cane be truly understood.',
+            title: 'Affordable and Tailorable Classes',
+            text: 'Have you ever taken a language class for a period of time and soon after its completion you forget everything you’ve learned and also lose your consistency with interacting with the language?  With affordable prices, varying levels of modules, varying resources,  and the ability to tailor your time with your conversation partner.',
             eventKey: "3"
         }
     ]
