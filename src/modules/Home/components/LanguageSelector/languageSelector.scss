@@ -6,6 +6,8 @@
     background-color: $bg-color-2;
     h2 {
         margin-bottom: 2rem;
+        color: $bg-color;
+        font-family: '$font-bold';
     }
     .form-group {
         display: flex;

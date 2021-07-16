@@ -15,13 +15,11 @@ const axiosInstance = axios.create({
 
 
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
-    debugger
     console.log(request)
     return request;
 });
 
 axiosInstance.interceptors.response.use((response: AxiosResponse<any>) => {
-    debugger
     console.log(response)
     return response;
 },

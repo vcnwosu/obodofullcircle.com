@@ -22,7 +22,7 @@ export interface Testimonial {
 export const testimonialArray: Testimonial[] = [
     {
         type: 'video',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Chiamaka Precious',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -41,9 +41,8 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chibuzo-Baltimore-US.mp4',
-        url: 'test2.mp4',
-        userName: 'Chibuzo',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+        userName: 'Chizute',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
         onEnded: (index: number) => {},
@@ -61,9 +60,8 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chineme-Maryland-US.mp4',
-        url: 'test.mp4',
-        userName: 'Chineme',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        userName: 'Prince Nwagbara',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
         onEnded: (index: number) => {},
@@ -81,8 +79,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Chizute',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -101,8 +98,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Nneoma-New-York-USA.mp4',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
         userName: 'Nneoma',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -121,8 +117,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
         userName: 'Obianuju',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -141,8 +136,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
         userName: 'Prince Nwagbara',
         isPlaying: false,
         handlePlayPause: (index: number) => {},
@@ -161,8 +155,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        // url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obi-Delaware-US.mp4',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
         userName: 'Obi',
         isPlaying: false,
         handlePlayPause: (index: number) => {},

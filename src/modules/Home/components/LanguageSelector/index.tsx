@@ -45,10 +45,10 @@ const LanguageSelector = () => {
             <div className="wrapper">
                 {/* <CustomCarousel /> */}
                 <div className="text-center pt-5 pb-5">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <h2>You caught us while we are getting ready to launch!</h2>
                     <Form noValidate>
                     <Form.Group controlId="email">
-                        <Form.Control ref={inputRef} type="text" required pattern={emailRegex} value={email} placeholder="Enter your email address" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                        <Form.Control ref={inputRef} type="text" required pattern={emailRegex} value={email} placeholder="Enter your email address to get notified" onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                     <button type="button" className="btn-attached" onClick={(e: any) => submitForm(e)}>Send</button>
                     </Form.Group>
                     </Form>

@@ -8,6 +8,8 @@
     @include breakpoint(small) {
         flex-direction: row;
         gap: 0;
+        justify-content: space-between;
+        align-items: center;
     }
     p {
        font-family: '$font-museo-700';
@@ -22,6 +24,9 @@
         @include breakpoint(small) {
             margin-left: 0;
         }
+    }
+    .image-container {
+        text-align: center;
     }
     img.bgImage {
         height: 275px;

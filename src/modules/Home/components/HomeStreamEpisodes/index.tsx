@@ -8,14 +8,14 @@ const HomeStreamEpisodes = () => {
     return (
         <div className="bg-stream">
             <img className="top-border" src={BorderImage} alt="border" />
-            <div className="wrapper wrapperStream d-flex align-items-center justify-content-between mt-4 mb-3">
+            <div className="wrapper wrapperStream d-flex mt-4 mb-3">
                 <h1 className="shadowText">Stream Episodes</h1>
                 <div>
                     <h1 className="head">Stream Episodes</h1>
                     <p className="mb-5">Learn Igbo on the go with our podcast for Free</p>
                     <CustomButton type="button" text="Stream" variant="primary" icon={Arrow} />
                 </div>
-                <div>
+                <div className="image-container">
                     <img className="bgImage" src={Image} alt="exchange" />
                 </div>
             </div>
