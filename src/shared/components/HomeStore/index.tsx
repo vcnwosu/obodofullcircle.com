@@ -1,4 +1,4 @@
-import Image from '../../../assets/images/homeStore.svg';
+import Image from '../../../assets/images/homeStore.png';
 import GooglePlay from '../../../assets/images/googlePlay.svg';
 import AppStore from '../../../assets/images/appStore.svg';
 import './homeStore.scss'

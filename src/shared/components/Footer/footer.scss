@@ -9,7 +9,7 @@ footer {
     padding: 20px;
     justify-content: space-between;
     @include breakpoint(small) {
-        padding: 0 40px;
+        padding: 40px;
     }
     @include breakpoint(large) {
         padding: 60px 120px 30px;
@@ -29,6 +29,10 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         gap: 0rem;
+        @include breakpoint(x-small) {
+            justify-content: flex-start;
+            gap: 2rem;
+        }
         @include breakpoint(small) {
             justify-content: flex-start;
             gap: 2.25rem;

@@ -67,6 +67,9 @@ h1.heading {
         font-size: 3rem !important;
     }
     @include breakpoint(large) {
+        font-size: 3.7rem !important;
+    }
+    @include breakpoint(x-large) {
         font-size: 4rem !important;
     }
 }

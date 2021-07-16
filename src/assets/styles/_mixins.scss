@@ -150,9 +150,10 @@
 }
 
 @mixin breakpoint($point) {
-  $breakpoint-extra-small: "(min-width: 321px)";
+  $breakpoint-extra-small: "(min-width: 376px)";
   $breakpoint-small: "(min-width: 769px)";
   $breakpoint-large: "(min-width: 1025px)";
+  $breakpoint-extra-large: "(min-width: 1441px)";
 
   @if $point == small {
     @media screen and #{$breakpoint-small} {
@@ -164,6 +165,10 @@
     }
   } @else if $point == x-small {
     @media screen and #{$breakpoint-extra-small} {
+      @content;
+    }
+  } @else if $point == x-large {
+    @media screen and #{$breakpoint-extra-large} {
       @content;
     }
   }
