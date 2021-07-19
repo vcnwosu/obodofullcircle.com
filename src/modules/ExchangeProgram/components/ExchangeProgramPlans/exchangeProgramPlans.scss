@@ -67,7 +67,9 @@
         border-radius: 10px;
         transition: transform 0.5s ease-in-out;
         &:hover {
-            transform: scale(1.05);
+            @include breakpoint(small) {
+                transform: scale(1.05);
+            }
         }
         @include breakpoint(small) {
             width: 350px;

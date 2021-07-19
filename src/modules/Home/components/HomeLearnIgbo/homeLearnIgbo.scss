@@ -22,6 +22,12 @@
         @include breakpoint(small) {
             flex-direction: row;
         }
+        > div:nth-child(2) {
+            margin-top: 2rem;
+            @include breakpoint(small) {
+                margin-top: 0;
+            }
+        }
     }
     h1 {
         font-size: 2rem !important;

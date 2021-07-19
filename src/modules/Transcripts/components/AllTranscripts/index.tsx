@@ -87,7 +87,7 @@ const AllTranscripts = () => {
                     ))}
                 </div>
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
         </div>
     )
 }

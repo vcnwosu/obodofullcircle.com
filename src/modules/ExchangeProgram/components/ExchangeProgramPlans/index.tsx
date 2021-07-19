@@ -4,7 +4,6 @@ import './exchangeProgramPlans.scss';
 import { basicPlanData, premiumPlanData } from './components/planData';
 import { CustomButton } from '../../../../shared/components/Button';
 import CustomModal from '../../../../shared/components/Modal';
-import { getRequest } from '../../../../http/httpService';
 import CustomSpinner from '../../../../shared/components/Spinner';
 
 const ExchangeProgramPlans = () => {
@@ -30,17 +29,6 @@ const ExchangeProgramPlans = () => {
             event.stopPropagation();
         }
     };
-    const testAxios = () => {
-        setLoading(true);
-        getRequest('todos/1')
-        .then(response => {
-            setLoading(false);
-            const data = response.data;
-        })
-        .catch(err => {
-            setLoading(false);
-        })
-    }
 
     const [activeType, setActiveType] = useState(1);
     return (
@@ -61,7 +49,7 @@ const ExchangeProgramPlans = () => {
                 </div>
                 <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
             <CustomSpinner show={loading}/>
         </div>
     )

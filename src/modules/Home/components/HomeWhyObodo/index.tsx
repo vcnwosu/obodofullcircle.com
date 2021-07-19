@@ -13,7 +13,7 @@ const HomeWhyIgbo = () => {
     const accordionArray: AccordionType[] = [
         {
             title: 'Learn with Native Speakers',
-            text: 'Learn how the language is actually spoken while gaining the confidence to speak the language in a manner that can be truly understood.',
+            text: 'Learn the intricacies of the language from our team of  trained native speakers and bonafide tutors while gaining the confidence to speak and utilize the language in your everyday life.',
             eventKey: "0"
         },
         {

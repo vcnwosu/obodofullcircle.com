@@ -18,7 +18,7 @@ const ExchangeProgram = () => {
         }
     }, [location])
     return (
-        <div>
+        <div style={{overflowX: 'hidden'}}>
           <ExchangeProgramIntroduction />
           <WhyExchangeProgram />
           <HowItWorks />

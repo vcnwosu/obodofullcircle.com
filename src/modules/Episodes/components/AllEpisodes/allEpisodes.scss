@@ -21,7 +21,7 @@
       font-family: '$font-medium';
       border-radius: 10px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 11px;
       @include breakpoint(small) {
         padding: 1rem 2rem;
         font-size: 16px;
@@ -89,8 +89,10 @@
         p:first-child {
           font-family: "$font-semi-bold";
           color: $bg-color-6;
+          font-size: 14px;
           @include breakpoint(small) {
             margin-bottom: 0.5rem;
+            font-size: 1rem;
           }
           span:last-child {
             font-family: "$font-regular";
@@ -157,9 +159,11 @@
       display: flex;
       align-items: center;
       margin-top: 2rem;
+      justify-content: flex-start;
       @include breakpoint(small) {
         gap: 2rem;
         margin-top: 1rem;
+        justify-content: flex-start;
       }
       @include breakpoint(large) {
         gap: 2rem;
@@ -167,7 +171,7 @@
       }
       button {
         font-family: "$font-regular" !important;
-        min-width: 150px;
+        min-width: 125px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -209,7 +213,7 @@
       }
       hr {
         width: 100%;
-        border: 1px solid $bg-color-6;
+        background-color: $bg-color-6;
       }
     }
     p {

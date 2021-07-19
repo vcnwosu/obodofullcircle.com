@@ -91,11 +91,10 @@ const HomeTeaching = () => {
             language: formData.language,
             contact: `+${formData.countryCode}${formData.whatsAppContact}`
         }
-        console.log(formValue);
         postRequest('add-tutor-contact', formValue)
             .then(res => {
+                setLoading(false);
                 if(res.data.status) {
-                    setLoading(false);
                     setFormData(initialFormvalue);
                     setErrors(initialErrors);
                     setShowModal(false);
@@ -187,7 +186,7 @@ const HomeTeaching = () => {
                 <p className="mb-4">Get started today by completing our assessment and booking your first interview call!</p>
                 <CustomButton type="button" text="Contact us" variant="primary" onClick={() => setShowModal(true)} />
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} buttonText="Submit" heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
             <CustomSpinner show={loading} />
         </div>
     )

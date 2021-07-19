@@ -27,6 +27,7 @@
     }
     div:nth-child(3) {
         text-align: left;
+        overflow-x: hidden;
         @include breakpoint(small) {
             text-align: right;  
         }
