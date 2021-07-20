@@ -31,8 +31,12 @@ const LanguageSelector = () => {
             postRequest('add-tutor-interest', formValue)
             .then(res => {
                 setLoading(false);
-                inputRef.current.value = '';
-                toast.success(res.data.message);
+                if(res.data.status) {
+                    inputRef.current.value = '';
+                    toast.success(res.data.message);
+                } else {
+                    toast.error(res.data.message);
+                }
             })
             .catch(err => {
                 setLoading(false);

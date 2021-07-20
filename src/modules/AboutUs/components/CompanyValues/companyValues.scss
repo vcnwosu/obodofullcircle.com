@@ -17,11 +17,16 @@
         padding-top: 2rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: 0rem;
         @include breakpoint(small) {
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
         }
         .value-item {
+            margin-top: 2rem;
+            @include breakpoint(small) {
+                margin-top: 0;
+            }
             h4 {
                 color: $bg-color;
                 font-family: '$font-bold';

@@ -12,7 +12,7 @@ const HomeStreamEpisodes = () => {
                 <div>
                     <h1 className="shadowText">Stream Episodes</h1>
                     <h1 className="head">Stream Episodes</h1>
-                    <p className="mb-5">Learn Igbo on the go with our podcast for Free</p>
+                    <p className="mb-5">Learning Igbo on the go is made easier with our free podcast</p>
                     <CustomButton type="button" text="Stream" variant="primary" icon={Arrow} />
                 </div>
                 <div className="image-container">

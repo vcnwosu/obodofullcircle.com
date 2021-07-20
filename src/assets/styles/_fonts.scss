@@ -1,11 +1,13 @@
 @font-face {
     font-family: '$font-extra-bold';
     src: url('../fonts/HKGrotesk-ExtraBold.otf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: '$font-medium';
     src: url('../fonts/HKGrotesk-Medium.otf');
+    font-display: swap;
 }
 
 @font-face {
