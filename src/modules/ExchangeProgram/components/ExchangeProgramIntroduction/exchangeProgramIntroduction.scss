@@ -20,10 +20,6 @@
     > div > p {
         color: $bg-color;
         font-family: '$font-museo';
-        padding-right: 0;
-        @include breakpoint(small) {
-            padding-right: 60%;
-        }
     }
     div:nth-child(3) {
         text-align: left;

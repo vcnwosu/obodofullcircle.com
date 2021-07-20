@@ -23,7 +23,7 @@ const HomeWhyIgbo = () => {
         },
         {
             title: 'Practice Practically',
-            text: 'Learn how to navigate real life scenarios with the language, cultural nuances to the speech.',
+            text: 'Learn how to navigate real life scenarios and practice  “thinking” more in the language with a variety of exercises and lessons aimed at deepen the understanding of the language as well as cultural nuances.',
             eventKey: "2"
         },
         {
@@ -38,7 +38,7 @@ const HomeWhyIgbo = () => {
             {/* <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
             <div className="wrapper wrapperObodo d-flex justify-content-between mt-5">
                 <div className="accordion-div">
-                    <CustomAccordion list={accordionArray} styleClass="btn-toggle" />
+                    <CustomAccordion list={accordionArray} styleClass="btn-toggle" count={4} />
                 </div>
                 <div>
                     <img src={Image} alt="whyImage"/>
