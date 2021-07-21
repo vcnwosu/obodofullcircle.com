@@ -1,13 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 import { toast } from "react-toastify";
 
-type Headers = {
-    
-}
 export const baseURL = 'https://devapis.obodofullcircle.com/api/v1/';
-// const headers: Headers = {
-//     Content
-// };
 
 const axiosInstance = axios.create({
     baseURL
@@ -15,12 +9,10 @@ const axiosInstance = axios.create({
 
 
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
-    console.log(request)
     return request;
 });
 
 axiosInstance.interceptors.response.use((response: AxiosResponse<any>) => {
-    console.log(response)
     return response;
 },
     (err: AxiosError<any>) => {
