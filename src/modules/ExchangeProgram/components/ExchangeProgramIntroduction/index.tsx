@@ -7,8 +7,8 @@ const ExchangeProgramIntroduction = () => {
         <div className="ep-intro-div">
             <div className="wrapper">
                 <h3>Exchange Program</h3>
-                <h1>Speak to learn not learn to speak</h1>
-                <p>Redefining language learning and creating great connections to a larger sense of community.</p>
+                <h1>Speak to learn and learn to speak</h1>
+                <p>With conversation at the center of our approach, we equip individuals to become more and more conversational in their heritage language in order to better interact and utilize the language at the times that matter most.</p>
             </div>
             <div className="mission-container">
                 <div className="mission-div">
@@ -17,7 +17,7 @@ const ExchangeProgramIntroduction = () => {
                     </div>
                     <div>
                         <h2>Mission Statement</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aspernatur delectus consectetur saepe sunt dolor, labore molestiae esse rerum odit minus sit voluptates doloremque sapiente vero inventore iusto ullam, facere assumenda vel laudantium aliquid blanditiis neque. Consectetur esse unde nihil quae, animi pariatur. Quis esse officiis autem aspernatur. Fugiat, quia.</p>
+                        <p>Our mission is to make language learning a lifestyle, with less focus on the finished product and more focus on the journey. We are committed to creating a safe community for learners and tutors alike, to grow, learn, and explore their native language, culture, and heritage. In this way we seek to create long lasting and meaningful connections between those in the diaspora and those on the African continent, while providing opportunities for those back home.</p>
                     </div>
                 </div>
             </div>

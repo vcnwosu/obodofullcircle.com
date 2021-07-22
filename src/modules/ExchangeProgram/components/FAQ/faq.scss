@@ -1,0 +1,47 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/fonts';
+@import '../../../../assets/styles/mixins';
+
+
+.faq-div{
+    padding: 2rem 0;
+    h2 {
+        color: $text-color-2;
+        font-family: '$font-bold';
+    }
+}
+
+
+
+.accordion-div-faq {
+    width: 100%;
+    margin-top: 1rem;
+    @include breakpoint(small) {
+        width: 80%;
+        margin-top: 3rem;
+    }
+    .accordion .card {
+        border: none;
+        background: $bg-color-4;
+        margin-bottom: 1rem;
+        .card-header {
+            background: transparent;
+            border: none;
+            h5 {
+                color: $bg-color;
+                font-family: '$font-semi-bold';
+                margin-bottom: 0;
+                padding: 1rem 0;
+            }
+        }
+        .card-body {
+            color: $bg-color;
+            font-family: '$font-museo-regular';
+            padding: 0 1.25rem 1.25rem;
+        }
+        hr {
+            display: none;
+        }
+    }
+}
+

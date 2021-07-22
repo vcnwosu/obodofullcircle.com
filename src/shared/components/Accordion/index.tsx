@@ -6,10 +6,11 @@ import CustomToggle from "./CustomToggle";
 interface Props {
     list: AccordionType[],
     styleClass: string;
+    count: number;
 }
 
-const CustomAccordion = ({ list, styleClass }: Props) => {
-    const [toggle, setToggle] = useState([false, false, false, false]);
+const CustomAccordion = ({ list, styleClass, count }: Props) => {
+    const [toggle, setToggle] = useState(Array(count).fill(false));
 
     const toggleState = (eventKey: number) => {
         const arr = [...toggle];
