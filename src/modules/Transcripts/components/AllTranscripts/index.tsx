@@ -1,54 +1,32 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import TranscriptCard from './components/TranscriptCard';
-import { seasonData } from '../../../../shared/CommonData/seasonData';
 import { TranscriptCardType } from './components/TranscriptCard';
 import './allTranscripts.scss';
 import CustomModal from '../../../../shared/components/Modal';
+import EpisodeContext, { Season } from '../../../../store/EpisodeContext';
 
-
-const transcriptCardData: TranscriptCardType[] = [
-    {
-        title: 'Introduction: O teego !',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    },
-    {
-        title: 'Kola Nut Player I',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    },
-    {
-        title: 'Kola Nut Player II',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    },
-    {
-        title: 'Introduction: O teego0 !',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    },
-    {
-        title: 'Kola Nut Player III',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    },
-    {
-        title: 'Kola Nut Player IV',
-        description: 'Oji Abiala: An lgbo Podcast',
-        price: '$15.00',
-        onClick: () => {}
-    }
-
-]
-
-const AllTranscripts = () => {
-    const [currentSeason, setCurrentSeason] = useState(1);
+interface Props {
+    id: string;
+}
+const AllTranscripts = ({id}: Props) => {
+    const seasonContext = useContext(EpisodeContext);
+    const [currentSeason, setCurrentSeason] = useState(0);
     const [showModal, setShowModal] = useState(false);
+    const [seasonList, setSeasonList] = useState<Season[]>([]);
+    const [currentEpisodeList, setCurrentEpisodeList] = useState<TranscriptCardType[]>([]);
+    useEffect(() => {
+        const seasonNumber = +(id.slice(1, id.indexOf('e')));
+        setCurrentSeason(() => seasonNumber);
+        setSeasonList(seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id));
+        if(seasonContext.seasonList.length > 0) {
+            setCurrentEpisodeList(() => [...seasonContext.seasonList[seasonNumber]?.episodes].reverse());
+        }
+    }, [seasonContext, id])
+
+    const showCurrentSeasonEpisodes = (index: number) => {
+        setCurrentSeason(index);
+        setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes].reverse());
+    }
 
     const modalBody = () => {
         return (
@@ -75,15 +53,15 @@ const AllTranscripts = () => {
             <div className="wrapper">
                 <h2>All Episodes Transcripts</h2>
                 <div className="d-flex season-container">
-                    {seasonData.map((season, index) => (
-                        <div key={season.title} className={currentSeason === index + 1 ? 'active' : ''} onClick={() => setCurrentSeason(index + 1)}>
-                            {season.title}
-                        </div>
+                    {seasonList.length > 0 && seasonList.map((season, index) => (
+                        <div key={season.season_id} className={currentSeason === index ? 'active' : ''} onClick={() => showCurrentSeasonEpisodes(index)}>
+                        Season {season.season_id}
+                    </div>
                     ))}
                 </div>
                 <div className="transcript-cards-container">
-                    {transcriptCardData.map(card => (
-                        <TranscriptCard key={card.title} title={card.title} description={card.description} price={card.price} onClick={() => setShowModal(true)} />
+                    {currentEpisodeList && currentEpisodeList.length > 0 &&  currentEpisodeList.map((card, index) => (
+                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id}  key={card.title} title={card.title} description={card.description} price="15.00" image={card.image} onClick={() => setShowModal(true)} />
                     ))}
                 </div>
             </div>

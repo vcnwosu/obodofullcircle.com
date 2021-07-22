@@ -62,7 +62,12 @@
         padding: 1rem;
       }
       img {
-        height: auto;
+        width: 30%;
+      }
+      .transcript-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       p:first-child {
         font-family: "$font-regular";
@@ -88,6 +93,7 @@
         border: none;
         border-radius: 5px;
         font-family: "$font-semi-bold";
+        max-width: max-content;
       }
     }
   }
