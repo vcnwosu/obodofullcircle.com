@@ -48,7 +48,7 @@ const HomeWhyIgbo = () => {
                 </div>
                 <div>
                     {/* <img src={Image} alt="whyImage"/> */}
-                    <Carousel>
+                    <Carousel interval={2000}>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"

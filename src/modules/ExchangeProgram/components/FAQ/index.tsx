@@ -61,7 +61,7 @@ const FAQ = () => {
             <h2 className="text-center">Frequently Asked Questions</h2>
             <div className="wrapper d-flex justify-content-center mt-3">
                 <div className="accordion-div-faq">
-                    <CustomAccordion list={accordionArray} styleClass="btn-toggle-question" count={8} />
+                    <CustomAccordion list={accordionArray} styleClass="btn-toggle-secondary" count={8} />
                 </div>
             </div>
         </div>

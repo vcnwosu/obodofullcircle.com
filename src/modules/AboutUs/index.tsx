@@ -23,7 +23,7 @@ const AboutUs = () => {
           <OurMission />
           <WhoWeAre />
           <MeetTheFounder />
-          {/* <OurTeam /> */}
+          <OurTeam />
           <CompanyValues />
         </div>
     )
