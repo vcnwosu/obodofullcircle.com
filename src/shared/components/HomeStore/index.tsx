@@ -17,8 +17,8 @@ const HomeStore = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={Image} alt="storeImage" />
-                    {/* <video autoPlay loop>
+                    <img src={ObodoMobile} alt="storeImage" />
+                    {/* <video autoPlay loop style={{width: '30vw'}}>
                         <source src="ObodoVideo.mp4" type="video/mp4" />
                     </video> */}
                 </div>

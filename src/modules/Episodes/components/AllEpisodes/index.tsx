@@ -1,42 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import './allEpisodes.scss'
 import AudioCard from './components/AudioCard';
 import { AudioCardType } from './components/AudioCard'
-import { getRequest } from '../../../../http/httpService';
-import CustomSpinner from '../../../../shared/components/Spinner';
+import EpisodeContext, { Season } from '../../../../store/EpisodeContext';
+import { useHistory } from 'react-router-dom';
 
-interface Season {
-    episodes: AudioCardType[];
-    season_id: number;
-}
-let list: Season[] = [];
 const AllEpisodes = () => {
-    const [loading, setLoading] = useState(false);
+    const history = useHistory();
+    const seasonContext = useContext(EpisodeContext);
     const [currentSeason, setCurrentSeason] = useState(0);
     const [playStatus, setPlayStatus] = useState<boolean[]>([]);
     const [seasonList, setSeasonList] = useState<Season[]>([]);
     const [currentEpisodeList, setCurrentEpisodeList] = useState<AudioCardType[]>([]);
+
     useEffect(() => {
-        getEpisodeList();
-    }, [])
-    
-    const getEpisodeList = () => {
-        setLoading(true);
-        getRequest('get-episodes')
-            .then(res => {
-                setLoading(false);
-                list = res.data.data.sort((a: Season, b: Season) => a.season_id - b.season_id);
-                setSeasonList(() => res.data.data);
-                setCurrentEpisodeList(() => [...list[0].episodes].reverse());
-                setPlayStatus(Array(list[0].episodes.length).fill(false))
-            })
-        
-    }
+        setSeasonList(seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id));
+        if (seasonContext.seasonList.length > 0) {
+            setCurrentEpisodeList(() => [...seasonContext.seasonList[0]?.episodes].reverse());
+        }
+        setPlayStatus(Array(seasonContext.seasonList[0]?.episodes?.length).fill(false))
+    }, [seasonContext])
 
     const showCurrentSeasonEpisodes = (index: number) => {
         setCurrentSeason(index);
-        setCurrentEpisodeList(() => [...list[index].episodes].reverse());
-        setPlayStatus(Array(list[index].episodes.length).fill(false))
+        setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes].reverse());
+        setPlayStatus(Array(seasonContext.seasonList[index]?.episodes.length).fill(false))
     }
 
     const handlePlayPause = (index: number) => {
@@ -56,24 +44,27 @@ const AllEpisodes = () => {
         arr[index] = false;
         setPlayStatus(arr);
     }
+
+    const navigateToTranscripts = (index: number) => {
+        history.push(`/transcripts#s${currentSeason}epi${index}`);
+    }
     return (
         <div className="all-episodes-div" id="podcasts">
             <div className="wrapper">
                 <h2>All Episodes</h2>
                 <div className="d-flex season-container">
-                    {seasonList.map((season, index) => (
+                    {seasonList.length > 0 && seasonList.map((season, index) => (
                         <div key={season.season_id} className={currentSeason === index ? 'active' : ''} onClick={() => showCurrentSeasonEpisodes(index)}>
                             Season {season.season_id}
                         </div>
                     ))}
                 </div>
                 <div className="audio-cards-container">
-                    {currentEpisodeList.map((card, index) => (
-                        <AudioCard index={index} key={card.title} title={card.title} episdode_date={card.episdode_date} episdode_no={card.episdode_no} image={card.image} duration={card.duration} description={card.description} transacript={card.transacript} audio={card.audio} showTranscript={card.showTranscript} isPlaying={playStatus[index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} />
+                    {currentEpisodeList && currentEpisodeList.length > 0 && currentEpisodeList.map((card, index) => (
+                        <AudioCard index={index} key={card.title} title={card.title} episdode_date={card.episdode_date} episdode_no={card.episdode_no} image={card.image} duration={card.duration} description={card.description} transacript={card.transacript} audio={card.audio} showTranscript={card.showTranscript} isPlaying={playStatus[index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} navigateToTranscripts={(index: number) => navigateToTranscripts(index)} />
                     ))}
                 </div>
             </div>
-            <CustomSpinner show={loading}/>
         </div>
     )
 }
