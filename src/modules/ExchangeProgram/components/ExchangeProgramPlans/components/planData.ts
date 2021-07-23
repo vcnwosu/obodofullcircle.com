@@ -41,7 +41,7 @@ export const basicPlanData: PlanType = {
             text: 'Predominantly case based learning structure',
             tooltipType: 'Line',
             showInfoIcon: true,
-            tooltipText: 'Case based learning'
+            tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
             text: 'Immersive plan - LMS',

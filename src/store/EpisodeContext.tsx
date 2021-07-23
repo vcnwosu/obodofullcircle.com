@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect, Context } from "react";
+import { toast } from "react-toastify";
 import { getRequest } from '../http/httpService';
 import { AudioCardType } from "../modules/Episodes/components/AllEpisodes/components/AudioCard";
 import CustomSpinner from "../shared/components/Spinner";
@@ -23,7 +24,11 @@ export const EpisodeContextProvider = (props: any) => {
         getRequest('get-episodes')
             .then(res => {
                 setLoading(false);
+                if (res.data.code >= 1000 && res.data.code <= 2000) {
+                    toast.error(res.data.message);
+                } else {
                 setSeasonList(() => res.data.data);
+                }
             })
 
     }

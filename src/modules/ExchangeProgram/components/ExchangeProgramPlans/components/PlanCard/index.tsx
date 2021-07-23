@@ -41,7 +41,7 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
                                         ))}
                                     </ul>
                                 ): (
-                                    <p>{item.tooltipText}</p>
+                                    <p className="text-left">{item.tooltipText}</p>
                                 )}
                             </div>
                         </div>

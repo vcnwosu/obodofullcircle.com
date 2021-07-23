@@ -2,6 +2,12 @@ import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
 import BorderImage from '../../../../assets/images/borderDesign.svg';
 import './whyExchangeProgram.scss';
+import { Carousel } from 'react-bootstrap';
+import StatsImage1 from '../../../../assets/images/100 streams white bg.svg';
+import StatsImage2 from '../../../../assets/images/100 streams white bg.svg';
+import StatsImage3 from '../../../../assets/images/100 streams white bg.svg';
+import StatsImage4 from '../../../../assets/images/100 streams white bg.svg';
+import StatsImage5 from '../../../../assets/images/100 streams white bg.svg';
 
 export interface AccordionType {
     title: string;
@@ -37,12 +43,49 @@ const WhyExchangeProgram = () => {
         <div className="why-ep pt-5">
             {/* <h2 className="text-center">Why IGBO Exchange Program</h2>
             <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
-            <div className="wrapper wrapperObodo d-flex justify-content-between mt-5">
+            <div className="wrapper ex-wrapperObodo d-flex justify-content-between">
                 <div className="accordion-div-ep">
                     <CustomAccordion list={accordionArray} styleClass="btn-toggle-secondary" count={4}/>
                 </div>
                 <div>
-                    <img src={Image} alt="whyImage"/>
+                    {/* <img src={Image} alt="whyImage"/> */}
+                    <Carousel>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage1}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage2}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage3}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage4}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage5}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
                 </div>
             </div>
             <img src={BorderImage} alt="" />

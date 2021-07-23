@@ -77,15 +77,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => {},
         index: 0
     },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
-        userName: 'Chizute',
-        isPlaying: false,
-        handlePlayPause: (index: number) => {},
-        onEnded: (index: number) => {},
-        index: 3
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
+    //     userName: 'Chizute',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => {},
+    //     onEnded: (index: number) => {},
+    //     index: 3
+    // },
     {
         type: 'text',
         data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',
@@ -96,15 +96,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => {},
         index: 0
     },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-        userName: 'Nneoma',
-        isPlaying: false,
-        handlePlayPause: (index: number) => {},
-        onEnded: (index: number) => {},
-        index: 4
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+    //     userName: 'Nneoma',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => {},
+    //     onEnded: (index: number) => {},
+    //     index: 4
+    // },
     {
         type: 'text',
         data: 'I am so happy that I decided to join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
@@ -115,15 +115,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => {},
         index: 0
     },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
-        userName: 'Obianuju',
-        isPlaying: false,
-        handlePlayPause: (index: number) => {},
-        onEnded: (index: number) => {},
-        index: 5
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+    //     userName: 'Obianuju',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => {},
+    //     onEnded: (index: number) => {},
+    //     index: 5
+    // },
     {
         type: 'text',
         data: 'Ndewo!\nI started my Igbo learning journey with the Igbo Podcast conversation Exchange just over two months ago and I’m so happy I made that decision. I’m 22 years old and it’s always bothered me that I couldn’t speak my mother tongue so to have the opportunity to learn at my own pace has been incredible. My conversation partner is friendly, patient and understanding and I feel at ease even when I make mistakes. I am slowly beginning to understand more of the language and I get excited when I listen to an Igbo song and it makes sense or when I watch Igbo movies and can get a general idea of what’s going on. I’m really grateful for this program and I’d definitely recommend it to others.',
@@ -134,15 +134,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => {},
         index: 0
     },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
-        userName: 'Prince Nwagbara',
-        isPlaying: false,
-        handlePlayPause: (index: number) => {},
-        onEnded: (index: number) => {},
-        index: 6
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
+    //     userName: 'Prince Nwagbara',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => {},
+    //     onEnded: (index: number) => {},
+    //     index: 6
+    // },
     {
         type: 'text',
         data: 'I love Igboppdacst! Like many Nigerians that grew up in the diaspora, I grew up hearing Igbo and could understand but, my confidence to speak? Nonexistant. Since joining the program, I have learned so much and am able to hold full conversations (which was a goal of mine). I love that the program goes at your pace, and the relationship you develop with your tutor. I’m excited to continue and hope to be fluent, which I know will be possible with this program. A God sent!',
@@ -153,15 +153,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => {},
         index: 0
     },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-        userName: 'Obi',
-        isPlaying: false,
-        handlePlayPause: (index: number) => {},
-        onEnded: (index: number) => {},
-        index: 7
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
+    //     userName: 'Obi',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => {},
+    //     onEnded: (index: number) => {},
+    //     index: 7
+    // },
     {
         type: 'text',
         data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',

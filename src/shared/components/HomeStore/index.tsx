@@ -1,6 +1,6 @@
 import Image from '../../../assets/images/homeStore.png';
-import GooglePlay from '../../../assets/images/googlePlay.svg';
-import AppStore from '../../../assets/images/appStore.svg';
+import GooglePlay from '../../../assets/images/GooglePlayCS.svg';
+import AppStore from '../../../assets/images/AppleStoreCS.svg';
 import ObodoMobile from '../../../assets/images/ObodoMobile.gif';
 import './homeStore.scss'
 

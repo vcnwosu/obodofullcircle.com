@@ -61,7 +61,7 @@ const AllTranscripts = ({id}: Props) => {
                 </div>
                 <div className="transcript-cards-container">
                     {currentEpisodeList && currentEpisodeList.length > 0 &&  currentEpisodeList.map((card, index) => (
-                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id}  key={card.title} title={card.title} description={card.description} price="15.00" image={card.image} onClick={() => setShowModal(true)} />
+                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id}  key={card.title} title={card.title} description={card.description} price="$15.00" image={card.image} onClick={() => setShowModal(true)} />
                     ))}
                 </div>
             </div>

@@ -2,6 +2,11 @@ import { Carousel } from 'react-bootstrap';
 import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
 import './homeWhyObodo.scss';
+import StatsImage1 from '../../../../assets/images/150 students green bg.svg';
+import StatsImage2 from '../../../../assets/images/5 months green bg.svg';
+import StatsImage3 from '../../../../assets/images/4 continents green bg.svg';
+import StatsImage4 from '../../../../assets/images/15 countries green bg.svg';
+import StatsImage5 from '../../../../assets/images/100 streams green bg.svg';
 
 export interface AccordionType {
     title: string;
@@ -37,7 +42,7 @@ const HomeWhyIgbo = () => {
         <div className="bg-green pt-5 pb-5">
             <h2 className="text-center">Why the Conversation Exchange Program</h2>
             {/* <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
-            <div className="wrapper wrapperObodo d-flex justify-content-between mt-5">
+            <div className="wrapper wrapperObodo d-flex justify-content-between">
                 <div className="accordion-div">
                     <CustomAccordion list={accordionArray} styleClass="btn-toggle" count={4} />
                 </div>
@@ -47,37 +52,37 @@ const HomeWhyIgbo = () => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src={Image}
+                                src={StatsImage1}
                                 alt="First slide"
                             />
-                            <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src={Image}
+                                src={StatsImage2}
                                 alt="Second slide"
                             />
-
-                            <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src={Image}
+                                src={StatsImage3}
                                 alt="Third slide"
                             />
-
-                            <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage4}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage5}
+                                alt="Third slide"
+                            />
                         </Carousel.Item>
                     </Carousel>
                 </div>

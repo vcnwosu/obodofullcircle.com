@@ -4,6 +4,7 @@ import WhoWeAre from "./components/WhoWeAre";
 import CompanyValues from "./components/CompanyValues";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import OurTeam from "./components/OurTeam";
 
 const AboutUs = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const AboutUs = () => {
           <OurMission />
           <WhoWeAre />
           <MeetTheFounder />
+          {/* <OurTeam /> */}
           <CompanyValues />
         </div>
     )

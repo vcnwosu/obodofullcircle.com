@@ -6,7 +6,8 @@ const OurMission = () => {
         <div className="au-mission-div">
             <div className="wrapper">
                 <h3>Our Mission</h3>
-                <h2>To make language learning a lifestyle, while bridging the gap between the diaspora and the continent for an overall greater sense of self.</h2>
+                {/* <h2>To make language learning a lifestyle, while bridging the gap between the diaspora and the continent for an overall greater sense of self.</h2> */}
+                <h2>Obodo, where community comes full circle</h2>
             </div>
             <div>
                 <img src={missionBorder} alt="missionBorder" />

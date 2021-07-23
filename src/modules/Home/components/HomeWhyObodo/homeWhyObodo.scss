@@ -7,6 +7,7 @@
     flex-direction: column;
     @include breakpoint(small) {
         flex-direction: row;
+        align-items: center;
     }
     > div:nth-child(2) {
         width: 100%;
@@ -15,7 +16,7 @@
         @include breakpoint(small) {
             width: 50%;
         }
-        .carousel.slide {
+        > .carousel.slide {
             width: 100%;
             @include breakpoint(small) {
                 width: 420px;

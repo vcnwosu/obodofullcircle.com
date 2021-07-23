@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Button, Form, FormControl, InputGroup } from "react-bootstrap";
 import { nameRegex, emailRegex, numericRegex } from '../../../utils/regex';
 import { stateList } from './stateList';
+import { countryCodeList } from './countryCodeList';
 import { postRequest } from "../../../http/httpService";
 import CustomSpinner from "../Spinner";
 import { toast } from "react-toastify";
@@ -29,7 +30,7 @@ const HomeTeaching = () => {
         nameError: 'Please enter a name.',
         countryError: 'Please select a country.',
         stateError: 'Please select a state.',
-        countryCodeError: 'Please enter country code and whatsapp contact.',
+        countryCodeError: 'Please select a country code.',
         whatsAppContactError: 'Please enter whatsapp contact.',
         emailError: 'Please enter an email.',
         languageError: 'Please enter the language you speak.'
@@ -58,16 +59,10 @@ const HomeTeaching = () => {
                     setErrors({ ...errors, emailError: 'Please enter a valid email.' })
                 }
                     break;
-                case 'countryCode': if (e.target.validity.valueMissing) {
-                    setErrors({ ...errors, countryCodeError: 'Please enter country code and whatsapp contact.' })
-                } else {
-                    setErrors({ ...errors, countryCodeError: 'Please enter only numbers.' })
-                }
-                    break;
                 case 'whatsAppContact': if (e.target.validity.valueMissing) {
-                    setErrors({ ...errors, countryCodeError: 'Please enter whatsapp contact and whatsapp contact.' })
+                    setErrors({ ...errors, whatsAppContactError: 'Please enter whatsapp contact.' })
                 } else {
-                    setErrors({ ...errors, countryCodeError: 'Please enter only numbers.' })
+                    setErrors({ ...errors, whatsAppContactError: 'Please enter only numbers.' })
                 }
                     break;
             }
@@ -89,19 +84,20 @@ const HomeTeaching = () => {
             country: formData.country,
             state: formData.state,
             language: formData.language,
-            contact: `+${formData.countryCode}${formData.whatsAppContact}`
+            contact: `${formData.countryCode}${formData.whatsAppContact}`
         }
+        console.log(formValue)
         postRequest('add-tutor-contact', formValue)
             .then(res => {
                 setLoading(false);
-                if(res.data.status) {
+                if (res.data.code >= 1000 && res.data.code <= 2000) {
+                    toast.error(res.data.message);
+                } else {
                     setFormData(initialFormvalue);
                     setErrors(initialErrors);
                     setShowModal(false);
                     setValidated(false);
                     toast.success(res.data.message);
-                } else {
-                    toast.error(res.data.message);
                 }
             })
             .catch(err => {
@@ -151,23 +147,32 @@ const HomeTeaching = () => {
                             {errors.emailError}
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <div className="d-flex inputs-group">
-                        <Form.Group controlId="language">
-                            <Form.Label>Language you speak</Form.Label>
-                            <Form.Control type="text" required value={formData.language} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                    <Form.Group controlId="language">
+                        <Form.Label>Language you speak</Form.Label>
+                        <Form.Control type="text" required value={formData.language} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                        <Form.Control.Feedback type="invalid" >
+                            {errors.languageError}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <div className="d-flex number-group">
+                        <Form.Group controlId="countryCode">
+                            <Form.Label>WhatsApp Contact</Form.Label>
+                            <FormControl className="country-code" as="select" required value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} >
+                                <option value="" disabled>Select Code</option>
+                                {countryCodeList.map(item => (
+                                    <option key={`${item.code} (${item.country})`} value={item.code}>{`${item.code} (${item.country})`}</option>
+                                ))}
+                            </FormControl>
                             <Form.Control.Feedback type="invalid" >
-                                {errors.languageError}
+                                {errors.countryCodeError}
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group>
-                            <Form.Label>WhatsApp Contact</Form.Label>
-                            <InputGroup className="mb-3">
-                                <FormControl type="text" maxLength={4} pattern={numericRegex} required id="countryCode" value={formData.countryCode} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
-                                <FormControl className="contact-number" type="text" maxLength={15} pattern={numericRegex} required id="whatsAppContact" value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
-                                <Form.Control.Feedback type="invalid" >
-                                    {errors.countryCodeError}
-                                </Form.Control.Feedback>
-                            </InputGroup>
+                        <Form.Group controlId="whatsAppContact">
+                            <Form.Label>&nbsp;</Form.Label>
+                            <FormControl className="contact-number" type="text" maxLength={15} pattern={numericRegex} required value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                            <Form.Control.Feedback type="invalid" >
+                                {errors.whatsAppContactError}
+                            </Form.Control.Feedback>
                         </Form.Group>
                     </div>
                     <div className="text-center">

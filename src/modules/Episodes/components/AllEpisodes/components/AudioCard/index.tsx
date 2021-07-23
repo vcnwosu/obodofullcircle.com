@@ -57,7 +57,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                 <div className="episode-content">
                     <p><span>{episdode_no}  </span>  &nbsp;&nbsp;|&nbsp;&nbsp;  <span>{episdode_date}</span>&nbsp;&nbsp;  <span>{formatTime (duration)}</span> </p>
                     <h3>{title}</h3>
-                    {/* <div dangerouslySetInnerHTML={{__html: description}} /> */}
+                    <div dangerouslySetInnerHTML={{__html: description}} />
                     <div className="button-div d-flex">
                         <button type="button" onClick={onPlayPause}>
                             <img src={isPlaying ? Pause : Play} alt="PlayPause" />
