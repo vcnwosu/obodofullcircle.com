@@ -3,10 +3,11 @@
 @import '../../../../assets/styles/mixins';
 
 
-.wrapperObodo {
+.ex-wrapperObodo {
     flex-direction: column;
     @include breakpoint(small) {
         flex-direction: row;
+        align-items: center;
     }
     img {
         height: auto;
@@ -17,6 +18,21 @@
     }
     > div:nth-child(2) {
         padding: 1.25rem;
+        .carousel.slide {
+            width: 100%;
+            @include breakpoint(small) {
+                width: 420px;
+            }
+            .carousel-indicators li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $bg-color;
+            }
+            .carousel-control-prev, .carousel-control-next {
+                display: none;
+            }
+        }
     }
 }
 .why-ep h2 {

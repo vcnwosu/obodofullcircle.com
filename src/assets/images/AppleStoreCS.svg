@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="265" height="96" viewBox="0 0 265 96">
+  <defs>
+    <linearGradient id="linear-gradient" x1="3.133" y1="8.259" x2="3.133" y2="8.242" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#19e6ff"/>
+      <stop offset="1" stop-color="#1e51ee"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4152" data-name="Group 4152" transform="translate(-585 -6296)">
+    <path id="Path_4272" data-name="Path 4272" d="M8,0H257a8,8,0,0,1,8,8V88a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" transform="translate(585 6296)" fill="#07060f"/>
+    <g id="Group_3135" data-name="Group 3135" transform="translate(302 1)">
+      <text id="Apple_Store" data-name="Apple Store" transform="translate(385 6363)" fill="#fff" font-size="26" font-family="HKGrotesk-SemiBold, HK Grotesk" font-weight="600"><tspan x="0" y="0">Apple Store</tspan></text>
+      <text id="COMING_SOON_ON" data-name="COMING SOON ON" transform="translate(385 6333)" fill="#fff" font-size="14" font-family="HKGrotesk-Medium, HK Grotesk" font-weight="500"><tspan x="0" y="0">COMING SOON ON</tspan></text>
+    </g>
+    <g id="Symbols" transform="translate(603 6313)">
+      <path id="path-2_1_" d="M38.858,5c5.2,0,7.8,0,10.631.867a10.932,10.932,0,0,1,6.587,6.587C57,15.284,57,17.942,57,23.142V38.858c0,5.2,0,7.8-.867,10.631a10.932,10.932,0,0,1-6.587,6.587C46.658,57,44.058,57,38.858,57H23.142c-5.2,0-7.8,0-10.631-.867a11.115,11.115,0,0,1-6.644-6.644C5,46.716,5,44.116,5,38.858V23.142c0-5.2,0-7.8.867-10.631a11.024,11.024,0,0,1,6.644-6.587C15.284,5,17.884,5,23.142,5H38.858Z" fill="url(#linear-gradient)"/>
+      <path id="Icon" d="M21.826,48.583a.577.577,0,0,1,.289-.231,5.8,5.8,0,0,1,1.387-.231,5.035,5.035,0,0,1,3.351,1.271.356.356,0,0,1,.058.4l-2.369,4.044a2.545,2.545,0,0,1-2.2,1.271,2.494,2.494,0,0,1-1.5-.52,2.587,2.587,0,0,1-.636-3.351l1.618-2.658Zm30.8-6.182a2.577,2.577,0,0,1,2.6,2.253,2.541,2.541,0,0,1-2.484,2.773H49.675L51.928,51.3a2.587,2.587,0,0,1-.636,3.351,2.494,2.494,0,0,1-1.5.52,2.545,2.545,0,0,1-2.2-1.271l-5.431-9.418-4.276-7.4c-.058-.058-.058-.116-.058-.231,0-.289-.058-.578-.058-.867a11.576,11.576,0,0,1,1.387-5.662.325.325,0,0,1,.52,0l7.049,12.018h5.893Zm-13.289.116a4.393,4.393,0,0,1,2.08,3.813,5.692,5.692,0,0,1-.116.982c0,.058-.116.116-.173.116H19.572a2.514,2.514,0,1,1,.116-5.027h5.72l7.8-13.4-2.138-3.64a2.462,2.462,0,0,1,1.156-3.524,2.683,2.683,0,0,1,3.293,1.1l.636,1.1.693-1.156a2.5,2.5,0,1,1,4.276,2.6L31.186,42.4h7.742A.835.835,0,0,1,39.332,42.517Z" transform="translate(-5.097 -7.01)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

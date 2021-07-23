@@ -24,16 +24,29 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
                         /Month
                     </span>
                 </p>
-                <p className="price">{priceTotal}</p>
+                {/* <p className="price">{priceTotal}</p> */}
             </div>}
             {detailsList.map(item => (
                 <div key={item.text} className="d-flex align-items-start">
                     <img src={CheckboxArrow} alt="Checkbox" />
                     <p className="plan-text">{item.text}</p>
-                    <div className="tooltip-div">
-                        <img src={Info} alt="Info" />
-                        <span className="tooltip-text">Tooltip Text</span>
-                    </div>
+                    {item.showInfoIcon && (
+                        <div className="tooltip-div">
+                            <img src={Info} alt="Info" />
+                            <div className="tooltip-text">
+                                {item.tooltipType === 'list' ? (
+                                    <ul>
+                                        {item.tooltipList?.map(text => (
+                                            <li>{text}</li>
+                                        ))}
+                                    </ul>
+                                ): (
+                                    <p className="text-left">{item.tooltipText}</p>
+                                )}
+                            </div>
+                        </div>
+                    )
+                    }
                 </div>
             ))}
         </div>

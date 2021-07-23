@@ -10,9 +10,10 @@ import HomeTeaching from './shared/components/HomeTeaching';
 import { Spinner } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { EpisodeContextProvider } from './store/EpisodeContext';
 
 const spinner = (
-  <div className="d-flex justify-content-center align-items-center" style={{minHeight: '100vh'}}>
+  <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
     <Spinner animation="border" variant="success" />
   </div>
 )
@@ -22,20 +23,22 @@ const App: React.FC = () => {
   const history = createBrowserHistory();
   return (
     <>
-      <Router history={history}>
-        <React.Suspense fallback={spinner}>
-          <Header />
-          <Switch>
-            {routeList.map(({ path, ...rest }): any =>
-              (<Route key={path} path={path} {...rest} />)
-            )}
-          </Switch>
-          <HomeTestimonials />
-          <HomeStore />
-          <HomeTeaching />
-          <Footer />
-        </React.Suspense>
-      </Router>
+      <EpisodeContextProvider>
+        <Router history={history}>
+          <React.Suspense fallback={spinner}>
+            <Header />
+            <Switch>
+              {routeList.map(({ path, ...rest }): any =>
+                (<Route key={path} path={path} {...rest} />)
+              )}
+            </Switch>
+            <HomeTestimonials />
+            <HomeStore />
+            <HomeTeaching />
+            <Footer />
+          </React.Suspense>
+        </Router>
+      </EpisodeContextProvider>
     </>
 
   );

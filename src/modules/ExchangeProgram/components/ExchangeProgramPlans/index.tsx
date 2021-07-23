@@ -5,6 +5,8 @@ import { basicPlanData, premiumPlanData } from './components/planData';
 import { CustomButton } from '../../../../shared/components/Button';
 import CustomModal from '../../../../shared/components/Modal';
 import CustomSpinner from '../../../../shared/components/Spinner';
+import GooglePlay from '../../../../assets/images/GooglePlayCS.svg';
+import AppStore from '../../../../assets/images/AppleStoreCS.svg';
 
 const ExchangeProgramPlans = () => {
     const [showModal, setShowModal] = useState(false);
@@ -12,8 +14,9 @@ const ExchangeProgramPlans = () => {
 
     const modalBody = () => {
         return (
-            <div className="form-class">
-                Trial Plan
+            <div className="modal-box d-flex mt-2">
+                <img className="store-img mr-3" src={GooglePlay} alt="googlePlay" />
+                <img className="store-img" src={AppStore} alt="appStore" />
             </div>
         )
     }
@@ -45,12 +48,12 @@ const ExchangeProgramPlans = () => {
                 </div>
                 <div className="plan-card-div d-flex justify-content-center">
                     <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
-                    <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal}  />
+                    <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal} />
                 </div>
                 <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
-            <CustomSpinner show={loading}/>
+            <CustomModal show={showModal} handleClose={handleClose} heading="OBODO for Mobile" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomSpinner show={loading} />
         </div>
     )
 }

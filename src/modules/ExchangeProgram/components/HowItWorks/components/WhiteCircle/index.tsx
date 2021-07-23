@@ -23,7 +23,7 @@ const circleData: CircleText[] = [
     },
     {
         image: LMS,
-        text: 'Utilize weekly plan and fulfil manageable daily tasks including sending your converstaion partner voice notes'
+        text: 'Utilize weekly immersion plan'
     }
 ]
 

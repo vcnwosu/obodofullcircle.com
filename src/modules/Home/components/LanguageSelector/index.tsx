@@ -31,11 +31,11 @@ const LanguageSelector = () => {
             postRequest('add-tutor-interest', formValue)
             .then(res => {
                 setLoading(false);
-                if(res.data.status) {
+                if(res.data.code >= 1000 && res.data.code <= 2000) {
+                    toast.error(res.data.message);
+                } else {
                     inputRef.current.value = '';
                     toast.success(res.data.message);
-                } else {
-                    toast.error(res.data.message);
                 }
             })
             .catch(err => {

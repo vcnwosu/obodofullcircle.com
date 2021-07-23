@@ -72,9 +72,34 @@
             flex: 1;
         }
     }
-    .input-group .contact-number {
-        flex-grow: 5;
-        border-left: 1px solid $border-color-3 !important;
+    .number-group {
+        .form-group:first-child {
+            width: 45%;
+            @include breakpoint(small) {
+                width: 40%;
+            }
+        }
+        .form-group:last-child {
+            width: 55%;
+            @include breakpoint(small) {
+                width: 60%;
+            }
+        }
+        .form-label {
+            position: absolute;
+        }
+        .country-code {
+            margin-top: 2rem;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-right: 1px solid $border-color-3 !important;
+        }
+        .contact-number {
+            margin-top: 2rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: none;
+        }
     }
     .form-group {
         label {

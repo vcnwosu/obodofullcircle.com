@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import ExchangeProgramIntroduction from "./components/ExchangeProgramIntroduction"
 import ExchangeProgramPlans from "./components/ExchangeProgramPlans"
+import FAQ from "./components/FAQ"
 import HowItWorks from "./components/HowItWorks"
 import WhyExchangeProgram from "./components/WhyExchangeProgram"
 
@@ -23,6 +24,7 @@ const ExchangeProgram = () => {
           <WhyExchangeProgram />
           <HowItWorks />
           <ExchangeProgramPlans />
+          <FAQ />
         </div>
     )
 }

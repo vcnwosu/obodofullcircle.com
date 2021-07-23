@@ -1,6 +1,7 @@
 import Image from '../../../assets/images/homeStore.png';
-import GooglePlay from '../../../assets/images/googlePlay.svg';
-import AppStore from '../../../assets/images/appStore.svg';
+import GooglePlay from '../../../assets/images/GooglePlayCS.svg';
+import AppStore from '../../../assets/images/AppleStoreCS.svg';
+import ObodoMobile from '../../../assets/images/ObodoMobile.gif';
 import './homeStore.scss'
 
 const HomeStore = () => {
@@ -16,7 +17,10 @@ const HomeStore = () => {
                     </div>
                 </div>
                 <div>
-                    <img src={Image} alt="storeImage" />
+                    <img src={ObodoMobile} alt="storeImage" />
+                    {/* <video autoPlay loop style={{width: '30vw'}}>
+                        <source src="ObodoVideo.mp4" type="video/mp4" />
+                    </video> */}
                 </div>
             </div>
         </div>
