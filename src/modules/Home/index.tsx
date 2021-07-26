@@ -6,6 +6,7 @@ import HomeWhyObodo from "./components/HomeWhyObodo";
 import LanguageSelector from "./components/LanguageSelector";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import HomeTestimonials from "./components/HomeTestimonials";
 
 const Home = () => {
     const location = useLocation();
@@ -27,6 +28,7 @@ const Home = () => {
             <HomeStreamEpisodes />
             <HomeWhyObodo />
             <HomeShopResources />
+            <HomeTestimonials />
         </div>
     )
 }

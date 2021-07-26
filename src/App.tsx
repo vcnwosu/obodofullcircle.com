@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { EpisodeContextProvider } from './store/EpisodeContext';
 
 const spinner = (
-  <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+  <div style={{position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
     <Spinner animation="border" variant="success" />
   </div>
 )
@@ -32,7 +32,7 @@ const App: React.FC = () => {
                 (<Route key={path} path={path} {...rest} />)
               )}
             </Switch>
-            <HomeTestimonials />
+            {/* <HomeTestimonials /> */}
             <HomeStore />
             <HomeTeaching />
             <Footer />

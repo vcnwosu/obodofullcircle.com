@@ -10,11 +10,13 @@ const HomeExchangeProgram = () => {
                 <div>
                     <img className="bgImage" src={Image} alt="exchange" />
                 </div>
-                <div className="wrapper wrapperExchange">
+                <div>
                     <h1 className="shadow">Exchange Program</h1>
-                    <h1 className="heading">Exchange Program</h1>
-                    <p className="text mb-5">Redifining language learning, while fostering a greater sense of community.</p>
-                    <CustomButton type="button" text="Join Us" variant="primary" icon={Arrow} />
+                    <div className="wrapper wrapperExchange">
+                        <h1 className="heading">Exchange Program</h1>
+                        <p className="text mb-5">Redifining language learning, while fostering a greater sense of community.</p>
+                        <CustomButton type="button" text="Join Us" variant="primary" icon={Arrow} />
+                    </div>
                 </div>
             </div>
             <div className="vl"></div>

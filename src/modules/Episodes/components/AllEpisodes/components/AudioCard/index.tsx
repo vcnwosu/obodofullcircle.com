@@ -63,8 +63,8 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                             <img src={isPlaying ? Pause : Play} alt="PlayPause" />
                             {isPlaying ? 'Pause Episode' : 'Play Episode'}
                         </button>
-                        {index === 0 && <CustomButton type="button" variant="secondary" text="View Transcript" onClick={toggleTranscript} />}
-                        {index !== 0 && <CustomButton type="button" variant="secondary" text="Purchase Transcript" onClick={onNavigateToTranscripts} />}
+                        <CustomButton type="button" variant="secondary" text="View Transcript" onClick={toggleTranscript} />
+                        {/* {index !== 0 && <CustomButton type="button" variant="secondary" text="Purchase Transcript" onClick={onNavigateToTranscripts} />} */}
                     </div>
                     <Player src={audio} playPause={isPlaying} onEnded={onPlayEnded} />
                 </div>

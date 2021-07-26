@@ -14,6 +14,10 @@
         }
         @include breakpoint(large) {
             padding-bottom: 0;
+            padding-right: 60px;
+        }
+        > div:nth-child(2) {
+            position: relative;
         }
     }
     img.bgImage {
@@ -60,7 +64,7 @@
         padding: 0 50px 0 35px !important;
     }
     @include breakpoint(large) {
-        padding: 0 50px 0 120px !important;
+        padding: 0 0 0 100px !important;
     }
     @include breakpoint(x-large) {
         padding: 0 120px 0 120px !important;
@@ -98,8 +102,8 @@ h1.shadow {
         left: 20px;
     }
     @include breakpoint(large) {
-        font-size: 4.5rem !important;
-        top: -80px;
+        font-size: 4rem !important;
+        top: -60px;
         left: 40px;
     }
     @include breakpoint(x-large) {

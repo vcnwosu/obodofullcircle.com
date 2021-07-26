@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
+import HomeTestimonials from "../Home/components/HomeTestimonials"
 import ExchangeProgramIntroduction from "./components/ExchangeProgramIntroduction"
 import ExchangeProgramPlans from "./components/ExchangeProgramPlans"
 import FAQ from "./components/FAQ"
@@ -25,6 +26,7 @@ const ExchangeProgram = () => {
           <HowItWorks />
           <ExchangeProgramPlans />
           <FAQ />
+          <HomeTestimonials />
         </div>
     )
 }

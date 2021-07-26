@@ -1,13 +1,13 @@
 import { Modal } from "react-bootstrap";
+import './modal.scss';
 
 interface Props {
     show: boolean;
     handleClose: () => void;
     heading: string;
     body: JSX.Element;
-    onSubmit: (e: any) => void;
 }
-const CustomModal = ({ show, handleClose, heading, body, onSubmit }: Props) => {
+const CustomModal = ({ show, handleClose, heading, body }: Props) => {
 
     return (
         <Modal show={show} onHide={handleClose} size="lg">
