@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import HomeTestimonials from "../Home/components/HomeTestimonials";
 import AllEpisodes from "./components/AllEpisodes";
 import EpisodesIntroduction from "./components/EpisodesIntroduction"
 
@@ -19,6 +20,7 @@ const Episodes = () => {
         <div>
             <EpisodesIntroduction />
             <AllEpisodes />
+            <HomeTestimonials />
         </div>
     )
 

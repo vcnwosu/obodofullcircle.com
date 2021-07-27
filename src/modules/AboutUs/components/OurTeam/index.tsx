@@ -1,7 +1,7 @@
-import ChukwualukaChiama from '../../../../assets/images/1.png';
-import ObinnaWogu from '../../../../assets/images/2.png';
-import ChinemeEzekwenna from '../../../../assets/images/3.png';
-import VictorNwosu from '../../../../assets/images/4.png';
+import ChukwualukaChiama from '../../../../assets/images/Chukwualuka Chiama.png';
+import ObinnaWogu from '../../../../assets/images/Obinna Wogu.png';
+import ChinemeEzekwenna from '../../../../assets/images/Chineme Ezekwenna.png';
+import VictorNwosu from '../../../../assets/images/Victor Nwosu.png';
 import ChibuzoUwakaneme from '../../../../assets/images/Chibuzo Uwakaneme.png'
 import './ourTeam.scss';
 const OurTeam = () => {

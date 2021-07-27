@@ -52,7 +52,7 @@ const ExchangeProgramPlans = () => {
                 </div>
                 <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} heading="OBODO for Mobile" body={modalBody()} onSubmit={(e: any) => handleSubmit(e)} />
+            <CustomModal show={showModal} handleClose={handleClose} heading="OBODO for Mobile" body={modalBody()} />
             <CustomSpinner show={loading} />
         </div>
     )

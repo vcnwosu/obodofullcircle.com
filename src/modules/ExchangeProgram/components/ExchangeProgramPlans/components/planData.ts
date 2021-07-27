@@ -78,7 +78,9 @@ export const premiumPlanData: PlanType = {
         },
         {
             text: 'Live call sessions with tutor only',
-            showInfoIcon: false
+            tooltipType: 'Line',
+            showInfoIcon: true,
+            tooltipText: 'Tutor: a native speaker with over 2 years of experience teaching the language at various capacities.  Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.'
         },
         {
             text: 'T/TH voice-note correspondence',
@@ -86,7 +88,9 @@ export const premiumPlanData: PlanType = {
         },
         {
             text: 'Classroom structure AND case based learning',
-            showInfoIcon: false
+            tooltipType: 'Line',
+            showInfoIcon: true,
+            tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
             text: 'Immersion plan',

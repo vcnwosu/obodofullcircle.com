@@ -1,7 +1,6 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixins';
-
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
 
 .bg-green .wrapperObodo {
     flex-direction: column;
@@ -21,12 +20,20 @@
             @include breakpoint(small) {
                 width: 420px;
             }
-            .carousel-indicators li {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
+            .carousel-indicators {
+                bottom: -30px;
+                @include breakpoint(small) {
+                    bottom: 0;
+                }
+                li {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
             }
-            .carousel-control-prev, .carousel-control-next {
+
+            .carousel-control-prev,
+            .carousel-control-next {
                 display: none;
             }
         }
@@ -44,7 +51,7 @@
 }
 .bg-green h2 {
     color: $white;
-    font-family: '$font-extra-bold';
+    font-family: "$font-extra-bold";
     padding: 0 20px;
     font-size: 1.5rem;
     @include breakpoint(x-small) {
@@ -54,7 +61,7 @@
 
 .bg-green p {
     color: $white;
-    font-family: '$font-museo-700';
+    font-family: "$font-museo-700";
 }
 
 .accordion-div {
@@ -74,12 +81,12 @@
         border: none;
         h5 {
             color: $white;
-            font-family: '$font-bold';
+            font-family: "$font-bold";
         }
     }
     .card-body {
         color: $white;
-        font-family: '$font-museo-regular';
+        font-family: "$font-museo-regular";
     }
     hr {
         background-color: $white;
