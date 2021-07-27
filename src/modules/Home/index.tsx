@@ -7,6 +7,7 @@ import LanguageSelector from "./components/LanguageSelector";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import HomeTestimonials from "./components/HomeTestimonials";
+import { testimonialArray } from './testimonialsData';
 
 const Home = () => {
     const location = useLocation();
@@ -28,7 +29,7 @@ const Home = () => {
             <HomeStreamEpisodes />
             <HomeWhyObodo />
             <HomeShopResources />
-            <HomeTestimonials />
+            <HomeTestimonials data={testimonialArray} type="textVideo"/>
         </div>
     )
 }

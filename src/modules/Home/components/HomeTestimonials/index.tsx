@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import TextTestimonial from './components/TextTestimonial';
 import VideoTestimonial from './components/VideoTestimonial';
-import { testimonialArray } from './testimonialsData';
+import { testimonialArray } from '../../testimonialsData';
 import './homeTestimonials.scss';
+import PictureTestimonial from './components/PictureTestimonial';
 
-const HomeTestimonials = () => {
+interface Props {
+    data: any[],
+    type: string;
+}
+const HomeTestimonials = ({data, type}: Props) => {
     const [playStatus, setPlayStatus] = useState([false, false, false, false, false, false, false, false]);
-
 
     const handlePlayPause = (index: number) => {
         const arr = [...playStatus];
@@ -43,11 +47,11 @@ const HomeTestimonials = () => {
                 </div> */}
                 <div className="testimonial-block mt-5" >
                     <div className="d-flex">
-                        {testimonialArray.map((item, index) => (
+                        {type === 'textVideo' ? (data.map((item, index) => (
                             <div key={index} className={index % 2 === 0 ? 'mb-4' : 'mt-4'}>
                                 {item.type === 'text' ? <TextTestimonial data={item.data} userImage={item.userImage} userName={item.userName} /> : <VideoTestimonial index={item.index} url={item.url} userName={item.userName} isPlaying={playStatus[item.index]}  handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)}/>}
                             </div>
-                        ))}
+                        ))) : (data.map((item, index) => <PictureTestimonial key={index} image={item.image} />))}
                     </div>
                 </div>
             </div>

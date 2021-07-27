@@ -37,7 +37,7 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
                                 {item.tooltipType === 'list' ? (
                                     <ul>
                                         {item.tooltipList?.map(text => (
-                                            <li>{text}</li>
+                                            <li key={text}>{text}</li>
                                         ))}
                                     </ul>
                                 ): (
