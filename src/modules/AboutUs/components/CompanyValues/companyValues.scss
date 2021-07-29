@@ -1,35 +1,41 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
 
 .au-company-div {
     background-color: $bg-color-4;
     padding: 3rem 0;
     h2 {
         color: $bg-color;
-        font-family: '$font-bold';
+        font-family: "$font-bold";
     }
-    p{
+    p {
         color: $bg-color;
-        font-family: '$font-museo-700';
+        font-family: "$font-museo-700";
+        font-size: 1rem;
+        @include breakpoint(x-small) {
+            font-size: 1.25rem;
+        }
     }
     .grid-items-container {
-        padding-top: 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 0rem;
+        display: flex;
+        flex-direction: column;
         @include breakpoint(small) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2rem;
+            padding: 4rem 0 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15rem;
         }
         .value-item {
             margin-top: 2rem;
+            text-align: center;
             @include breakpoint(small) {
                 margin-top: 0;
+                width: 25%;
             }
             h4 {
                 color: $bg-color;
-                font-family: '$font-bold';
+                font-family: "$font-bold";
                 margin-top: 1rem;
                 font-size: 1.4rem !important;
                 @include breakpoint(small) {
@@ -38,10 +44,9 @@
             }
             p {
                 color: $text-color-4;
-                font-family: '$font-museo-regular';
+                font-family: "$font-museo-regular";
                 font-size: 0.9rem !important;
             }
         }
     }
-
 }

@@ -5,13 +5,19 @@
 .ep-plan-div {
     background-color: $bg-color-2;
     padding: 3rem 0 3rem 0;
-    > div > h2 {
-        color: $bg-color;
-        font-family: "$font-bold";
-    }
-    p {
-        color: $bg-color;
-        font-family: "$font-museo-700";
+    > div {
+        > h2 {
+            color: $bg-color;
+            font-family: "$font-bold";
+        }
+        > p {
+            color: $bg-color;
+            font-family: "$font-museo-700";
+            font-size: 1rem;
+            @include breakpoint(x-small) {
+                font-size: 1.25rem;
+            }
+        }
     }
     .type-selector {
         padding: 3rem 0;
@@ -97,6 +103,9 @@
             text-align: left;
             font-family: "$font-museo-regular";
             flex-grow: 1;
+            b {
+                font-family: "$font-museo";
+            }
         }
         .tooltip-div {
             position: relative;
@@ -146,7 +155,7 @@
             border-style: solid;
             clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
             border-color: $black;
-          }
+        }
     }
 }
 .modal-box {

@@ -29,7 +29,7 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
             {detailsList.map(item => (
                 <div key={item.text} className="d-flex align-items-start">
                     <img src={CheckboxArrow} alt="Checkbox" />
-                    <p className="plan-text">{item.text}</p>
+                    <p className="plan-text" dangerouslySetInnerHTML={{ __html: item.text }} />
                     {item.showInfoIcon && (
                         <div className="tooltip-div">
                             <img src={Info} alt="Info" />
@@ -40,7 +40,7 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
                                             <li key={text}>{text}</li>
                                         ))}
                                     </ul>
-                                ): (
+                                ) : (
                                     <p className="text-left">{item.tooltipText}</p>
                                 )}
                             </div>

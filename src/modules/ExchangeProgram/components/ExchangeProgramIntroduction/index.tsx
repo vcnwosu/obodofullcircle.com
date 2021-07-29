@@ -17,7 +17,7 @@ const ExchangeProgramIntroduction = () => {
                     </div>
                     <div>
                         <h2>Mission Statement</h2>
-                        <p>Our mission is to make language learning a lifestyle, with less focus on the finished product and more focus on the journey. We are committed to creating a safe community for learners and tutors alike, to grow, learn, and explore their native language, culture, and heritage. In this way we seek to create long lasting and meaningful connections between those in the diaspora and those on the African continent, while providing opportunities for those back home.</p>
+                        <p>A language learning platform that lets you speak better and get colloquial without any hesitation. We aim to adopt an innovative approach in transforming you into a CONVERSANT if not more. We want to make Obodo the most reliable and competent place for YOU to embark on a journey that's challenging but exhilarating at the same time.</p>
                     </div>
                 </div>
             </div>

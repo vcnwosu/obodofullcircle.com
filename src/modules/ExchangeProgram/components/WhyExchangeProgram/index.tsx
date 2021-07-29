@@ -3,11 +3,11 @@ import CustomAccordion from '../../../../shared/components/Accordion';
 import BorderImage from '../../../../assets/images/borderDesign.svg';
 import './whyExchangeProgram.scss';
 import { Carousel } from 'react-bootstrap';
-import StatsImage1 from '../../../../assets/images/100 streams white bg.svg';
-import StatsImage2 from '../../../../assets/images/100 streams white bg.svg';
-import StatsImage3 from '../../../../assets/images/100 streams white bg.svg';
-import StatsImage4 from '../../../../assets/images/100 streams white bg.svg';
-import StatsImage5 from '../../../../assets/images/100 streams white bg.svg';
+import StatsImage1 from '../../../../assets/images/statsImage1 white.svg';
+import StatsImage2 from '../../../../assets/images/statsImage2 white.svg';
+import StatsImage3 from '../../../../assets/images/statsImage3 white.svg';
+import StatsImage4 from '../../../../assets/images/statsImage4 white.svg';
+import StatsImage5 from '../../../../assets/images/statsImage5 white.svg';
 
 export interface AccordionType {
     title: string;
@@ -40,7 +40,7 @@ const WhyExchangeProgram = () => {
         }
     ]
     return (
-        <div className="why-ep pt-5">
+        <div className="why-ep">
             {/* <h2 className="text-center">Why IGBO Exchange Program</h2>
             <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
             <div className="wrapper ex-wrapperObodo d-flex justify-content-between">

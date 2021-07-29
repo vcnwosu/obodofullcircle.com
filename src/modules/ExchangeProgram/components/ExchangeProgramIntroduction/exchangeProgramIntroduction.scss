@@ -1,17 +1,17 @@
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .ep-intro-div {
     background: linear-gradient(180deg, $bg-color-4 75%, $white 0);
     padding-top: 6rem;
     h3 {
         color: $primary-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
     }
     h1 {
         color: $bg-color;
-        font-family: '$font-extra-bold';
+        font-family: "$font-extra-bold";
         font-size: 2rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
@@ -19,13 +19,17 @@
     }
     > div > p {
         color: $bg-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
+        font-size: 1rem;
+        @include breakpoint(x-small) {
+            font-size: 1.25rem;
+        }
     }
     div:nth-child(3) {
         text-align: left;
         overflow-x: hidden;
         @include breakpoint(small) {
-            text-align: right;  
+            text-align: right;
         }
     }
     .border-design {
@@ -34,12 +38,12 @@
             height: 45px;
         }
         @include breakpoint(large) {
-            height: 55px;     
+            height: 55px;
         }
     }
 }
 .mission-container {
-    background-image: url('../../../../assets/images/ep-intro-bg.svg');
+    background-image: url("../../../../assets/images/ep-intro-bg.svg");
     margin-left: 1rem;
     padding: 3rem 0 0 3rem;
     background-repeat: no-repeat;
@@ -64,15 +68,15 @@
             padding: 3rem;
         }
         div > img {
-            height: 150px;
+            height: 130px;
         }
         h2 {
             color: $white;
-            font-family: '$font-bold';
+            font-family: "$font-bold";
         }
         p {
             color: $white;
-            font-family: '$font-museo-regular';
+            font-family: "$font-museo-regular";
         }
     }
 }
