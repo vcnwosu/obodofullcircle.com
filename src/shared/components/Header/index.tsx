@@ -9,7 +9,7 @@ import Caret from '../../../assets/images/caret.svg';
 
 const navList: Navs[] = [
     {
-        path: '/episodes',
+        path: '/e',
         text: 'Episodes'
     },
     {
@@ -22,7 +22,7 @@ const navList: Navs[] = [
         isDropdown: true,
         dropdownItems: [
             {
-                path: '/transcripts',
+                path: '/t',
                 text: 'Transcripts'
             }
         ]
@@ -40,7 +40,7 @@ const Header = () => {
     const clickHandler = () => {
         inputRef.current.checked = false;
     }
-    
+
     return (
         <header>
             <div className="wrapper header-container">

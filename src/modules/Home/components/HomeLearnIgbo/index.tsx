@@ -11,7 +11,7 @@ const HomeLearnIgbo = () => {
     }
 
     const navigateToEpisodes = () => {
-        history.push(episodes.path)
+        // history.push(episodes.path)
     }
     return (
         <div className="bg-learn">

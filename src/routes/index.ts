@@ -48,10 +48,18 @@ const aboutUs: Route = {
     component: AboutUs
 }
 
+const defaultRoute: Route = {
+    path: '**',
+    exact: true,
+    isProtected: false,
+    component: Home
+}
+
 export const routeList = [
     home,
-    episodes,
+    // episodes,
     exchangeProgram,
-    transcripts,
-    aboutUs
+    // transcripts,
+    aboutUs,
+    defaultRoute
 ]

@@ -23,18 +23,18 @@ const Navigation = ({ list, type }: Props) => {
                 (<Navbar expand="lg">
                     <Nav className="flex-column">
                         {list.map(item => (
-                                <Link key={item.text} to={item.path}>{item.text}</Link>
-                            ))
+                            <Link key={item.text} to={item.path}>{item.text}</Link>
+                        ))
                         }
                     </Nav>
                 </Navbar>) : (
-                <Navbar expand="lg">
-                    <Nav>
-                        {list.map(item => (
-                            <NavLink key={item.text} to={item.path} >{item.text}</NavLink>
-                        ))}
-                    </Nav>
-                </Navbar>
+                    <Navbar expand="lg">
+                        <Nav>
+                            {list.map(item => (
+                                <NavLink key={item.text} to={item.path} >{item.text}</NavLink>
+                            ))}
+                        </Nav>
+                    </Navbar>
                 )
             }
         </>
