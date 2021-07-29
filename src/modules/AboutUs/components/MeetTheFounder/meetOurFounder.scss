@@ -1,6 +1,6 @@
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .au-founder-div {
     position: relative;
@@ -17,7 +17,7 @@
         @include breakpoint(small) {
             height: 550px;
         }
-        @include breakpoint(large) {
+        @include breakpoint(x-large) {
             height: 650px;
         }
     }
@@ -35,26 +35,26 @@
                 top: -1rem;
                 left: -2rem;
             }
-            @include breakpoint(large) {
+            @include breakpoint(x-large) {
                 font-size: 5rem !important;
                 top: -5rem;
                 left: -2rem;
             }
         }
         h2 {
-            font-family: '$font-bold';
+            font-family: "$font-bold";
             color: $bg-color;
             margin-bottom: 1rem;
             @include breakpoint(small) {
                 margin-bottom: 1rem;
-                margin-top: 1.5rem
+                margin-top: 1.5rem;
             }
-            @include breakpoint(large) {
+            @include breakpoint(x-large) {
                 margin-bottom: 1.5rem;
             }
         }
         p {
-            font-family: '$font-museo-regular';
+            font-family: "$font-museo-regular";
             color: $bg-color;
             &.first-line {
                 margin-bottom: 2rem;
