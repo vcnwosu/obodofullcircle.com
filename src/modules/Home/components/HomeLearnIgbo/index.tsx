@@ -18,9 +18,9 @@ const HomeLearnIgbo = () => {
             <div className="wrapper d-flex justify-content-between align-items-center">
                 <div>
                     <h1>Obodo, where community comes full circle</h1>
-                    <p className="mb-5">Join the community and make deeper connections to your heritage in a fun and impactful manner.</p>
+                    <p className="mb-5">Join a language learning community to make deeper connections with diverse cultures in a fun way that matters.</p>
                     <div className="d-flex">
-                        <CustomButton type="button" text="Stream Episodes" variant="primary" onClick={() => navigateToEpisodes()}/>
+                        <CustomButton type="button" text="Stream Episodes" variant="primary" onClick={() => navigateToEpisodes()} />
                         <CustomButton className="ml-3" type="button" text="Exchange Program" variant="secondary" onClick={() => navigateToExchange()} />
                     </div>
                 </div>

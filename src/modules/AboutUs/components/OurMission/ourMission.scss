@@ -1,6 +1,6 @@
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .au-mission-div {
     background-color: $bg-color-4;
@@ -17,22 +17,18 @@
     }
     h3 {
         color: $primary-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
     }
     h2 {
         color: $bg-color;
-        font-family: '$font-extra-bold';
+        font-family: "$font-extra-bold";
         font-size: 2rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
         }
     }
-    // p {
-    //     color: $bg-color;
-    //     font-family: '$font-bold';
-    //     font-size: 1.5rem;
-    //     @include breakpoint(small) {
-    //         font-size: 2rem;
-    //     }
-    // }
+    p {
+        color: $bg-color;
+        font-family: "$font-museo";
+    }
 }

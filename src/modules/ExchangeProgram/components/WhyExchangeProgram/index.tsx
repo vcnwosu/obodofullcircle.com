@@ -20,22 +20,22 @@ const WhyExchangeProgram = () => {
     const accordionArray: AccordionType[] = [
         {
             title: 'Learn with Native Speakers',
-            text: 'Learn the intricacies of the language from our team of  trained native speakers and bonafide tutors while gaining the confidence to speak and utilize the language in your everyday life.',
+            text: 'Effectively decode the complexities of the language from our team of trained native speakers and bonafide. Receive every help to gain the confidence to speak and utilize the language in your everyday life.',
             eventKey: "0"
         },
         {
-            title: 'Set your pace with accountability',
-            text: 'Learn at your own pace with all of the multimedia resources provided, while still having a mapped out weekly plan to stay on track and your tutor or conversation partner to keep you accountable.',
+            title: 'Set your Learning Pace',
+            text: 'Learn Igbo language at your own pace without compromising on the results and accountability. Get access to all the multimedia resources provided, while still having an exact roadmap of the weekly plan to stay on track with your tutor.',
             eventKey: "1"
         },
         {
-            title: 'Practice Practically',
-            text: 'Learn how to navigate real life scenarios and practice  “thinking” more in the language with a variety of exercises and lessons aimed at deepen the understanding of the language as well as cultural nuances.',
+            title: 'Hands-on Practical Learning',
+            text: 'Learning any language and not speaking it can take you far from making progress. Learn to navigate real-life scenarios and practice the art of “thinking” more in the language. This can be achieved with a variety of fun and interactive exercises we have created for you to advance at every stage of learning. It is aimed at deepening the understanding of the language as well as cultural nuances.',
             eventKey: "2"
         },
         {
             title: 'Affordable and Tailorable Classes',
-            text: 'Have you ever taken a language class for a period of time and soon after its completion you forget everything you’ve learned and also lose your consistency with interacting with the language?  With affordable prices, varying levels of modules, varying resources,  and the ability to tailor your time with your conversation partner.',
+            text: 'Have you ever taken a language class for a while and soon after its completion you forget everything you’ve learned and also lose your consistency with interacting with the language? With affordable prices, varying levels of modules, varying resources, and the ability to tailor your time with your conversation partner, making real progress with your language learning has never been easier!',
             eventKey: "3"
         }
     ]
@@ -45,7 +45,7 @@ const WhyExchangeProgram = () => {
             <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, assumenda?</p> */}
             <div className="wrapper ex-wrapperObodo d-flex justify-content-between">
                 <div className="accordion-div-ep">
-                    <CustomAccordion list={accordionArray} styleClass="btn-toggle-secondary" count={4}/>
+                    <CustomAccordion list={accordionArray} styleClass="btn-toggle-secondary" count={4} />
                 </div>
                 <div>
                     {/* <img src={Image} alt="whyImage"/> */}
