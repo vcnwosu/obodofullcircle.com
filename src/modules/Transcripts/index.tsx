@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import HomeTestimonials from "../Home/components/HomeTestimonials";
+import { testimonialArray } from "../Home/testimonialsData";
 import AllTranscripts from "./components/AllTranscripts";
 import TranscriptsIntroduction from "./components/TranscriptsIntroduction";
 
@@ -24,7 +25,7 @@ const Transcripts = () => {
         <div>
           <TranscriptsIntroduction />
           <AllTranscripts id={currentId} />
-          <HomeTestimonials />
+          <HomeTestimonials data={testimonialArray} type="textVideo" />
         </div>
     )
 }

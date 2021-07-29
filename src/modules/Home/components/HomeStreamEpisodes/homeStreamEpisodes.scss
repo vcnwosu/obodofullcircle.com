@@ -1,5 +1,5 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .wrapperStream {
     position: relative;
@@ -19,14 +19,15 @@
         padding-right: 120px;
     }
     p {
-       font-family: '$font-museo-700';
-       font-size: 1rem;
-       color: $text-color-4;
-       @include breakpoint(x-small) {
-        font-size: 1.25rem;
-    }
+        font-family: "$font-museo-700";
+        font-size: 1rem;
+        color: $text-color-4;
+        @include breakpoint(x-small) {
+            font-size: 1.25rem;
+        }
     }
     > div {
+        padding: 0 20px;
         @include breakpoint(small) {
             margin-left: 0;
         }
@@ -92,7 +93,7 @@ h1.shadowText {
     }
     @include breakpoint(x-large) {
         font-size: 5rem !important;
-        top: 120px;
+        top: 90px;
         left: 70px;
     }
 }

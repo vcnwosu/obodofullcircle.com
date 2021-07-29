@@ -23,11 +23,17 @@
             @include breakpoint(small) {
                 width: 420px;
             }
-            .carousel-indicators li {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $bg-color;
+            .carousel-indicators{
+                bottom: -30px;
+                @include breakpoint(small) {
+                    bottom: 0;
+                }
+                li {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $bg-color;
+                }
             }
             .carousel-control-prev, .carousel-control-next {
                 display: none;

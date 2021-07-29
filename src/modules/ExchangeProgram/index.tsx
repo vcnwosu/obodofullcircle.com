@@ -5,7 +5,8 @@ import ExchangeProgramIntroduction from "./components/ExchangeProgramIntroductio
 import ExchangeProgramPlans from "./components/ExchangeProgramPlans"
 import FAQ from "./components/FAQ"
 import HowItWorks from "./components/HowItWorks"
-import WhyExchangeProgram from "./components/WhyExchangeProgram"
+import WhyExchangeProgram from "./components/WhyExchangeProgram";
+import { exchnageProgramTestimonialArray } from './testimonialData';
 
 const ExchangeProgram = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const ExchangeProgram = () => {
           <HowItWorks />
           <ExchangeProgramPlans />
           <FAQ />
-          <HomeTestimonials />
+          <HomeTestimonials data={exchnageProgramTestimonialArray} type="textVideo"/>
         </div>
     )
 }

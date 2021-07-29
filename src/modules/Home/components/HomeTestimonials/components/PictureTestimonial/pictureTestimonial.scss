@@ -1,0 +1,19 @@
+@import "../../../../../../assets/styles/variables";
+@import '../../../../../../assets/styles/fonts';
+@import '../../../../../../assets/styles/mixins';
+
+.pictureTestimonial {
+    min-width: 280px;
+    // background-color: $white;
+    // padding: 10px;
+    height: 100%;
+    @include breakpoint(x-small) {
+      width: 320px;
+    }
+    @include breakpoint(small) {
+      min-width: 300px;
+    }
+    img {
+        width: 100%;
+    }
+}

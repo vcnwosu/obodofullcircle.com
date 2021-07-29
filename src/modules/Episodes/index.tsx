@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import HomeTestimonials from "../Home/components/HomeTestimonials";
 import AllEpisodes from "./components/AllEpisodes";
-import EpisodesIntroduction from "./components/EpisodesIntroduction"
+import EpisodesIntroduction from "./components/EpisodesIntroduction";
+import { testimonialArray } from './testimonialData';
 
 const Episodes = () => {
     const location = useLocation();
@@ -20,7 +21,7 @@ const Episodes = () => {
         <div>
             <EpisodesIntroduction />
             <AllEpisodes />
-            <HomeTestimonials />
+            <HomeTestimonials data={testimonialArray} type="picture" />
         </div>
     )
 

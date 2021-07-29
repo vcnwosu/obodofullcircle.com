@@ -12,8 +12,10 @@ const HomeStreamEpisodes = () => {
                 <div>
                     <h1 className="shadowText">Stream Episodes</h1>
                     <h1 className="head">Stream Episodes</h1>
-                    <p className="mb-5">Learning Igbo on the go is made easier with our free podcast</p>
-                    <CustomButton type="button" text="Stream" variant="primary" icon={Arrow} />
+                    <p className="mb-5">Stream, Listen, Learn. <br />
+                        Notes that you’ll never lose. Here’s the best way to learn the Igbo language anywhere, anytime.
+                    </p>
+                    <CustomButton type="button" text="Stream Now" variant="primary" icon={Arrow} />
                 </div>
                 <div className="image-container">
                     <img className="bgImage" src={Image} alt="exchange" />

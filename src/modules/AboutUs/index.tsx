@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import OurTeam from "./components/OurTeam";
 import HomeTestimonials from "../Home/components/HomeTestimonials";
+import { testimonialArray } from '../Home/testimonialsData';
 
 const AboutUs = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const AboutUs = () => {
           <MeetTheFounder />
           <OurTeam />
           <CompanyValues />
-          <HomeTestimonials />
+          <HomeTestimonials data={testimonialArray} type="textVideo"/>
         </div>
     )
 }

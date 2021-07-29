@@ -6,7 +6,7 @@ const WhoWeAre = () => {
             <div className="wrapper">
                 <h3>Who we are</h3>
                 <p>
-                    We are a team of language learners and speakers who are committed to bringing us all full circle on our journey to find, explore, create community  We are also the parent company to the Igbo podcast brand. Understanding that language is one aspect of community….
+                    We are who you can call home to the Nigerian language learning platform to help you knit tight with your culture. You call us a team of language learners and speakers who are committed to bringing us all full circle on our journey to find, explore and create a nurturing and progressive community. And language being the major aspect of any community, we are on a mission to harness it with each passing day.
                 </p>
             </div>
         </div>
