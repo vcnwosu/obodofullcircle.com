@@ -2,11 +2,11 @@ import { Carousel } from 'react-bootstrap';
 import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
 import './homeWhyObodo.scss';
-import StatsImage1 from '../../../../assets/images/150 students green bg.svg';
-import StatsImage2 from '../../../../assets/images/5 months green bg.svg';
-import StatsImage3 from '../../../../assets/images/4 continents green bg.svg';
-import StatsImage4 from '../../../../assets/images/15 countries green bg.svg';
-import StatsImage5 from '../../../../assets/images/100 streams green bg.svg';
+import StatsImage1 from '../../../../assets/images/statsImage1 square.svg';
+import StatsImage2 from '../../../../assets/images/statsImage2 square.svg';
+import StatsImage3 from '../../../../assets/images/statsImage3 square.svg';
+import StatsImage4 from '../../../../assets/images/statsImage4 square.svg';
+import StatsImage5 from '../../../../assets/images/statsImage5 square.svg';
 
 export interface AccordionType {
     title: string;
@@ -46,7 +46,6 @@ const HomeWhyIgbo = () => {
                     <CustomAccordion list={accordionArray} styleClass="btn-toggle" count={4} />
                 </div>
                 <div>
-                    {/* <img src={Image} alt="whyImage"/> */}
                     <Carousel interval={2000}>
                         <Carousel.Item>
                             <img

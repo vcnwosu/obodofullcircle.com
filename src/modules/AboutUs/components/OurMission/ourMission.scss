@@ -30,5 +30,9 @@
     p {
         color: $bg-color;
         font-family: "$font-museo";
+        font-size: 1rem;
+        @include breakpoint(x-small) {
+            font-size: 1.25rem;
+        }
     }
 }

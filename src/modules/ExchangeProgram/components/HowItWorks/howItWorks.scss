@@ -1,6 +1,6 @@
 @import "../../../../assets/styles/variables";
 @import "../../../../assets/styles/fonts";
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/mixins";
 
 .ep-how-div {
   // background-image: url('../../../../assets/images/ExchangeHow.svg');
@@ -9,6 +9,7 @@
   h2 {
     color: $white;
     font-family: "$font-bold";
+    margin-bottom: 1rem;
   }
   p {
     color: $white;
@@ -39,7 +40,7 @@
       width: 100%;
     }
     p {
-      font-family: '$font-museo-regular';
+      font-family: "$font-museo-regular";
       text-align: center;
       margin-top: 1rem;
     }

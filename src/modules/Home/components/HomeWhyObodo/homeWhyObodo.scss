@@ -10,21 +10,18 @@
     }
     > div:nth-child(2) {
         width: 100%;
-        display: flex;
-        justify-content: flex-end;
         @include breakpoint(small) {
+            display: flex;
+            justify-content: flex-end;
             width: 50%;
         }
         > .carousel.slide {
             width: 100%;
             @include breakpoint(small) {
-                width: 420px;
+                width: 60%;
             }
             .carousel-indicators {
-                bottom: -30px;
-                @include breakpoint(small) {
-                    bottom: 0;
-                }
+                bottom: -15%;
                 li {
                     width: 10px;
                     height: 10px;
@@ -41,9 +38,9 @@
     img {
         height: auto;
         width: 100%;
-        @include breakpoint(small) {
-            width: 420px;
-        }
+        // @include breakpoint(small) {
+        //     width: 420px;
+        // }
     }
     > div:nth-child(2) {
         padding: 1.25rem;
