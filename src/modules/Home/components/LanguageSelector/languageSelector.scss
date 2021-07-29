@@ -1,13 +1,13 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
-@import '../../../../assets/styles/fonts';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+@import "../../../../assets/styles/fonts";
 
 .bg-language {
     background-color: $bg-color-2;
     h2 {
         margin-bottom: 2rem;
         color: $bg-color;
-        font-family: '$font-bold';
+        font-family: "$font-bold";
     }
     .form-group {
         display: flex;
@@ -18,11 +18,11 @@
             padding: 14px 8px 14px;
             font-size: 10px;
             border: none;
-            background-color: #ECECF7;
+            background-color: #ececf7;
             width: 70%;
-            font-family: '$font-medium';
+            font-family: "$font-medium";
             @include breakpoint(x-small) {
-                width: 40%;
+                width: 65%;
                 font-size: 12px;
                 padding: 13px 15px;
             }
@@ -36,7 +36,8 @@
                 font-size: 14px;
                 padding: 16px 15px;
             }
-            &:active, &:focus {
+            &:active,
+            &:focus {
                 outline: none;
                 box-shadow: none;
             }
