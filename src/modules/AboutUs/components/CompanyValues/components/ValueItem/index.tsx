@@ -23,7 +23,7 @@ const ValueItemsArray: ValueItemType[] = [
     // },
     {
         image: BuildConnect,
-        heading: 'Creating, Fabricating, and Blending Cultures',
+        heading: 'Creating, Curating and Blending Cultures',
         text: 'We strive to build long lasting relationships and networks irrespective of proximity.'
     },
     {
