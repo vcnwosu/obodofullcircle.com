@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import TutorImg from '../../../../assets/images/tutor.svg';
 import { CustomButton } from '../../../../shared/components/Button';
-import { exchangeProgram, episodes } from '../../../../routes'
+import { exchangeProgram, episodes } from '../../../../routes';
 import './homeLearnIgbo.scss';
 
 const HomeLearnIgbo = () => {

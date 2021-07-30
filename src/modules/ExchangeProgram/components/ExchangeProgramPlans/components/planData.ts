@@ -10,6 +10,7 @@ export interface PlanType {
     heading: string;
     price: string;
     priceSingleMonth: string;
+    priceSingleMonthQuaterly: string;
     priceTotal: string;
     detailsList: detailText[]
 }
@@ -17,15 +18,16 @@ export interface PlanType {
 export const basicPlanData: PlanType = {
     heading: 'Basic',
     price: '$65',
-    priceSingleMonth: '$49',
+    priceSingleMonth: '$55',
+    priceSingleMonthQuaterly: '$50',
     priceTotal: '$98',
     detailsList: [
         {
-            text: '<b>45mins (max 1Hr)</b>/week live calls',
+            text: 'Live calls : Per week upto <b>1 hour</b>',
             showInfoIcon: false
         },
         {
-            text: 'Live call sessions with a <b>conversation partner or tutor</b>',
+            text: 'Live calls with : <b>Conversation partner or tutor</b>',
             showInfoIcon: true,
             tooltipType: 'list',
             tooltipList: [
@@ -34,17 +36,17 @@ export const basicPlanData: PlanType = {
             ]
         },
         {
-            text: 'T/TH Voice-note correspondence Immersion plan/prompts',
+            text: 'Access : Voice notes correspondence',
             showInfoIcon: false
         },
         {
-            text: '<b>Predominantly case based learning structure</b>',
+            text: 'Learning Mode: <b>Case based</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
-            text: 'Immersive plan - LMS',
+            text: 'Immersive plans through LMS',
             showInfoIcon: false
         },
         {
@@ -56,11 +58,11 @@ export const basicPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Monthly goals and Progress reports',
+            text: 'Progress Tracking : Monthly Goals and Reports',
             showInfoIcon: false
         },
         {
-            text: 'Abridged grammar lessons covered over longer period of time',
+            text: 'Abridged grammar lessons',
             showInfoIcon: false
         }
     ]
@@ -68,32 +70,33 @@ export const basicPlanData: PlanType = {
 
 export const premiumPlanData: PlanType = {
     heading: 'Premium',
-    price: '$110',
-    priceSingleMonth: '$99',
+    price: '$115',
+    priceSingleMonth: '$110',
+    priceSingleMonthQuaterly: '$95',
     priceTotal: '$198',
     detailsList: [
         {
-            text: '<b>1h 30mins</b> week live calls',
+            text: 'Live calls : <b>1 hr 30 mins</b> per week',
             showInfoIcon: false
         },
         {
-            text: 'Live call sessions with <b>tutor only</b>',
+            text: 'Live calls with : <b>Only tutor</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Tutor: a native speaker with over 2 years of experience teaching the language at various capacities.  Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.'
         },
         {
-            text: 'T/TH voice-note correspondence',
+            text: 'Access : Voice notes correspondence',
             showInfoIcon: false
         },
         {
-            text: '<b>Classroom structure AND case based learning</b>',
+            text: 'Learning Mode: <b>Case based and Classroom</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
-            text: 'Immersion plan',
+            text: 'Immersion Plan through LMS',
             showInfoIcon: false
         },
         {
@@ -101,19 +104,19 @@ export const premiumPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Multimedia learning resources',
+            text: 'Multimedia Learning Resources',
             showInfoIcon: false
         },
         {
-            text: 'Goal making and Progress reports',
+            text: 'Progress Tracking : Monthly Goal and Reports',
             showInfoIcon: false
         },
         {
-            text: 'Detailed dive into language grammar while continued focus on practicalilty for everyday speech',
+            text: 'Deep dive into language grammar with continued focus to improve speech',
             showInfoIcon: false
         },
         {
-            text: 'Access to ALL audio <b>flashcards</b> for duration of subscription',
+            text: '<b>Access to all audio flashcards</b>',
             showInfoIcon: false
         }
     ]

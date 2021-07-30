@@ -47,8 +47,8 @@ const ExchangeProgramPlans = () => {
                     </div>
                 </div>
                 <div className="plan-card-div d-flex justify-content-center">
-                    <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceTotal={basicPlanData.priceTotal} />
-                    <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceTotal={premiumPlanData.priceTotal} />
+                    <PlanCard type={activeType} heading={basicPlanData.heading} price={basicPlanData.price} detailsList={basicPlanData.detailsList} priceSingleMonth={basicPlanData.priceSingleMonth} priceSingleMonthQuaterly={basicPlanData.priceSingleMonthQuaterly} priceTotal={basicPlanData.priceTotal} />
+                    <PlanCard type={activeType} heading={premiumPlanData.heading} price={premiumPlanData.price} detailsList={premiumPlanData.detailsList} priceSingleMonth={premiumPlanData.priceSingleMonth} priceSingleMonthQuaterly={premiumPlanData.priceSingleMonthQuaterly} priceTotal={premiumPlanData.priceTotal} />
                 </div>
                 <CustomButton type="button" variant="primary" text="Start 7-day trial now" onClick={() => setShowModal(true)} />
             </div>
