@@ -160,6 +160,9 @@
 }
 .modal-box {
     img {
-        height: 60px;
+        height: 40px;
+        @include breakpoint(small) {
+            height: 60px;
+        }
     }
 }
