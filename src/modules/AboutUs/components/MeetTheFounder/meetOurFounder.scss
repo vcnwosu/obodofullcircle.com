@@ -15,8 +15,11 @@
     img {
         height: 400px;
         @include breakpoint(small) {
-            height: 550px;
+            height: 500px;
         }
+        // @include breakpoint(large) {
+        //     height: 550px;
+        // }
         @include breakpoint(x-large) {
             height: 650px;
         }
@@ -32,12 +35,17 @@
             font-size: 2.3rem !important;
             @include breakpoint(small) {
                 font-size: 3rem !important;
+                top: 0rem;
+                left: -2rem;
+            }
+            @include breakpoint(large) {
+                font-size: 3rem !important;
                 top: -1rem;
                 left: -2rem;
             }
             @include breakpoint(x-large) {
                 font-size: 5rem !important;
-                top: -5rem;
+                top: -4rem;
                 left: -2rem;
             }
         }
@@ -47,7 +55,7 @@
             margin-bottom: 1rem;
             @include breakpoint(small) {
                 margin-bottom: 1rem;
-                margin-top: 1.5rem;
+                margin-top: 2.5rem;
             }
             @include breakpoint(x-large) {
                 margin-bottom: 1.5rem;
@@ -56,8 +64,13 @@
         p {
             font-family: "$font-museo-regular";
             color: $bg-color;
-            &.first-line {
-                margin-bottom: 2rem;
+            @include breakpoint(large) {
+                margin-bottom: 1.5rem;
+                font-size: 0.8rem;
+            }
+            @include breakpoint(x-large) {
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
             }
         }
     }
