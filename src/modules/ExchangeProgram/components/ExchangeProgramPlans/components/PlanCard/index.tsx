@@ -1,12 +1,14 @@
 import CheckboxArrow from '../../../../../../assets/images/checkboxArrow.svg';
 import saveImage from '../../../../../../assets/images/save.svg';
+import saveImage10 from '../../../../../../assets/images/save10.svg';
+import saveImage15 from '../../../../../../assets/images/save15.svg';
 import { PlanType } from '../planData';
 import Info from '../../../../../../assets/images/Info.svg';
 interface NewPlanType extends PlanType {
     type: number;
 }
 
-const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, type }: NewPlanType) => {
+const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceSingleMonthQuaterly, priceTotal, type }: NewPlanType) => {
     return (
         <div className="plan-card">
             <div className="d-flex justify-content-between align-items-center">
@@ -16,10 +18,11 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceTotal, t
                         /Month
                     </span>
                 </p>}
-                {type !== 1 && <img className="save-image" src={saveImage} alt="saveImage" />}
+                {type === 3 && <img className="save-image" src={saveImage} alt="saveImage" />}
+                {type === 2 && <img className="save-image" src={price === '$65' ? saveImage15 : saveImage10} alt="saveImage" />}
             </div>
             {type !== 1 && <div className="d-flex justify-content-between align-items-center">
-                <p className="price">{priceSingleMonth}
+                <p className="price">{type === 2 ? priceSingleMonth : priceSingleMonthQuaterly}
                     <span>
                         /Month
                     </span>
