@@ -5,8 +5,9 @@ interface Props {
     data: string | undefined;
     userImage: string | undefined;
     userName: string;
+    location: string;
 }
-const TextTestimonial = ({ data, userImage, userName }: Props) => {
+const TextTestimonial = ({ data, userImage, userName, location }: Props) => {
     return (
         <div className="testimonial-div d-flex flex-column">
             <div>
@@ -16,6 +17,7 @@ const TextTestimonial = ({ data, userImage, userName }: Props) => {
             <div className="d-flex user-div">
                 {userImage && <img src={userImage} alt="userImage" />}
                 <span>{userName}</span>
+                <span>{location}</span>
             </div>
         </div>
     )
