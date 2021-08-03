@@ -1,6 +1,6 @@
 import ChukwualukaChiama from '../../../../assets/images/Chukwualuka Chiama.png';
 import ObinnaWogu from '../../../../assets/images/Obinna Wogu.png';
-import ChinemeEzekwenna from '../../../../assets/images/Chineme Ezekwenna.png';
+import ChinemeEzekwenna from '../../../../assets/images/Chineme Ezekwenna.jpg';
 import VictorNwosu from '../../../../assets/images/Victor Nwosu.png';
 import ChibuzoUwakaneme from '../../../../assets/images/Chibuzo Uwakaneme.png'
 import './ourTeam.scss';

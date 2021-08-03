@@ -49,7 +49,7 @@ const HomeTestimonials = ({ data, type }: Props) => {
                     <div className="d-flex">
                         {type === 'textVideo' ? (data.map((item, index) => (
                             <div key={index} className={index % 2 === 0 ? 'mb-4' : 'mt-4'}>
-                                {item.type === 'text' ? <TextTestimonial data={item.data} userImage={item.userImage} userName={item.userName} /> : <VideoTestimonial index={item.index} url={item.url} userName={item.userName} isPlaying={playStatus[item.index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} />}
+                                {item.type === 'text' ? <TextTestimonial data={item.data} userImage={item.userImage} userName={item.userName} location={item.location} /> : <VideoTestimonial index={item.index} url={item.url} userName={item.userName} isPlaying={playStatus[item.index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} />}
                             </div>
                         ))) : (data.map((item, index) => (
                             <div key={index} className={index % 2 === 0 ? 'mb-4' : 'mt-4'}>
