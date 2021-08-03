@@ -32,7 +32,7 @@ const FAQ = () => {
         },
         {
             title: 'What is the difference between a conversation partner and a tutor?',
-            text: 'We pride ourselves in our ability to transform native speakers into skilled and knowledgeable conversation partners. But there are some distinctions between a conversation partner and a tutor. A tutor will focus on equipping you with the language from scratch to make your foundation stronger. This will include taking you through the basics and giving a solid introduction to the language you aspire to become fluent in. On the other hand, a conversation partner will assist you in practicing what you have already learned from your tutor. This will be the next step which will focus on enhancing your conversational skills. Collectively, you will be able to not only learn but practice practically to keep track of your progress.',
+            text: 'A conversation partner is a native speaker who has undergone detailed training to work with learners, provide an optimal learning environment, and explain basic grammatical details. On the other hand, a tutor is a native speaker with over 2 years of experience teaching the language at various capacities. Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.',
             eventKey: "4"
         },
         {

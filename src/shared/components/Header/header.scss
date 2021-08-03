@@ -26,13 +26,13 @@ header {
     .nav-toggle:checked ~ nav {
       transform: scale(1, 1);
     }
-    
+
     .nav-toggle:checked ~ nav a {
       opacity: 1;
       transition: opacity 0.25s ease-in-out 0.25s;
       pointer-events: all;
     }
-    
+
     nav {
       position: absolute;
       text-align: left;
@@ -74,7 +74,6 @@ header {
           background-color: transparent;
           border: none;
           color: $white;
-          // font-size: 14px;
           &:focus + ul {
             opacity: 1;
             pointer-events: all;
@@ -82,9 +81,17 @@ header {
           &:hover {
             color: $primary-color;
           }
+          &:focus img {
+            transform: rotateX(0deg);
+          }
           img {
             margin-left: 0.75rem;
             height: 8px;
+            transform: rotateX(180deg);
+            transition: transform 0.5s ease-in-out;
+            // &:hover {
+            //   transform: rotateX(180deg);
+            // }
           }
         }
       }

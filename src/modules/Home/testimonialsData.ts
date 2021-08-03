@@ -12,6 +12,7 @@ export interface Testimonial {
     data?: string | undefined;
     userImage?: string | undefined;
     userName: string;
+    location?: string;
     url?: string | undefined;
     isPlaying: boolean;
     handlePlayPause: (index: number) => void;
@@ -33,7 +34,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: 'I have always been pretty competent in my level of comprehension in listening but struggled with my ability to speak as fluently as I would like. I was tired of whining about this as a life goal and decided to make it a reality. Since joining the program, my speaking proficiency has increased tremendously. I am more confident and much more likely to respond in igbo when others speak to me instead of my previous inclination to respond in English.',
         userImage: Ngozi,
-        userName: 'Ngozi, Texas',
+        userName: 'Ngozi',
+        location: 'Texas',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -52,7 +54,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: 'The program works with my busy schedule. So I knew it was something I could commit to. After 4 months, I’m learning more igbo than I ever have before and it excites me!  My learning partner is nice and has never discouraged me even when I slacked. It’s worth the cost and is helping me achieve my goal.',
         userImage: Chelsea,
-        userName: 'Chelsea, Michigan US',
+        userName: 'Chelsea',
+        location: 'Michigan US',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -71,7 +74,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: 'I’ve tried to learn igbo on my own three different times, and I failed each time, usually within a few weeks. With the igbo exchange program I’ve been able to make so much progress in the last couple of months. I learn things that I can use in everyday conversation, I have an encouraging conversation partner to practice my Igbo with every week, and a structured program to keep me accountable. Daalu Ifunanya for creating this program!',
         userImage: '',
-        userName: 'Ugo, Texas, USA',
+        userName: 'Ugo',
+        location: 'Texas, USA',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -90,7 +94,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',
         userImage: '',
-        userName: 'Ijeoma, New Jersey, USA',
+        userName: 'Ijeoma',
+        location: 'New Jersey, USA',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -147,7 +152,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: 'I love Igboppdacst! Like many Nigerians that grew up in the diaspora, I grew up hearing Igbo and could understand but, my confidence to speak? Nonexistant. Since joining the program, I have learned so much and am able to hold full conversations (which was a goal of mine). I love that the program goes at your pace, and the relationship you develop with your tutor. I’m excited to continue and hope to be fluent, which I know will be possible with this program. A God sent!',
         userImage: Chizi,
-        userName: 'Chizi Duru, New York, USA',
+        userName: 'Chizi Duru',
+        location: 'New York, USA',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -166,7 +172,8 @@ export const testimonialArray: Testimonial[] = [
         type: 'text',
         data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
         userImage: Chioma,
-        userName: 'Chioma Nnamaka, Uppsala, Sweden',
+        userName: 'Chioma Nnamaka',
+        location: 'Uppsala, Sweden',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
