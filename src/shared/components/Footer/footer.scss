@@ -1,6 +1,6 @@
-@import '../../../assets/styles/variables';
-@import '../../../assets/styles/fonts';
-@import '../../../assets/styles/mixins';
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/mixins";
 
 footer {
     background-color: $bg-color;
@@ -21,14 +21,15 @@ footer {
             flex-direction: row;
         }
     }
-    .navbar, .nav-link{
+    .navbar,
+    .nav-link {
         padding: 0 !important;
     }
     .store-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        gap: 0rem;
+        // justify-content: space-between;
+        // gap: 0rem;
         @include breakpoint(x-small) {
             justify-content: flex-start;
             gap: 2rem;
@@ -48,6 +49,12 @@ footer {
             }
             @include breakpoint(large) {
                 height: 90px;
+            }
+            &:first-child {
+                margin-right: 1.5rem;
+                @include breakpoint(small) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -95,10 +102,10 @@ footer {
         h3 {
             font-size: 18px;
             color: $primary-color;
-            font-family: '$font-bold';
+            font-family: "$font-bold";
         }
         a {
-            font-family: '$font-regular';
+            font-family: "$font-regular";
             margin: 10px 0;
         }
     }
@@ -111,7 +118,7 @@ footer {
 }
 .links a {
     margin: 10px 0;
-    font-family: '$font-light';
+    font-family: "$font-light";
     @include breakpoint(small) {
         margin: 10px;
     }
@@ -125,7 +132,7 @@ footer {
     align-items: center;
     p {
         font-size: 14px;
-        font-family: '$font-light';
+        font-family: "$font-light";
         color: #fff;
     }
 }

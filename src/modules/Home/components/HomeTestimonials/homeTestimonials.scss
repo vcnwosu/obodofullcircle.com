@@ -48,13 +48,19 @@
         scrollbar-width: thin;
     }
     > div {
-        gap: 0.5rem;
+        // gap: 0.5rem;
         transition: 0.5s transform ease-in-out;
         @include breakpoint(x-small) {
             gap: 1rem;
         }
         @include breakpoint(small) {
             gap: 1.4rem;
+        }
+        > div:not(:first-child) {
+            margin-left: 0.5rem;
+            @include breakpoint(small) {
+                margin-left: 0;
+            }
         }
     }
     &::-webkit-scrollbar {
