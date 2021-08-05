@@ -83,7 +83,7 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'test.mp4',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
         userName: 'Obianuju',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
