@@ -1,5 +1,3 @@
-import TranscriptImage from '../../../../../../assets/images/TranscriptImage.svg';
-
 export interface TranscriptCardType {
     title: string;
     description: string;
@@ -17,10 +15,10 @@ const TranscriptCard = ({ title, description, price, image, onClick, id, active 
             <div className="transcript-content">
                 <p>Transcript</p>
                 <h5>{title}</h5>
-                <p className="description">Introduction</p>
+                {/* <p className="description">Introduction</p> */}
                 <div>
-                    <button type="button" onClick={onClick}>{price}</button>
-                    <button className="ml-2" type="button" onClick={onClick}>Purchase</button>
+                    <button type="button" className="mr-2">{price}</button>
+                    <button className="purchase-btn" type="button" onClick={onClick}>Purchase</button>
                 </div>
             </div>
         </div>

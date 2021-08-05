@@ -81,15 +81,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => { },
         index: 0
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chiamaka-Precious-London-UK.mp4',
-    //     userName: 'Chizute',
-    //     isPlaying: false,
-    //     handlePlayPause: (index: number) => {},
-    //     onEnded: (index: number) => {},
-    //     index: 3
-    // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
+        userName: 'Obianuju',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 3
+    },
     {
         type: 'text',
         data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',

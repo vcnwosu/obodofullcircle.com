@@ -32,6 +32,8 @@
             padding: 10px;
             cursor: pointer;
             font-size: 12px;
+            display: flex;
+            align-items: center;
             @include breakpoint(small) {
                 padding: 10px 50px;
                 font-size: 1rem;
@@ -58,7 +60,7 @@
 }
 
 .plan-card-div {
-    gap: 2rem;
+    // gap: 2rem;
     flex-direction: column;
     margin-bottom: 3rem;
     @include breakpoint(small) {
@@ -155,6 +157,12 @@
             border-style: solid;
             clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
             border-color: $black;
+        }
+        &:nth-child(2) {
+            margin-top: 2rem;
+            @include breakpoint(small) {
+                margin-top: 0;
+            }
         }
     }
 }

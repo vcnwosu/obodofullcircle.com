@@ -8,7 +8,7 @@ import EpisodeContext, { Season } from '../../../../store/EpisodeContext';
 interface Props {
     id: string;
 }
-const AllTranscripts = ({id}: Props) => {
+const AllTranscripts = ({ id }: Props) => {
     const seasonContext = useContext(EpisodeContext);
     const [currentSeason, setCurrentSeason] = useState(0);
     const [showModal, setShowModal] = useState(false);
@@ -18,7 +18,7 @@ const AllTranscripts = ({id}: Props) => {
         const seasonNumber = +(id.slice(1, id.indexOf('e')));
         setCurrentSeason(() => seasonNumber);
         setSeasonList(seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id));
-        if(seasonContext.seasonList.length > 0) {
+        if (seasonContext.seasonList.length > 0) {
             setCurrentEpisodeList(() => [...seasonContext.seasonList[seasonNumber]?.episodes].reverse());
         }
     }, [seasonContext, id])
@@ -55,13 +55,13 @@ const AllTranscripts = ({id}: Props) => {
                 <div className="d-flex season-container">
                     {seasonList.length > 0 && seasonList.map((season, index) => (
                         <div key={season.season_id} className={currentSeason === index ? 'active' : ''} onClick={() => showCurrentSeasonEpisodes(index)}>
-                        Season {season.season_id}
-                    </div>
+                            Season {season.season_id}
+                        </div>
                     ))}
                 </div>
                 <div className="transcript-cards-container">
-                    {currentEpisodeList && currentEpisodeList.length > 0 &&  currentEpisodeList.map((card, index) => (
-                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id}  key={card.title} title={card.title} description={card.description} price="$15.00" image={card.image} onClick={() => setShowModal(true)} />
+                    {currentEpisodeList && currentEpisodeList.length > 0 && currentEpisodeList.map((card, index) => (
+                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id} key={card.title} title={card.title} description={card.description} price="$5.00" image={card.image} onClick={() => setShowModal(true)} />
                     ))}
                 </div>
             </div>
