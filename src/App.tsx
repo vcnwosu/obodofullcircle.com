@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { EpisodeContextProvider } from './store/EpisodeContext';
 
 const spinner = (
-  <div style={{position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+  <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
     <Spinner animation="border" variant="success" />
   </div>
 )
@@ -21,21 +21,22 @@ const spinner = (
 toast.configure();
 const App: React.FC = () => {
   const history = createBrowserHistory();
+  console.log(history)
   return (
     <>
       <EpisodeContextProvider>
         <Router history={history}>
           <React.Suspense fallback={spinner}>
-            <Header />
+            {!history.location.pathname.includes('payments') && <Header />}
             <Switch>
               {routeList.map(({ path, ...rest }): any =>
                 (<Route key={path} path={path} {...rest} />)
               )}
             </Switch>
             {/* <HomeTestimonials /> */}
-            <HomeStore />
-            <HomeTeaching />
-            <Footer />
+            {!history.location.pathname.includes('payments') && <HomeStore />}
+            {!history.location.pathname.includes('payments') && <HomeTeaching />}
+            {!history.location.pathname.includes('payments') && <Footer />}
           </React.Suspense>
         </Router>
       </EpisodeContextProvider>
