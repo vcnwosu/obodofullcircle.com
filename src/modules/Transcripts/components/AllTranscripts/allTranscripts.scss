@@ -72,6 +72,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+        width: 100%;
       }
       p:first-child {
         font-family: "$font-regular";
@@ -103,6 +104,17 @@
         margin-bottom: 0.5rem;
         font-size: 13px;
       }
+      div.price-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > p {
+          font-family: "$font-bold" !important;
+          color: $primary-color !important;
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
+      }
       button {
         background-color: $primary-color;
         color: $white;
@@ -121,15 +133,15 @@
           padding: 0.5rem 1rem;
         }
       }
-      .purchase-btn {
-        visibility: visible;
-        @include breakpoint(small) {
-          visibility: hidden;
-        }
-      }
-      &:hover .purchase-btn {
-        visibility: visible;
-      }
+      // .purchase-btn {
+      //   visibility: visible;
+      //   @include breakpoint(small) {
+      //     visibility: hidden;
+      //   }
+      // }
+      // &:hover .purchase-btn {
+      //   visibility: visible;
+      // }
     }
   }
 }

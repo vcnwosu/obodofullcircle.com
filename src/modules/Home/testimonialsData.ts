@@ -101,15 +101,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => { },
         index: 0
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-    //     userName: 'Nneoma',
-    //     isPlaying: false,
-    //     handlePlayPause: (index: number) => {},
-    //     onEnded: (index: number) => {},
-    //     index: 4
-    // },
+    {
+        type: 'video',
+        url: 'test.mp4',
+        userName: 'Nneoma',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 4
+    },
     // {
     //     type: 'text',
     //     data: 'I am so happy that I decided to join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
@@ -159,15 +159,15 @@ export const testimonialArray: Testimonial[] = [
         onEnded: (index: number) => { },
         index: 0
     },
-    // {
-    //     type: 'video',
-    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Chizute-London-UK.mp4',
-    //     userName: 'Obi',
-    //     isPlaying: false,
-    //     handlePlayPause: (index: number) => {},
-    //     onEnded: (index: number) => {},
-    //     index: 7
-    // },
+    {
+        type: 'video',
+        url: 'test1.mp4',
+        userName: 'Obi',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 7
+    },
     {
         type: 'text',
         data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
