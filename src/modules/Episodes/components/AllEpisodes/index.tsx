@@ -15,6 +15,7 @@ const AllEpisodes = () => {
 
     useEffect(() => {
         setSeasonList(seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id));
+        // setSeasonList([{ season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }, { season_id: 1, episodes: [] }])
         if (seasonContext.seasonList.length > 0) {
             setCurrentEpisodeList(() => [...seasonContext.seasonList[0]?.episodes].reverse());
         }

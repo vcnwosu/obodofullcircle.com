@@ -1,12 +1,12 @@
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 .episode-intro-div {
     position: relative;
     background: linear-gradient(180deg, $bg-color-4 93%, $white 0);
     overflow-x: hidden;
     @include breakpoint(small) {
-        background: linear-gradient(180deg, $bg-color-4 84%, $white 0);
+        background: linear-gradient(180deg, $bg-color-4 87%, $white 0);
     }
     div:first-child {
         padding-top: 4rem;
@@ -18,11 +18,11 @@
     }
     h3 {
         color: $primary-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
     }
     h2 {
         color: $bg-color;
-        font-family: '$font-extra-bold';
+        font-family: "$font-extra-bold";
         font-size: 2rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
@@ -30,7 +30,7 @@
     }
     > p {
         color: $bg-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
         padding-right: 0;
         @include breakpoint(small) {
             padding-right: 60%;
@@ -38,7 +38,7 @@
     }
     .podcast-platforms {
         p {
-            font-family: '$font-bold';
+            font-family: "$font-bold";
             color: $bg-color-6;
             font-size: 2rem;
         }
@@ -46,9 +46,9 @@
             z-index: 1;
             height: 80px;
             @include breakpoint(small) {
-                height: auto;
+                height: 120px;
             }
-        }   
+        }
     }
     > img {
         position: absolute;
@@ -56,7 +56,7 @@
         top: calc(91% - 30px);
         @include breakpoint(small) {
             height: auto;
-            top: calc(82% - 48px);
+            top: calc(85% - 48px);
         }
     }
 }
