@@ -4,7 +4,7 @@ import Mary from '../../assets/images/Mary.svg';
 import Chimnonso from '../../assets/images/Chimnonso.svg';
 import Chizi from '../../assets/images/Chizi.svg';
 import Chioma from '../../assets/images/Chioma.svg';
-import DefaultUser from '../../assets/images/DefaultUser.svg';
+import Henry from '../../assets/images/Henry.png';
 
 
 export interface Testimonial {
@@ -103,12 +103,12 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'test.mp4',
-        userName: 'Nneoma',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-10-chimomnso.mp4',
+        userName: 'Chizi Duru',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 4
+        index: 5
     },
     // {
     //     type: 'text',
@@ -148,12 +148,23 @@ export const testimonialArray: Testimonial[] = [
     //     onEnded: (index: number) => {},
     //     index: 6
     // },
+    // {
+    //     type: 'text',
+    //     data: 'I love Igboppdacst! Like many Nigerians that grew up in the diaspora, I grew up hearing Igbo and could understand but, my confidence to speak? Nonexistant. Since joining the program, I have learned so much and am able to hold full conversations (which was a goal of mine). I love that the program goes at your pace, and the relationship you develop with your tutor. I’m excited to continue and hope to be fluent, which I know will be possible with this program. A God sent!',
+    //     userImage: Chizi,
+    //     userName: 'Chizi Duru',
+    //     location: 'New York, USA',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => { },
+    //     onEnded: (index: number) => { },
+    //     index: 0
+    // },
     {
         type: 'text',
-        data: 'I love Igboppdacst! Like many Nigerians that grew up in the diaspora, I grew up hearing Igbo and could understand but, my confidence to speak? Nonexistant. Since joining the program, I have learned so much and am able to hold full conversations (which was a goal of mine). I love that the program goes at your pace, and the relationship you develop with your tutor. I’m excited to continue and hope to be fluent, which I know will be possible with this program. A God sent!',
-        userImage: Chizi,
-        userName: 'Chizi Duru',
-        location: 'New York, USA',
+        data: 'Igbo podcast has made an impact in my journey of learning more about my heritage. My confidence in speaking Igbo has increased. I saw a dramatic change within the first 3 months of the program. The Igbo tutors are very intentional and have a lot of patience because I\'m a slow learner. You learn the fundamentals of the Igbo Language such as abc\'s, adjectives and how to create sentences. I highly recommend this program. You\'ll enjoy it!',
+        userImage: Henry,
+        userName: 'Henry Uche',
+        location: 'Oklahoma, USA',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -161,22 +172,43 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'test1.mp4',
-        userName: 'Obi',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testmonial-8.mp4',
+        userName: 'Chimomnso',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 7
+        index: 4
     },
+    // {
+    //     type: 'text',
+    //     data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
+    //     userImage: Chioma,
+    //     userName: 'Chioma Nnamaka',
+    //     location: 'Uppsala, Sweden',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => { },
+    //     onEnded: (index: number) => { },
+    //     index: 0
+    // },
+    // {
+    //     type: 'text',
+    //     data: 'I am so happy that I decided to see join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
+    //     userImage: Chioma,
+    //     userName: 'Mary',
+    //     location: 'New Jersey, USA',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => { },
+    //     onEnded: (index: number) => { },
+    //     index: 0
+    // },
     {
-        type: 'text',
-        data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
-        userImage: Chioma,
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-9-chioma.mp4',
         userName: 'Chioma Nnamaka',
-        location: 'Uppsala, Sweden',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 0
-    }
+        index: 6
+    },
+
 ]

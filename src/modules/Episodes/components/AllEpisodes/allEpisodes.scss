@@ -14,6 +14,7 @@
   .season-container {
     gap: 0.5rem;
     margin-top: 1rem;
+    overflow-x: auto;
     div {
       padding: 0.5rem;
       background-color: $white;
@@ -22,6 +23,7 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 11px;
+      min-width: max-content;
       @include breakpoint(small) {
         padding: 1rem 2rem;
         font-size: 16px;
@@ -87,7 +89,7 @@
         @include breakpoint(small) {
           width: calc(70% - 2rem);
         }
-        p:first-child {
+        > p:first-child {
           font-family: "$font-semi-bold";
           color: $bg-color-6;
           font-size: 14px;
@@ -106,7 +108,8 @@
           font-family: "$font-extra-bold";
           color: $bg-color;
         }
-        p {
+        p,
+        div {
           color: $text-color-4;
           font-family: "$font-museo-regular";
           word-break: break-word;
