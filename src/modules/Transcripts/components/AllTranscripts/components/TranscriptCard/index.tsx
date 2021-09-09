@@ -16,8 +16,8 @@ const TranscriptCard = ({ title, description, price, image, onClick, id, active 
                 <p>Transcript</p>
                 <h5>{title}</h5>
                 {/* <p className="description">Introduction</p> */}
-                <div>
-                    <button type="button" className="mr-2">{price}</button>
+                <div className="price-div">
+                    <p>{price}</p>
                     <button className="purchase-btn" type="button" onClick={onClick}>Purchase</button>
                 </div>
             </div>
