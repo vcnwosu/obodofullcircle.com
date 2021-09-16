@@ -63,16 +63,16 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
-        userName: 'Prince Nwagbara',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-10-chimomnso.mp4',
+        userName: 'Chizi Duru',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 2
+        index: 5
     },
     {
         type: 'text',
-        data: 'I’ve tried to learn igbo on my own three different times, and I failed each time, usually within a few weeks. With the igbo exchange program I’ve been able to make so much progress in the last couple of months. I learn things that I can use in everyday conversation, I have an encouraging conversation partner to practice my Igbo with every week, and a structured program to keep me accountable. Daalu Ifunanya for creating this program!',
+        data: 'I’ve tried to learn Igbo on my own three different times, and I failed each time, usually within a few weeks. With the igbo exchange program I’ve been able to make so much progress in the last couple of months. I learn things that I can use in everyday conversation, I have an encouraging conversation partner to practice my Igbo with every week, and a structured program to keep me accountable. Daalu Ifunanya for creating this program!',
         userImage: '',
         userName: 'Ugo',
         location: 'Texas, USA',
@@ -83,19 +83,19 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
-        userName: 'Obianuju',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
+        userName: 'Prince Nwagbara',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 3
+        index: 2
     },
     {
         type: 'text',
-        data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',
-        userImage: '',
-        userName: 'Ijeoma',
-        location: 'New Jersey, USA',
+        data: 'Igbo podcast has made an impact in my journey of learning more about my heritage. My confidence in speaking Igbo has increased. I saw a dramatic change within the first 3 months of the program. The Igbo tutors are very intentional and have a lot of patience because I\'m a slow learner. You learn the fundamentals of the Igbo Language such as abc\'s, adjectives and how to create sentences. I highly recommend this program. You\'ll enjoy it!',
+        userImage: Henry,
+        userName: 'Henry Uche',
+        location: 'Oklahoma, USA',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
@@ -103,23 +103,56 @@ export const testimonialArray: Testimonial[] = [
     },
     {
         type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-10-chimomnso.mp4',
-        userName: 'Chizi Duru',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testmonial-8.mp4',
+        userName: 'Chimomnso',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
-        index: 5
+        index: 4
+    },
+    {
+        type: 'text',
+        data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
+        userImage: Chioma,
+        userName: 'Chioma Nnamaka',
+        location: 'Uppsala, Sweden',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 0
     },
     // {
     //     type: 'text',
-    //     data: 'I am so happy that I decided to join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
-    //     userImage: Mary,
-    //     userName: 'Mary ',
+    //     data: ' I see this program as an accountability partner that is pushing you to speak the language. You don’t want to let your conversation partner down. If you have kept putting off learning Igbo just do it now. You have friendly coaches to help you through while on the program',
+    //     userImage: '',
+    //     userName: 'Ijeoma',
+    //     location: 'New Jersey, USA',
     //     isPlaying: false,
-    //     handlePlayPause: (index: number) => {},
-    //     onEnded: (index: number) => {},
+    //     handlePlayPause: (index: number) => { },
+    //     onEnded: (index: number) => { },
     //     index: 0
     // },
+    {
+        type: 'video',
+        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Obianuju-Lagos-Nigeria.mp4',
+        userName: 'Obianuju',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 3
+    },
+
+    {
+        type: 'text',
+        data: 'I am so happy I decided to join this program! Since joining, I have seen improvements in understanding and speaking the Igbo language. I love how the program incorporates the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, and does and makes my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating, as I sometimes need that reassurance that I\'m making progress.  For anyone who wants to learn or improve their Igbo, I 100% recommend this program, you\'ll love it!',
+        userImage: Mary,
+        userName: 'Mary ',
+        location: 'New Jersey, USA',
+        isPlaying: false,
+        handlePlayPause: (index: number) => { },
+        onEnded: (index: number) => { },
+        index: 0
+    },
     // {
     //     type: 'video',
     //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/Prince-Nwagbara-Texas-US.mp4',
@@ -159,37 +192,6 @@ export const testimonialArray: Testimonial[] = [
     //     onEnded: (index: number) => { },
     //     index: 0
     // },
-    {
-        type: 'text',
-        data: 'Igbo podcast has made an impact in my journey of learning more about my heritage. My confidence in speaking Igbo has increased. I saw a dramatic change within the first 3 months of the program. The Igbo tutors are very intentional and have a lot of patience because I\'m a slow learner. You learn the fundamentals of the Igbo Language such as abc\'s, adjectives and how to create sentences. I highly recommend this program. You\'ll enjoy it!',
-        userImage: Henry,
-        userName: 'Henry Uche',
-        location: 'Oklahoma, USA',
-        isPlaying: false,
-        handlePlayPause: (index: number) => { },
-        onEnded: (index: number) => { },
-        index: 0
-    },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testmonial-8.mp4',
-        userName: 'Chimomnso',
-        isPlaying: false,
-        handlePlayPause: (index: number) => { },
-        onEnded: (index: number) => { },
-        index: 4
-    },
-    // {
-    //     type: 'text',
-    //     data: 'I absolutely love Oji Abiala! I started this program 2 months ago without knowing any Igbo (except for a few words) and now I know enough to carry a daily conversation. The structure of the program is very helpful as I get to listen to the lessons as well as have one-on-one conversations with my conversation tutor. This allows for me to hear and speak Igbo on a consistent basis. It has helped me tremendously and I would highly recommend this program to anyone that is looking to learn Igbo!',
-    //     userImage: Chioma,
-    //     userName: 'Chioma Nnamaka',
-    //     location: 'Uppsala, Sweden',
-    //     isPlaying: false,
-    //     handlePlayPause: (index: number) => { },
-    //     onEnded: (index: number) => { },
-    //     index: 0
-    // },
     // {
     //     type: 'text',
     //     data: 'I am so happy that I decided to see join the Igbo Conversation Exchange program! Ever since I joined, I have seen improvements in understanding and speaking the igbo language. I love how the program is setup to incorporate the Igbo Podcast episodes, this has helped me to train my ear to hearing the language. My conversation partner is awesome, he does a great job in making my learning easy and is very encouraging. He lets me know that I\'m improving. This is especially motivating for me because I sometimes need that reassuring word that I\'m making progress.  For anyone who wants learn or improve their igbo, I 100% recommend trying out the Igbo Conversation Exchange program, you\'ll love it! 🙂',
@@ -201,14 +203,14 @@ export const testimonialArray: Testimonial[] = [
     //     onEnded: (index: number) => { },
     //     index: 0
     // },
-    {
-        type: 'video',
-        url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-9-chioma.mp4',
-        userName: 'Chioma Nnamaka',
-        isPlaying: false,
-        handlePlayPause: (index: number) => { },
-        onEnded: (index: number) => { },
-        index: 6
-    },
+    // {
+    //     type: 'video',
+    //     url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testimonial-9-chioma.mp4',
+    //     userName: 'Chioma Nnamaka',
+    //     isPlaying: false,
+    //     handlePlayPause: (index: number) => { },
+    //     onEnded: (index: number) => { },
+    //     index: 6
+    // },
 
 ]
