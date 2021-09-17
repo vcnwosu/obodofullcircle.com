@@ -104,7 +104,7 @@ export const testimonialArray: Testimonial[] = [
     {
         type: 'video',
         url: 'https://d20z2h0urn304k.cloudfront.net/testimonials/testmonial-8.mp4',
-        userName: 'Chimomnso',
+        userName: 'Chimnonso Nduaka',
         isPlaying: false,
         handlePlayPause: (index: number) => { },
         onEnded: (index: number) => { },
