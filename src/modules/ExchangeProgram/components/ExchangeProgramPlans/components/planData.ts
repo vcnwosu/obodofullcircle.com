@@ -27,7 +27,7 @@ export const basicPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Live calls with : <b>Conversation partner or tutor</b>',
+            text: 'Live calls with : <b>Conversation partner</b>',
             showInfoIcon: true,
             tooltipType: 'list',
             tooltipList: [
@@ -80,7 +80,7 @@ export const premiumPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Live calls with : <b>Only tutor</b>',
+            text: 'Live calls with : <b>Tutor</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Tutor: a native speaker with over 2 years of experience teaching the language at various capacities.  Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.'
