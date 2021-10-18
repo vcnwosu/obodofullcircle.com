@@ -19,7 +19,7 @@
         padding-right: 120px;
     }
     p {
-        font-family: "$font-museo-regular";
+        font-family: "$font-museo";
         font-size: 1rem;
         color: $text-color-4;
         @include breakpoint(x-small) {

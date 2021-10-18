@@ -4,6 +4,8 @@ interface detailText {
     tooltipType?: string;
     tooltipList?: string[];
     tooltipText?: string;
+    textType?: string;
+    listText?: string[];
 }
 
 export interface PlanType {
@@ -36,33 +38,51 @@ export const basicPlanData: PlanType = {
             ]
         },
         {
-            text: 'Access : Voice notes correspondence',
+            text: 'Zoom audio and occasional whiteboard instruction',
             showInfoIcon: false
         },
         {
-            text: 'Learning Mode: <b>Case based</b>',
+            text: 'Learning Style: <b>Case based</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
-            text: 'Immersive plans through LMS',
+            text: 'Multimedia Learning Resources :',
+            showInfoIcon: false,
+            textType: 'list',
+            listText: [
+                'Dialogues',
+                'Video/Movie exercises',
+                'Audio Exercises',
+                'Music exercises',
+                'Poems, Plays, Literature etc'
+            ]
+        },
+        {
+            text: 'Monthly Verbal Quizzes with detailed review',
             showInfoIcon: false
         },
         {
-            text: 'Quizzes',
+            text: 'Progress Tracking: Verbal Monthly Goals review',
             showInfoIcon: false
         },
         {
-            text: 'Multimedia Learning Resources',
+            text: 'Access :',
+            showInfoIcon: false,
+            textType: 'list',
+            listText: [
+                'Voice note Exchanges and Library',
+                'Immersion weekly plans',
+                '<b>3 free audio flashcard sets</b> for the duration of your subscription',
+            ]
+        },
+        {
+            text: 'Abridged grammar lessons with conversation focus',
             showInfoIcon: false
         },
         {
-            text: 'Progress Tracking : Monthly Goals and Reports',
-            showInfoIcon: false
-        },
-        {
-            text: 'Abridged grammar lessons',
+            text: 'Worksheets not provided',
             showInfoIcon: false
         }
     ]
@@ -76,7 +96,7 @@ export const premiumPlanData: PlanType = {
     priceTotal: '$198',
     detailsList: [
         {
-            text: 'Live calls : <b>1 hr 30 mins</b> per week',
+            text: 'Live calls : Per week <b>1 hr 30 mins</b>',
             showInfoIcon: false
         },
         {
@@ -86,37 +106,51 @@ export const premiumPlanData: PlanType = {
             tooltipText: 'Tutor: a native speaker with over 2 years of experience teaching the language at various capacities.  Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.'
         },
         {
-            text: 'Access : Voice notes correspondence',
+            text: 'Zoom audio and whiteboard instruction each session',
             showInfoIcon: false
         },
         {
-            text: 'Learning Mode: <b>Case based and Classroom</b>',
+            text: 'Learning Style: <b>Integrated Classroom and Case Based</b>',
             tooltipType: 'Line',
             showInfoIcon: true,
             tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
-            text: 'Immersion Plan through LMS',
-            showInfoIcon: false
-        },
-        {
-            text: 'Quizzes',
-            showInfoIcon: false
-        },
-        {
             text: 'Multimedia Learning Resources',
+            showInfoIcon: false,
+            textType: 'list',
+            listText: [
+                'Dialogues',
+                'Video/Movie exercises',
+                'Audio Exercises',
+                'Music exercises',
+                'Poems, Plays, Literature etc'
+            ]
+        },
+        {
+            text: 'Monthly Written and Verbal Quizzes with detailed review',
             showInfoIcon: false
         },
         {
-            text: 'Progress Tracking : Monthly Goal and Reports',
+            text: 'Progress Tracking: Monthly Language learning goals sheet and verbal goals review',
             showInfoIcon: false
         },
         {
-            text: 'Deep dive into language grammar with continued focus to improve speech',
+            text: 'Access :',
+            showInfoIcon: false,
+            textType: 'list',
+            listText: [
+                'Voice note Exchanges and Library',
+                'Immersion weekly plan',
+                '<b>UNLIMITED audio flashcard sets</b> for the duration of your subscription'
+            ]
+        },
+        {
+            text: 'Detailed grammar lessons with conversation focus',
             showInfoIcon: false
         },
         {
-            text: '<b>Access to all audio flashcards</b>',
+            text: 'Worksheets provided for additional practice',
             showInfoIcon: false
         }
     ]

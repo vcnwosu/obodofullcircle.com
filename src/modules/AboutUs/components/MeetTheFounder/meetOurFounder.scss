@@ -40,12 +40,12 @@
             }
             @include breakpoint(large) {
                 font-size: 3rem !important;
-                top: -1rem;
+                top: 0rem;
                 left: -2rem;
             }
             @include breakpoint(x-large) {
                 font-size: 5rem !important;
-                top: -4rem;
+                top: -3rem;
                 left: -2rem;
             }
         }
