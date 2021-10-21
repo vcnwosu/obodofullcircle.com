@@ -36,11 +36,11 @@ const HomeShopResources = () => {
     ]
     return (
         <div className="resources-div bg-light pt-5 pb-5">
-            <h2 className="text-center">Shop Resources</h2>
-            <p className="text-center">The gift that keeps on giving, shop now</p>
+            <h2 className="text-center">Resources</h2>
+            <p className="text-center">Make language learning fun and not a chore, with our carefully curated resources!</p>
             <div className="d-flex wrapper card-div mt-5">
                 {cardDataArray.map(card => (
-                    <CustomCard key={card.title} image={card.image} title={card.title} text={card.text} available={card.available}/>
+                    <CustomCard key={card.title} image={card.image} title={card.title} text={card.text} available={card.available} />
                 ))}
             </div>
             <div className="text-center mt-5">
