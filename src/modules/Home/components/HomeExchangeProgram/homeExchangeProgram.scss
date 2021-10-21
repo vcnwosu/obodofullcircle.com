@@ -1,6 +1,6 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
 
 .div-container {
     background-color: $bg-color;
@@ -115,7 +115,7 @@ h1.shadow {
 
 p.text {
     color: $white;
-    font-family: '$font-museo-regular';
+    font-family: "$font-museo";
     font-size: 1rem;
     @include breakpoint(x-small) {
         font-size: 1.25rem;

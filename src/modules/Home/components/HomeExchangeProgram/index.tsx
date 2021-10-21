@@ -21,7 +21,7 @@ const HomeExchangeProgram = () => {
                     <h1 className="shadow">Exchange Program</h1>
                     <div className="wrapper wrapperExchange">
                         <h1 className="heading">Exchange Program</h1>
-                        <p className="text mb-5">Don’t let language hold you back from engaging in your community. Speak what’s on your mind on a global platform while fostering a greater sense of community.</p>
+                        <p className="text mb-5">Don’t let language hold you back from engaging with your community. Speak what’s on your mind on a global platform while fostering a greater sense of self.</p>
                         <CustomButton type="button" text="Join Us" variant="primary" icon={Arrow} onClick={() => navigateToExchange()} />
                     </div>
                 </div>

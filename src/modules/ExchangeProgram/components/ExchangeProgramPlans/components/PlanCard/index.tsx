@@ -30,26 +30,37 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceSingleMo
                 {/* <p className="price">{priceTotal}</p> */}
             </div>}
             {detailsList.map(item => (
-                <div key={item.text} className="d-flex align-items-start">
-                    <img src={CheckboxArrow} alt="Checkbox" />
-                    <p className="plan-text" dangerouslySetInnerHTML={{ __html: item.text }} />
-                    {item.showInfoIcon && (
-                        <div className="tooltip-div">
-                            <img src={Info} alt="Info" />
-                            <div className="tooltip-text">
-                                {item.tooltipType === 'list' ? (
-                                    <ul>
-                                        {item.tooltipList?.map(text => (
-                                            <li key={text}>{text}</li>
-                                        ))}
-                                    </ul>
-                                ) : (
-                                    <p className="text-left">{item.tooltipText}</p>
-                                )}
+                <div key={item.text}>
+                    <div className="d-flex align-items-start">
+                        <img src={CheckboxArrow} alt="Checkbox" />
+                        <p className="plan-text" dangerouslySetInnerHTML={{ __html: item.text }} />
+                        {item.showInfoIcon && (
+                            <div className="tooltip-div">
+                                <img src={Info} alt="Info" />
+                                <div className="tooltip-text">
+                                    {item.tooltipType === 'list' ? (
+                                        <ul>
+                                            {item.tooltipList?.map(text => (
+                                                <li key={text}>{text}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p className="text-left">{item.tooltipText}</p>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    )
-                    }
+                        )
+                        }
+                    </div>
+                    {item.textType === 'list' && (
+                        <ul style={{ marginLeft: '4rem' }}>
+                            {item.listText?.map(text => (
+                                <li key={text} className="text-left">
+                                    <p className="plan-text" dangerouslySetInnerHTML={{ __html: text }} />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             ))}
         </div>

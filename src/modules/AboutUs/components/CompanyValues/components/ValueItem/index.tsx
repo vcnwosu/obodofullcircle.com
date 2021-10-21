@@ -13,7 +13,7 @@ interface ValueItemType {
 const ValueItemsArray: ValueItemType[] = [
     {
         image: AddValue,
-        heading: 'Instilling Value and Meaningful Relationships',
+        heading: 'Deliver excellent and meaningful services and resources.',
         text: 'Whether it be to our learners, teachers, or other partners, we strive to have our presence, interactions, and relationships to be meaningful and advantageous for all.'
     },
     // {
@@ -23,12 +23,12 @@ const ValueItemsArray: ValueItemType[] = [
     // },
     {
         image: BuildConnect,
-        heading: 'Creating, Curating and Blending Cultures',
+        heading: 'Promote, foster, and curate community.',
         text: 'We strive to build long lasting relationships and networks irrespective of proximity.'
     },
     {
         image: EconomicGrowth,
-        heading: 'Redefining Growth and Innovation',
+        heading: 'Provide innovative opportunities.',
         text: 'We strive to provide supplemental income to people and spaces that need it the most. While our teachers are limited to location we prioritize those in communities that  provide stable income to our employees .'
     },
     // {
