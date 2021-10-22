@@ -15,6 +15,7 @@
     gap: 0.5rem;
     margin-top: 1rem;
     overflow-x: auto;
+    padding-bottom: 1rem;
     div {
       padding: 0.5rem;
       background-color: $white;
@@ -38,6 +39,21 @@
         color: $white;
       }
     }
+    &::-webkit-scrollbar {
+      display: none;
+      @include breakpoint(small) {
+        display: block;
+        height: 10px; /* height of horizontal scrollbar */
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary-color;
+    }
   }
   .audio-cards-container {
     margin: 2rem 0;
@@ -58,7 +74,7 @@
       padding: 0.5rem 0.5rem 2rem;
       flex-direction: column;
       gap: 2rem;
-      align-items: center;
+      align-items: flex-start;
       // margin-bottom: 2rem;
       flex-wrap: wrap;
       position: relative;

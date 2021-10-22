@@ -31,11 +31,8 @@ export const basicPlanData: PlanType = {
         {
             text: 'Live calls with : <b>Conversation partner</b>',
             showInfoIcon: true,
-            tooltipType: 'list',
-            tooltipList: [
-                'Conversation partner: a native speaker who has undergone detailed training to work with learners, provide optimal learning environment,  and explain basic grammatical details',
-                'Tutor: a native speaker with over 2 years of experience teaching the language at various capacities.  Also undergone training to work with learners to provide an ideal learning environment. More experienced with teaching basic and advanced grammatical concepts.'
-            ]
+            tooltipType: 'Line',
+            tooltipText: 'Conversation partner: a native speaker who has undergone detailed training to work with learners, provide optimal learning environment,  and explain basic grammatical details'
         },
         {
             text: 'Zoom audio and occasional whiteboard instruction',

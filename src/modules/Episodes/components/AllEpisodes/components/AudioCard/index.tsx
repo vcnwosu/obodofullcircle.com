@@ -6,6 +6,9 @@ import Pause from '../../../../../../assets/images/PauseIcon.svg';
 import { CustomButton } from '../../../../../../shared/components/Button';
 import Player from '../../../../../../shared/components/Player';
 import { formatTime } from '../../../../../../utils/formatTime';
+import { postRequest } from '../../../../../../http/httpService';
+import CustomSpinner from '../../../../../../shared/components/Spinner';
+import { toast } from "react-toastify";
 
 export interface AudioCardType {
     title: string;
@@ -13,21 +16,23 @@ export interface AudioCardType {
     isPlaying: boolean;
     handlePlayPause: (index: number) => void;
     onEnded: (index: number) => void;
-    index: number,
-    episdode_date: string,
-    description: string,
-    duration: number,
-    image: string,
-    audio: string,
-    episdode_no: string,
-    transacript: string
+    index: number;
+    episdode_date: string;
+    description: string;
+    duration: number;
+    image: string;
+    audio: string;
+    episdode_no: string;
+    transacript: string;
+    currentSeason: number;
     navigateToTranscripts: (index: number) => void;
 }
 
-const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, onEnded, episdode_date, episdode_no, duration, description, image, audio, transacript, navigateToTranscripts }: AudioCardType) => {
+const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, onEnded, episdode_date, episdode_no, duration, description, image, audio, transacript, navigateToTranscripts, currentSeason }: AudioCardType) => {
 
     const [showHideTranscript, setShowHideTranscript] = useState(showTranscript);
     const [isHovered, setIsHovered] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const onPlayPause = () => {
         handlePlayPause(index);
@@ -43,6 +48,29 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
 
     const onNavigateToTranscripts = () => {
         navigateToTranscripts(index);
+    }
+
+    const onPurchaseTranscript = () => {
+        const transcriptObj = {
+            season_no: String(currentSeason),
+            episode_no: episdode_no
+        }
+        console.log(transcriptObj);
+        setLoading(true);
+        postRequest('buy-transcript', transcriptObj)
+            .then(res => {
+                setLoading(false);
+                if (res.data.code >= 1000 && res.data.code <= 2000) {
+                    toast.error(res.data.message);
+                } else {
+                    window.open(res.data.data.stripe_url, '_blank');
+                    toast.success(res.data.message);
+                }
+            })
+            .catch(err => {
+                setLoading(false);
+            })
+
     }
     const htmlDecode = (input: string) => {
         var e = document.createElement('div');
@@ -67,7 +95,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                         </button>
                         {/* <CustomButton type="button" variant="secondary" text="View Transcript" onClick={toggleTranscript} /> */}
                         {/* <CustomButton type="button" variant="secondary" text="Purchase Transcript" /> */}
-                        <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                        <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onPurchaseTranscript}>
                             Purchase Transcript &nbsp;<img src={isHovered ? WhiteLine : Line} alt="" /> $5.00
                         </button>
                     </div>
@@ -78,6 +106,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                 <h4 className="d-flex">Transcript <hr /></h4>
                 <div dangerouslySetInnerHTML={{ __html: htmlDecode(transacript) }} />
             </div>
+            <CustomSpinner show={loading} />
         </>
     )
 }

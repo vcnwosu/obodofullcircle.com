@@ -86,7 +86,6 @@ const HomeTeaching = () => {
             language: formData.language,
             contact: `${formData.countryCode}${formData.whatsAppContact}`
         }
-        console.log(formValue)
         postRequest('add-tutor-contact', formValue)
             .then(res => {
                 setLoading(false);

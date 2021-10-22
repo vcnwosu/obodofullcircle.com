@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/fonts";
+@import "../../assets/styles/mixins";
+
+.success-div {
+    height: 100vh;
+    img {
+        height: 250px;
+        @include breakpoint(small) {
+            height: 300px;
+        }
+    }
+    h3 {
+        margin-top: 1rem;
+        color: $text-color-2;
+        font-family: "$font-bold";
+        text-align: center;
+    }
+}

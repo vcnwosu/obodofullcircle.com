@@ -1,7 +1,12 @@
+import SuccessImage from '../../assets/images/success.svg';
+import './success.scss';
+
 const PaymentSuccess = () => {
     return (
-        <div>
-            <h2 className="text-center">Payment Successful</h2>
+        <div className="success-div d-flex justify-content-center align-items-center">
+            <div>
+                <img src={SuccessImage} alt="SuccessImage" />
+            </div>
         </div>
     )
 }
