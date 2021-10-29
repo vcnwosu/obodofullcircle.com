@@ -4,6 +4,7 @@ import './homeShopResources.scss';
 import Transcript from '../../../../assets/images/Transcript.svg';
 import Course from '../../../../assets/images/Course.svg';
 import Flashcard from '../../../../assets/images/Flashcard.svg';
+import weekMonthPlanner from '../../../../assets/images/weekMonthPlanner.svg';
 
 interface Card {
     image: string;
@@ -22,15 +23,21 @@ const HomeShopResources = () => {
             available: true
         },
         {
-            image: Course,
-            title: 'Independent Course',
-            text: 'Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you\'ve learned.',
+            image: Flashcard,
+            title: 'Audio Visual Flashcards',
+            text: 'Some part of language learning requires memorization! Utilize our premade Audio flashcards to help practices vocabulary, phrases and audio comprehension of the language.',
             available: false
         },
         {
-            image: Flashcard,
-            title: 'Audio Flashcards',
-            text: 'Some part of language learning requires memorization! Utilize our premade Audio flashcards to help practices vocabulary, phrases and audio comprehension of the language.',
+            image: weekMonthPlanner,
+            title: 'Monthly/Weekly Planner',
+            text: 'The Ọganihu (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.',
+            available: false
+        },
+        {
+            image: Course,
+            title: 'Independent Course',
+            text: 'Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you\'ve learned.',
             available: false
         }
     ]

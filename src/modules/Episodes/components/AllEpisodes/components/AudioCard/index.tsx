@@ -38,24 +38,17 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
         handlePlayPause(index);
     }
 
-    const toggleTranscript = () => {
-        setShowHideTranscript(!showHideTranscript);
-    }
 
     const onPlayEnded = () => {
         onEnded(index);
     }
 
-    const onNavigateToTranscripts = () => {
-        navigateToTranscripts(index);
-    }
 
     const onPurchaseTranscript = () => {
         const transcriptObj = {
             season_no: String(currentSeason),
             episode_no: episdode_no
         }
-        console.log(transcriptObj);
         setLoading(true);
         postRequest('buy-transcript', transcriptObj)
             .then(res => {
@@ -64,7 +57,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                     toast.error(res.data.message);
                 } else {
                     window.open(res.data.data.stripe_url, '_blank');
-                    toast.success(res.data.message);
+                    // toast.success(res.data.message);
                 }
             })
             .catch(err => {
@@ -95,9 +88,9 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                         </button>
                         {/* <CustomButton type="button" variant="secondary" text="View Transcript" onClick={toggleTranscript} /> */}
                         {/* <CustomButton type="button" variant="secondary" text="Purchase Transcript" /> */}
-                        <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onPurchaseTranscript}>
+                        {index !== 0 && <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onPurchaseTranscript}>
                             Purchase Transcript &nbsp;<img src={isHovered ? WhiteLine : Line} alt="" /> $5.00
-                        </button>
+                        </button>}
                     </div>
                     <Player src={audio} playPause={isPlaying} onEnded={onPlayEnded} />
                 </div>
