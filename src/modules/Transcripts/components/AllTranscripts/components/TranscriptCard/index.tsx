@@ -7,7 +7,6 @@ export interface TranscriptCardType {
     title: string;
     description: string;
     price: string;
-    onClick: () => void;
     image: string;
     id: string;
     active: string;
@@ -15,7 +14,7 @@ export interface TranscriptCardType {
     episdode_no: string;
 }
 
-const TranscriptCard = ({ title, description, price, image, onClick, id, active, currentSeason, episdode_no }: TranscriptCardType) => {
+const TranscriptCard = ({ title, description, price, image, id, active, currentSeason, episdode_no }: TranscriptCardType) => {
     const [loading, setLoading] = useState(false);
     const onPurchaseTranscript = () => {
         const transcriptObj = {

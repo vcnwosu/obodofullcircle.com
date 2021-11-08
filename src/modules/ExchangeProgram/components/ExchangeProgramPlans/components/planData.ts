@@ -69,7 +69,7 @@ export const basicPlanData: PlanType = {
             showInfoIcon: false,
         },
         {
-            text: '<b>3 free audio flashcard sets</b> for the duration of your subscription',
+            text: '<b>3 free audio visual flashcard sets</b> for the duration of your subscription',
             showInfoIcon: false
         },
         {
@@ -114,6 +114,7 @@ export const premiumPlanData: PlanType = {
             text: 'Multimedia Learning Resources',
             showInfoIcon: true,
             tooltipType: 'list',
+            tooltipText: 'More time each call to work with :',
             tooltipList: [
                 'Dialogues',
                 'Video/Movie exercises',
@@ -135,7 +136,7 @@ export const premiumPlanData: PlanType = {
             showInfoIcon: false,
         },
         {
-            text: '<b>UNLIMITED audio flashcard sets</b> for the duration of your subscription',
+            text: '<b>UNLIMITED audio visual flashcard sets</b> for the duration of your subscription',
             showInfoIcon: false
         },
         {

@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import TranscriptCard from './components/TranscriptCard';
 import { TranscriptCardType } from './components/TranscriptCard';
 import './allTranscripts.scss';
-import CustomModal from '../../../../shared/components/Modal';
 import EpisodeContext, { Season } from '../../../../store/EpisodeContext';
 
 interface Props {
@@ -11,43 +10,28 @@ interface Props {
 const AllTranscripts = ({ id }: Props) => {
     const seasonContext = useContext(EpisodeContext);
     const [currentSeason, setCurrentSeason] = useState(0);
-    const [showModal, setShowModal] = useState(false);
+    const [currentSeasonId, setCurrentSeasonId] = useState(1);
     const [seasonList, setSeasonList] = useState<Season[]>([]);
     const [currentEpisodeList, setCurrentEpisodeList] = useState<TranscriptCardType[]>([]);
     useEffect(() => {
-        const seasonNumber = +(id.slice(1, id.indexOf('e')));
-        setCurrentSeason(() => seasonNumber);
         setSeasonList(seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id));
+        const list = seasonContext.seasonList.sort((a: Season, b: Season) => a.season_id - b.season_id);
+        setSeasonList(list.filter((season: Season) => (
+            !season.episodes.every(item => !item.found)
+        )))
+
         if (seasonContext.seasonList.length > 0) {
-            setCurrentEpisodeList(() => [...seasonContext.seasonList[seasonNumber]?.episodes].reverse());
+            setCurrentEpisodeList(() => [...seasonContext.seasonList[currentSeason]?.episodes.filter((item: any) => item.found)].reverse());
+            setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
         }
-    }, [seasonContext, id])
+    }, [seasonContext])
 
     const showCurrentSeasonEpisodes = (index: number) => {
         setCurrentSeason(index);
-        setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes].reverse());
+        setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes.filter((item: any) => item.found)].reverse());
+        setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
     }
 
-    const modalBody = () => {
-        return (
-            <div className="form-class">
-                Purchase Transcripts
-            </div>
-        )
-    }
-
-    const handleClose = () => {
-        setShowModal(false);
-    }
-
-
-    const handleSubmit = (event: any) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-    };
 
     return (
         <div className="all-transcripts-div">
@@ -61,12 +45,11 @@ const AllTranscripts = ({ id }: Props) => {
                     ))}
                 </div>
                 <div className="transcript-cards-container">
-                    {currentEpisodeList && currentEpisodeList.length > 0 && currentEpisodeList.splice(1).map((card, index) => (
-                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id} key={card.title} title={card.title} description={card.description} price="$5.00" episdode_no={card.episdode_no} currentSeason={currentSeason} image={card.image} onClick={() => setShowModal(true)} />
+                    {currentEpisodeList && currentEpisodeList.length > 0 && currentEpisodeList.map((card, index) => (
+                        <TranscriptCard id={`s${currentSeason}epi${index}`} active={id} key={card.title} title={card.title} description={card.description} price="$5.00" episdode_no={card.episdode_no} currentSeason={currentSeasonId} image={card.image} />
                     ))}
                 </div>
             </div>
-            <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} />
         </div>
     )
 }

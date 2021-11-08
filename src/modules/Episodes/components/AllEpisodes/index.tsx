@@ -9,6 +9,7 @@ const AllEpisodes = () => {
     const history = useHistory();
     const seasonContext = useContext(EpisodeContext);
     const [currentSeason, setCurrentSeason] = useState(0);
+    const [currentSeasonId, setCurrentSeasonId] = useState(1);
     const [playStatus, setPlayStatus] = useState<boolean[]>([]);
     const [seasonList, setSeasonList] = useState<Season[]>([]);
     const [currentEpisodeList, setCurrentEpisodeList] = useState<AudioCardType[]>([]);
@@ -18,12 +19,14 @@ const AllEpisodes = () => {
         if (seasonContext.seasonList.length > 0) {
             setCurrentEpisodeList(() => [...seasonContext.seasonList[0]?.episodes].reverse());
         }
+        setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
         setPlayStatus(Array(seasonContext.seasonList[0]?.episodes?.length).fill(false))
     }, [seasonContext])
 
     const showCurrentSeasonEpisodes = (index: number) => {
         setCurrentSeason(index);
         setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes].reverse());
+        setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
         setPlayStatus(Array(seasonContext.seasonList[index]?.episodes.length).fill(false))
     }
 
@@ -61,7 +64,7 @@ const AllEpisodes = () => {
                 </div>
                 <div className="audio-cards-container">
                     {currentEpisodeList && currentEpisodeList.length > 0 && currentEpisodeList.map((card, index) => (
-                        <AudioCard index={index} key={card.title} title={card.title} episdode_date={card.episdode_date} episdode_no={card.episdode_no} image={card.image} duration={card.duration} description={card.description} transacript={card.transacript} audio={card.audio} showTranscript={card.showTranscript} isPlaying={playStatus[index]} currentSeason={currentSeason} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} navigateToTranscripts={(index: number) => navigateToTranscripts(index)} />
+                        <AudioCard index={index} key={card.title} title={card.title} episdode_date={card.episdode_date} episdode_no={card.episdode_no} image={card.image} duration={card.duration} description={card.description} transacript={card.transacript} audio={card.audio} showTranscript={card.showTranscript} isPlaying={playStatus[index]} currentSeason={currentSeasonId} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} found={card.found} />
                     ))}
                 </div>
             </div>

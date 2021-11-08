@@ -39,11 +39,14 @@ const PlanCard = ({ heading, price, detailsList, priceSingleMonth, priceSingleMo
                                 <img src={Info} alt="Info" />
                                 <div className="tooltip-text">
                                     {item.tooltipType === 'list' ? (
-                                        <ul>
-                                            {item.tooltipList?.map(text => (
-                                                <li key={text}>{text}</li>
-                                            ))}
-                                        </ul>
+                                        <div>
+                                            <p>{item.tooltipText}</p>
+                                            <ul>
+                                                {item.tooltipList?.map(text => (
+                                                    <li key={text}>{text}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     ) : (
                                         <p className="text-left">{item.tooltipText}</p>
                                     )}
