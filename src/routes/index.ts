@@ -93,9 +93,12 @@ export const routeList = [
     exchangeProgram,
     transcripts,
     aboutUs,
-    paymentSuccess,
-    paymentCancel,
+    defaultRoute
+]
+
+export const publicRouteList = [
     privacyPolicy,
     termsConditions,
-    defaultRoute
+    paymentSuccess,
+    paymentCancel,
 ]
