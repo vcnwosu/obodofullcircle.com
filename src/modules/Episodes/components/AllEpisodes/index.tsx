@@ -26,7 +26,7 @@ const AllEpisodes = () => {
     const showCurrentSeasonEpisodes = (index: number) => {
         setCurrentSeason(index);
         setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes].reverse());
-        setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
+        setCurrentSeasonId(seasonContext.seasonList[index]?.season_id);
         setPlayStatus(Array(seasonContext.seasonList[index]?.episodes.length).fill(false))
     }
 
@@ -48,9 +48,6 @@ const AllEpisodes = () => {
         setPlayStatus(arr);
     }
 
-    const navigateToTranscripts = (index: number) => {
-        history.push(`/transcripts#s${currentSeason}epi${index}`);
-    }
     return (
         <div className="all-episodes-div" id="podcasts">
             <div className="wrapper">

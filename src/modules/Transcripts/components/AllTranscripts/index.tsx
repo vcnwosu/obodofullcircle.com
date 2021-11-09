@@ -29,7 +29,7 @@ const AllTranscripts = ({ id }: Props) => {
     const showCurrentSeasonEpisodes = (index: number) => {
         setCurrentSeason(index);
         setCurrentEpisodeList(() => [...seasonContext.seasonList[index]?.episodes.filter((item: any) => item.found)].reverse());
-        setCurrentSeasonId(seasonContext.seasonList[currentSeason]?.season_id);
+        setCurrentSeasonId(seasonContext.seasonList[index]?.season_id);
     }
 
 
