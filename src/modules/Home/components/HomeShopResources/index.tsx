@@ -4,7 +4,7 @@ import './homeShopResources.scss';
 import Transcript from '../../../../assets/images/Transcript.svg';
 import Course from '../../../../assets/images/Course.svg';
 import Flashcard from '../../../../assets/images/Flashcard.svg';
-import weekMonthPlanner from '../../../../assets/images/weekMonthPlanner.svg';
+import weekMonthPlanner from '../../../../assets/images/planner.svg';
 
 interface Card {
     image: string;

@@ -7,6 +7,8 @@ const Transcripts = React.lazy(() => import('../modules/Transcripts'));
 const AboutUs = React.lazy(() => import('../modules/AboutUs'));
 const PaymentSuccess = React.lazy(() => import('../modules/PaymentSuccess'));
 const PaymentCancel = React.lazy(() => import('../modules/PaymentCancel'));
+const PrivacyPolicy = React.lazy(() => import('../modules/PrivacyPolicy'));
+const TermsConditions = React.lazy(() => import('../modules/TermsCondtions'));
 interface Route {
     path: string;
     exact: boolean;
@@ -64,6 +66,20 @@ const paymentCancel: Route = {
     component: PaymentCancel
 }
 
+const privacyPolicy: Route = {
+    path: '/pages/privacy-policy',
+    exact: true,
+    isProtected: false,
+    component: PrivacyPolicy
+}
+
+const termsConditions: Route = {
+    path: '/pages/terms-conditions',
+    exact: true,
+    isProtected: false,
+    component: TermsConditions
+}
+
 const defaultRoute: Route = {
     path: '**',
     exact: true,
@@ -79,5 +95,7 @@ export const routeList = [
     aboutUs,
     paymentSuccess,
     paymentCancel,
+    privacyPolicy,
+    termsConditions,
     defaultRoute
 ]

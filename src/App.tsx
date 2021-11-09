@@ -27,16 +27,16 @@ const App: React.FC = () => {
       <EpisodeContextProvider>
         <Router history={history}>
           <React.Suspense fallback={spinner}>
-            {!history.location.pathname.includes('payments') && <Header />}
+            {!history.location.pathname.includes('payments') && !history.location.pathname.includes('pages') && <Header />}
             <Switch>
               {routeList.map(({ path, ...rest }): any =>
                 (<Route key={path} path={path} {...rest} />)
               )}
             </Switch>
             {/* <HomeTestimonials /> */}
-            {!history.location.pathname.includes('payments') && <HomeStore />}
-            {!history.location.pathname.includes('payments') && <HomeTeaching />}
-            {!history.location.pathname.includes('payments') && <Footer />}
+            {!history.location.pathname.includes('payments') && !history.location.pathname.includes('pages') && <HomeStore />}
+            {!history.location.pathname.includes('payments') && !history.location.pathname.includes('pages') && <HomeTeaching />}
+            {!history.location.pathname.includes('payments') && !history.location.pathname.includes('pages') && <Footer />}
           </React.Suspense>
         </Router>
       </EpisodeContextProvider>
