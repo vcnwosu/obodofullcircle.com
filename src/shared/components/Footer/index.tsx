@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
@@ -98,7 +99,10 @@ const Footer = () => {
             <footer className="d-flex flex-column">
                 <div className="d-flex justify-content-between">
                     <div className="logo">
-                        <img src={Logo} alt="logo" />
+                        <Link to="/">
+                            <img src={Logo} alt="logo" />
+                        </Link>
+                        {/* <img src={Logo} alt="logo" /> */}
                     </div>
                     <div className="footer-container">
                         <div className="footer-nav">

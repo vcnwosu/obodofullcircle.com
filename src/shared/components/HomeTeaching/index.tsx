@@ -61,6 +61,8 @@ const HomeTeaching = () => {
                     break;
                 case 'whatsAppContact': if (e.target.validity.valueMissing) {
                     setErrors({ ...errors, whatsAppContactError: 'Please enter whatsapp contact.' })
+                } else if (e.target.validity.tooShort) {
+                    setErrors({ ...errors, whatsAppContactError: 'Contact number must be between 7 to 15 digits' })
                 } else {
                     setErrors({ ...errors, whatsAppContactError: 'Please enter only numbers.' })
                 }
@@ -168,7 +170,7 @@ const HomeTeaching = () => {
                         </Form.Group>
                         <Form.Group controlId="whatsAppContact">
                             <Form.Label>&nbsp;</Form.Label>
-                            <FormControl className="contact-number" type="text" maxLength={15} pattern={numericRegex} required value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
+                            <FormControl className="contact-number" type="text" minLength={7} maxLength={15} pattern={numericRegex} required value={formData.whatsAppContact} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e)} />
                             <Form.Control.Feedback type="invalid" >
                                 {errors.whatsAppContactError}
                             </Form.Control.Feedback>
