@@ -45,6 +45,7 @@
         img {
             z-index: 1;
             height: 80px;
+            cursor: pointer;
             @include breakpoint(small) {
                 height: 120px;
             }
