@@ -6,6 +6,18 @@ import GooglePodcast from '../../../../assets/images/GooglePodcast.svg';
 import episodeBorder from '../../../../assets/images/episodeBorder.svg';
 
 const EpisodesIntroduction = () => {
+    const openSoundCloud = () => {
+        window.open('https://m.soundcloud.com/user-109836463', '_blank');
+    }
+    const openSpotify = () => {
+        window.open('https://open.spotify.com/show/4kviagfc1QPkOr9q9Mdn55', '_blank');
+    }
+    const openApplePodcast = () => {
+        window.open('https://podcasts.apple.com/us/podcast/igbo-podcast/id1442032358', '_blank');
+    }
+    const openGooglePodcast = () => {
+        window.open('https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLnNvdW5kY2xvdWQuY29tL3VzZXJzL3NvdW5kY2xvdWQ6dXNlcnM6NTM5MTEyMTk1L3NvdW5kcy5yc3M', '_blank');
+    }
     return (
         <div className="episode-intro-div">
             <div className="wrapper">
@@ -16,10 +28,10 @@ const EpisodesIntroduction = () => {
             <div className="text-center podcast-platforms">
                 <p>Get On</p>
                 <div className="d-flex justify-content-center">
-                    <img src={SoundCloud} alt="SoundCloud" />
-                    <img src={Spotify} alt="Spotify" />
-                    <img src={ApplePodcast} alt="ApplePodcast" />
-                    <img src={GooglePodcast} alt="GoogePodcast" />
+                    <img src={SoundCloud} alt="SoundCloud" onClick={openSoundCloud} />
+                    <img src={Spotify} alt="Spotify" onClick={openSpotify} />
+                    <img src={ApplePodcast} alt="ApplePodcast" onClick={openApplePodcast} />
+                    <img src={GooglePodcast} alt="GoogePodcast" onClick={openGooglePodcast} />
                 </div>
             </div>
             <img src={episodeBorder} alt="episodeBorder" />
