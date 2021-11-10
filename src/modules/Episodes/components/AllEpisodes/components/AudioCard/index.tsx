@@ -25,10 +25,10 @@ export interface AudioCardType {
     episdode_no: string;
     transacript: string;
     currentSeason: number;
-    navigateToTranscripts: (index: number) => void;
+    found: boolean;
 }
 
-const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, onEnded, episdode_date, episdode_no, duration, description, image, audio, transacript, navigateToTranscripts, currentSeason }: AudioCardType) => {
+const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, onEnded, episdode_date, episdode_no, duration, description, image, audio, transacript, currentSeason, found }: AudioCardType) => {
 
     const [showHideTranscript, setShowHideTranscript] = useState(showTranscript);
     const [isHovered, setIsHovered] = useState(false);
@@ -38,24 +38,17 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
         handlePlayPause(index);
     }
 
-    const toggleTranscript = () => {
-        setShowHideTranscript(!showHideTranscript);
-    }
 
     const onPlayEnded = () => {
         onEnded(index);
     }
 
-    const onNavigateToTranscripts = () => {
-        navigateToTranscripts(index);
-    }
 
     const onPurchaseTranscript = () => {
         const transcriptObj = {
             season_no: String(currentSeason),
             episode_no: episdode_no
         }
-        console.log(transcriptObj);
         setLoading(true);
         postRequest('buy-transcript', transcriptObj)
             .then(res => {
@@ -64,7 +57,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                     toast.error(res.data.message);
                 } else {
                     window.open(res.data.data.stripe_url, '_blank');
-                    toast.success(res.data.message);
+                    // toast.success(res.data.message);
                 }
             })
             .catch(err => {
@@ -85,7 +78,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                     <img src={isPlaying ? Pause : Play} alt="PlayPause" onClick={onPlayPause} />
                 </div>
                 <div className="episode-content">
-                    <p><span>{episdode_no}  </span>  &nbsp;&nbsp;|&nbsp;&nbsp;  <span>{episdode_date}</span>&nbsp;&nbsp;  <span>{formatTime(duration)}</span> </p>
+                    <p><span>{episdode_date}</span>&nbsp;&nbsp;  <span>{formatTime(duration)}</span> </p>
                     <h3>{title}</h3>
                     <div dangerouslySetInnerHTML={{ __html: description }} />
                     <div className="button-div d-flex">
@@ -95,9 +88,9 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                         </button>
                         {/* <CustomButton type="button" variant="secondary" text="View Transcript" onClick={toggleTranscript} /> */}
                         {/* <CustomButton type="button" variant="secondary" text="Purchase Transcript" /> */}
-                        <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onPurchaseTranscript}>
+                        {found && <button type="button" className="btn btn-secondary" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onPurchaseTranscript}>
                             Purchase Transcript &nbsp;<img src={isHovered ? WhiteLine : Line} alt="" /> $5.00
-                        </button>
+                        </button>}
                     </div>
                     <Player src={audio} playPause={isPlaying} onEnded={onPlayEnded} />
                 </div>

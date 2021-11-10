@@ -8,6 +8,7 @@ export interface Navs {
     text: string;
     isDropdown?: boolean
     dropdownItems?: Navs[];
+    onClick?: () => void;
 }
 
 interface Props {
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const Navigation = ({ list, type }: Props) => {
+
 
     return (
         <>
@@ -31,7 +33,7 @@ const Navigation = ({ list, type }: Props) => {
                     <Navbar expand="lg">
                         <Nav>
                             {list.map(item => (
-                                <NavLink key={item.text} to={item.path} >{item.text}</NavLink>
+                                <NavLink key={item.text} to={item.path} onClick={item.onClick}>{item.text}</NavLink>
                             ))}
                         </Nav>
                     </Navbar>

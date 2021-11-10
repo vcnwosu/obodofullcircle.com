@@ -7,6 +7,10 @@ const Transcripts = React.lazy(() => import('../modules/Transcripts'));
 const AboutUs = React.lazy(() => import('../modules/AboutUs'));
 const PaymentSuccess = React.lazy(() => import('../modules/PaymentSuccess'));
 const PaymentCancel = React.lazy(() => import('../modules/PaymentCancel'));
+const PrivacyPolicy = React.lazy(() => import('../modules/PrivacyPolicy'));
+const TermsConditions = React.lazy(() => import('../modules/TermsCondtions'));
+const Support = React.lazy(() => import('../modules/Support'));
+const Documentation = React.lazy(() => import('../modules/Documentation'));
 interface Route {
     path: string;
     exact: boolean;
@@ -50,6 +54,48 @@ const aboutUs: Route = {
     component: AboutUs
 }
 
+const paymentSuccess: Route = {
+    path: '/payments/success',
+    exact: true,
+    isProtected: false,
+    component: PaymentSuccess
+}
+
+const paymentCancel: Route = {
+    path: '/payments/cancel',
+    exact: true,
+    isProtected: false,
+    component: PaymentCancel
+}
+
+const privacyPolicy: Route = {
+    path: '/pages/privacy-policy',
+    exact: true,
+    isProtected: false,
+    component: PrivacyPolicy
+}
+
+const termsConditions: Route = {
+    path: '/pages/terms-conditions',
+    exact: true,
+    isProtected: false,
+    component: TermsConditions
+}
+
+const support: Route = {
+    path: '/pages/support',
+    exact: true,
+    isProtected: false,
+    component: Support
+}
+
+const documentation: Route = {
+    path: '/pages/documentation',
+    exact: true,
+    isProtected: false,
+    component: Documentation
+}
+
 const defaultRoute: Route = {
     path: '**',
     exact: true,
@@ -64,4 +110,13 @@ export const routeList = [
     // transcripts,
     aboutUs,
     defaultRoute
+]
+
+export const publicRouteList = [
+    privacyPolicy,
+    termsConditions,
+    paymentSuccess,
+    paymentCancel,
+    support,
+    documentation
 ]

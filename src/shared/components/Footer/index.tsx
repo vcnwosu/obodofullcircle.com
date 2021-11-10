@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
@@ -73,11 +73,17 @@ const footerNavList: Navs[] = [
     },
     {
         path: '',
-        text: 'Privacy Policy'
+        text: 'Privacy Policy',
+        onClick: () => {
+            window.open('/pages/privacy-policy', '_blank')
+        }
     },
     {
         path: '',
-        text: 'Terms and Conditions'
+        text: 'Terms and Conditions',
+        onClick: () => {
+            window.open('/pages/terms-conditions', '_blank')
+        }
     },
 
 ]
@@ -86,7 +92,7 @@ const Footer = () => {
     const [fbHovered, setFBHovered] = useState(false);
     const [linkedinHovered, setLinkedinHovered] = useState(false);
     const [instaHovered, setInstaHovered] = useState(false);
-    
+
     return (
         <>
             <footer className="d-flex flex-column">
@@ -97,7 +103,7 @@ const Footer = () => {
                     <div className="footer-container">
                         <div className="footer-nav">
                             <h3>Company</h3>
-                            <Navigation list={companyNavList} type="footer"/>
+                            <Navigation list={companyNavList} type="footer" />
                         </div>
                         <div className="footer-nav">
                             <h3>Our Podcast</h3>
@@ -119,12 +125,12 @@ const Footer = () => {
                 </div>
                 <div className="d-flex justify-content-between bottom-nav">
                     <div className="links">
-                        <Navigation list={footerNavList} type="footerBottom"/>
+                        <Navigation list={footerNavList} type="footerBottom" />
                     </div>
                     <div className="social-links">
-                        <img src={fbHovered ? FBHovered : FB} alt="" onMouseEnter={() => setFBHovered(true)} onMouseLeave={() => setFBHovered(false)}/>
-                        <img src={linkedinHovered ? LinkedinHovered : Linkedin} alt="" onMouseEnter={() => setLinkedinHovered(true)} onMouseLeave={() => setLinkedinHovered(false)}/>
-                        <img src={instaHovered ? InstaHovered : Insta} alt="" onMouseEnter={() => setInstaHovered(true)} onMouseLeave={() => setInstaHovered(false)}/>
+                        <img src={fbHovered ? FBHovered : FB} alt="" onMouseEnter={() => setFBHovered(true)} onMouseLeave={() => setFBHovered(false)} />
+                        <img src={linkedinHovered ? LinkedinHovered : Linkedin} alt="" onMouseEnter={() => setLinkedinHovered(true)} onMouseLeave={() => setLinkedinHovered(false)} />
+                        <img src={instaHovered ? InstaHovered : Insta} alt="" onMouseEnter={() => setInstaHovered(true)} onMouseLeave={() => setInstaHovered(false)} />
                     </div>
                 </div>
             </footer>

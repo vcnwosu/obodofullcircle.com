@@ -45,10 +45,10 @@ export const basicPlanData: PlanType = {
             tooltipText: 'Case based learning - teaching facilitated through practical examples, scenarios, and role play application and having that lead discussion of grammar and other language topics.'
         },
         {
-            text: 'Multimedia Learning Resources :',
-            showInfoIcon: false,
-            textType: 'list',
-            listText: [
+            text: 'Multimedia Learning Resources',
+            showInfoIcon: true,
+            tooltipType: 'list',
+            tooltipList: [
                 'Dialogues',
                 'Video/Movie exercises',
                 'Audio Exercises',
@@ -65,14 +65,12 @@ export const basicPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Access :',
+            text: 'Access : Voice note Exchanges and Library, Immersion weekly plans',
             showInfoIcon: false,
-            textType: 'list',
-            listText: [
-                'Voice note Exchanges and Library',
-                'Immersion weekly plans',
-                '<b>3 free audio flashcard sets</b> for the duration of your subscription',
-            ]
+        },
+        {
+            text: '<b>3 free audio visual flashcard sets</b> for the duration of your subscription',
+            showInfoIcon: false
         },
         {
             text: 'Abridged grammar lessons with conversation focus',
@@ -114,9 +112,10 @@ export const premiumPlanData: PlanType = {
         },
         {
             text: 'Multimedia Learning Resources',
-            showInfoIcon: false,
-            textType: 'list',
-            listText: [
+            showInfoIcon: true,
+            tooltipType: 'list',
+            tooltipText: 'More time each call to work with :',
+            tooltipList: [
                 'Dialogues',
                 'Video/Movie exercises',
                 'Audio Exercises',
@@ -133,14 +132,12 @@ export const premiumPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Access :',
+            text: 'Access : Voice note Exchanges and Library, Immersion weekly plan',
             showInfoIcon: false,
-            textType: 'list',
-            listText: [
-                'Voice note Exchanges and Library',
-                'Immersion weekly plan',
-                '<b>UNLIMITED audio flashcard sets</b> for the duration of your subscription'
-            ]
+        },
+        {
+            text: '<b>UNLIMITED audio visual flashcard sets</b> for the duration of your subscription',
+            showInfoIcon: false
         },
         {
             text: 'Detailed grammar lessons with conversation focus',

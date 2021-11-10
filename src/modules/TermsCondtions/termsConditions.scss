@@ -1,0 +1,23 @@
+.terms-conditions {
+    h2 {
+        margin-top: 1rem;
+    }
+    p {
+        margin-bottom: 0.5rem;
+        font-size: 15px;
+        font-family: auto;
+    }
+    h4 {
+        margin: 1rem 0;
+        &:first-of-type {
+            margin-top: 2rem;
+        }
+    }
+    ol {
+        margin-left: 1rem;
+        li {
+            font-size: 15px;
+            font-family: auto;
+        }
+    }
+}

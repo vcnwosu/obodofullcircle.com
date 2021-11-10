@@ -1,18 +1,18 @@
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
 
 .card-div {
     flex-direction: column;
     @include breakpoint(small) {
         flex-direction: row;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
 .resources-div h2 {
     color: $bg-color;
-    font-family: '$font-bold';
+    font-family: "$font-bold";
     font-size: 1.5rem;
     @include breakpoint(x-small) {
         font-size: 2rem;
@@ -21,7 +21,7 @@
 
 .resources-div p {
     color: $bg-color;
-    font-family: '$font-museo-700';
+    font-family: "$font-museo-700";
     font-size: 1rem;
     @include breakpoint(x-small) {
         font-size: 1.25rem;
@@ -29,19 +29,19 @@
 }
 
 .resources-div .card-title {
-    font-family: '$font-bold';
+    font-family: "$font-bold";
 }
 
 .resources-div .card-text {
     color: $white;
     font-size: 14px;
-    font-family: '$font-museo-regular';
+    font-family: "$font-museo-regular";
 }
 
 .resources-div .card-body {
     padding-bottom: 2rem;
     @include breakpoint(x-small) {
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
     }
 }
 

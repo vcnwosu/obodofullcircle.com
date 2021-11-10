@@ -7,7 +7,6 @@ export interface TranscriptCardType {
     title: string;
     description: string;
     price: string;
-    onClick: () => void;
     image: string;
     id: string;
     active: string;
@@ -15,7 +14,7 @@ export interface TranscriptCardType {
     episdode_no: string;
 }
 
-const TranscriptCard = ({ title, description, price, image, onClick, id, active, currentSeason, episdode_no }: TranscriptCardType) => {
+const TranscriptCard = ({ title, description, price, image, id, active, currentSeason, episdode_no }: TranscriptCardType) => {
     const [loading, setLoading] = useState(false);
     const onPurchaseTranscript = () => {
         const transcriptObj = {
@@ -31,7 +30,7 @@ const TranscriptCard = ({ title, description, price, image, onClick, id, active,
                     toast.error(res.data.message);
                 } else {
                     window.open(res.data.data.stripe_url, '_blank');
-                    toast.success(res.data.message);
+                    // toast.success(res.data.message);
                 }
             })
             .catch(err => {
@@ -40,7 +39,7 @@ const TranscriptCard = ({ title, description, price, image, onClick, id, active,
 
     }
     return (
-        <div id={id} className="d-flex transcript-card" style={id === active ? { outline: '2px solid #06D6A0' } : {}}>
+        <div id={id} className="d-flex transcript-card">
             <img src={image} alt="TranscriptImage" />
             <div className="transcript-content">
                 <p>Transcript</p>

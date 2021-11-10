@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { routeList } from './routes';
+import { routeList, publicRouteList } from './routes';
 import Header from './shared/components/Header';
 import Footer from './shared/components/Footer';
 import HomeTestimonials from './modules/Home/components/HomeTestimonials';
@@ -21,25 +21,35 @@ const spinner = (
 toast.configure();
 const App: React.FC = () => {
   const history = createBrowserHistory();
-  console.log(history)
   return (
     <>
-      <EpisodeContextProvider>
+      {(history.location.pathname.includes('pages') || history.location.pathname.includes('payments')) ?
         <Router history={history}>
           <React.Suspense fallback={spinner}>
-            {!history.location.pathname.includes('payments') && <Header />}
             <Switch>
-              {routeList.map(({ path, ...rest }): any =>
+              {publicRouteList.map(({ path, ...rest }): any =>
                 (<Route key={path} path={path} {...rest} />)
               )}
             </Switch>
-            {/* <HomeTestimonials /> */}
-            {!history.location.pathname.includes('payments') && <HomeStore />}
-            {!history.location.pathname.includes('payments') && <HomeTeaching />}
-            {!history.location.pathname.includes('payments') && <Footer />}
           </React.Suspense>
-        </Router>
-      </EpisodeContextProvider>
+        </Router> :
+        <EpisodeContextProvider>
+          <Router history={history}>
+            <React.Suspense fallback={spinner}>
+              <Header />
+              <Switch>
+                {routeList.map(({ path, ...rest }): any =>
+                  (<Route key={path} path={path} {...rest} />)
+                )}
+              </Switch>
+              {/* <HomeTestimonials /> */}
+              <HomeStore />
+              <HomeTeaching />
+              <Footer />
+            </React.Suspense>
+          </Router>
+        </EpisodeContextProvider>
+      }
     </>
 
   );
