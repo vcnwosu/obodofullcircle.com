@@ -105,9 +105,9 @@ const defaultRoute: Route = {
 
 export const routeList = [
     home,
-    // episodes,
+    episodes,
     exchangeProgram,
-    // transcripts,
+    transcripts,
     aboutUs,
     defaultRoute
 ]

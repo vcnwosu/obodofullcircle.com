@@ -9,7 +9,7 @@ import Caret from '../../../assets/images/caret.svg';
 
 const navList: Navs[] = [
     {
-        path: '/e',
+        path: '/episodes',
         text: 'Episodes'
     },
     {
@@ -22,7 +22,7 @@ const navList: Navs[] = [
         isDropdown: true,
         dropdownItems: [
             {
-                path: '/t',
+                path: '/transcripts',
                 text: 'Transcripts'
             }
         ]
