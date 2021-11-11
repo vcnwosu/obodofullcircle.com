@@ -5,12 +5,13 @@ interface Props {
     image: string;
     title: string;
     text: string;
-    available: boolean
+    available: boolean;
+    onClick?: () => void;
 }
-const CustomCard = ({ image, title, text, available }: Props) => {
+const CustomCard = ({ image, title, text, available, onClick }: Props) => {
 
     return (
-        <Card className="shop-card">
+        <Card className="shop-card" onClick={onClick}>
             <div className="card-image">
                 <img src={image} alt="cardImg" />
             </div>
