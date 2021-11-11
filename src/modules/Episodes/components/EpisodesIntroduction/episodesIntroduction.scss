@@ -23,7 +23,7 @@
     h2 {
         color: $bg-color;
         font-family: "$font-extra-bold";
-        font-size: 2rem !important;
+        font-size: 1.8rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
         }

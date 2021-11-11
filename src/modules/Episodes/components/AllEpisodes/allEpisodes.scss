@@ -130,6 +130,14 @@
           font-family: "$font-museo-regular";
           word-break: break-word;
         }
+        .episode-description {
+          overflow: hidden;
+        }
+        .see-more {
+          text-decoration: underline;
+          color: blue;
+          cursor: pointer;
+        }
         .rhap_container {
           background-color: transparent;
           box-shadow: none;
