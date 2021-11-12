@@ -1,6 +1,6 @@
-@import '../../../../assets/styles/fonts';
-@import '../../../../assets/styles/variables';
-@import '../../../../assets/styles/mixins';
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
 
 .transcripts-intro-div {
     background-color: $bg-color-4;
@@ -8,12 +8,12 @@
     padding-bottom: 1rem;
     h3 {
         color: $primary-color;
-        font-family: '$font-museo';
+        font-family: "$font-museo";
     }
     h2 {
         color: $bg-color;
-        font-family: '$font-extra-bold';
-        font-size: 2rem !important;
+        font-family: "$font-extra-bold";
+        font-size: 1.8rem !important;
         @include breakpoint(small) {
             font-size: 3rem !important;
         }

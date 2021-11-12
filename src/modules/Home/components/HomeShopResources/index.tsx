@@ -5,22 +5,28 @@ import Transcript from '../../../../assets/images/Transcript.svg';
 import Course from '../../../../assets/images/Course.svg';
 import Flashcard from '../../../../assets/images/Flashcard.svg';
 import weekMonthPlanner from '../../../../assets/images/planner.svg';
+import { useHistory } from "react-router-dom";
 
 interface Card {
     image: string;
     title: string;
     text: string;
     available: boolean;
+    onClick?: () => void;
 }
 
 const HomeShopResources = () => {
 
+    const history = useHistory();
     const cardDataArray: Card[] = [
         {
             image: Transcript,
             title: 'Transcript',
             text: 'Purchase the transcripts and worksheets to the free podcast audios.',
-            available: true
+            available: true,
+            onClick: () => {
+                history.push('/transcripts');
+            }
         },
         {
             image: Flashcard,
@@ -47,7 +53,7 @@ const HomeShopResources = () => {
             <p className="text-center">Make language learning fun and not a chore, with our carefully curated resources!</p>
             <div className="d-flex wrapper card-div mt-5">
                 {cardDataArray.map(card => (
-                    <CustomCard key={card.title} image={card.image} title={card.title} text={card.text} available={card.available} />
+                    <CustomCard key={card.title} image={card.image} title={card.title} text={card.text} available={card.available} onClick={card.onClick} />
                 ))}
             </div>
             <div className="text-center mt-5">

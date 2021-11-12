@@ -6,6 +6,7 @@ import './header.scss';
 import styles from '../../../shared/components/Navigation/navigation.module.scss';
 import { useRef } from 'react';
 import Caret from '../../../assets/images/caret.svg';
+import { Dropdown } from 'react-bootstrap';
 
 const navList: Navs[] = [
     {
@@ -61,14 +62,28 @@ const Header = () => {
                                     <NavLink activeClassName={styles.active} to={nav.path} onClick={clickHandler}>{nav.text}</NavLink>
                                 ) : (
                                     <div>
-                                        <button type="button" className={`dropdown-button ${location.pathname === '/transcripts' ? styles.active : ''}`}>{nav.text} <img src={Caret} alt="Caret" /></button>
+                                        {/* <button type="button" className={`dropdown-button ${location.pathname === '/transcripts' ? styles.active : ''}`}>{nav.text} <img src={Caret} alt="Caret" /></button>
                                         <ul className="custom-dropdown">
                                             {nav.dropdownItems?.map(item => (
                                                 <li key={item.text}>
                                                     <NavLink activeClassName={styles.active} to={item.path} onClick={clickHandler}>{item.text}</NavLink>
                                                 </li>
                                             ))}
-                                        </ul>
+                                        </ul> */}
+                                        <Dropdown>
+                                            <Dropdown.Toggle id="dropdown-basic" className={`dropdown-button ${location.pathname === '/transcripts' ? styles.active : ''}`}>
+                                                {nav.text}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                {nav.dropdownItems?.map(item => (
+                                                    <Dropdown.Item>
+                                                        <NavLink activeClassName={styles.active} to={item.path} onClick={clickHandler}>{item.text}</NavLink>
+                                                    </Dropdown.Item>
+                                                    // <NavLink activeClassName={styles.active} className="dropdown-item" to={item.path} onClick={clickHandler}>{item.text}</NavLink>
+                                                ))}
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </div>
                                 )}
                             </li>

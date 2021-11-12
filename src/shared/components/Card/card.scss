@@ -9,6 +9,7 @@
     &:hover {
         @include breakpoint(small) {
             transform: scale(1.05);
+            cursor: pointer;
         }
     }
     &:hover > .coming-soon {

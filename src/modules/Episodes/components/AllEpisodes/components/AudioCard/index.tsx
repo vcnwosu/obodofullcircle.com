@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Line from '../../../../../../assets/images/line.svg';
 import WhiteLine from '../../../../../../assets/images/whiteLine.svg';
 import Play from '../../../../../../assets/images/PlayIcon.svg';
@@ -29,10 +29,21 @@ export interface AudioCardType {
 }
 
 const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, onEnded, episdode_date, episdode_no, duration, description, image, audio, transacript, currentSeason, found }: AudioCardType) => {
-
+    let divHeight;
+    const divRef = useRef<any>();
     const [showHideTranscript, setShowHideTranscript] = useState(showTranscript);
     const [isHovered, setIsHovered] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [hasMoreContent, setHasMoreContent] = useState(false);
+    const [moreContentShown, setMoreContentShown] = useState(false);
+
+    useEffect(() => {
+        divHeight = divRef.current.offsetHeight;
+        if (divHeight > 400) {
+            divRef.current.style.height = '400px';
+            setHasMoreContent(true);
+        }
+    }, [])
 
     const onPlayPause = () => {
         handlePlayPause(index);
@@ -70,6 +81,16 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
         e.innerHTML = input;
         return String(e.childNodes[0].nodeValue);
     }
+
+    const contentClickHandler = () => {
+        if (moreContentShown) {
+            divRef.current.style.height = '400px';
+            setMoreContentShown(false);
+        } else {
+            divRef.current.style.height = 'auto';
+            setMoreContentShown(true);
+        }
+    }
     return (
         <>
             <div className="d-flex audio-card">
@@ -80,7 +101,8 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                 <div className="episode-content">
                     <p><span>{episdode_date}</span>&nbsp;&nbsp;  <span>{formatTime(duration)}</span> </p>
                     <h3>{title}</h3>
-                    <div dangerouslySetInnerHTML={{ __html: description }} />
+                    <div ref={divRef} className="episode-description" dangerouslySetInnerHTML={{ __html: description }} />
+                    {hasMoreContent && <p className="see-more" onClick={contentClickHandler}>{moreContentShown ? 'See Less' : 'See More'}</p>}
                     <div className="button-div d-flex">
                         <button type="button" onClick={onPlayPause}>
                             <img src={isPlaying ? Pause : Play} alt="PlayPause" />
