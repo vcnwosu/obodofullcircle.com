@@ -58,7 +58,8 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
     const onPurchaseTranscript = () => {
         const transcriptObj = {
             season_no: String(currentSeason),
-            episode_no: episdode_no
+            episode_no: episdode_no,
+            source: 'episodes'
         }
         setLoading(true);
         postRequest('buy-transcript', transcriptObj)
@@ -67,7 +68,7 @@ const AudioCard = ({ title, showTranscript, isPlaying, handlePlayPause, index, o
                 if (res.data.code >= 1000 && res.data.code <= 2000) {
                     toast.error(res.data.message);
                 } else {
-                    window.open(res.data.data.stripe_url, '_blank');
+                    window.open(res.data.data.stripe_url, '_self');
                     // toast.success(res.data.message);
                 }
             })
