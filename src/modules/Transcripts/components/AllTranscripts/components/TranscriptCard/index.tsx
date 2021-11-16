@@ -19,7 +19,8 @@ const TranscriptCard = ({ title, description, price, image, id, active, currentS
     const onPurchaseTranscript = () => {
         const transcriptObj = {
             season_no: String(currentSeason),
-            episode_no: episdode_no
+            episode_no: episdode_no,
+            source: 'transcripts'
         }
         console.log(transcriptObj);
         setLoading(true);
@@ -29,7 +30,7 @@ const TranscriptCard = ({ title, description, price, image, id, active, currentS
                 if (res.data.code >= 1000 && res.data.code <= 2000) {
                     toast.error(res.data.message);
                 } else {
-                    window.open(res.data.data.stripe_url, '_blank');
+                    window.open(res.data.data.stripe_url, '_self');
                     // toast.success(res.data.message);
                 }
             })
