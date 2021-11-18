@@ -6,7 +6,7 @@
     background: linear-gradient(180deg, $bg-color-4 93%, $white 0);
     overflow-x: hidden;
     @include breakpoint(small) {
-        background: linear-gradient(180deg, $bg-color-4 87%, $white 0);
+        background: linear-gradient(180deg, $bg-color-4 89%, $white 0);
     }
     div:first-child {
         padding-top: 4rem;
@@ -28,12 +28,13 @@
             font-size: 3rem !important;
         }
     }
-    > p {
+    p {
         color: $bg-color;
         font-family: "$font-museo";
         padding-right: 0;
+        font-size: 1rem;
         @include breakpoint(small) {
-            padding-right: 60%;
+            font-size: 1.25rem;
         }
     }
     .podcast-platforms {
