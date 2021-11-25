@@ -77,7 +77,7 @@ const Header = () => {
 
                                             <Dropdown.Menu>
                                                 {nav.dropdownItems?.map(item => (
-                                                    <Dropdown.Item>
+                                                    <Dropdown.Item key={item.path}>
                                                         <NavLink activeClassName={styles.active} to={item.path} onClick={clickHandler}>{item.text}</NavLink>
                                                     </Dropdown.Item>
                                                     // <NavLink activeClassName={styles.active} className="dropdown-item" to={item.path} onClick={clickHandler}>{item.text}</NavLink>
