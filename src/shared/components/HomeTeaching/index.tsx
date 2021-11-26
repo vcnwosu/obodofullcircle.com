@@ -190,7 +190,7 @@ const HomeTeaching = () => {
             <div className="text-center">
                 <h1 className="head">Ready to Start Teaching?</h1>
                 <p className="mb-4">Get started today by completing our assessment and booking your first interview call!</p>
-                <CustomButton type="button" text="Contact us" variant="primary" onClick={() => setShowModal(true)} />
+                <CustomButton type="button" text="Become a Teacher" variant="primary" onClick={() => setShowModal(true)} />
             </div>
             <CustomModal show={showModal} handleClose={handleClose} heading="Basic Information" body={modalBody()} />
             <CustomSpinner show={loading} />
