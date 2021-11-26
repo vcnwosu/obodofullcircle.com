@@ -99,7 +99,7 @@ const Support = () => {
             })
     };
     return (
-        <div className="my-5">
+        <div className="my-5 support-div">
             <h2 className="text-center">Contact Us</h2>
             <p className="text-center">Please fill in details, we will get back to you shortly.</p>
             <div className="form-support form-class d-flex justify-content-center mt-4">
