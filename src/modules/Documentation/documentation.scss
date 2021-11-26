@@ -1,7 +1,11 @@
 @import "../../assets/styles/mixins";
-
+@import "../../assets/styles/variables";
 .documentation-div {
     margin: 15px;
+    h2 {
+        color: $primary-color;
+        font-weight: 700;
+    }
     @include breakpoint(small) {
         margin: 30px;
     }

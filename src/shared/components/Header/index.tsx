@@ -6,7 +6,7 @@ import './header.scss';
 import styles from '../../../shared/components/Navigation/navigation.module.scss';
 import { useRef } from 'react';
 import Caret from '../../../assets/images/caret.svg';
-import { Dropdown } from 'react-bootstrap';
+import { Button, Dropdown } from 'react-bootstrap';
 
 const navList: Navs[] = [
     {
@@ -40,6 +40,10 @@ const Header = () => {
 
     const clickHandler = () => {
         inputRef.current.checked = false;
+    }
+    const contactHandler = () => {
+        inputRef.current.checked = false;
+        window.open('/pages/support', '_blank')
     }
 
     return (
@@ -88,6 +92,11 @@ const Header = () => {
                                 )}
                             </li>
                         ))}
+                        <li>
+                            <Button variant="primary" type="button" onClick={contactHandler}>
+                                Contact Us
+                            </Button>
+                        </li>
                     </ul>
                 </nav>
             </div>

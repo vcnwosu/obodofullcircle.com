@@ -37,7 +37,7 @@ const HomeShopResources = () => {
         {
             image: weekMonthPlanner,
             title: 'Monthly/Weekly Planner',
-            text: 'The Ọganihu (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.',
+            text: 'The Ọganiru (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.',
             available: false
         },
         {

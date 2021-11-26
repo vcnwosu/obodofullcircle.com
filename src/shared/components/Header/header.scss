@@ -13,7 +13,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2rem 120px;
+      padding: 1.5rem 120px;
     }
     .logo {
       @include breakpoint(small) {
@@ -55,6 +55,7 @@ header {
         @include breakpoint(small) {
           display: flex;
           justify-content: flex-end;
+          align-items: center;
         }
       }
       li {
@@ -70,10 +71,10 @@ header {
             margin-top: 0rem;
           }
         }
-        &:last-child {
+        &:nth-child(4) {
           margin-left: 20px;
           @include breakpoint(small) {
-            margin-left: 60px;
+            margin-left: calc(61px + 0.75rem);
           }
         }
         .dropdown {
@@ -125,6 +126,10 @@ header {
               background-color: inherit;
             }
           }
+        }
+        button {
+          padding: 14px 30px;
+          font-size: 16px;
         }
       }
       a {

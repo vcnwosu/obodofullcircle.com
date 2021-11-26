@@ -1,10 +1,22 @@
-.form-support > form {
-    width: 35%;
-    border: 1px solid;
-    border-radius: 6px;
-    padding: 3rem;
-    box-shadow: 5px 5px 20px rgba(#000000, 0.25);
-    .form-group .form-control {
-        border-color: #ced4da;
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+.support-div {
+    padding: 1rem;
+    h2 {
+        color: $primary-color;
+        font-weight: 700;
+    }
+    .form-support > form {
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 1.5rem;
+        @include breakpoint(small) {
+            width: 35%;
+            padding: 3rem;
+        }
+        .form-group .form-control {
+            border-color: #ced4da;
+        }
     }
 }

@@ -70,7 +70,10 @@ const teacherNavList: Navs[] = [
 const footerNavList: Navs[] = [
     {
         path: '',
-        text: 'Help'
+        text: 'Contact Us',
+        onClick: () => {
+            window.open('/pages/support', '_blank')
+        }
     },
     {
         path: '',
@@ -86,6 +89,13 @@ const footerNavList: Navs[] = [
             window.open('/pages/terms-conditions', '_blank')
         }
     },
+    {
+        path: '',
+        text: 'Documentation',
+        onClick: () => {
+            window.open('/pages/documentation', '_blank')
+        }
+    }
 
 ]
 
