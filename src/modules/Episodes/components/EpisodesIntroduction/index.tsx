@@ -22,8 +22,8 @@ const EpisodesIntroduction = () => {
         <div className="episode-intro-div">
             <div className="wrapper">
                 <h3>Episodes</h3>
-                <h2>Listen to our premier Igbo podcast, making learning on the go so enjoyable.</h2>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, magni!</p> */}
+                <h2>Listen to our premier Igbo podcasts, making learning on the go easy!</h2>
+                <p>The sooner you start including them into your routine, the faster you will see the magic happen since they are made in a way that you can listen to them while you’re on the move without compromising your absorption rate. In fact, our podcasts encourage you to engage, rather than switch off. Switching to our podcasts will significantly remove any barriers to your learning.</p>
             </div>
             <div className="text-center podcast-platforms">
                 <p>Get On</p>

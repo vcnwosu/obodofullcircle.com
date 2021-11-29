@@ -33,10 +33,15 @@
         padding: 1rem 2rem;
         font-size: 16px;
       }
-      &.active,
-      &:hover {
+      &.active {
         background-color: $bg-color;
         color: $white;
+      }
+      &:hover {
+        @include breakpoint(small) {
+          background-color: $bg-color;
+          color: $white;
+        }
       }
     }
     &::-webkit-scrollbar {

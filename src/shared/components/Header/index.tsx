@@ -6,7 +6,7 @@ import './header.scss';
 import styles from '../../../shared/components/Navigation/navigation.module.scss';
 import { useRef } from 'react';
 import Caret from '../../../assets/images/caret.svg';
-import { Dropdown } from 'react-bootstrap';
+import { Button, Dropdown } from 'react-bootstrap';
 
 const navList: Navs[] = [
     {
@@ -40,6 +40,10 @@ const Header = () => {
 
     const clickHandler = () => {
         inputRef.current.checked = false;
+    }
+    const contactHandler = () => {
+        inputRef.current.checked = false;
+        window.open('/pages/support', '_blank')
     }
 
     return (
@@ -77,7 +81,7 @@ const Header = () => {
 
                                             <Dropdown.Menu>
                                                 {nav.dropdownItems?.map(item => (
-                                                    <Dropdown.Item>
+                                                    <Dropdown.Item key={item.path}>
                                                         <NavLink activeClassName={styles.active} to={item.path} onClick={clickHandler}>{item.text}</NavLink>
                                                     </Dropdown.Item>
                                                     // <NavLink activeClassName={styles.active} className="dropdown-item" to={item.path} onClick={clickHandler}>{item.text}</NavLink>
@@ -88,6 +92,11 @@ const Header = () => {
                                 )}
                             </li>
                         ))}
+                        <li>
+                            <Button variant="primary" type="button" onClick={contactHandler}>
+                                Contact Us
+                            </Button>
+                        </li>
                     </ul>
                 </nav>
             </div>

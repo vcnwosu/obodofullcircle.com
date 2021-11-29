@@ -1,0 +1,35 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+.documentation-div {
+    margin: 15px;
+    h2 {
+        color: $primary-color;
+        font-weight: 700;
+    }
+    @include breakpoint(small) {
+        margin: 30px;
+    }
+    ul,
+    ol {
+        img {
+            margin: 20px 10px;
+            height: auto;
+            max-width: 95%;
+            @include breakpoint(small) {
+                margin: 10px 30px;
+                height: 500px;
+            }
+        }
+        li {
+            margin-left: 15px;
+            padding: 10px 0;
+            @include breakpoint(small) {
+                margin-left: 30px;
+            }
+        }
+    }
+    ol > li {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
