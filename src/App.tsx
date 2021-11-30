@@ -11,6 +11,7 @@ import { Spinner } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { EpisodeContextProvider } from './store/EpisodeContext';
+import NotFound from './modules/NotFound';
 
 const spinner = (
   <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -33,22 +34,26 @@ const App: React.FC = () => {
             </Switch>
           </React.Suspense>
         </Router> :
-        <EpisodeContextProvider>
+        (history.location.pathname.includes('episodes') || history.location.pathname.includes('exchange-program') || history.location.pathname.includes('transcripts') || history.location.pathname.includes('about-us') || history.location.pathname === '/') ?
+          <EpisodeContextProvider>
+            <Router history={history}>
+              <React.Suspense fallback={spinner}>
+                <Header />
+                <Switch>
+                  {routeList.map(({ path, ...rest }): any =>
+                    (<Route key={path} path={path} {...rest} />)
+                  )}
+                </Switch>
+                {/* <HomeTestimonials /> */}
+                <HomeStore />
+                <HomeTeaching />
+                <Footer />
+              </React.Suspense>
+            </Router>
+          </EpisodeContextProvider> :
           <Router history={history}>
-            <React.Suspense fallback={spinner}>
-              <Header />
-              <Switch>
-                {routeList.map(({ path, ...rest }): any =>
-                  (<Route key={path} path={path} {...rest} />)
-                )}
-              </Switch>
-              {/* <HomeTestimonials /> */}
-              <HomeStore />
-              <HomeTeaching />
-              <Footer />
-            </React.Suspense>
+            <Route path="*" exact={true} component={NotFound} />
           </Router>
-        </EpisodeContextProvider>
       }
     </>
 
