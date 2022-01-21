@@ -11,6 +11,8 @@ import AppStore from "../../../../assets/images/AppleStoreCS.svg";
 const ExchangeProgramPlans = () => {
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [basicPlanId, setbasicPlanId] = useState("1111");
+  const [premiumPlanId, setPremiumPlanId] = useState("1112");
 
   const modalBody = () => {
     return (
@@ -52,19 +54,31 @@ const ExchangeProgramPlans = () => {
           <div className="d-flex type-background">
             <div
               className={`type-item ${activeType === 1 ? "active-type" : ""}`}
-              onClick={() => setActiveType(1)}
+              onClick={() => {
+                setActiveType(1);
+                setbasicPlanId("1111");
+                setPremiumPlanId("1112");
+              }}
             >
               MONTHLY
             </div>
             <div
               className={`type-item ${activeType === 2 ? "active-type" : ""}`}
-              onClick={() => setActiveType(2)}
+              onClick={() => {
+                setActiveType(2);
+                setbasicPlanId("TWOMONTH");
+                setPremiumPlanId("PremiumTwo");
+              }}
             >
               2 MONTHS {"{POPULAR}"}
             </div>
             <div
               className={`type-item ${activeType === 3 ? "active-type" : ""}`}
-              onClick={() => setActiveType(3)}
+              onClick={() => {
+                setActiveType(3);
+                setbasicPlanId("BASICTHREE");
+                setPremiumPlanId("PremiumThree");
+              }}
             >
               QUARTERLY
             </div>
@@ -79,6 +93,7 @@ const ExchangeProgramPlans = () => {
             priceSingleMonth={basicPlanData.priceSingleMonth}
             priceSingleMonthQuaterly={basicPlanData.priceSingleMonthQuaterly}
             priceTotal={basicPlanData.priceTotal}
+            zohoId={basicPlanId}
           />
           <PlanCard
             type={activeType}
@@ -88,6 +103,7 @@ const ExchangeProgramPlans = () => {
             priceSingleMonth={premiumPlanData.priceSingleMonth}
             priceSingleMonthQuaterly={premiumPlanData.priceSingleMonthQuaterly}
             priceTotal={premiumPlanData.priceTotal}
+            zohoId={premiumPlanId}
           />
         </div>
         <CustomButton
