@@ -30,6 +30,10 @@ const navList: Navs[] = [
         path: "",
         text: "Planner",
       },
+      {
+        path: "",
+        text: "Shop",
+      },
     ],
   },
   {
@@ -48,6 +52,11 @@ const Header = () => {
   const navigateToPlanner = () => {
     inputRef.current.checked = false;
     window.open("https://oganiruplanner.square.site/", "_blank");
+  };
+
+  const navigateToShop = () => {
+    inputRef.current.checked = false;
+    window.open("https://shopobodo.square.site/", "_blank");
   };
 
   const contactHandler = () => {
@@ -111,12 +120,16 @@ const Header = () => {
                           <Dropdown.Item key={item.path}>
                             <NavLink
                               activeClassName={
-                                item.text === "Planner" ? "" : styles.active
+                                item.text === "Planner" || item.text === "Shop"
+                                  ? ""
+                                  : styles.active
                               }
                               to={item.path}
                               onClick={
                                 item.text === "Planner"
                                   ? navigateToPlanner
+                                  : item.text === "Shop"
+                                  ? navigateToShop
                                   : clickHandler
                               }
                             >
