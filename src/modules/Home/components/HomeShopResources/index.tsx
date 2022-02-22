@@ -5,6 +5,7 @@ import Transcript from "../../../../assets/images/Transcript.svg";
 import Course from "../../../../assets/images/Course.svg";
 import Flashcard from "../../../../assets/images/Flashcard.svg";
 import weekMonthPlanner from "../../../../assets/images/planner.svg";
+import TranslationConsultation from "../../../../assets/images/TranslationConsultation.svg";
 import { useHistory } from "react-router-dom";
 
 interface Card {
@@ -17,6 +18,7 @@ interface Card {
 
 const HomeShopResources = () => {
   const history = useHistory();
+
   const cardDataArray: Card[] = [
     {
       image: Transcript,
@@ -34,6 +36,21 @@ const HomeShopResources = () => {
       available: false,
     },
     {
+      image: Course,
+      title: "Independent Course",
+      text: "Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you've learned.",
+      available: false,
+    },
+    {
+      image: TranslationConsultation,
+      title: "Translation/Consultation Services",
+      text: "Need Igbo translation or consultation you can trust? Our team of skilled Igbo linguists provides expert Igbo translation for official and unofficial documents. We also offer consultation on words, themes, and phrases for Igbo-infused projects.",
+      available: true,
+      onClick: () => {
+        window.open("/pages/support", "_blank");
+      },
+    },
+    {
       image: weekMonthPlanner,
       title: "Monthly/Weekly Planner",
       text: "The Ọganiru (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.",
@@ -41,12 +58,6 @@ const HomeShopResources = () => {
       onClick: () => {
         window.open("https://oganiruplanner.square.site/", "_blank");
       },
-    },
-    {
-      image: Course,
-      title: "Independent Course",
-      text: "Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you've learned.",
-      available: false,
     },
   ];
   return (
@@ -71,8 +82,11 @@ const HomeShopResources = () => {
       <div className="text-center mt-5">
         <CustomButton
           type="button"
-          text="See Our All Products"
+          text="Shop Obodo"
           variant="primary"
+          onClick={() =>
+            window.open("https://shopobodo.square.site/", "_blank")
+          }
         />
       </div>
     </div>

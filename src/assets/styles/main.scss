@@ -1,71 +1,71 @@
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "mixins";
+@import "fonts";
 
 // html {
 //     scroll-behavior: smooth;
 // }
 .wrapper {
-    padding: 0 20px;
-    @media screen and (min-width: 769px) {
-        padding: 0 40px;
-    }
-    @media screen and (min-width: 1025px) {
-        padding: 0 120px;
-    }
+  padding: 0 20px;
+  @media screen and (min-width: 769px) {
+    padding: 0 40px;
+  }
+  @media screen and (min-width: 1025px) {
+    padding: 0 110px;
+  }
 }
 
 a:hover {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 h1 {
-    font-family: '$font-extra-bold'
+  font-family: "$font-extra-bold";
 }
 
 p {
-    font-family: '$font-museo';
+  font-family: "$font-museo";
 }
 
 .bg-green {
-    background-color: $primary-color
+  background-color: $primary-color;
 }
 
 .bg-blue {
-    background-color: $bg-color;
+  background-color: $bg-color;
 }
 
 .bg-light {
-    background-color: $bg-color-2
+  background-color: $bg-color-2;
 }
 
 .btn-primary {
-    @include btn($primary-color, $white, $hover-color);
-    font-family: '$font-museo';
+  @include btn($primary-color, $white, $hover-color);
+  font-family: "$font-museo";
 }
 
 .btn-secondary {
-    @include btn-outline($white, $primary-color);
-    font-family: '$font-museo';
+  @include btn-outline($white, $primary-color);
+  font-family: "$font-museo";
 }
 
 .btn-toggle {
-    @include btn-icon($bg-color-5, $white, $primary-color );
-    font-family: '$font-museo';
+  @include btn-icon($bg-color-5, $white, $primary-color);
+  font-family: "$font-museo";
 }
 
 .btn-toggle-secondary {
-    @include btn-icon($bg-color-6, $white, $white );
-    font-family: '$font-museo';
+  @include btn-icon($bg-color-6, $white, $white);
+  font-family: "$font-museo";
 }
 
 .btn-toggle-question {
-    @include btn-icon($primary-color, $white, $white );
-    font-family: '$font-museo';
+  @include btn-icon($primary-color, $white, $white);
+  font-family: "$font-museo";
 }
 
 .btn-attached {
-    @include btn-attach($primary-color, $white);
-    font-family: '$font-museo';
+  @include btn-attach($primary-color, $white);
+  font-family: "$font-museo";
 }
