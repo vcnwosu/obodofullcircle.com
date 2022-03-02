@@ -105,7 +105,7 @@ const PlanCard = ({
           )}
         </div>
       ))}
-      <CustomButton
+      {/* <CustomButton
         type="button"
         variant="primary"
         text="Subscribe"
@@ -115,7 +115,7 @@ const PlanCard = ({
             "_blank"
           )
         }
-      />
+      /> */}
     </div>
   );
 };
