@@ -73,7 +73,7 @@ export const basicPlanData: PlanType = {
         {
             text: '<b>3 free audio visual flashcard sets</b> for the duration of your subscription',
             showInfoIcon: false,
-            isAvailable: true
+            isAvailable: false
         },
         {
             text: 'Abridged grammar lessons with conversation focus',
@@ -141,7 +141,7 @@ export const premiumPlanData: PlanType = {
         {
             text: '<b>UNLIMITED audio visual flashcard sets</b> for the duration of your subscription',
             showInfoIcon: false,
-            isAvailable: true
+            isAvailable: false
         },
         {
             text: 'Detailed grammar lessons with conversation focus',
