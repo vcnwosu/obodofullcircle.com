@@ -40,8 +40,9 @@ const ExchangeProgramPlans = () => {
     <div className="ep-plan-div" id="plans">
       <div className="info-strip">
         <p className="text-center">
-          * These prices displayed, go into effect when app goes live.Don't wait
-          to get started! Start today and take advantage of our Pre-launch sale!
+          * These prices displayed and flashcards go into effect when the app
+          goes live! Don’t wait to get started! Start today and take advantage
+          of our Pre-Launch sale!
         </p>
         <p className="text-center">
           Email <b>info@obodofullcircle.com</b> to get started!

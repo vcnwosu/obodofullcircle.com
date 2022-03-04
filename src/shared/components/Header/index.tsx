@@ -26,10 +26,10 @@ const navList: Navs[] = [
         path: "/transcripts",
         text: "Transcripts",
       },
-      {
-        path: "",
-        text: "Planner",
-      },
+      // {
+      //   path: "",
+      //   text: "Planner",
+      // },
       {
         path: "",
         text: "Shop",
