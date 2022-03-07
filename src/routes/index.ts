@@ -11,6 +11,8 @@ const PrivacyPolicy = React.lazy(() => import('../modules/PrivacyPolicy'));
 const TermsConditions = React.lazy(() => import('../modules/TermsCondtions'));
 const Support = React.lazy(() => import('../modules/Support'));
 const Documentation = React.lazy(() => import('../modules/Documentation'));
+const NotFound = React.lazy(() => import('../modules/NotFound'));
+const ComingSoon = React.lazy(() => import('../modules/Coming Soon'));
 interface Route {
     path: string;
     exact: boolean;
@@ -96,11 +98,11 @@ const documentation: Route = {
     component: Documentation
 }
 
-const defaultRoute: Route = {
-    path: '**',
+const comingSoon: Route = {
+    path: '/pages/coming-soon',
     exact: true,
     isProtected: false,
-    component: Home
+    component: ComingSoon
 }
 
 export const routeList = [
@@ -108,8 +110,7 @@ export const routeList = [
     episodes,
     exchangeProgram,
     transcripts,
-    aboutUs,
-    defaultRoute
+    aboutUs
 ]
 
 export const publicRouteList = [
@@ -118,5 +119,6 @@ export const publicRouteList = [
     paymentSuccess,
     paymentCancel,
     support,
-    documentation
+    documentation,
+    comingSoon
 ]

@@ -19,11 +19,17 @@ const companyNavList: Navs[] = [
     },
     {
         path: '',
-        text: 'Why Us'
+        text: 'Why Us',
+        onClick: () => {
+            window.open('/pages/coming-soon', '_blank')
+        }
     },
     {
         path: '',
-        text: 'Careers'
+        text: 'Careers',
+        onClick: () => {
+            window.open('/pages/coming-soon', '_blank')
+        }
     },
     {
         path: '#testimonials',
@@ -46,18 +52,27 @@ const podcastNavList: Navs[] = [
     },
     {
         path: '',
-        text: 'Shop'
+        text: 'Shop',
+        onClick: () => {
+            window.open('/pages/coming-soon', '_blank')
+        }
     }
 ]
 
 const appNavList: Navs[] = [
     {
         path: '',
-        text: 'Android'
+        text: 'Android',
+        onClick: () => {
+            window.open('/pages/coming-soon', '_blank')
+        }
     },
     {
         path: '',
-        text: 'iOS'
+        text: 'iOS',
+        onClick: () => {
+            window.open('/pages/coming-soon', '_blank')
+        }
     }
 ]
 const teacherNavList: Navs[] = [

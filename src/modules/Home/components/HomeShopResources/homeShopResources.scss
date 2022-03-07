@@ -3,59 +3,60 @@
 @import "../../../../assets/styles/mixins";
 
 .card-div {
-    flex-direction: column;
-    @include breakpoint(small) {
-        flex-direction: row;
-        gap: 2rem;
-    }
+  flex-direction: column;
+  @include breakpoint(small) {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
 }
 
 .resources-div h2 {
-    color: $bg-color;
-    font-family: "$font-bold";
-    font-size: 1.5rem;
-    @include breakpoint(x-small) {
-        font-size: 2rem;
-    }
+  color: $bg-color;
+  font-family: "$font-bold";
+  font-size: 1.5rem;
+  @include breakpoint(x-small) {
+    font-size: 2rem;
+  }
 }
 
 .resources-div p {
-    color: $bg-color;
-    font-family: "$font-museo-700";
-    font-size: 1rem;
-    @include breakpoint(x-small) {
-        font-size: 1.25rem;
-    }
+  color: $bg-color;
+  font-family: "$font-museo-700";
+  font-size: 1rem;
+  @include breakpoint(x-small) {
+    font-size: 1.25rem;
+  }
 }
 
 .resources-div .card-title {
-    font-family: "$font-bold";
+  font-family: "$font-bold";
 }
 
 .resources-div .card-text {
-    color: $white;
-    font-size: 14px;
-    font-family: "$font-museo-regular";
+  color: $white;
+  font-size: 14px;
+  font-family: "$font-museo-regular";
 }
 
 .resources-div .card-body {
-    padding-bottom: 2rem;
-    @include breakpoint(x-small) {
-        padding-bottom: 3rem;
-    }
+  padding-bottom: 2rem;
+  @include breakpoint(x-small) {
+    padding-bottom: 3rem;
+  }
 }
 
 .resources-div img {
-    height: 60px;
+  height: 60px;
 }
 
 .resources-div .card {
-    border-radius: 0.5rem !important;
-    margin-bottom: 2rem;
-    @include breakpoint(small) {
-        margin-bottom: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  border-radius: 0.5rem !important;
+  margin-bottom: 2rem;
+  @include breakpoint(small) {
+    margin-bottom: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

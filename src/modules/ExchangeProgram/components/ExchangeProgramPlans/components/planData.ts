@@ -6,6 +6,7 @@ interface detailText {
     tooltipText?: string;
     textType?: string;
     listText?: string[];
+    isAvailable?: boolean;
 }
 
 export interface PlanType {
@@ -14,14 +15,15 @@ export interface PlanType {
     priceSingleMonth: string;
     priceSingleMonthQuaterly: string;
     priceTotal: string;
-    detailsList: detailText[]
+    detailsList: detailText[];
+    zohoId?: string;
 }
 
 export const basicPlanData: PlanType = {
     heading: 'Basic',
-    price: '$65',
-    priceSingleMonth: '$55',
-    priceSingleMonthQuaterly: '$50',
+    price: '$55',
+    priceSingleMonth: '$105',
+    priceSingleMonthQuaterly: '$155',
     priceTotal: '$98',
     detailsList: [
         {
@@ -65,12 +67,13 @@ export const basicPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Access : Voice note Exchanges and Library, Immersion weekly plans',
+            text: 'Access : Voice note Exchanges, Immersion weekly plans',
             showInfoIcon: false,
         },
         {
             text: '<b>3 free audio visual flashcard sets</b> for the duration of your subscription',
-            showInfoIcon: false
+            showInfoIcon: false,
+            isAvailable: false
         },
         {
             text: 'Abridged grammar lessons with conversation focus',
@@ -85,9 +88,9 @@ export const basicPlanData: PlanType = {
 
 export const premiumPlanData: PlanType = {
     heading: 'Premium',
-    price: '$115',
-    priceSingleMonth: '$110',
-    priceSingleMonthQuaterly: '$95',
+    price: '$95',
+    priceSingleMonth: '$185',
+    priceSingleMonthQuaterly: '$275',
     priceTotal: '$198',
     detailsList: [
         {
@@ -124,7 +127,7 @@ export const premiumPlanData: PlanType = {
             ]
         },
         {
-            text: 'Monthly Written and Verbal Quizzes with detailed review',
+            text: 'Monthly Verbal Quizzes with detailed review',
             showInfoIcon: false
         },
         {
@@ -132,12 +135,13 @@ export const premiumPlanData: PlanType = {
             showInfoIcon: false
         },
         {
-            text: 'Access : Voice note Exchanges and Library, Immersion weekly plan',
+            text: 'Access : Voice note Exchanges, Immersion weekly plan',
             showInfoIcon: false,
         },
         {
             text: '<b>UNLIMITED audio visual flashcard sets</b> for the duration of your subscription',
-            showInfoIcon: false
+            showInfoIcon: false,
+            isAvailable: false
         },
         {
             text: 'Detailed grammar lessons with conversation focus',

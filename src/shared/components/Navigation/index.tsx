@@ -25,7 +25,7 @@ const Navigation = ({ list, type }: Props) => {
                 (<Navbar expand="lg">
                     <Nav className="flex-column">
                         {list.map(item => (
-                            <Link key={item.text} to={item.path}>{item.text}</Link>
+                            <Link key={item.text} to={item.path} onClick={item.onClick}>{item.text}</Link>
                         ))
                         }
                     </Nav>
