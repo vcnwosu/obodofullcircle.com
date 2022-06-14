@@ -116,28 +116,17 @@ const Header = () => {
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
-                        {nav.dropdownItems?.map((item) => (
-                          <Dropdown.Item key={item.path}>
-                            <NavLink
-                              activeClassName={
-                                item.text === "Planner" || item.text === "Shop"
-                                  ? ""
-                                  : styles.active
-                              }
-                              to={item.path}
-                              onClick={
-                                item.text === "Planner"
-                                  ? navigateToPlanner
-                                  : item.text === "Shop"
-                                  ? navigateToShop
-                                  : clickHandler
-                              }
-                            >
-                              {item.text}
-                            </NavLink>
-                          </Dropdown.Item>
-                          // <NavLink activeClassName={styles.active} className="dropdown-item" to={item.path} onClick={clickHandler}>{item.text}</NavLink>
-                        ))}
+                        {/* {nav.dropdownItems?.map((item) => ( */}
+                        <Dropdown.Item>
+                          <NavLink to="/transcripts" onClick={clickHandler}>
+                            Transcripts
+                          </NavLink>
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={navigateToShop}>
+                          Shop
+                        </Dropdown.Item>
+                        {/* // <NavLink activeClassName={styles.active} className="dropdown-item" to={item.path} onClick={clickHandler}>{item.text}</NavLink> */}
+                        {/* ))} */}
                       </Dropdown.Menu>
                     </Dropdown>
                   </div>
