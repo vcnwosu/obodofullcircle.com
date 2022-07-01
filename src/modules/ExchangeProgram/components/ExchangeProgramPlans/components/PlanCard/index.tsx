@@ -29,7 +29,7 @@ const PlanCard = ({
         {type === 1 && (
           <p className="price">
             {price}
-            {/* <span>/Month</span> */}
+            <span>/Month</span>
           </p>
         )}
         {type === 3 && (
@@ -47,7 +47,7 @@ const PlanCard = ({
         <div className="d-flex justify-content-between align-items-center">
           <p className="price">
             {type === 2 ? priceSingleMonth : priceSingleMonthQuaterly}
-            {/* <span>/Month</span> */}
+            <span>/Month</span>
           </p>
           {/* <p className="price">{priceTotal}</p> */}
         </div>
