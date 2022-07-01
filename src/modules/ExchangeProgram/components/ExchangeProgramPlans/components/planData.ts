@@ -21,9 +21,9 @@ export interface PlanType {
 
 export const basicPlanData: PlanType = {
     heading: 'Basic',
-    price: '$55',
-    priceSingleMonth: '$105',
-    priceSingleMonthQuaterly: '$155',
+    price: '$65',
+    priceSingleMonth: '$55/mo',
+    priceSingleMonthQuaterly: '$50/mo',
     priceTotal: '$98',
     detailsList: [
         {
@@ -88,9 +88,9 @@ export const basicPlanData: PlanType = {
 
 export const premiumPlanData: PlanType = {
     heading: 'Premium',
-    price: '$95',
-    priceSingleMonth: '$185',
-    priceSingleMonthQuaterly: '$275',
+    price: '$115',
+    priceSingleMonth: '$110/mo',
+    priceSingleMonthQuaterly: '$95/mo',
     priceTotal: '$198',
     detailsList: [
         {
