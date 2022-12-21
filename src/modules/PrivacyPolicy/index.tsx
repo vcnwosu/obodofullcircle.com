@@ -69,22 +69,22 @@ const PrivacyPolicy = () => {
       <h4>How we use your information</h4>
       <p>we use the information we collect in various ways, including to:</p>
       <ul>
-        <li>provide, operate, and maintain our Mobile App</li>
-        <li>improve, personalize, and expand our Mobile App</li>
-        <li>understand and analyze how you use our Mobile App</li>
+        <li>Provide, operate, and maintain our Mobile App </li>
+        <li>Improve, personalize, and expand our Mobile App</li>
+        <li>Understand and analyze how you use our Mobile App </li>
         <li>
-          offer useful features in our mobile app including the creation of
+          Offer useful features in our mobile app including the creation of
           profiles
         </li>
-        <li>develop new products, services, features, and functionality</li>
+        <li>Develop new products, services, features, and functionality</li>
         <li>
-          communicate with you, either directly or through one of our partners,
+          Communicate with you, either directly or through one of our partners,
           including for customer service, to provide you with updates and other
           information relating to the Mobile App, and for marketing and
-          promotional purposes
+          promotional purposes.
         </li>
-        <li>send you emails</li>
-        <li>find and prevent fraud</li>
+        <li>Send you emails</li>
+        <li>Find and prevent fraud</li>
       </ul>
 
       <h4>Log Data</h4>
