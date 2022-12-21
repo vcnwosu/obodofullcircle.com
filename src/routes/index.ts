@@ -7,7 +7,7 @@ const Transcripts = React.lazy(() => import('../modules/Transcripts'));
 const AboutUs = React.lazy(() => import('../modules/AboutUs'));
 const PaymentSuccess = React.lazy(() => import('../modules/PaymentSuccess'));
 const PaymentCancel = React.lazy(() => import('../modules/PaymentCancel'));
-const PrivacyPolicy = React.lazy(() => import('../modules/PrivacyPolicy'));
+const PrivacyPolicy = React.lazy(() => import('../modules/privacyPolicy'));
 const TermsConditions = React.lazy(() => import('../modules/TermsCondtions'));
 const Support = React.lazy(() => import('../modules/Support'));
 const Documentation = React.lazy(() => import('../modules/Documentation'));
