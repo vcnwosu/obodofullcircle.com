@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 import { toast } from "react-toastify";
 
-export const baseURL = 'https://apis.obodofullcircle.com/api/v1/'; // prod url
+export const baseURL = 'https://apis.obodofullcircle.com/api/v2/'; // prod url
 export const websiteURL = 'https://obodofullcircle.com/' // prod website url
 
 const axiosInstance = axios.create({
