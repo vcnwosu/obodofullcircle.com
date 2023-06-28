@@ -3,11 +3,12 @@ import CustomAccordion from '../../../../shared/components/Accordion';
 import BorderImage from '../../../../assets/images/borderDesign.svg';
 import './whyExchangeProgram.scss';
 import { Carousel } from 'react-bootstrap';
-import StatsImage1 from '../../../../assets/images/statsImage1 white.svg';
-import StatsImage2 from '../../../../assets/images/statsImage2 white.svg';
-import StatsImage3 from '../../../../assets/images/statsImage3 white.svg';
-import StatsImage4 from '../../../../assets/images/statsImage4 white.svg';
-import StatsImage5 from '../../../../assets/images/statsImage5 white.svg';
+import StatsImage1 from '../../../../assets/images/statsImage1 white updated.svg';
+import StatsImage2 from '../../../../assets/images/statsImage2 white updated.svg';
+import StatsImage3 from '../../../../assets/images/statsImage3 white updated.svg';
+import StatsImage4 from '../../../../assets/images/statsImage4 white updated.svg';
+import StatsImage5 from '../../../../assets/images/statsImage5 white updated.svg';
+import StatsImage6 from '../../../../assets/images/statsImage6 white updated.svg';
 
 export interface AccordionType {
     title: string;
@@ -83,6 +84,13 @@ const WhyExchangeProgram = () => {
                                 className="d-block w-100"
                                 src={StatsImage5}
                                 alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage6}
+                                alt="Sixth slide"
                             />
                         </Carousel.Item>
                     </Carousel>
