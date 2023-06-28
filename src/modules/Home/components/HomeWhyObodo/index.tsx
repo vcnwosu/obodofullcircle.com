@@ -2,11 +2,12 @@ import { Carousel } from 'react-bootstrap';
 import Image from '../../../../assets/images/whyIgboImage.svg';
 import CustomAccordion from '../../../../shared/components/Accordion';
 import './homeWhyObodo.scss';
-import StatsImage1 from '../../../../assets/images/statsImage1 square.svg';
-import StatsImage2 from '../../../../assets/images/statsImage2 square.svg';
-import StatsImage3 from '../../../../assets/images/statsImage3 square.svg';
-import StatsImage4 from '../../../../assets/images/statsImage4 square.svg';
-import StatsImage5 from '../../../../assets/images/statsImage5 square.svg';
+import StatsImage1 from '../../../../assets/images/statsImage1 square updated.svg';
+import StatsImage2 from '../../../../assets/images/statsImage2 square updated.svg';
+import StatsImage3 from '../../../../assets/images/statsImage3 square updated.svg';
+import StatsImage4 from '../../../../assets/images/statsImage4 square updated.svg';
+import StatsImage5 from '../../../../assets/images/statsImage5 square updated.svg';
+import StatsImage6 from '../../../../assets/images/statsImage6 square updated.svg';
 
 export interface AccordionType {
     title: string;
@@ -80,6 +81,13 @@ const HomeWhyIgbo = () => {
                                 className="d-block w-100"
                                 src={StatsImage5}
                                 alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={StatsImage6}
+                                alt="Sixth slide"
                             />
                         </Carousel.Item>
                     </Carousel>

@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 import { toast } from "react-toastify";
 
-export const baseURL = 'https://devapis.obodofullcircle.com/api/v1/';  // dev api url
-export const websiteURL = 'https://dev.obodofullcircle.com/' // dev website url
+export const baseURL = process.env.REACT_APP_BASE_URL;  // dev api url
+export const websiteURL = process.env.REACT_APP_WEBSITE_URL // dev website url
 
 const axiosInstance = axios.create({
     baseURL
