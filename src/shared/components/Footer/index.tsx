@@ -64,14 +64,14 @@ const appNavList: Navs[] = [
         path: '',
         text: 'Android',
         onClick: () => {
-            window.open('/pages/coming-soon', '_blank')
+            window.open('https://play.google.com/store/apps/details?id=com.droid.obodo')
         }
     },
     {
         path: '',
         text: 'iOS',
         onClick: () => {
-            window.open('/pages/coming-soon', '_blank')
+            window.open('https://apps.apple.com/in/app/obodo-full-circle/id1623822418')
         }
     }
 ]
