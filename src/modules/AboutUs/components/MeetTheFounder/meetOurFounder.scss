@@ -64,6 +64,10 @@
         p {
             font-family: "$font-museo-regular";
             color: $bg-color;
+            @include breakpoint(small) {
+                margin-bottom: 1.5rem;
+                font-size: 0.8rem;
+            }
             @include breakpoint(large) {
                 margin-bottom: 1.5rem;
                 font-size: 0.8rem;
