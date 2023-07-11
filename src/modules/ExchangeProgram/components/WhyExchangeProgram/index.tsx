@@ -8,7 +8,7 @@ import StatsImage2 from '../../../../assets/images/statsImage2 white updated.svg
 import StatsImage3 from '../../../../assets/images/statsImage3 white updated.svg';
 import StatsImage4 from '../../../../assets/images/statsImage4 white updated.svg';
 import StatsImage5 from '../../../../assets/images/statsImage5 white updated1.svg';
-import StatsImage6 from '../../../../assets/images/statsImage6 white updated.svg';
+import StatsImage6 from '../../../../assets/images/statsImage6 white updated1.svg';
 
 export interface AccordionType {
     title: string;
