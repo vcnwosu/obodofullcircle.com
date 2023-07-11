@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
-import GooglePlay from '../../../assets/images/GooglePlayCS.svg';
-import AppStore from '../../../assets/images/AppleStoreCS.svg';
+import GooglePlay from '../../../assets/images/GooglePlayCS1.svg';
+import AppStore from '../../../assets/images/AppleStoreCS1.svg';
 import FB from '../../../assets/images/fb.svg';
 import FBHovered from '../../../assets/images/Facebook hover.svg';
 import Linkedin from '../../../assets/images/linkedin.svg';
@@ -148,8 +148,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="store-icons">
-                        <img src={GooglePlay} alt="googlePlay" />
-                        <img src={AppStore} alt="appStore" />
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.droid.obodo" ><img src={GooglePlay} alt="googlePlay" /></a>
+                        <a target="_blank" href="https://apps.apple.com/in/app/obodo-full-circle/id1623822418"><img src={AppStore} alt="appStore" /></a>
                     </div>
                 </div>
                 <div className="d-flex justify-content-between bottom-nav">
