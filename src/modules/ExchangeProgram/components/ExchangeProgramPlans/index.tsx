@@ -5,8 +5,8 @@ import { basicPlanData, premiumPlanData } from "./components/planData";
 import { CustomButton } from "../../../../shared/components/Button";
 import CustomModal from "../../../../shared/components/Modal";
 import CustomSpinner from "../../../../shared/components/Spinner";
-import GooglePlay from "../../../../assets/images/GooglePlayCS.svg";
-import AppStore from "../../../../assets/images/AppleStoreCS.svg";
+import GooglePlay from "../../../../assets/images/GooglePlayCS1.svg";
+import AppStore from "../../../../assets/images/AppleStoreCS1.svg";
 
 const ExchangeProgramPlans = () => {
   const [showModal, setShowModal] = useState(false);
@@ -17,8 +17,8 @@ const ExchangeProgramPlans = () => {
   const modalBody = () => {
     return (
       <div className="modal-box d-flex mt-2">
-        <img className="store-img mr-3" src={GooglePlay} alt="googlePlay" />
-        <img className="store-img" src={AppStore} alt="appStore" />
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.droid.obodo" ><img className="store-img mr-3" src={GooglePlay} alt="googlePlay" /></a>
+        <a target="_blank" href="https://apps.apple.com/in/app/obodo-full-circle/id1623822418"><img className="store-img" src={AppStore} alt="appStore" /></a>
       </div>
     );
   };
