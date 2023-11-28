@@ -5,11 +5,6 @@ const PrivacyPolicy = () => {
     <div className="px-3 py-2 privacy-policy">
       <h2>Privacy Policy</h2>
       <p>
-        Obodo full circle built the Obodo full circle app as a Free app. This
-        SERVICE is provided by Obodo full circle at no cost and is intended for
-        use as is.
-      </p>
-      <p>
         This page is used to inform visitors regarding our policies with the
         collection, use, and disclosure of Personal Information if anyone
         decided to use our Service.
@@ -40,6 +35,39 @@ const PrivacyPolicy = () => {
       <p>
         By using our mobile app, you hereby consent to our privacy policy and
         agree to its terms.
+      </p>
+      <p>
+        Our app is dedicated to providing an immersive learning experience focused
+        on teaching the Igbo language. Through our platform, students have access
+        to various features designed to facilitate their learning journey. The app
+        offers a seamless chat interface, enabling direct communication between
+        students and their tutors. This chat functionality allows students to
+        engage in discussions, seek clarification, and receive guidance on
+        language-related queries. Additionally, students have the flexibility
+        to schedule classes with their dedicated tutors, and upon scheduling,
+        these class events seamlessly integrate into their local calendars,
+        ensuring timely reminders and easy access to planned sessions.
+      </p>
+      <p>
+        In fostering effective communication, students can share images and audio
+        files within the chat interface to supplement their learning experience.
+        This feature encourages interactive learning by allowing students to exchange
+        visual and auditory materials with their tutors.
+      </p>
+      <p>
+        To further enrich their learning, students gain access to comprehensive
+        flashcards specifically curated to enhance their understanding of the Igbo language.
+        These flashcards serve as valuable educational aids, offering insights into vocabulary,
+        grammar, and cultural nuances. Moreover, the app incorporates a robust learning management
+        system (LMS) meticulously designed to provide a structured and personalized learning
+        environment. Within this system, students can access a diverse array of learning resources,
+        track their progress, and engage with interactive learning materials tailored to suit their
+        individual pace and proficiency levels.
+      </p>
+      <p>
+        Our utmost priority is to ensure a secure and enriching learning experience for every user.
+        We employ stringent measures to safeguard user data, respecting the confidentiality and
+        privacy of all interactions and information exchanged within the platform.
       </p>
 
       <h4>Information Collection and Use</h4>
