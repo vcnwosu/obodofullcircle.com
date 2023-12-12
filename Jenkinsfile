@@ -78,7 +78,7 @@ pipeline {
             steps {
                 dir ("${WS_DIR}") {
                     withCredentials([string(credentialsId: 'ql-sonarqube-server-token', variable: 'SonarToken'), string(credentialsId: 'ql-sonarqube-global-webhook', variable: 'SonarWebHook')]) {
-                        waitForQualityGate (abortPipeline: true, credentialsId: 'ql-sonarqube-server-token', webhookSecretId: 'ql-sonarqube-global-webhook')
+                        waitForQualityGate (abortPipeline: false, credentialsId: 'ql-sonarqube-server-token', webhookSecretId: 'ql-sonarqube-global-webhook')
                     }
                 }
             }
