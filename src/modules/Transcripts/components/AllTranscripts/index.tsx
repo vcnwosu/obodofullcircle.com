@@ -15,26 +15,19 @@ const AllTranscripts = ({ id }: Props) => {
   const [currentEpisodeList, setCurrentEpisodeList] = useState<
     TranscriptCardType[]
   >([]);
+
   useEffect(() => {
-    setSeasonList(
-      seasonContext.seasonList.sort(
-        (a: Season, b: Season) => a.season_id - b.season_id
-      )
-    );
     const list = seasonContext.seasonList.sort(
       (a: Season, b: Season) => a.season_id - b.season_id
     );
-    setSeasonList(
-      list.filter(
-        (season: Season) => !season.episodes.every((item) => !item.found)
-      )
-    );
+
+    setSeasonList(list);
 
     if (seasonContext.seasonList.length > 0) {
       setCurrentEpisodeList(() =>
         [
           ...seasonContext.seasonList[currentSeason]?.episodes.filter(
-            (item: any) => item.found
+            (item: any) => !item.found
           ),
         ].reverse()
       );
@@ -47,7 +40,7 @@ const AllTranscripts = ({ id }: Props) => {
     setCurrentEpisodeList(() =>
       [
         ...seasonContext.seasonList[index]?.episodes.filter(
-          (item: any) => item.found
+          (item: any) => !item.found
         ),
       ].reverse()
     );
@@ -58,34 +51,37 @@ const AllTranscripts = ({ id }: Props) => {
     <div className="all-transcripts-div">
       <div className="wrapper">
         <h2>All Episodes Transcripts</h2>
+
         <div className="d-flex season-container">
-          {seasonList.length > 0 &&
-            seasonList.map((season, index) => (
-              <div
-                key={season.season_id}
-                className={currentSeason === index ? "active" : ""}
-                onClick={() => showCurrentSeasonEpisodes(index)}
-              >
-                Season {season.season_id}
-              </div>
-            ))}
+          {seasonList?.length > 0
+            ? seasonList.map((season, index) => (
+                <div
+                  key={season.season_id || index}
+                  className={currentSeason === index ? "active" : ""}
+                  onClick={() => showCurrentSeasonEpisodes(index)}
+                >
+                  Season {season.season_id}
+                </div>
+              ))
+            : null}
         </div>
+
         <div className="transcript-cards-container">
-          {currentEpisodeList &&
-            currentEpisodeList.length > 0 &&
-            currentEpisodeList.map((card, index) => (
-              <TranscriptCard
-                id={`s${currentSeason}epi${index}`}
-                active={id}
-                key={card.title}
-                title={card.title}
-                description={card.description}
-                price="$5.50"
-                episdode_no={card.episdode_no}
-                currentSeason={currentSeasonId}
-                image={card.image}
-              />
-            ))}
+          {currentEpisodeList?.length > 0
+            ? currentEpisodeList.map((card, index) => (
+                <TranscriptCard
+                  id={`s${currentSeason}epi${index}`}
+                  active={id}
+                  key={card.title}
+                  title={card.title}
+                  description={card.description}
+                  price="$5.50"
+                  episdode_no={card.episdode_no}
+                  currentSeason={currentSeasonId}
+                  image={card.image}
+                />
+              ))
+            : null}
         </div>
       </div>
     </div>
