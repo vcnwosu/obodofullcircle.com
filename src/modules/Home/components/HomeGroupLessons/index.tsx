@@ -9,7 +9,7 @@ import { exchangeProgram } from '../../../../routes';
 const HomeGroupLessons = () => {
     const history = useHistory();
     const navigateToExchange = () => {
-        history.push(exchangeProgram.path);
+        window.open("https://shopobodo.square.site/shop/group-tutoring/2", "_blank");
     }
 
     const featuresDataArray: string[] = ["Personal Instructor", "Group lessons for children and teens", "Safe, fun group lessons empower all", "Interactive Games and Mediums"]

@@ -18,7 +18,7 @@ const featuresData: string[] = [
 const HomeIndependentCourse = () => {
     const history = useHistory();
     const navigateToEpisodes = () => {
-        history.push(episodes.path)
+        window.open("https://docs.google.com/forms/d/15aWnL_dfOccDchlbDnieQnzJ8_KyqnYrFrXvVT7gvX4/edit", "_blank");
     }
     return (
         <div className="bg-stream">
