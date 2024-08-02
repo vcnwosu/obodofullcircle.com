@@ -6,8 +6,8 @@
   flex-direction: column;
   @include breakpoint(small) {
     flex-direction: row;
-    gap: 1rem;
-    padding: 0 1rem;
+    gap: 3.125rem;
+    padding: 0 5.625rem;
   }
 }
 

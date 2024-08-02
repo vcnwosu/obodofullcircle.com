@@ -1,0 +1,148 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.div-container {
+  background-color: $bg-color;
+  position: relative;
+  > div {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @include breakpoint(small) {
+      flex-direction: row;
+    }
+    @include breakpoint(large) {
+      padding-top: 66px;
+      padding-bottom: 66px;
+      //   padding-bottom: 0;
+      padding-right: 60px;
+    }
+    > div:nth-child(2) {
+      position: relative;
+    }
+  }
+  img.bgImage {
+    height: 262px;
+    @include breakpoint(small) {
+      height: 360px;
+    }
+  }
+  .vl {
+    border-left: 1px solid $white;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 0.1;
+    @include breakpoint(small) {
+      display: block;
+    }
+  }
+  .vl:first-child {
+    left: 55%;
+  }
+  .vl:nth-child(2) {
+    left: 60%;
+  }
+  .vl:nth-child(3) {
+    left: 66%;
+  }
+  .vl:nth-child(4) {
+    left: 72%;
+  }
+  .vl:nth-child(5) {
+    left: 78%;
+  }
+  .vl:nth-child(6) {
+    left: 84%;
+  }
+}
+.wrapperExchange {
+  position: relative;
+  padding-bottom: 2rem;
+  z-index: 1;
+
+  > div {
+    display: flex;
+    gap: 1rem;
+    // justify-content: center;
+    align-items: center;
+
+    > img {
+      margin-bottom: 1rem;
+    }
+  }
+
+  > button {
+    margin-top: 2.5rem;
+  }
+
+  @include breakpoint(small) {
+    padding: 0px 50px 0 35px !important;
+
+    > button {
+      //   margin-top: 0;
+    }
+  }
+  @include breakpoint(large) {
+    padding: 0 0 0 100px !important;
+  }
+  @include breakpoint(x-large) {
+    padding: 0 120px 0 120px !important;
+  }
+}
+
+h1.heading {
+  font-size: 1.8rem !important;
+  margin-bottom: 2rem;
+  color: $white;
+  @include breakpoint(x-small) {
+    font-size: 2rem !important;
+  }
+  @include breakpoint(small) {
+    font-size: 3rem !important;
+  }
+  @include breakpoint(large) {
+    font-size: 3.5rem !important;
+  }
+  @include breakpoint(x-large) {
+    font-size: 4rem !important;
+  }
+}
+h1.shadow {
+  font-size: 2rem !important;
+  color: $text-shadow-1;
+  position: absolute;
+  top: -27px;
+  left: 6px;
+  box-shadow: none !important;
+  @include breakpoint(x-small) {
+    font-size: 2.2rem !important;
+  }
+  @include breakpoint(small) {
+    font-size: 3.3rem !important;
+    top: -20px;
+    left: 20px;
+  }
+  @include breakpoint(large) {
+    font-size: 4rem !important;
+    top: -40px;
+    left: 40px;
+  }
+  @include breakpoint(x-large) {
+    font-size: 5rem !important;
+    top: -60px;
+    left: 40px;
+  }
+}
+
+p.text {
+  color: $white;
+  font-family: "$font-museo";
+  font-size: 1rem;
+  @include breakpoint(x-small) {
+    font-size: 1.25rem;
+  }
+}

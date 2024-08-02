@@ -35,12 +35,12 @@ const HomeShopResources = () => {
       text: "Some part of language learning requires memorization! Utilize our premade Audio flashcards to help practices vocabulary, phrases and audio comprehension of the language.",
       available: false,
     },
-    {
-      image: Course,
-      title: "Independent Course",
-      text: "Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you've learned.",
-      available: false,
-    },
+    // {
+    //   image: Course,
+    //   title: "Independent Course",
+    //   text: "Looking for an in depth way to learn Igbo fundamentals and language hacks? Purchase our video lessons to learn at your own pace and with the option of a Native Speaker to occasionally help practice your pronunciations to what you've learned.",
+    //   available: false,
+    // },
     {
       image: TranslationConsultation,
       title: "Translation/Consultation Services",
@@ -50,15 +50,15 @@ const HomeShopResources = () => {
         window.open("/pages/support", "_blank");
       },
     },
-    {
-      image: weekMonthPlanner,
-      title: "Monthly/Weekly Planner",
-      text: "The Ọganiru (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.",
-      available: true,
-      onClick: () => {
-        window.open("https://oganiruplanner.square.site/", "_blank");
-      },
-    },
+    // {
+    //   image: weekMonthPlanner,
+    //   title: "Monthly/Weekly Planner",
+    //   text: "The Ọganiru (Progress) Planner offers a seamless way to stay organized while effortlessly infusing Igbo language learning. The planner promotes progress over perfection, to help you stay on track throughout the year while making strides towards your goals and aspirations.",
+    //   available: true,
+    //   onClick: () => {
+    //     window.open("https://oganiruplanner.square.site/", "_blank");
+    //   },
+    // },
   ];
   return (
     <div className="resources-div bg-light pt-5 pb-5">

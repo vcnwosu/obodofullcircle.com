@@ -15,7 +15,7 @@ const navList: Navs[] = [
   },
   {
     path: "/exchange-program",
-    text: "Exchange Program",
+    text: "Language Program",
   },
   {
     path: "",
