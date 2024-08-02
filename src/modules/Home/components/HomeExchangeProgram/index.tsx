@@ -18,10 +18,12 @@ const HomeExchangeProgram = () => {
                     <img className="bgImage" src={Image} alt="exchange" />
                 </div>
                 <div>
-                    <h1 className="shadow">Exchange Program</h1>
+                    <h1 className="shadow">Igbo Language Program</h1>
                     <div className="wrapper wrapperExchange">
-                        <h1 className="heading">Exchange Program</h1>
-                        <p className="text mb-5">Don’t let language hold you back from engaging with your community. Speak what’s on your mind on a global platform while fostering a greater sense of self.</p>
+                        <h1 className="heading">Igbo Language Program</h1>
+                        <p className="text mb-5">Don’t Let language hold you back from engaging with your
+                            community. Learn to speak the Igbo language today for less than $14/mo.
+                            Lessons for adults and children ages 5 and up.</p>
                         <CustomButton type="button" text="Join Us" variant="primary" icon={Arrow} onClick={() => navigateToExchange()} />
                     </div>
                 </div>

@@ -34,7 +34,7 @@ const HomeTestimonials = ({ data, type }: Props) => {
         <div className="testimonials-div pt-5 pb-5" id="testimonials">
             <div className="text-center">
                 <h2>See what people are saying</h2>
-                <p className="text">Don’t just take our word for it, hear from the community</p>
+                <p className="text">Don’t just take our word for it, hear from the community about our individual lessons</p>
             </div>
             <div className="testimonial-wrapper">
                 {/* <div className=" d-flex arrow-icons">
