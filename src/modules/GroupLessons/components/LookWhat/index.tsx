@@ -1,7 +1,8 @@
 import './lookWhat.scss';
 import Image3 from "../../../../assets/images/comma.svg"
-import VideoTestimonial from '../../../Home/components/HomeTestimonials/components/VideoTestimonial';
+// import VideoTestimonial from '../../../Home/components/HomeTestimonials/components/VideoTestimonial';
 import { useState } from 'react';
+import VideoTestimonial from './component/VideoTestimonial';
 
 const LookWhat = () => {
     const [playStatus, setPlayStatus] = useState([false, false, false, false, false, false, false, false]);
@@ -86,8 +87,9 @@ const LookWhat = () => {
                                 </div>
 
                                 <div>
-                                    <VideoTestimonial index={item.index} url={item.url} userName={item.userName} isPlaying={playStatus[item.index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} />
+                                    {/* <VideoTestimonial index={item.index} url={item.url} userName={item.userName} isPlaying={playStatus[item.index]} handlePlayPause={(index: number) => handlePlayPause(index)} onEnded={(index: number) => onEnded(index)} /> */}
                                     {/* video */}
+                                    <VideoTestimonial/>
                                 </div>
 
                             </div>
