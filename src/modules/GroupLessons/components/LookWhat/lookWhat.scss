@@ -2,16 +2,16 @@
 @import "../../../../assets/styles/fonts";
 @import "../../../../assets/styles/mixins";
 
-.wrapper-kickStart {
-  background-color: $white !important;
+.wrapper-lookWhat {
+  background-color: $bg-color;
   padding: 95px 90px;
   display: flex;
-  gap: 4.25rem;
+  flex-direction: column;
 }
 
 h1.heading-kickstart {
   font-size: 1.8rem !important;
-  color: $black !important;
+  color: $white;
   @include breakpoint(x-small) {
     font-size: 2rem !important;
   }
@@ -26,9 +26,29 @@ h1.heading-kickstart {
   }
 }
 
-.description-kickstart {
-    padding: 2.125rem 0;
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  // max-width: 300px;
+  overflow-x: auto;
+}
+
+.card-insta {
+  background-color: $white;
+  color: $black;
+  display: flex;
+  border-radius: 0.75rem;
+  max-width: 604px;
+
+  > div {
+    padding: 37px 1.25rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
+
+    > img {
+      height: 50px;
+      align-self: flex-start;
+    }
+  }
 }
