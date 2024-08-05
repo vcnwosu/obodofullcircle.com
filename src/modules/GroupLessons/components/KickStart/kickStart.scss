@@ -1,0 +1,27 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.wrapper-why {
+  background-color: $bg-color;
+  padding: 95px 90px;
+  display: flex;
+
+}
+
+h1.heading {
+    font-size: 1.8rem !important;
+    color: $white;
+    @include breakpoint(x-small) {
+        font-size: 2rem !important;
+    }
+    @include breakpoint(small) {
+        font-size: 3rem !important;
+    }
+    @include breakpoint(large) {
+        font-size: 3rem !important;
+    }
+    @include breakpoint(x-large) {
+        font-size: 4rem !important;
+    }
+}
