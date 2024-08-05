@@ -21,7 +21,7 @@ const HomeLearnIgbo = () => {
                     <p className="mb-5">Join our language learning community - a place to connect, learn and share with a diverse range of cultures in a way that matters.</p>
                     <div className="d-flex">
                         <CustomButton type="button" text="Stream Episodes" variant="primary" onClick={() => navigateToEpisodes()} />
-                        <CustomButton className="ml-3" type="button" text="Exchange Program" variant="secondary" onClick={() => navigateToExchange()} />
+                        <CustomButton className="ml-3" type="button" text="Start Igbo Lessons" variant="secondary" onClick={() => navigateToExchange()} />
                     </div>
                 </div>
                 <div>

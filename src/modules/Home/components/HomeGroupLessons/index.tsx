@@ -1,4 +1,4 @@
-import Image from '../../../../assets/images/groupLessonsImage.svg';
+import Image from '../../../../assets/images/groupLessonsImage.webp';
 import Arrow from '../../../../assets/images/arrow.svg';
 import Tick from '../../../../assets/images/greenTick.svg';
 import { CustomButton } from '../../../../shared/components/Button';
@@ -12,7 +12,7 @@ const HomeGroupLessons = () => {
         window.open("https://shopobodo.square.site/shop/group-tutoring/2", "_blank");
     }
 
-    const featuresDataArray: string[] = ["Personal Instructor", "Group lessons for children and teens", "Safe, fun group lessons empower all", "Interactive Games and Mediums"]
+    const featuresDataArray: string[] = ["Innovative Curriculum that promotes speaking from day one.", "Group lessons for children and teens", "Safe, fun group lessons empower all", "Interactive Games and Mediums"]
 
     return (
         <div className="div-container">

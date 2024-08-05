@@ -1,6 +1,6 @@
 import { CustomButton } from "../../../../shared/components/Button";
 import Arrow from '../../../../assets/images/arrow.svg';
-import Image from '../../../../assets/images/independentCourseImage.svg';
+import Image from '../../../../assets/images/independentCourseImage.webp';
 import BorderImage from '../../../../assets/images/borderDesign.svg';
 import Tick from '../../../../assets/images/blackTick.svg';
 import { episodes } from '../../../../routes';
