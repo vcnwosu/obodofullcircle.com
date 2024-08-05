@@ -99,15 +99,19 @@ h1.heading {
   margin-bottom: 2rem;
   color: $white;
   @include breakpoint(x-small) {
+    margin-top: 1rem;
     font-size: 2rem !important;
   }
   @include breakpoint(small) {
+    margin-top: 2rem;
     font-size: 3rem !important;
   }
   @include breakpoint(large) {
+    margin-top: 3rem;
     font-size: 3.5rem !important;
   }
   @include breakpoint(x-large) {
+    margin-top: 3rem;
     font-size: 4rem !important;
   }
 }
@@ -123,17 +127,17 @@ h1.shadow {
   }
   @include breakpoint(small) {
     font-size: 3.3rem !important;
-    top: -20px;
+    top: 0px;
     left: 20px;
   }
   @include breakpoint(large) {
     font-size: 4rem !important;
-    top: -40px;
+    top: 0px;
     left: 40px;
   }
   @include breakpoint(x-large) {
     font-size: 5rem !important;
-    top: -60px;
+    top: 0px;
     left: 40px;
   }
 }
