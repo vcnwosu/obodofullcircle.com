@@ -8,6 +8,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import HomeTestimonials from "./components/HomeTestimonials";
 import { testimonialArray } from './testimonialsData';
+import HomeGroupLessons from "./components/HomeGroupLessons";
+import HomeIndependentCourse from "./components/HomeIndependentCourse";
 
 const Home = () => {
     const location = useLocation();
@@ -24,12 +26,14 @@ const Home = () => {
     return (
         <div>
             <HomeLearnIgbo />
-            <LanguageSelector />
+            {/* <LanguageSelector /> */}
             <HomeExchangeProgram />
             <HomeStreamEpisodes />
+            <HomeGroupLessons />
+            <HomeIndependentCourse />
             <HomeWhyObodo />
             <HomeShopResources />
-            <HomeTestimonials data={testimonialArray} type="textVideo"/>
+            <HomeTestimonials data={testimonialArray} type="textVideo" />
         </div>
     )
 }
