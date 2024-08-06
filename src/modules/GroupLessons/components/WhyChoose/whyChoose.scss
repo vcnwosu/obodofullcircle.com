@@ -4,11 +4,24 @@
 
 .wrapper-why {
   background-color: $bg-color;
-  padding: 95px 90px;
+  padding: 38px 20px;
   display: flex;
   gap: 40px;
   justify-content: center;
   align-items: center;
+  flex-direction: column-reverse;
+
+  @include breakpoint(small) {
+    padding: 95px 90px;
+    flex-direction: row;
+  }
+}
+
+img.whyChoose {
+  height: 300px;
+  @include breakpoint(small) {
+    height: 440px;
+  }
 }
 
 h1.heading {
@@ -62,3 +75,4 @@ h1.heading {
     font-size: 2rem;
   }
 }
+

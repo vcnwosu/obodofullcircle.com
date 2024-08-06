@@ -1,6 +1,7 @@
 import { CustomButton } from "../../../../shared/components/Button";
-import Image1 from '../../../../assets/images/groupLesson-groupLessonJoin.png';
-import Image2 from '../../../../assets/images/groupLesson-join.png';
+import Image1 from '../../../../assets/images/groupLesson1.webp';
+import Image2 from '../../../../assets/images/groupLesson2.webp';
+import Image3 from '../../../../assets/images/groupLesson3.webp';
 
 import "./groupLessonsJoin.scss"
 
@@ -10,7 +11,7 @@ const GroupLessonsJoin = () => {
         <div>
             <div className="wrapper-lessonJoin">
                 <div>
-                    <img className="" src={Image1} alt="group-lessons1" />
+                    <img className="lesson" src={Image1} alt="group-lessons1" />
                 </div>
                 <div>
                     <h1>Group Lessons</h1>
@@ -19,9 +20,10 @@ const GroupLessonsJoin = () => {
                     <CustomButton type="button" text="Join Now" variant="primary" onClick={() => console.log("clicked")} />
                 </div>
                 <div>
-                    <img className="" src={Image2} alt="group-lessons2" />
+                    <img className="lesson" src={Image2} alt="group-lessons2" />
 
                 </div>
+                <img className="lesson-mobile" src={Image3} alt="group-lessons2" />
             </div>
         </div>
     )

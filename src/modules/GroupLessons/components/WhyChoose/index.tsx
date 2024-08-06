@@ -1,4 +1,4 @@
-import Image from '../../../../assets/images/whyChoose.svg';
+import Image from '../../../../assets/images/whyChoose.webp';
 // import CustomAccordion from '../../../../shared/components/Accordion';
 import CustomAccordion from './component/CustomAccordian';
 import './whyChoose.scss'
@@ -45,7 +45,7 @@ const WhyChoose = () => {
                     <CustomAccordion list={accordionArray} count={3} />
                 </div>
                 <div>
-                    <img className="bgImage" src={Image} alt="exchange" />
+                    <img className="whyChoose" src={Image} alt="exchange" />
                 </div>
 
             </div>

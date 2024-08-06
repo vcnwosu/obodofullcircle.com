@@ -4,9 +4,24 @@
 
 .wrapper-kickStart {
   background-color: $white !important;
-  padding: 95px 90px;
   display: flex;
-  gap: 4.25rem;
+  gap: 2.25rem;
+  padding: 38px 20px;
+  
+  flex-direction: column;
+  @include breakpoint(small) {
+    padding: 95px 90px;
+    flex-direction: row;
+    gap: 4.25rem;
+    // height: 600px;
+  }
+}
+
+img.kickstart {
+  height: 300px;
+  @include breakpoint(small) {
+    height: 400px;
+  }
 }
 
 h1.heading-kickstart {
@@ -27,8 +42,8 @@ h1.heading-kickstart {
 }
 
 .description-kickstart {
-    padding: 2.125rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  padding: 2.125rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
