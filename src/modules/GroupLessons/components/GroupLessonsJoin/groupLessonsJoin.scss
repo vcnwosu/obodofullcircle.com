@@ -1,0 +1,63 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.wrapper-lessonJoin {
+  background-color: $bg-color-2;
+  padding: 38px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.125rem;
+
+  > div:nth-child(1) {
+    display: none;
+  }
+  > div:nth-child(3) {
+    display: none;
+  }
+
+  @include breakpoint(small) {
+    padding: 95px 90px;
+    flex-direction: row;
+    > div:nth-child(1) {
+      display: block;
+    }
+    > div:nth-child(3) {
+      display: block;
+    }
+  }
+  @include breakpoint(large) {
+    // padding: 0 0 0 100px !important;
+  }
+  @include breakpoint(x-large) {
+    // padding: 0 120px 0 120px !important;
+  }
+
+  img.lesson {
+    height: 300px;
+    // display: none;
+    @include breakpoint(small) {
+      height: 225px;
+    }
+  }
+
+  img.lesson-mobile {
+    height: 299px;
+    width: 100%;
+    @include breakpoint(small) {
+      display: none !important;
+    }
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 1rem;
+  }
+
+  > div:nth-child(2) p {
+    text-align: center;
+  }
+}

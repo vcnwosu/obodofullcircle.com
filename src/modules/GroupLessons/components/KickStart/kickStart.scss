@@ -1,0 +1,49 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.wrapper-kickStart {
+  background-color: $white !important;
+  display: flex;
+  gap: 2.25rem;
+  padding: 38px 20px;
+  
+  flex-direction: column;
+  @include breakpoint(small) {
+    padding: 95px 90px;
+    flex-direction: row;
+    gap: 4.25rem;
+    // height: 600px;
+  }
+}
+
+img.kickstart {
+  height: 300px;
+  @include breakpoint(small) {
+    height: 400px;
+  }
+}
+
+h1.heading-kickstart {
+  font-size: 1.8rem !important;
+  color: $black !important;
+  @include breakpoint(x-small) {
+    font-size: 2rem !important;
+  }
+  @include breakpoint(small) {
+    font-size: 3rem !important;
+  }
+  @include breakpoint(large) {
+    font-size: 3rem !important;
+  }
+  @include breakpoint(x-large) {
+    font-size: 4rem !important;
+  }
+}
+
+.description-kickstart {
+  padding: 2.125rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}

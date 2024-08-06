@@ -1,0 +1,146 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+@import "../../../../assets/styles/mixins";
+
+.wrapper-lookWhat {
+  background-color: $bg-color;
+  padding: 38px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(small) {
+    padding: 95px 90px;
+    flex-direction: column;
+    // height: 600px;
+  }
+}
+
+img.comma {
+  height: 31px;
+  width: auto;
+  align-self: flex-start;
+  @include breakpoint(small) {
+    height: 51px;
+  }
+}
+
+img.social-image {
+  height: 100%;
+  width: 100%;
+}
+
+p.author {
+  font-size: 16px;
+  font-weight: 700;
+
+  @include breakpoint(small) {
+    font-size: 18px;
+  }
+}
+
+.video-image {
+  height: 460px;
+  width: auto;
+}
+
+h1.heading-kickstart {
+  font-size: 1.8rem !important;
+  color: $white;
+  @include breakpoint(x-small) {
+    font-size: 2rem !important;
+  }
+  @include breakpoint(small) {
+    font-size: 3rem !important;
+  }
+  @include breakpoint(large) {
+    font-size: 3rem !important;
+  }
+  @include breakpoint(x-large) {
+    font-size: 4rem !important;
+  }
+}
+
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  // max-width: 300px;
+  overflow-x: auto;
+  gap: 1.25rem;
+  overflow: hidden;
+  scrollbarwidth: "none";
+  msoverflowstyle: "none";
+}
+
+.card-insta {
+  background-color: $white;
+  color: $black;
+  display: flex;
+  flex-direction: column-reverse;
+  // gap: 1.25rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  min-width: 300px;
+  height: 680px;
+
+  @include breakpoint(small) {
+    min-width: 600px;
+    height: 415px;
+    // max-height: 390px;
+  }
+
+  > div:nth-child(1) {
+    width: 100%;
+    padding: 37px 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+  
+  }
+
+  > div:nth-child(2) {
+    width: 100%;
+  }
+
+  @include breakpoint(small) {
+    flex-direction: row;
+
+  
+  }
+}
+
+.feedback {
+  font-size: 14px;
+  @include breakpoint(small) {
+    font-size: 16px;
+  }
+}
+
+.image-section {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.video-div {
+  height: 315px;
+  // width: 244px;
+  > video {
+    height: 100%;
+    width: 100%;
+  }
+
+  @include breakpoint(small) {
+    height: 100%;
+  }
+}
+
+.scroll-btn {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  > button {
+    background-color: transparent;
+    border: none;
+  }
+}
