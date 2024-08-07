@@ -6,10 +6,9 @@ import './kickStart.scss';
 
 const KickStart = () => {
     const navigateToExchange = () => {
-        console.log("back")
+        window.open("/pages/support", "_blank");
     }
     return (
-        // <div>
         <div className="wrapper-kickStart">
             <div>
                 <img className="kickstart" src={Image} alt="group-lessons" />
@@ -22,7 +21,6 @@ const KickStart = () => {
                 </div>
             </div>
         </div>
-        // </div>
     );
 }
 

@@ -5,11 +5,13 @@ import { CustomButton } from '../../../../shared/components/Button';
 import './homeGroupLessons.scss';
 import { useHistory } from 'react-router-dom';
 import { exchangeProgram } from '../../../../routes';
+// import {groupLessons} from "../../../../routes"
 
 const HomeGroupLessons = () => {
     const history = useHistory();
     const navigateToExchange = () => {
-        window.open("https://shopobodo.square.site/shop/group-tutoring/2", "_blank");
+        window.open("pages/group-lessons")
+        
     }
 
     const featuresDataArray: string[] = ["Innovative Curriculum that promotes speaking from day one.", "Group lessons for children and teens", "Safe, fun group lessons empower all", "Interactive Games and Mediums"]

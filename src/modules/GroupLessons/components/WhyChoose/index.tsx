@@ -1,7 +1,8 @@
 import Image from '../../../../assets/images/whyChoose.webp';
-// import CustomAccordion from '../../../../shared/components/Accordion';
+import { CustomButton } from '../../../../shared/components/Button';
 import CustomAccordion from './component/CustomAccordian';
 import './whyChoose.scss'
+import Arrow from '../../../../assets/images/arrow.svg';
 
 export interface AccordionType {
     title: string;
@@ -35,7 +36,9 @@ const accordionArray: AccordionType[] = [
 
 const WhyChoose = () => {
 
-
+const navigateToGroupLesson =() =>{
+    window.open("https://shopobodo.square.site/shop/group-tutoring/2", "_blank");
+}
 
     return (
         <div>
@@ -43,6 +46,7 @@ const WhyChoose = () => {
                 <div>
                     <h1 className='heading'>Why Choose Group Lessons</h1>
                     <CustomAccordion list={accordionArray} count={3} />
+                    <CustomButton type="button" text="Explore Now" variant="primary" icon={Arrow} onClick={() => navigateToGroupLesson()}/>
                 </div>
                 <div>
                     <img className="whyChoose" src={Image} alt="exchange" />
