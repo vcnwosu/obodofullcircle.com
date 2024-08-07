@@ -32,14 +32,14 @@ const LookWhat = () => {
     const scrollHorizontallyRight = () => {
         if (divRef?.current) {
             divRef?.current.scrollBy({ left: +300, behavior: 'smooth' })
-           
+
         }
     };
 
     const scrollHorizontallyLeft = () => {
         if (divRef?.current) {
             divRef?.current.scrollBy({ left: -300, behavior: 'smooth' })
-            
+
         }
     };
 
@@ -68,7 +68,7 @@ const LookWhat = () => {
         {
             type: 'video',
             url: "https://d20z2h0urn304k.cloudfront.net/socicalmedia/lovely.mp4",
-            feedback: "another deligent learner in our group lessons and has since continued on with our individual lessons! One thing that I appreciated about her was her great questions during classes and in the smaller group chats, and her courage to speak out loud and volunteer to answer questions!",
+            feedback: "One thing that I appreciated about her was her great questions during classes and in the smaller group chats, and her courage to speak out loud.",
             author: "Ifomaaa",
             isPlaying: false,
             handlePlayPause: (index: number) => { },
@@ -111,7 +111,7 @@ const LookWhat = () => {
                     {instagramArray.map((item: any, index: number) => {
                         return (
                             <div className='card-insta'>
-                                <div className=''>
+                                <div className='first'>
                                     <img src={Image3} alt='comma' className='comma' />
                                     <p className='feedback'>
                                         {item?.feedback}
@@ -120,7 +120,7 @@ const LookWhat = () => {
                                 </div>
 
                                 <div className='image-section'>
-                                   
+
                                     {item.type === 'video' ?
                                         <div className='video-div'>
                                             <video controls className=''>
@@ -136,8 +136,6 @@ const LookWhat = () => {
                             </div>
                         )
                     })}
-
-
                 </div>
 
                 <div className='scroll-btn'>
