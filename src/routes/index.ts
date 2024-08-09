@@ -106,7 +106,7 @@ const comingSoon: Route = {
 };
 
 export const groupLessons: Route = {
-  path: "/pages/group-lessons",
+  path: "/group-lessons",
   exact: true,
   isProtected: false,
   component: GroupLessons,
