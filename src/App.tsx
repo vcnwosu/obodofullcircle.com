@@ -34,7 +34,7 @@ const App: React.FC = () => {
             </Switch>
           </React.Suspense>
         </Router> :
-        (history.location.pathname.includes('episodes') || history.location.pathname.includes('exchange-program') || history.location.pathname.includes('transcripts') || history.location.pathname.includes('about-us') || history.location.pathname === '/')?
+        (history.location.pathname.includes('episodes') || history.location.pathname.includes('exchange-program') || history.location.pathname.includes('transcripts') || history.location.pathname.includes('about-us') || history.location.pathname === '/' || history.location.pathname.includes('group-lessons'))?
           <EpisodeContextProvider>
             <Router history={history}>
               <React.Suspense fallback={spinner}>
