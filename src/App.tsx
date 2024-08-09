@@ -38,16 +38,16 @@ const App: React.FC = () => {
           <EpisodeContextProvider>
             <Router history={history}>
               <React.Suspense fallback={spinner}>
-                <Header />
+                {/* <Header /> */}
                 <Switch>
                   {routeList.map(({ path, ...rest }): any =>
                     (<Route key={path} path={path} {...rest} />)
                   )}
                 </Switch>
                 {/* <HomeTestimonials /> */}
-                <HomeStore />
-                <HomeTeaching />
-                <Footer />
+                {/* <HomeStore /> */}
+                {/* <HomeTeaching /> */}
+                {/* <Footer /> */}
               </React.Suspense>
             </Router>
           </EpisodeContextProvider> :

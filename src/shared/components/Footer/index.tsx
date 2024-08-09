@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Navigation, { Navs } from "../Navigation";
 import './footer.scss';
 import Logo from '../../../assets/images/OBODOLOGO.svg';
@@ -115,6 +115,8 @@ const footerNavList: Navs[] = [
 ]
 
 const Footer = () => {
+    const history = useHistory();
+    console.log(history.location.pathname, "pathname")
     const [fbHovered, setFBHovered] = useState(false);
     const [linkedinHovered, setLinkedinHovered] = useState(false);
     const [instaHovered, setInstaHovered] = useState(false);
@@ -147,10 +149,12 @@ const Footer = () => {
                             <Navigation list={teacherNavList} type="footer" />
                         </div>
                     </div>
-                    <div className="store-icons">
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.droid.obodo" ><img src={GooglePlay} alt="googlePlay" /></a>
-                        <a target="_blank" href="https://apps.apple.com/in/app/obodo-full-circle/id1623822418"><img src={AppStore} alt="appStore" /></a>
-                    </div>
+                    {!history.location.pathname.includes('group-lessons') &&
+                        <div className="store-icons">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.droid.obodo" ><img src={GooglePlay} alt="googlePlay" /></a>
+                            <a target="_blank" href="https://apps.apple.com/in/app/obodo-full-circle/id1623822418"><img src={AppStore} alt="appStore" /></a>
+                        </div>
+                    }
                 </div>
                 <div className="d-flex justify-content-between bottom-nav">
                     <div className="links">

@@ -41,6 +41,19 @@
     }
   }
 
+  button.joinNow {
+    height: 42px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(small) {
+      height: 50px;
+      width: 230px;
+    }
+  }
+
   img.lesson-mobile {
     height: 299px;
     width: 100%;

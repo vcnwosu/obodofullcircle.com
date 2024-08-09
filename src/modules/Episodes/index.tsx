@@ -4,6 +4,10 @@ import HomeTestimonials from "../Home/components/HomeTestimonials";
 import AllEpisodes from "./components/AllEpisodes";
 import EpisodesIntroduction from "./components/EpisodesIntroduction";
 import { testimonialArray } from './testimonialData';
+import Header from "../../shared/components/Header";
+import HomeStore from "../../shared/components/HomeStore";
+import HomeTeaching from "../../shared/components/HomeTeaching";
+import Footer from "../../shared/components/Footer";
 
 const Episodes = () => {
     const location = useLocation();
@@ -19,9 +23,13 @@ const Episodes = () => {
     }, [location])
     return (
         <div>
+            <Header />
             <EpisodesIntroduction />
             <AllEpisodes />
             <HomeTestimonials data={testimonialArray} type="picture" />
+            <HomeStore />
+            <HomeTeaching />
+            <Footer />
         </div>
     )
 

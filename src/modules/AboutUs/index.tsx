@@ -7,9 +7,13 @@ import { useEffect } from "react";
 import OurTeam from "./components/OurTeam";
 import HomeTestimonials from "../Home/components/HomeTestimonials";
 import { testimonialArray } from '../Home/testimonialsData';
+import Header from "../../shared/components/Header";
+import HomeStore from "../../shared/components/HomeStore";
+import HomeTeaching from "../../shared/components/HomeTeaching";
+import Footer from "../../shared/components/Footer";
 
 const AboutUs = () => {
-  const location = useLocation();
+    const location = useLocation();
     useEffect(() => {
         if (location.hash) {
             let elem = document.getElementById(location.hash.slice(1))
@@ -22,12 +26,16 @@ const AboutUs = () => {
     }, [location])
     return (
         <div>
-          <OurMission />
-          <WhoWeAre />
-          <MeetTheFounder />
-          <OurTeam />
-          <CompanyValues />
-          <HomeTestimonials data={testimonialArray} type="textVideo"/>
+            <Header />
+            <OurMission />
+            <WhoWeAre />
+            <MeetTheFounder />
+            <OurTeam />
+            <CompanyValues />
+            <HomeTestimonials data={testimonialArray} type="textVideo" />
+            <HomeStore />
+            <HomeTeaching />
+            <Footer />
         </div>
     )
 }

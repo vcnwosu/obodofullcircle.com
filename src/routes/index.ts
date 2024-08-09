@@ -105,14 +105,14 @@ const comingSoon: Route = {
   component: ComingSoon,
 };
 
-const groupLessons: Route = {
+export const groupLessons: Route = {
   path: "/pages/group-lessons",
   exact: true,
   isProtected: false,
   component: GroupLessons,
 };
 
-export const routeList = [home, episodes, exchangeProgram, transcripts, aboutUs];
+export const routeList = [home, episodes, exchangeProgram, transcripts, aboutUs, groupLessons];
 
 export const publicRouteList = [
   privacyPolicy,
@@ -122,5 +122,4 @@ export const publicRouteList = [
   support,
   documentation,
   comingSoon,
-  groupLessons,
 ];
