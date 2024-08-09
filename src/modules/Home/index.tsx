@@ -10,6 +10,10 @@ import HomeTestimonials from "./components/HomeTestimonials";
 import { testimonialArray } from './testimonialsData';
 import HomeGroupLessons from "./components/HomeGroupLessons";
 import HomeIndependentCourse from "./components/HomeIndependentCourse";
+import Header from "../../shared/components/Header";
+import HomeStore from "../../shared/components/HomeStore";
+import HomeTeaching from "../../shared/components/HomeTeaching";
+import Footer from "../../shared/components/Footer";
 
 const Home = () => {
     const location = useLocation();
@@ -25,6 +29,7 @@ const Home = () => {
     }, [location])
     return (
         <div>
+            <Header />
             <HomeLearnIgbo />
             {/* <LanguageSelector /> */}
             <HomeExchangeProgram />
@@ -34,6 +39,9 @@ const Home = () => {
             <HomeWhyObodo />
             <HomeShopResources />
             <HomeTestimonials data={testimonialArray} type="textVideo" />
+            <HomeStore />
+            <HomeTeaching />
+            <Footer />
         </div>
     )
 }

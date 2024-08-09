@@ -25,7 +25,7 @@ const HomeIndependentCourse = () => {
             <img className="top-border" src={BorderImage} alt="border" />
             <div className="wrapper wrapperStream d-flex mt-4 mb-3">
                 <div>
-                    <h1 className="shadowText">Independent Course</h1>
+                    <h1 className="shadowTextIndependent">Independent Course</h1>
                     <h1 className="head">Independent Course</h1>
                     {featuresData.map((item: string) => {
                         return (

@@ -23,12 +23,27 @@
       position: relative;
     }
   }
-  img.bgImage {
+  img.bg-group {
     height: 262px;
     @include breakpoint(small) {
-      height: 360px;
+      height: 450px;
+      width: 100%;
     }
   }
+
+  .wrapper-homeGroup {
+    padding-left: 20px;
+    @include breakpoint(small) {
+      padding-left: 100px;
+      > :nth-child(1) {
+        width: 40%;
+      }
+      > :nth-child(2) {
+        width: 60%;
+      }
+    }
+  }
+
   .vl {
     border-left: 1px solid $white;
     min-height: 100%;

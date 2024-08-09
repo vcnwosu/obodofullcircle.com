@@ -22,7 +22,7 @@ const GroupLessonsJoin = () => {
                     <h1>Group Lessons</h1>
                     <p>Our unique group lessons are guaranteed to build you or your child’s confidence in speaking Igbo
                         while learning more about the Igbo culture and making long lasting connections.</p>
-                    <CustomButton type="button" text="Join Now" variant="primary" onClick={() => navigateToContactUs()} />
+                    <CustomButton className="joinNow" type="button" text="Join Now" variant="primary" onClick={() => navigateToContactUs()} />
                 </div>
                 <div>
                     <img className="lesson" src={Image2} alt="group-lessons2" />

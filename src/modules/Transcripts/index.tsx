@@ -4,10 +4,14 @@ import HomeTestimonials from "../Home/components/HomeTestimonials";
 import { testimonialArray } from "../Home/testimonialsData";
 import AllTranscripts from "./components/AllTranscripts";
 import TranscriptsIntroduction from "./components/TranscriptsIntroduction";
+import Header from "../../shared/components/Header";
+import HomeStore from "../../shared/components/HomeStore";
+import HomeTeaching from "../../shared/components/HomeTeaching";
+import Footer from "../../shared/components/Footer";
 
 const Transcripts = () => {
     const [currentId, setCurrentId] = useState('');
-  const location = useLocation();
+    const location = useLocation();
     useEffect(() => {
         if (location.hash) {
             setTimeout(() => {
@@ -23,9 +27,13 @@ const Transcripts = () => {
     }, [location])
     return (
         <div>
-          <TranscriptsIntroduction />
-          <AllTranscripts id={currentId} />
-          <HomeTestimonials data={testimonialArray} type="textVideo" />
+            <Header />
+            <TranscriptsIntroduction />
+            <AllTranscripts id={currentId} />
+            <HomeTestimonials data={testimonialArray} type="textVideo" />
+            <HomeStore />
+            <HomeTeaching />
+            <Footer />
         </div>
     )
 }
