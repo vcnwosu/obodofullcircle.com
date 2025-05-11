@@ -87,112 +87,64 @@
     gap: 6rem;
   }
   .plan-card {
-    background-color: $bg-color-8;
-    border: 1px solid $border-color;
+    background-color: $bg-color-4;
+    border: 1px solid $quinary-color;
     padding: 1rem 0.5rem 1rem 0.5rem;
     width: 100%;
     border-radius: 10px;
     position: relative;
     transition: transform 0.5s ease-in-out;
+    margin-bottom: 50px;
     @include breakpoint(small) {
       width: 350px;
+      margin-bottom: 0px;
     }
-    > div:first-child {
+    > div {
       margin-bottom: 2rem;
-    }
-    > div:not(:first-child) {
-      margin-bottom: 2rem;
-    }
-    > div > div {
-      gap: 1rem;
-    }
-    h2 {
-      color: $bg-color;
-      font-family: "$font-bold";
-    }
-    .save-image {
-      margin-right: -0.5rem;
-    }
-    .price {
-      font-family: "$font-bold";
-      font-size: 20px;
-      span {
-        font-family: "$font-medium";
-        font-size: 16px;
-      }
-    }
-    p.plan-text {
-      color: $bg-color;
-      margin-bottom: 0;
-      text-align: left;
-      font-family: "$font-museo-regular";
-      flex-grow: 1;
-      b {
-        font-family: "$font-museo";
-      }
-    }
-    .tooltip-div {
-      position: relative;
-      display: inline-block;
-    }
 
-    .tooltip-div .tooltip-text {
-      visibility: hidden;
-      max-width: 280px;
-      width: max-content;
-      background-color: $tooltip-color;
-      opacity: 0.8;
-      border-color: $border-color;
-      color: $white;
-      border-radius: 6px 0 6px 6px;
-      padding: 0.5rem 1rem;
-      font-family: "$font-museo-regular";
-      position: absolute;
-      z-index: 1;
-      top: 140%;
-      right: 8px;
-      @include breakpoint(small) {
-        max-width: 450px;
+      > div {
+        gap: 1rem;
       }
-      ul {
-        padding: 0 1rem;
-        margin-bottom: 0;
-        li {
-          text-align: left;
+    }
+    .badge-wrapper {
+      .badge {
+        display: inline-block;
+        background-color: $quinary-color;
+        color: $tertiary-color;
+        padding: 7px 7px;
+      }
+    }
+    .pricing {
+      span.price {
+        font-family: "$font-bold";
+        font-size: 35px;
+      }
+      span.cycle {
+        font-family: "$font-medium";
+        font-size: 14px;
+      }
+    }
+    ul {
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+      font-family: "$font-museo-regular";
+      list-style-type: none;
+
+      li {
+        text-align: left;
+        position: relative;
+        margin-bottom: 1rem;
+
+        &::before {
+          content: '\02713';
+          position: absolute;
+          margin-left: -20px;
+        }
+
+        b.special {
+          color: $secondary-color;
         }
       }
-      p {
-        color: $white;
-        font-family: "$font-museo-regular";
-        margin-bottom: 0;
-      }
-    }
-    .tooltip-div:hover .tooltip-text {
-      visibility: visible;
-    }
-    .tooltip-div .tooltip-text::after {
-      content: " ";
-      position: absolute;
-      top: -13px;
-      right: 0;
-      margin-left: -5px;
-      border-width: 8px;
-      border-style: solid;
-      clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
-      border-color: $black;
-    }
-    &:nth-child(2) {
-      margin-top: 2rem;
-      @include breakpoint(small) {
-        margin-top: 0;
-      }
-    }
-    & .btn-primary {
-      position: absolute;
-      bottom: 1rem;
-      right: 50%;
-      transform: translateX(50%);
-      padding: 15px 25px;
     }
   }
 }

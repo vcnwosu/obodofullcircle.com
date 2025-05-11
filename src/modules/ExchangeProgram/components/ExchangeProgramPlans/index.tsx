@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PlanCard from "./components/PlanCard";
 import "./exchangeProgramPlans.scss";
-import { basicPlanData, premiumPlanData } from "./components/planData";
+import { basicPlanData, freePlanData, premiumPlanData, starterPlanData } from "./components/planData";
 import { CustomButton } from "../../../../shared/components/Button";
 import CustomModal from "../../../../shared/components/Modal";
 import CustomSpinner from "../../../../shared/components/Spinner";
@@ -38,73 +38,33 @@ const ExchangeProgramPlans = () => {
   const [activeType, setActiveType] = useState(1);
   return (
     <div className="ep-plan-div" id="plans">
-      <div className="info-strip">
-        <p className="text-center">
-          * These prices displayed and flashcards go into effect when the app
-          goes live! Don’t wait to get started! Start today and take advantage
-          of our Pre-Launch sale!
-        </p>
-        <p className="text-center">
-          Email <b>info@obodofullcircle.com</b> to get started!
-        </p>
-      </div>
-      <div className="wrapper text-center">
+      <div className="wrapper text-center pt-4">
         <h2>Right Plan For Your Learning</h2>
         <p>Igbo Conversation Exchange</p>
-        <div className="type-selector d-flex justify-content-center">
-          <div className="d-flex type-background">
-            <div
-              className={`type-item ${activeType === 1 ? "active-type" : ""}`}
-              onClick={() => {
-                setActiveType(1);
-                setbasicPlanId("1111");
-                setPremiumPlanId("1112");
-              }}
-            >
-              MONTHLY
-            </div>
-            <div
-              className={`type-item ${activeType === 2 ? "active-type" : ""}`}
-              onClick={() => {
-                setActiveType(2);
-                setbasicPlanId("TWOMONTH");
-                setPremiumPlanId("PremiumTwo");
-              }}
-            >
-              2 MONTHS {"{POPULAR}"}
-            </div>
-            <div
-              className={`type-item ${activeType === 3 ? "active-type" : ""}`}
-              onClick={() => {
-                setActiveType(3);
-                setbasicPlanId("BASICTHREE");
-                setPremiumPlanId("PremiumThree");
-              }}
-            >
-              QUARTERLY
-            </div>
-          </div>
-        </div>
-        <div className="plan-card-div d-flex justify-content-center">
+        <div className="plan-card-div d-flex justify-content-center mt-4">
           <PlanCard
-            type={activeType}
-            heading={basicPlanData.heading}
-            price={basicPlanData.price}
-            detailsList={basicPlanData.detailsList}
-            priceSingleMonth={basicPlanData.priceSingleMonth}
-            priceSingleMonthQuaterly={basicPlanData.priceSingleMonthQuaterly}
-            priceTotal={basicPlanData.priceTotal}
-            zohoId={basicPlanId}
+            heading={freePlanData.heading}
+            price={freePlanData.price}
+            cycle={freePlanData.cycle}
+            detailsList={freePlanData.detailsList}
           />
           <PlanCard
-            type={activeType}
+            heading={starterPlanData.heading}
+            price={starterPlanData.price}
+            cycle={starterPlanData.cycle}
+            detailsList={starterPlanData.detailsList}
+          />
+          <PlanCard
+            heading={basicPlanData.heading}
+            price={basicPlanData.price}
+            cycle={basicPlanData.cycle}
+            detailsList={basicPlanData.detailsList}
+          />
+          <PlanCard
             heading={premiumPlanData.heading}
             price={premiumPlanData.price}
+            cycle={premiumPlanData.cycle}
             detailsList={premiumPlanData.detailsList}
-            priceSingleMonth={premiumPlanData.priceSingleMonth}
-            priceSingleMonthQuaterly={premiumPlanData.priceSingleMonthQuaterly}
-            priceTotal={premiumPlanData.priceTotal}
-            zohoId={premiumPlanId}
           />
         </div>
         <CustomButton
