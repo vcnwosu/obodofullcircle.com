@@ -1,19 +1,22 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 import { toast } from "react-toastify";
 
-export const baseURL = process.env.REACT_APP_BASE_URL; // prod url
-export const websiteURL = process.env.REACT_APP_WEBSITE_URL // prod website url
+export const backendURL = process.env.REACT_APP_BACKEND_URL;
+export const websiteURL = process.env.REACT_APP_WEBSITE_URL;
+export const apisURL = process.env.REACT_APP_APIS_URL;
+export const stripeCheckoutURL = process.env.REACT_APP_STRIPE_CHECKOUT_URL;
 
-const axiosInstance = axios.create({
-    baseURL
+console.log(backendURL, websiteURL, apisURL, stripeCheckoutURL);
+
+const axiosBackend = axios.create({
+    baseURL: backendURL
 })
 
-
-axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
+axiosBackend.interceptors.request.use((request: AxiosRequestConfig) => {
     return request;
 });
 
-axiosInstance.interceptors.response.use((response: AxiosResponse<any>) => {
+axiosBackend.interceptors.response.use((response: AxiosResponse<any>) => {
     return response;
 },
     (err: AxiosError<any>) => {
@@ -23,4 +26,44 @@ axiosInstance.interceptors.response.use((response: AxiosResponse<any>) => {
 
 );
 
-export default axiosInstance;
+const axiosAPIS = axios.create({
+    baseURL: apisURL
+})
+
+axiosAPIS.interceptors.request.use((request: AxiosRequestConfig) => {
+    return request;
+});
+
+axiosAPIS.interceptors.response.use((response: AxiosResponse<any>) => {
+    return response;
+},
+    (err: AxiosError<any>) => {
+        toast.error(err.message);
+        return Promise.reject(err);
+    }
+
+);
+
+const stripeCheckoutAPIS = axios.create({
+    baseURL: stripeCheckoutURL
+})
+
+stripeCheckoutAPIS.interceptors.request.use((request: AxiosRequestConfig) => {
+    return request;
+});
+
+stripeCheckoutAPIS.interceptors.response.use((response: AxiosResponse<any>) => {
+    return response;
+},
+    (err: AxiosError<any>) => {
+        toast.error(err.message);
+        return Promise.reject(err);
+    }
+
+);
+
+export const backend = axiosBackend;
+export const api = axiosAPIS;
+export const stripeCheckout = stripeCheckoutAPIS;
+
+export default { backend, api };

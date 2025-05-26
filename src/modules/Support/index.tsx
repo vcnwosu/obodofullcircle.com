@@ -79,8 +79,8 @@ const Support = () => {
             contact: `${formData.countryCode}${formData.contact}`,
             description: formData.description
         }
-        postRequest('contact-support', formValue)
-            .then(res => {
+        postRequest('backend', 'contact-support', formValue)
+            ?.then(res => {
                 setLoading(false);
                 if (res.data.code >= 1000 && res.data.code <= 2000) {
                     toast.error(res.data.message);

@@ -13,6 +13,12 @@ const Support = React.lazy(() => import('../modules/Support'));
 const Documentation = React.lazy(() => import('../modules/Documentation'));
 const NotFound = React.lazy(() => import('../modules/NotFound'));
 const ComingSoon = React.lazy(() => import('../modules/Coming Soon'));
+const Login = React.lazy(() => import("../modules/Login"));
+const ResetPassword = React.lazy(() => import("../modules/ResetPassword"));
+const Signup = React.lazy(() => import("../modules/Signup"));
+const Dashboard = React.lazy(() => import("../modules/Dashboard"));
+const VerifyOTP = React.lazy(() => import("../modules/VerifyOTP"));
+
 interface Route {
     path: string;
     exact: boolean;
@@ -20,7 +26,7 @@ interface Route {
     component: LazyExoticComponent<() => JSX.Element>
 }
 
-const home: Route = {
+export const home: Route = {
     path: '/',
     exact: true,
     isProtected: false,
@@ -54,6 +60,48 @@ const aboutUs: Route = {
     exact: true,
     isProtected: false,
     component: AboutUs
+}
+
+export const login: Route = {
+    path: '/login',
+    exact: true,
+    isProtected: false,
+    component: Login
+}
+
+export const resetPassword: Route = {
+    path: '/reset-password',
+    exact: true,
+    isProtected: false,
+    component: ResetPassword
+}
+
+const igboExchSignup: Route = {
+    path: '/igbo-exchange-signup',
+    exact: true,
+    isProtected: false,
+    component: Signup
+}
+
+export const signup: Route = {
+    path: '/signup',
+    exact: true,
+    isProtected: false,
+    component: Signup
+}
+
+export const dashboard: Route = {
+    path: '/dashboard',
+    exact: true,
+    isProtected: true,
+    component: Dashboard
+}
+
+export const verifyotp: Route = {
+    path: '/verify-otp',
+    exact: true,
+    isProtected: false,
+    component: VerifyOTP
 }
 
 const paymentSuccess: Route = {
@@ -110,7 +158,15 @@ export const routeList = [
     episodes,
     exchangeProgram,
     transcripts,
-    aboutUs
+    aboutUs,
+    login,
+    resetPassword,
+    signup,
+    igboExchSignup,
+    dashboard,
+    verifyotp,
+    paymentSuccess,
+    paymentCancel
 ]
 
 export const publicRouteList = [

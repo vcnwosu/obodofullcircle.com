@@ -69,3 +69,8 @@ p {
   @include btn-attach($primary-color, $white);
   font-family: "$font-museo";
 }
+
+.btn-danger {
+  @include btn($danger, $white, $warning);
+  font-family: "$font-museo";
+}

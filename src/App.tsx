@@ -12,6 +12,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { EpisodeContextProvider } from './store/EpisodeContext';
 import NotFound from './modules/NotFound';
+import { AuthProvider } from './store/AuthContext';
 
 const spinner = (
   <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -19,36 +20,57 @@ const spinner = (
   </div>
 )
 
+const episodeContextRoutes = [
+  'episodes',
+  'exchange-program',
+  'transcripts',
+  'about-us',
+  'login',
+  'dashboard',
+  'verify-otp',
+  'igbo-exchange-signup',
+  '/'
+]
+
+const pubRoutes = [
+  'pages',
+  'payments',
+]
+
 toast.configure();
 const App: React.FC = () => {
   const history = createBrowserHistory();
   return (
     <>
-      {(history.location.pathname.includes('pages') || history.location.pathname.includes('payments')) ?
+      {(pubRoutes.map((pubroute) => history.location.pathname.includes(pubroute)).reduce((acc, val) => acc || val, false)) ?
         <Router history={history}>
-          <React.Suspense fallback={spinner}>
-            <Switch>
-              {publicRouteList.map(({ path, ...rest }): any =>
-                (<Route key={path} path={path} {...rest} />)
-              )}
-            </Switch>
-          </React.Suspense>
+          <AuthProvider>
+            <React.Suspense fallback={spinner}>
+              <Switch>
+                {publicRouteList.map(({ path, ...rest }): any =>
+                  (<Route key={path} path={path} {...rest} />)
+                )}
+              </Switch>
+            </React.Suspense>
+          </AuthProvider>
         </Router> :
-        (history.location.pathname.includes('episodes') || history.location.pathname.includes('exchange-program') || history.location.pathname.includes('transcripts') || history.location.pathname.includes('about-us') || history.location.pathname === '/') ?
+        (episodeContextRoutes.map((contextroute) => history.location.pathname.includes(contextroute)).reduce((acc, val) => acc || val, false)) ?
           <EpisodeContextProvider>
             <Router history={history}>
-              <React.Suspense fallback={spinner}>
-                <Header />
-                <Switch>
-                  {routeList.map(({ path, ...rest }): any =>
-                    (<Route key={path} path={path} {...rest} />)
-                  )}
-                </Switch>
-                {/* <HomeTestimonials /> */}
-                <HomeStore />
-                <HomeTeaching />
-                <Footer />
-              </React.Suspense>
+              <AuthProvider>
+                <React.Suspense fallback={spinner}>
+                  <Header />
+                  <Switch>
+                    {routeList.map(({ path, ...rest }): any =>
+                      (<Route key={path} path={path} {...rest} />)
+                    )}
+                  </Switch>
+                  {/* <HomeTestimonials /> */}
+                  <HomeStore />
+                  <HomeTeaching />
+                  <Footer />
+                </React.Suspense>
+              </AuthProvider>
             </Router>
           </EpisodeContextProvider> :
           <Router history={history}>

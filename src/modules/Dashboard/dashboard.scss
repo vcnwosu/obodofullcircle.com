@@ -1,0 +1,55 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+div#dashboard {
+    div#change-plan-group {
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(large) {
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        input {
+            @include breakpoint(large) {
+                max-width: 200px;
+                border-radius: 0.25rem 0 0 0.25rem;
+                font-size: 16px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-color: $quinary-color;
+                border-right: none;
+            }
+        }
+
+        button {
+            color: white;
+            margin-top: 10px;
+
+            @include breakpoint(large) {
+                font-size: 16px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                border-color: $quinary-color;
+            }
+
+            &#change-plan {
+                background-color: $primary-color;
+
+                @include breakpoint(large) {
+                    border-radius: 0;
+                    border-right: none;
+                }
+            }
+
+            &#cancel-plan {
+                background-color: #dc3545;
+
+                @include breakpoint(large) {
+                    border-radius: 0 0.25rem 0.25rem 0;
+                }
+            }
+        }
+    }
+}

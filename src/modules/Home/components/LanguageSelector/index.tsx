@@ -28,8 +28,8 @@ const LanguageSelector = () => {
             const formValue = {
                 email
             };
-            postRequest('add-tutor-interest', formValue)
-            .then(res => {
+            postRequest('backend', 'add-tutor-interest', formValue)
+            ?.then(res => {
                 setLoading(false);
                 if(res.data.code >= 1000 && res.data.code <= 2000) {
                     toast.error(res.data.message);

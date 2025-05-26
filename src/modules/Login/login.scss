@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+div#login {
+    p {
+        a {
+            color: $primary-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

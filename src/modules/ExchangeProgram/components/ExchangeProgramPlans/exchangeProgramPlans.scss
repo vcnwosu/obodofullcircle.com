@@ -99,6 +99,16 @@
       width: 350px;
       margin-bottom: 0px;
     }
+    > span#current-plan {
+      background-color: $quinary-color;
+      padding: 5px 10px;
+      border-radius: 0.25rem 0.25rem 0 0;
+      position: absolute;
+      top: -19px;
+      right: -1px;
+      color: $tertiary-color;
+      font-weight: bold;
+    }
     > div {
       margin-bottom: 2rem;
 
