@@ -19,6 +19,16 @@ const spinner = (
   </div>
 )
 
+const episodeContextRoutes = [
+  'episodes',
+  'exchange-program',
+  'transcripts',
+  'about-us',
+  'login',
+  'dashboard',
+  '/'
+]
+
 toast.configure();
 const App: React.FC = () => {
   const history = createBrowserHistory();
@@ -34,7 +44,7 @@ const App: React.FC = () => {
             </Switch>
           </React.Suspense>
         </Router> :
-        (history.location.pathname.includes('episodes') || history.location.pathname.includes('exchange-program') || history.location.pathname.includes('transcripts') || history.location.pathname.includes('about-us') || history.location.pathname === '/') ?
+        (episodeContextRoutes.map((contextroute) => history.location.pathname.includes(contextroute)).reduce((acc, val) => acc || val, false)) ?
           <EpisodeContextProvider>
             <Router history={history}>
               <React.Suspense fallback={spinner}>

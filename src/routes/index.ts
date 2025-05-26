@@ -13,6 +13,9 @@ const Support = React.lazy(() => import('../modules/Support'));
 const Documentation = React.lazy(() => import('../modules/Documentation'));
 const NotFound = React.lazy(() => import('../modules/NotFound'));
 const ComingSoon = React.lazy(() => import('../modules/Coming Soon'));
+const Login = React.lazy(() => import("../modules/Login"));
+const Dashboard = React.lazy(() => import("../modules/Dashboard"));
+
 interface Route {
     path: string;
     exact: boolean;
@@ -54,6 +57,20 @@ const aboutUs: Route = {
     exact: true,
     isProtected: false,
     component: AboutUs
+}
+
+const login: Route = {
+    path: '/login',
+    exact: true,
+    isProtected: false,
+    component: Login
+}
+
+const dashboard: Route = {
+    path: '/dashboard',
+    exact: true,
+    isProtected: true,
+    component: Dashboard
 }
 
 const paymentSuccess: Route = {
@@ -110,7 +127,9 @@ export const routeList = [
     episodes,
     exchangeProgram,
     transcripts,
-    aboutUs
+    aboutUs,
+    login,
+    dashboard
 ]
 
 export const publicRouteList = [

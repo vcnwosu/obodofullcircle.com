@@ -7,6 +7,7 @@ import styles from "../../../shared/components/Navigation/navigation.module.scss
 import { useRef } from "react";
 import Caret from "../../../assets/images/caret.svg";
 import { Button, Dropdown } from "react-bootstrap";
+import { useAuth } from "../../../store/AuthContext";
 
 const navList: Navs[] = [
   {
@@ -40,10 +41,19 @@ const navList: Navs[] = [
     path: "/about-us",
     text: "About Us",
   },
+  {
+    path: "/login",
+    text: "Login"
+  },
+  {
+    path: "/dashboard",
+    text: "Dashboard"
+  }
 ];
 const Header = () => {
   const inputRef = useRef<any>();
   const location = useLocation();
+  const auth = useAuth();
 
   const clickHandler = () => {
     inputRef.current.checked = false;
@@ -83,7 +93,11 @@ const Header = () => {
         />
         <nav>
           <ul>
-            {navList.map((nav) => (
+            {navList.filter((nav) => {
+              return (nav.path !== "/login" && nav.path !== "/dashboard") ||
+                (nav.path === "/dashboard" && auth?.user !== undefined) ||
+                (nav.path === "/login" && auth?.user === undefined)
+            }).map((nav) => (
               <li key={nav.text}>
                 {nav.path ? (
                   <NavLink
