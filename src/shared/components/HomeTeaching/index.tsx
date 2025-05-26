@@ -88,8 +88,8 @@ const HomeTeaching = () => {
             language: formData.language,
             contact: `${formData.countryCode}${formData.whatsAppContact}`
         }
-        postRequest('add-tutor-contact', formValue)
-            .then(res => {
+        postRequest("backend", 'add-tutor-contact', formValue)
+            ?.then(res => {
                 setLoading(false);
                 if (res.data.code >= 1000 && res.data.code <= 2000) {
                     toast.error(res.data.message);

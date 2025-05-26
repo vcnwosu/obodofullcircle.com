@@ -76,8 +76,8 @@ const AudioCard = ({
       source: "episodes",
     };
     setLoading(true);
-    postRequest("buy-transcript", transcriptObj)
-      .then((res) => {
+    postRequest("backend", "buy-transcript", transcriptObj)
+      ?.then((res) => {
         setLoading(false);
         if (res.data.code >= 1000 && res.data.code <= 2000) {
           toast.error(res.data.message);

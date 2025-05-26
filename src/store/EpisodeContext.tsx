@@ -18,7 +18,7 @@ export const EpisodeContextProvider = (props: any) => {
 
   const getEpisodeList = () => {
     setLoading(true);
-    getRequest("get-episodes").then((res) => {
+    getRequest("backend", "get-episodes")?.then((res) => {
       setLoading(false);
       if (res.data.code >= 1000 && res.data.code <= 2000) {
         toast.error(res.data.message);

@@ -1,0 +1,32 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+div#login-module {
+    form {
+        input {
+            &.form-control {
+                margin: 10px 0;
+            }
+        }
+
+        div#usertype {
+            margin: 20px 0;
+
+            div.form-check {
+                margin-right: 15px;
+            }
+        }
+
+        button[type="submit"] {
+            padding: 10px 40px;
+        }
+    }
+
+    p {
+        a {
+            color: $primary-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
